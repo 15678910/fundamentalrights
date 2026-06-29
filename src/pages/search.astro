@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="검색 | 우리 헌법 기본권">
+  <h1>검색</h1>
+  <link href={`${base}pagefind/pagefind-ui.css`} rel="stylesheet" />
+  <div id="search"></div>
+  <script src={`${base}pagefind/pagefind-ui.js`} is:inline></script>
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      new PagefindUI({ element: "#search", showSubResults: true, translations: { placeholder: "권리·용어 검색" } });
+    });
+  </script>
+</BaseLayout>
