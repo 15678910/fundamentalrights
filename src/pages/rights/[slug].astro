@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import DifficultyToggle from "../../components/DifficultyToggle.astro";
 import OriginalText from "../../components/OriginalText.astro";
@@ -11,6 +11,7 @@ export async function getStaticPaths() {
   return rights.map((r) => ({ params: { slug: r.id }, props: { entry: r } }));
 }
 
+type Props = { entry: CollectionEntry<"rights"> };
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const cat = getCategory(entry.data.category);

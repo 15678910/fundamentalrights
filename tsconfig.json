@@ -5,5 +5,5 @@
     "paths": {},
     "types": ["node"]
   },
-  "exclude": ["tests"]
+  "exclude": ["dist", ".astro", "node_modules", "tests"]
 }
