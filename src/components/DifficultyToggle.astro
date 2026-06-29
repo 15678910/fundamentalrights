@@ -1,0 +1,15 @@
+---
+import { DIFFICULTIES } from "../lib/difficulty";
+---
+<div role="group" aria-label="난이도 선택" style="display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0">
+  {DIFFICULTIES.map((d) => (
+    <button
+      data-difficulty-btn={d.key}
+      aria-pressed={d.key === "easy"}
+      style="padding:.4rem .8rem;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--fg);cursor:pointer"
+    >{d.label}</button>
+  ))}
+</div>
+<style>
+  button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+</style>

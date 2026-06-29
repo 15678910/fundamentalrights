@@ -1,0 +1,7 @@
+---
+const { text, article } = Astro.props;
+---
+<details style="margin:1rem 0;border:1px solid var(--border);border-radius:8px;padding:.5rem .75rem;background:var(--card)">
+  <summary style="cursor:pointer;font-weight:600">📜 헌법 원문 (제{article}조)</summary>
+  <p style="margin:.5rem 0 0;color:var(--muted)">{text}</p>
+</details>
