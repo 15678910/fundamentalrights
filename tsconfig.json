@@ -2,6 +2,8 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {}
-  }
+    "paths": {},
+    "types": ["node"]
+  },
+  "exclude": ["tests"]
 }
