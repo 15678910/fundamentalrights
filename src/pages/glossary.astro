@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const terms = (await getCollection("glossary")).sort((a, b) => a.data.term.localeCompare(b.data.term, "ko"));
+---
+<BaseLayout title="용어 사전 | 우리 헌법 기본권">
+  <h1>용어 사전</h1>
+  <dl>
+    {terms.map((t) => (
+      <div id={t.data.term} style="margin:1rem 0;padding-bottom:1rem;border-bottom:1px solid var(--border)">
+        <dt style="font-weight:700">{t.data.term}</dt>
+        <dd style="margin:.3rem 0 0">{t.data.short}</dd>
+      </div>
+    ))}
+  </dl>
+</BaseLayout>
