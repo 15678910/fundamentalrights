@@ -1,0 +1,22 @@
+---
+const { questions = [] } = Astro.props;
+---
+{questions.map((q: any) => (
+  <div
+    data-quiz
+    data-answer={q.answer}
+    data-explanation={q.explanation}
+    style="border-left:4px solid var(--accent);background:var(--card);border-radius:6px;padding:.75rem 1rem;margin:1rem 0"
+  >
+    <p style="font-weight:600;margin:.2rem 0">❓ {q.question}</p>
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+      {q.options.map((opt: string, i: number) => (
+        <button
+          data-quiz-option={i}
+          style="padding:.4rem .8rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer"
+        >{opt}</button>
+      ))}
+    </div>
+    <p data-quiz-result hidden style="margin:.5rem 0 0;font-weight:600"></p>
+  </div>
+))}
