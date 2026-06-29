@@ -20,6 +20,11 @@ const rights = defineCollection({
     terms: z.array(z.string()).default([]),
     quiz: z.array(quizQuestion).default([]),
     order: z.number().int(),
+    intro: z.string().optional(),
+    cases: z.string().optional(),
+    protectors: z.string().optional(),
+    history: z.string().optional(),
+    questions: z.array(z.string()).default([]),
   }),
 });
 

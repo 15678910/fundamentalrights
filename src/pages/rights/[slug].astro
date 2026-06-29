@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import DifficultyToggle from "../../components/DifficultyToggle.astro";
 import OriginalText from "../../components/OriginalText.astro";
 import Quiz from "../../components/Quiz.astro";
+import InfoSection from "../../components/InfoSection.astro";
 import { getCategory } from "../../lib/categories";
 
 export async function getStaticPaths() {
@@ -23,6 +24,7 @@ const base = import.meta.env.BASE_URL;
     <span style={`color:${cat?.color}`}>{cat?.label}</span>
   </p>
   <h1 style="margin:.2rem 0">제{entry.data.article}조 · {entry.data.title}</h1>
+  {entry.data.intro && <p style="font-size:1.05rem;color:var(--muted);margin:.3rem 0 0">{entry.data.intro}</p>}
 
   <DifficultyToggle />
 
@@ -31,6 +33,18 @@ const base = import.meta.env.BASE_URL;
   </article>
 
   <OriginalText text={entry.data.original} article={entry.data.article} />
+
+  {entry.data.cases && <InfoSection icon="🏠" title="실생활 이야기" text={entry.data.cases} />}
+  {entry.data.protectors && <InfoSection icon="🛡️" title="누가 지켜주나요?" text={entry.data.protectors} />}
+  {entry.data.history && <InfoSection icon="📜" title="어떻게 생겨났나요?" text={entry.data.history} />}
+  {entry.data.questions.length > 0 && (
+    <section style="margin:1.5rem 0">
+      <h2 style="font-size:1.15rem">💭 생각해 볼 질문</h2>
+      <ul style="margin:.4rem 0 0;padding-left:1.2rem;line-height:1.9">
+        {entry.data.questions.map((q) => <li>{q}</li>)}
+      </ul>
+    </section>
+  )}
 
   {entry.data.quiz.length > 0 && <Quiz questions={entry.data.quiz} />}
 
