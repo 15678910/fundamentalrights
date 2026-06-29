@@ -1,0 +1,14 @@
+---
+import Mascot from "./Mascot.astro";
+import { getCategory } from "../lib/categories";
+const { entry } = Astro.props;
+const cat = getCategory(entry.data.category);
+const base = import.meta.env.BASE_URL;
+---
+<a href={`${base}rights/${entry.id}`} style="display:flex;gap:.75rem;align-items:center;border:1px solid var(--border);border-radius:10px;padding:.75rem;text-decoration:none;color:var(--fg)">
+  <Mascot color={cat?.color} />
+  <span>
+    <span style={`font-size:.75rem;color:${cat?.color}`}>제{entry.data.article}조 · {cat?.label}</span>
+    <strong style="display:block">{entry.data.title}</strong>
+  </span>
+</a>

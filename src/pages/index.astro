@@ -1,15 +1,25 @@
 ---
----
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RightCard from "../components/RightCard.astro";
+import { CATEGORIES } from "../lib/categories";
 
-<html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>기본권 교육</title>
-  </head>
-  <body>
-    <h1>기본권 교육 사이트</h1>
-  </body>
-</html>
+const rights = (await getCollection("rights")).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout>
+  <h1>우리 헌법이 지켜주는 권리</h1>
+  <p style="color:var(--muted)">대한민국 헌법 제2장의 기본권을 <b>쉬운 말 · 보통 · 자세히</b> 세 단계로 읽어보세요. 누구나 자기 수준에서 이해할 수 있어요.</p>
+
+  {CATEGORIES.map((cat) => {
+    const items = rights.filter((r) => r.data.category === cat.key);
+    if (items.length === 0) return null;
+    return (
+      <section style="margin:1.5rem 0">
+        <h2 style={`color:${cat.color};border-bottom:2px solid ${cat.color};padding-bottom:.2rem`}>{cat.label}</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem;margin-top:.75rem">
+          {items.map((entry) => <RightCard entry={entry} />)}
+        </div>
+      </section>
+    );
+  })}
+</BaseLayout>
