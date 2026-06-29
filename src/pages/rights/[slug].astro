@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DifficultyToggle from "../../components/DifficultyToggle.astro";
+import OriginalText from "../../components/OriginalText.astro";
+import Quiz from "../../components/Quiz.astro";
+import { getCategory } from "../../lib/categories";
+
+export async function getStaticPaths() {
+  const rights = await getCollection("rights");
+  return rights.map((r) => ({ params: { slug: r.id }, props: { entry: r } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const cat = getCategory(entry.data.category);
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title={`${entry.data.title} | 우리 헌법 기본권`}>
+  <p style="color:var(--muted);font-size:.85rem">
+    <a href={base}>홈</a> ›
+    <span style={`color:${cat?.color}`}>{cat?.label}</span>
+  </p>
+  <h1 style="margin:.2rem 0">제{entry.data.article}조 · {entry.data.title}</h1>
+
+  <DifficultyToggle />
+
+  <article>
+    <Content />
+  </article>
+
+  <OriginalText text={entry.data.original} article={entry.data.article} />
+
+  {entry.data.quiz.length > 0 && <Quiz questions={entry.data.quiz} />}
+
+  <script src={`${base}scripts/difficulty-toggle.js`} is:inline></script>
+  <script src={`${base}scripts/quiz-client.js`} is:inline></script>
+</BaseLayout>
