@@ -25,7 +25,8 @@ const hasSidebar = Astro.slots.has("sidebar");
         </div>
       </div>
       <nav class="tabs" aria-label="주요 메뉴">
-        <a href={base}>기본권 설명</a>
+        <a href={`${base}intro`}>기본권이란?</a>
+        <a href={base}>기본권 목록</a>
         <a href={`${base}issues`}>쟁점</a>
         <a href={`${base}glossary`}>용어사전</a>
         <a href={`${base}about`}>소개</a>
