@@ -1,0 +1,24 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="사생활의 비밀과 자유">
+  <title>사생활의 비밀과 자유</title>
+  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
+  <!-- Envelope body -->
+  <rect x="20" y="36" width="80" height="56" rx="10" fill="#0891b2"/>
+  <!-- Envelope flap fold lines -->
+  <path d="M20 46 L60 68 L100 46" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+  <!-- Envelope inner highlight -->
+  <rect x="24" y="40" width="72" height="48" rx="7" fill="#0891b2" opacity="0"/>
+  <!-- Envelope top flap closed -->
+  <path d="M20 36 Q20 36 60 62 Q100 36 100 36 L100 36 Q100 32 96 30 L24 30 Q20 32 20 36Z" fill="#ffffff" opacity="0.15"/>
+  <!-- Envelope seal / heart -->
+  <path d="M60 55 C60 55 53 49 53 44.5 C53 41.4 55.7 39 59 39 C59.7 39 60.3 39.1 60 39.5 C59.7 39.1 60.3 39 61 39 C64.3 39 67 41.4 67 44.5 C67 49 60 55 60 55Z" fill="#f59e0b"/>
+  <!-- Lock overlay at bottom-right -->
+  <rect x="70" y="70" width="26" height="20" rx="6" fill="#1f2937" opacity="0.85"/>
+  <path d="M76 70 Q76 62 83 62 Q90 62 90 70" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <!-- Lock shackle highlight -->
+  <path d="M77.5 70 Q77.5 63.5 83 63.5 Q88.5 63.5 88.5 70" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <!-- Lock body highlight -->
+  <rect x="71" y="71" width="24" height="18" rx="5" fill="#ffffff" opacity="0.1"/>
+  <!-- Keyhole -->
+  <circle cx="83" cy="77" r="3" fill="#ffffff" opacity="0.9"/>
+  <rect x="81.5" y="77" width="3" height="5" rx="1.5" fill="#ffffff" opacity="0.9"/>
+</svg>

@@ -1,0 +1,48 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="노동3권">
+  <title>노동3권</title>
+  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
+  <!-- Figure left - body -->
+  <rect x="18" y="68" width="22" height="28" rx="8" fill="#db2777"/>
+  <!-- Figure left - head -->
+  <circle cx="29" cy="55" r="10" fill="#fcd9b6"/>
+  <!-- Figure left - eyes -->
+  <circle cx="26" cy="53" r="1.5" fill="#1f2937"/>
+  <circle cx="32" cy="53" r="1.5" fill="#1f2937"/>
+  <!-- Figure left - arm raised -->
+  <rect x="26" y="38" width="7" height="18" rx="3.5" fill="#fcd9b6" transform="rotate(-10 30 47)"/>
+  <!-- Figure left - arm side -->
+  <rect x="36" y="68" width="14" height="7" rx="3.5" fill="#fcd9b6"/>
+
+  <!-- Figure middle - body (center, slightly taller) -->
+  <rect x="49" y="64" width="22" height="32" rx="8" fill="#be185d"/>
+  <!-- Figure middle - head -->
+  <circle cx="60" cy="50" r="11" fill="#fcd9b6"/>
+  <!-- Figure middle - eyes -->
+  <circle cx="57" cy="48" r="1.5" fill="#1f2937"/>
+  <circle cx="63" cy="48" r="1.5" fill="#1f2937"/>
+  <!-- Figure middle - smile -->
+  <path d="M56 54 Q60 58 64 54" stroke="#1f2937" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Figure middle - arm raised high -->
+  <rect x="56" y="30" width="8" height="22" rx="4" fill="#fcd9b6" transform="rotate(5 60 41)"/>
+  <!-- Raised fist circle -->
+  <circle cx="60" cy="28" r="6" fill="#fcd9b6"/>
+
+  <!-- Figure right - body -->
+  <rect x="80" y="68" width="22" height="28" rx="8" fill="#db2777"/>
+  <!-- Figure right - head -->
+  <circle cx="91" cy="55" r="10" fill="#fcd9b6"/>
+  <!-- Figure right - eyes -->
+  <circle cx="88" cy="53" r="1.5" fill="#1f2937"/>
+  <circle cx="94" cy="53" r="1.5" fill="#1f2937"/>
+  <!-- Figure right - arm raised -->
+  <rect x="88" y="38" width="7" height="18" rx="3.5" fill="#fcd9b6" transform="rotate(10 91 47)"/>
+  <!-- Figure right - arm side -->
+  <rect x="70" y="68" width="14" height="7" rx="3.5" fill="#fcd9b6"/>
+
+  <!-- Unity band / ground line connecting all three -->
+  <rect x="24" y="94" width="72" height="6" rx="3" fill="#f9a8d4"/>
+  <!-- Three dots above band showing union -->
+  <circle cx="37" cy="91" r="3" fill="#ffffff"/>
+  <circle cx="60" cy="89" r="3" fill="#ffffff"/>
+  <circle cx="83" cy="91" r="3" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="선거권">
+  <title>선거권</title>
+  <rect width="120" height="120" rx="26" fill="#e4f7ec"/>
+  <!-- Ballot box body -->
+  <rect x="28" y="62" width="64" height="42" rx="10" fill="#16a34a"/>
+  <!-- Box slot opening -->
+  <rect x="44" y="58" width="32" height="8" rx="4" fill="#14532d"/>
+  <!-- Ballot paper (folded card going in) -->
+  <rect x="49" y="30" width="22" height="32" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <!-- Check mark on ballot -->
+  <path d="M55 46 L59 52 L68 40" stroke="#16a34a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Lines on ballot (candidate list feel) -->
+  <rect x="53" y="34" width="12" height="2.5" rx="1.2" fill="#d1fae5"/>
+  <rect x="53" y="38.5" width="10" height="2.5" rx="1.2" fill="#d1fae5"/>
+  <!-- Hand inserting ballot -->
+  <!-- Thumb -->
+  <path d="M42 48 Q38 44 40 38 Q42 32 48 36 L50 42" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Palm -->
+  <ellipse cx="46" cy="50" rx="7" ry="5" fill="#fcd9b6"/>
+  <!-- Fingers suggestion -->
+  <path d="M40 48 Q36 52 38 58" stroke="#fcd9b6" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Box bottom highlight stripe -->
+  <rect x="28" y="94" width="64" height="10" rx="8" fill="#14532d" opacity="0.35"/>
+  <!-- Small star / sparkle on box -->
+  <circle cx="82" cy="78" r="4" fill="#f59e0b"/>
+  <circle cx="82" cy="78" r="2" fill="#ffffff"/>
+</svg>

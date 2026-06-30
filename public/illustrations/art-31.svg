@@ -1,0 +1,33 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="교육을 받을 권리">
+  <title>교육을 받을 권리</title>
+  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
+  <!-- Open book base -->
+  <rect x="22" y="54" width="76" height="44" rx="6" fill="#db2777"/>
+  <!-- Book left page -->
+  <rect x="24" y="56" width="34" height="40" rx="4" fill="#ffffff"/>
+  <!-- Book right page -->
+  <rect x="62" y="56" width="34" height="40" rx="4" fill="#fce7f3"/>
+  <!-- Book spine line -->
+  <rect x="58" y="56" width="4" height="40" rx="2" fill="#db2777"/>
+  <!-- Lines on left page -->
+  <rect x="30" y="64" width="20" height="3" rx="1.5" fill="#f9a8d4"/>
+  <rect x="30" y="71" width="20" height="3" rx="1.5" fill="#f9a8d4"/>
+  <rect x="30" y="78" width="14" height="3" rx="1.5" fill="#f9a8d4"/>
+  <!-- Lines on right page -->
+  <rect x="68" y="64" width="20" height="3" rx="1.5" fill="#f9a8d4"/>
+  <rect x="68" y="71" width="20" height="3" rx="1.5" fill="#f9a8d4"/>
+  <rect x="68" y="78" width="14" height="3" rx="1.5" fill="#f9a8d4"/>
+  <!-- Graduation cap base brim -->
+  <ellipse cx="60" cy="39" rx="22" ry="6" fill="#1f2937"/>
+  <!-- Cap top -->
+  <rect x="46" y="25" width="28" height="16" rx="4" fill="#1f2937"/>
+  <!-- Cap highlight -->
+  <rect x="49" y="28" width="22" height="4" rx="2" fill="#374151"/>
+  <!-- Tassel string -->
+  <line x1="80" y1="39" x2="86" y2="52" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tassel end -->
+  <circle cx="86" cy="54" r="3" fill="#f59e0b"/>
+  <!-- Pencil -->
+  <rect x="72" y="26" width="6" height="22" rx="2" fill="#f59e0b" transform="rotate(20 75 37)"/>
+  <polygon points="74.5,44 77.5,44 76,48" fill="#fcd9b6" transform="rotate(20 76 46)"/>
+</svg>

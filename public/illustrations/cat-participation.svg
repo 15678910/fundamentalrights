@@ -1,0 +1,31 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="참정권 - 투표함">
+  <title>참정권 - 투표함</title>
+  <rect width="120" height="120" rx="26" fill="#e4f7ec"/>
+  <!-- Ballot box body -->
+  <rect x="22" y="62" width="76" height="44" rx="10" fill="#16a34a"/>
+  <!-- Ballot box lid -->
+  <rect x="18" y="54" width="84" height="14" rx="7" fill="#15803d"/>
+  <!-- Slot in lid -->
+  <rect x="48" y="58" width="24" height="5" rx="2.5" fill="#052e16"/>
+  <!-- Ballot paper going in -->
+  <rect x="50" y="30" width="20" height="32" rx="4" fill="#ffffff"/>
+  <!-- Check mark on ballot -->
+  <path d="M56 46 L60 51 L68 40" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Ballot lines (form fields) -->
+  <rect x="54" y="35" width="12" height="2.5" rx="1.2" fill="#d1fae5"/>
+  <!-- Hand holding ballot -->
+  <path d="M54 44 Q42 44 38 34" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Thumb -->
+  <circle cx="54" cy="44" r="5" fill="#fcd9b6"/>
+  <path d="M48 38 Q44 32 46 28" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Star accent left -->
+  <circle cx="30" cy="78" r="4" fill="#4ade80" opacity="0.6"/>
+  <circle cx="90" cy="78" r="4" fill="#4ade80" opacity="0.6"/>
+  <!-- Small circles on box face (rivets) -->
+  <circle cx="36" cy="72" r="3" fill="#15803d"/>
+  <circle cx="84" cy="72" r="3" fill="#15803d"/>
+  <!-- Bottom of box -->
+  <rect x="30" y="98" width="60" height="6" rx="3" fill="#14532d"/>
+  <!-- Decorative stripes on box -->
+  <rect x="22" y="80" width="76" height="4" rx="2" fill="#15803d" opacity="0.5"/>
+</svg>

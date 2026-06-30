@@ -1,0 +1,28 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="주거의 자유">
+  <title>주거의 자유</title>
+  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
+  <!-- House body -->
+  <rect x="28" y="58" width="64" height="46" rx="8" fill="#0891b2"/>
+  <!-- Roof -->
+  <path d="M18 62 L60 24 L102 62Z" fill="#1f2937" stroke="#1f2937" stroke-linejoin="round"/>
+  <!-- Roof highlight ridge -->
+  <path d="M60 24 L60 62" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+  <!-- Door -->
+  <rect x="50" y="76" width="20" height="28" rx="6" fill="#ffffff" opacity="0.9"/>
+  <!-- Door knob -->
+  <circle cx="64" cy="91" r="2.2" fill="#f59e0b"/>
+  <!-- Window left -->
+  <rect x="32" y="66" width="14" height="14" rx="4" fill="#ffffff" opacity="0.85"/>
+  <line x1="39" y1="66" x2="39" y2="80" stroke="#0891b2" stroke-width="1.5"/>
+  <line x1="32" y1="73" x2="46" y2="73" stroke="#0891b2" stroke-width="1.5"/>
+  <!-- Window right -->
+  <rect x="74" y="66" width="14" height="14" rx="4" fill="#ffffff" opacity="0.85"/>
+  <line x1="81" y1="66" x2="81" y2="80" stroke="#0891b2" stroke-width="1.5"/>
+  <line x1="74" y1="73" x2="88" y2="73" stroke="#0891b2" stroke-width="1.5"/>
+  <!-- Shield badge (lock/protection) -->
+  <path d="M84 36 C84 36 94 40 94 50 C94 57 89 62 84 64 C79 62 74 57 74 50 C74 40 84 36 84 36Z" fill="#f59e0b"/>
+  <!-- Lock icon inside shield -->
+  <rect x="80" y="51" width="8" height="6" rx="2" fill="#ffffff"/>
+  <path d="M81 51 Q81 46 84 46 Q87 46 87 51" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <circle cx="84" cy="54" r="1.2" fill="#f59e0b"/>
+</svg>

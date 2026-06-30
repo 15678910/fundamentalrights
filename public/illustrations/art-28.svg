@@ -1,0 +1,43 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="형사보상청구권">
+  <title>형사보상청구권</title>
+  <rect width="120" height="120" rx="26" fill="#fbf1da"/>
+  <!-- Open door frame -->
+  <rect x="32" y="28" width="42" height="74" rx="8" fill="#ca8a04"/>
+  <!-- Door opening (open, light behind) -->
+  <rect x="36" y="32" width="30" height="66" rx="6" fill="#fde68a"/>
+  <!-- Door panel swung open -->
+  <rect x="60" y="28" width="20" height="74" rx="8" fill="#f59e0b"/>
+  <!-- Door knob on panel -->
+  <circle cx="62" cy="66" r="3.5" fill="#ca8a04"/>
+  <!-- Light rays from open door -->
+  <line x1="40" y1="60" x2="26" y2="52" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="40" y1="65" x2="24" y2="65" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="40" y1="70" x2="26" y2="78" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Figure walking out (freedom) -->
+  <!-- Body -->
+  <rect x="79" y="64" width="16" height="22" rx="8" fill="#ca8a04"/>
+  <!-- Head -->
+  <circle cx="87" cy="56" r="11" fill="#fcd9b6"/>
+  <!-- Eyes happy -->
+  <circle cx="83.5" cy="54" r="2" fill="#1f2937"/>
+  <circle cx="90.5" cy="54" r="2" fill="#1f2937"/>
+  <circle cx="84.2" cy="53.2" r="0.8" fill="#ffffff"/>
+  <circle cx="91.2" cy="53.2" r="0.8" fill="#ffffff"/>
+  <!-- Happy smile -->
+  <path d="M82 59 Q87 64 92 59" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <!-- Cheeks rosy -->
+  <circle cx="79" cy="57" r="3" fill="#f59e0b" opacity="0.4"/>
+  <circle cx="95" cy="57" r="3" fill="#f59e0b" opacity="0.4"/>
+  <!-- Arms (celebratory raise) -->
+  <path d="M79 70 Q70 62 66 54" stroke="#fcd9b6" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+  <circle cx="65" cy="52" r="4.5" fill="#fcd9b6"/>
+  <path d="M95 70 Q102 62 104 54" stroke="#fcd9b6" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+  <circle cx="104" cy="52" r="4.5" fill="#fcd9b6"/>
+  <!-- Coin (restitution) near figure -->
+  <circle cx="73" cy="90" r="8" fill="#f59e0b"/>
+  <circle cx="73" cy="90" r="5.5" fill="#fde68a"/>
+  <!-- Hair -->
+  <ellipse cx="87" cy="46" rx="9" ry="4" fill="#1f2937"/>
+  <ellipse cx="79" cy="49" rx="4" ry="3.5" fill="#1f2937"/>
+  <ellipse cx="95" cy="49" rx="4" ry="3.5" fill="#1f2937"/>
+</svg>

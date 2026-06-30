@@ -1,0 +1,37 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기본권 제한의 원칙">
+  <title>기본권 제한의 원칙</title>
+  <rect width="120" height="120" rx="26" fill="#efe7fd"/>
+  <!-- Shield outer -->
+  <path d="M60 18 L90 30 L90 66 C90 84 60 102 60 102 C60 102 30 84 30 66 L30 30 Z" fill="#7c3aed"/>
+  <!-- Shield inner -->
+  <path d="M60 26 L84 36 L84 66 C84 80 60 95 60 95 C60 95 36 80 36 66 L36 36 Z" fill="#8b5cf6"/>
+  <!-- Shield highlight -->
+  <path d="M60 30 L80 39 L80 44" stroke="#a78bfa" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Balance scale beam -->
+  <rect x="50" y="52" width="20" height="4" rx="2" fill="#ffffff"/>
+  <!-- Scale center post -->
+  <rect x="58" y="56" width="4" height="18" rx="2" fill="#ffffff"/>
+  <!-- Scale base -->
+  <rect x="50" y="72" width="20" height="4" rx="2" fill="#ffffff"/>
+
+  <!-- Left pan string -->
+  <line x1="52" y1="56" x2="44" y2="64" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Right pan string -->
+  <line x1="68" y1="56" x2="76" y2="64" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Left pan -->
+  <path d="M38 64 Q44 68 50 64" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Right pan -->
+  <path d="M70 64 Q76 68 82 64" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Small coin on left pan -->
+  <circle cx="44" cy="63" r="3" fill="#f59e0b"/>
+  <!-- Small coin on right pan -->
+  <circle cx="76" cy="63" r="3" fill="#f59e0b"/>
+
+  <!-- Decorative dots at shield top corners -->
+  <circle cx="42" cy="36" r="3" fill="#c4b5fd"/>
+  <circle cx="78" cy="36" r="3" fill="#c4b5fd"/>
+  <!-- Star at top of shield -->
+  <polygon points="60,20 62,26 68,26 63,30 65,36 60,32 55,36 57,30 52,26 58,26" fill="#f59e0b"/>
+</svg>

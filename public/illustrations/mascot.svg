@@ -1,0 +1,37 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="마스코트 캐릭터">
+  <title>마스코트 캐릭터</title>
+  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
+  <!-- Body -->
+  <rect x="44" y="68" width="32" height="28" rx="14" fill="#0891b2"/>
+  <!-- Head -->
+  <circle cx="60" cy="54" r="22" fill="#fcd9b6"/>
+  <!-- Eyes -->
+  <circle cx="52" cy="51" r="3.5" fill="#1f2937"/>
+  <circle cx="68" cy="51" r="3.5" fill="#1f2937"/>
+  <!-- Eye shine -->
+  <circle cx="53.5" cy="49.5" r="1.2" fill="#ffffff"/>
+  <circle cx="69.5" cy="49.5" r="1.2" fill="#ffffff"/>
+  <!-- Smile -->
+  <path d="M52 59 Q60 66 68 59" stroke="#1f2937" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <!-- Rosy cheeks -->
+  <circle cx="46" cy="57" r="4" fill="#f59e0b" opacity="0.35"/>
+  <circle cx="74" cy="57" r="4" fill="#f59e0b" opacity="0.35"/>
+  <!-- Left arm waving up -->
+  <path d="M44 76 Q30 68 26 56" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <!-- Left hand -->
+  <circle cx="26" cy="54" r="6" fill="#fcd9b6"/>
+  <!-- Right arm down -->
+  <path d="M76 76 Q90 80 94 90" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <!-- Right hand -->
+  <circle cx="94" cy="92" r="6" fill="#fcd9b6"/>
+  <!-- Legs -->
+  <rect x="47" y="92" width="10" height="16" rx="5" fill="#0891b2"/>
+  <rect x="63" y="92" width="10" height="16" rx="5" fill="#0891b2"/>
+  <!-- Shoes -->
+  <ellipse cx="52" cy="109" rx="7" ry="4.5" fill="#1f2937"/>
+  <ellipse cx="68" cy="109" rx="7" ry="4.5" fill="#1f2937"/>
+  <!-- Hair -->
+  <ellipse cx="60" cy="33" rx="18" ry="8" fill="#1f2937"/>
+  <ellipse cx="46" cy="37" rx="7" ry="6" fill="#1f2937"/>
+  <ellipse cx="74" cy="37" rx="7" ry="6" fill="#1f2937"/>
+</svg>

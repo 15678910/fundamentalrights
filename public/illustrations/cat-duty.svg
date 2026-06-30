@@ -1,0 +1,33 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기본의무 - 두 손이 방패를 받쳐 들다">
+  <title>기본의무 - 두 손이 방패를 받쳐 들다</title>
+  <rect width="120" height="120" rx="26" fill="#eef1f5"/>
+  <!-- Shield -->
+  <path d="M60 20 L90 32 L90 62 Q90 86 60 100 Q30 86 30 62 L30 32Z" fill="#64748b"/>
+  <!-- Shield inner layer -->
+  <path d="M60 28 L84 38 L84 62 Q84 82 60 94 Q36 82 36 62 L36 38Z" fill="#94a3b8"/>
+  <!-- Shield star / check mark -->
+  <path d="M48 60 L56 70 L74 48" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Left hand (palm up, supporting) -->
+  <!-- Left palm -->
+  <rect x="14" y="82" width="36" height="20" rx="8" fill="#fcd9b6"/>
+  <!-- Left fingers curled up -->
+  <rect x="16" y="68" width="8" height="20" rx="4" fill="#fcd9b6"/>
+  <rect x="26" y="65" width="8" height="23" rx="4" fill="#fcd9b6"/>
+  <rect x="36" y="67" width="8" height="21" rx="4" fill="#fcd9b6"/>
+  <rect x="44" y="72" width="6" height="16" rx="3" fill="#fcd9b6"/>
+  <!-- Left thumb -->
+  <ellipse cx="12" cy="88" rx="6" ry="4.5" fill="#fcd9b6" transform="rotate(15 12 88)"/>
+  <!-- Right hand (palm up, supporting) -->
+  <!-- Right palm -->
+  <rect x="70" y="82" width="36" height="20" rx="8" fill="#fcd9b6"/>
+  <!-- Right fingers curled up -->
+  <rect x="96" y="68" width="8" height="20" rx="4" fill="#fcd9b6"/>
+  <rect x="86" y="65" width="8" height="23" rx="4" fill="#fcd9b6"/>
+  <rect x="76" y="67" width="8" height="21" rx="4" fill="#fcd9b6"/>
+  <rect x="70" y="72" width="6" height="16" rx="3" fill="#fcd9b6"/>
+  <!-- Right thumb -->
+  <ellipse cx="108" cy="88" rx="6" ry="4.5" fill="#fcd9b6" transform="rotate(-15 108 88)"/>
+  <!-- Decorative dots -->
+  <circle cx="22" cy="26" r="3.5" fill="#64748b" opacity="0.3"/>
+  <circle cx="98" cy="26" r="3.5" fill="#64748b" opacity="0.3"/>
+</svg>

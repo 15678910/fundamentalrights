@@ -1,0 +1,22 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="국가배상청구권">
+  <title>국가배상청구권</title>
+  <rect width="120" height="120" rx="26" fill="#fbf1da"/>
+  <!-- Shield outer -->
+  <path d="M60 18 L96 34 L96 72 Q96 96 60 108 Q24 96 24 72 L24 34 Z" fill="#ca8a04"/>
+  <!-- Shield inner face -->
+  <path d="M60 26 L88 39 L88 72 Q88 92 60 102 Q32 92 32 72 L32 39 Z" fill="#fde68a"/>
+  <!-- Shield rim highlight -->
+  <path d="M60 22 L92 37 L92 72 Q92 94 60 105" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <!-- Coin circle (restitution / compensation) -->
+  <circle cx="60" cy="62" r="22" fill="#f59e0b"/>
+  <circle cx="60" cy="62" r="17" fill="#ca8a04"/>
+  <circle cx="60" cy="62" r="12" fill="#fde68a"/>
+  <!-- Bandage cross on coin (state makes amends / heals harm) -->
+  <!-- Horizontal band -->
+  <rect x="50" y="58" width="20" height="8" rx="4" fill="#ffffff"/>
+  <!-- Vertical band -->
+  <rect x="56" y="52" width="8" height="20" rx="4" fill="#ffffff"/>
+  <!-- Cross detail dots -->
+  <circle cx="54" cy="62" r="1.5" fill="#ca8a04" opacity="0.4"/>
+  <circle cx="66" cy="62" r="1.5" fill="#ca8a04" opacity="0.4"/>
+</svg>

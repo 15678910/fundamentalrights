@@ -1,0 +1,42 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기본권 영웅 장면">
+  <title>기본권 영웅 장면</title>
+  <rect width="120" height="120" rx="26" fill="#efe7fd"/>
+  <!-- Large open book -->
+  <rect x="18" y="62" width="84" height="46" rx="8" fill="#ffffff"/>
+  <!-- Book spine -->
+  <rect x="57" y="62" width="6" height="46" rx="3" fill="#c4b5fd"/>
+  <!-- Book left page lines -->
+  <rect x="26" y="72" width="26" height="3" rx="1.5" fill="#7c3aed" opacity="0.25"/>
+  <rect x="26" y="80" width="22" height="3" rx="1.5" fill="#7c3aed" opacity="0.25"/>
+  <rect x="26" y="88" width="24" height="3" rx="1.5" fill="#7c3aed" opacity="0.25"/>
+  <!-- Book right page lines -->
+  <rect x="68" y="72" width="26" height="3" rx="1.5" fill="#7c3aed" opacity="0.25"/>
+  <rect x="68" y="80" width="22" height="3" rx="1.5" fill="#7c3aed" opacity="0.25"/>
+  <rect x="68" y="88" width="24" height="3" rx="1.5" fill="#7c3aed" opacity="0.25"/>
+  <!-- Star on book (center top) -->
+  <polygon points="60,56 62.4,63 69.5,63 63.8,67.5 66,74.5 60,70 54,74.5 56.2,67.5 50.5,63 57.6,63" fill="#f59e0b"/>
+  <!-- Figure left (smaller, child) -->
+  <circle cx="32" cy="46" r="9" fill="#fcd9b6"/>
+  <rect x="26" y="55" width="12" height="16" rx="6" fill="#2563eb"/>
+  <ellipse cx="32" cy="72" rx="7" ry="4" fill="#2563eb" opacity="0.6"/>
+  <!-- Left figure hair -->
+  <ellipse cx="32" cy="38" rx="8" ry="5" fill="#1f2937"/>
+  <!-- Left figure smile -->
+  <path d="M28.5 48.5 Q32 52 35.5 48.5" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Figure center (taller, adult) -->
+  <circle cx="60" cy="36" r="11" fill="#fcd9b6"/>
+  <rect x="52" y="47" width="16" height="20" rx="7" fill="#7c3aed"/>
+  <ellipse cx="60" cy="68" rx="9" ry="5" fill="#7c3aed" opacity="0.6"/>
+  <!-- Center figure hair -->
+  <ellipse cx="60" cy="26" rx="9.5" ry="5.5" fill="#1f2937"/>
+  <!-- Center figure smile -->
+  <path d="M55.5 38.5 Q60 43 64.5 38.5" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <!-- Figure right (medium, teen) -->
+  <circle cx="88" cy="44" r="10" fill="#fcd9b6"/>
+  <rect x="81" y="54" width="14" height="18" rx="6" fill="#16a34a"/>
+  <ellipse cx="88" cy="73" rx="8" ry="4.5" fill="#16a34a" opacity="0.6"/>
+  <!-- Right figure hair -->
+  <ellipse cx="88" cy="35" rx="9" ry="6" fill="#f59e0b"/>
+  <!-- Right figure smile -->
+  <path d="M83.5 47 Q88 51 92.5 47" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+</svg>

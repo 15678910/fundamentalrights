@@ -1,0 +1,32 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="재판을 받을 권리">
+  <title>재판을 받을 권리</title>
+  <rect width="120" height="120" rx="26" fill="#fbf1da"/>
+  <!-- Courthouse columns -->
+  <rect x="22" y="48" width="10" height="48" rx="5" fill="#ca8a04"/>
+  <rect x="38" y="48" width="10" height="48" rx="5" fill="#ca8a04"/>
+  <rect x="72" y="48" width="10" height="48" rx="5" fill="#ca8a04"/>
+  <rect x="88" y="48" width="10" height="48" rx="5" fill="#ca8a04"/>
+  <!-- Courthouse base / steps -->
+  <rect x="18" y="92" width="84" height="8" rx="4" fill="#ca8a04"/>
+  <rect x="22" y="98" width="76" height="8" rx="4" fill="#f59e0b" opacity="0.6"/>
+  <!-- Roof / pediment -->
+  <polygon points="60,16 16,48 104,48" fill="#ca8a04"/>
+  <!-- Roof highlight edge -->
+  <polygon points="60,22 22,46 98,46" fill="#f59e0b" opacity="0.25"/>
+  <!-- Balance scale post -->
+  <rect x="57" y="44" width="6" height="38" rx="3" fill="#1f2937"/>
+  <!-- Scale beam -->
+  <rect x="34" y="56" width="52" height="5" rx="2.5" fill="#1f2937"/>
+  <!-- Left scale pan chain -->
+  <line x1="40" y1="61" x2="38" y2="74" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="46" y1="61" x2="48" y2="74" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left pan -->
+  <path d="M35 74 Q42 80 49 74" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" fill="#fde68a"/>
+  <!-- Right scale pan chain -->
+  <line x1="74" y1="61" x2="72" y2="74" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="80" y1="61" x2="82" y2="74" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right pan -->
+  <path d="M69 74 Q76 80 83 74" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" fill="#fde68a"/>
+  <!-- Pivot circle -->
+  <circle cx="60" cy="56" r="4" fill="#f59e0b"/>
+</svg>
