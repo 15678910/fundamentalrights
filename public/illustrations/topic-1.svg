@@ -1,0 +1,33 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="민주주의">
+  <title>민주주의</title>
+  <rect width="120" height="120" rx="26" fill="#e5edff"/>
+  <!-- Building base -->
+  <rect x="24" y="58" width="72" height="36" rx="6" fill="#2563eb"/>
+  <!-- Roof / pediment -->
+  <polygon points="18,58 60,34 102,58" fill="#1d4ed8"/>
+  <!-- Star on pediment -->
+  <polygon points="60,39 62.4,46 69.6,46 63.8,50.4 66.2,57.6 60,53.2 53.8,57.6 56.2,50.4 50.4,46 57.6,46" fill="#f59e0b"/>
+  <!-- Columns -->
+  <rect x="30" y="60" width="8" height="32" rx="4" fill="#93c5fd"/>
+  <rect x="46" y="60" width="8" height="32" rx="4" fill="#93c5fd"/>
+  <rect x="66" y="60" width="8" height="32" rx="4" fill="#93c5fd"/>
+  <rect x="82" y="60" width="8" height="32" rx="4" fill="#93c5fd"/>
+  <!-- Ground line -->
+  <rect x="20" y="92" width="80" height="6" rx="3" fill="#1d4ed8"/>
+  <!-- Person left -->
+  <circle cx="32" cy="26" r="8" fill="#fcd9b6"/>
+  <rect x="27" y="33" width="10" height="12" rx="5" fill="#2563eb"/>
+  <!-- Person right -->
+  <circle cx="88" cy="26" r="8" fill="#fcd9b6"/>
+  <rect x="83" y="33" width="10" height="12" rx="5" fill="#2563eb"/>
+  <!-- Person center -->
+  <circle cx="60" cy="22" r="8" fill="#fcd9b6"/>
+  <rect x="55" y="29" width="10" height="12" rx="5" fill="#f59e0b"/>
+  <!-- Connection dots -->
+  <circle cx="40" cy="26" r="3" fill="#2563eb"/>
+  <circle cx="52" cy="22" r="3" fill="#2563eb"/>
+  <circle cx="68" cy="22" r="3" fill="#2563eb"/>
+  <circle cx="80" cy="26" r="3" fill="#2563eb"/>
+  <line x1="40" y1="26" x2="52" y2="22" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <line x1="68" y1="22" x2="80" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -2,9 +2,172 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const terms = (await getCollection("glossary")).sort((a, b) => a.data.term.localeCompare(b.data.term, "ko"));
+const gameData = terms.map((t) => ({ term: t.data.term, short: t.data.short }));
 ---
 <BaseLayout title="용어 사전 | 우리 헌법 기본권">
   <h1>용어 사전</h1>
+
+  <!-- 용어 짝맞추기 게임 -->
+  <section id="matching-game" aria-label="용어 짝맞추기 게임" style="margin-bottom:2.5rem;">
+    <h2 style="margin-bottom:.5rem;">용어 짝맞추기</h2>
+    <p style="margin-bottom:1rem;color:var(--text-muted,#666);">용어 카드를 먼저 클릭하고, 알맞은 뜻 카드를 클릭해 보세요!</p>
+    <div id="game-status" role="status" aria-live="polite" style="margin-bottom:.75rem;font-weight:600;min-height:1.5em;"></div>
+    <div id="game-board" style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;"></div>
+    <div id="game-controls" style="margin-top:1rem;display:none;">
+      <button id="restart-btn" type="button" style="padding:.5rem 1.25rem;background:var(--accent,#2563eb);color:#fff;border:none;border-radius:.375rem;cursor:pointer;font-size:1rem;font-weight:600;">다시 하기</button>
+    </div>
+  </section>
+
+  <!-- JSON data for the inline script — no Astro vars inside is:inline -->
+  <script type="application/json" id="glossary-data" set:html={JSON.stringify(gameData)}></script>
+
+  <script is:inline>
+  (function () {
+    var el = document.getElementById("glossary-data");
+    var allTerms = el ? JSON.parse(el.textContent) : [];
+
+    var board = document.getElementById("game-board");
+    var statusEl = document.getElementById("game-status");
+    var controls = document.getElementById("game-controls");
+    var restartBtn = document.getElementById("restart-btn");
+    var section = document.getElementById("matching-game");
+
+    if (!allTerms || allTerms.length < 2) {
+      if (section) section.style.display = "none";
+      return;
+    }
+
+    var PICK = Math.min(6, allTerms.length);
+    var selectedTerm = null;
+    var matchedCount = 0;
+
+    function shuffle(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+      }
+      return a;
+    }
+
+    function cardStyle(base) {
+      return "display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem .75rem;border:2px solid var(--border,#d1d5db);border-radius:.5rem;cursor:pointer;background:var(--card-bg,#fff);font-size:.9rem;line-height:1.4;min-height:4rem;width:100%;box-sizing:border-box;transition:background .15s,border-color .15s;" + (base || "");
+    }
+
+    function startRound() {
+      selectedTerm = null;
+      matchedCount = 0;
+      statusEl.textContent = "";
+      controls.style.display = "none";
+      board.innerHTML = "";
+
+      var picked = shuffle(allTerms).slice(0, PICK);
+      var termOrder = shuffle(picked.slice());
+      var defOrder = shuffle(picked.slice());
+
+      var termCol = document.createElement("div");
+      termCol.style.cssText = "display:flex;flex-direction:column;gap:.5rem;";
+      var defCol = document.createElement("div");
+      defCol.style.cssText = "display:flex;flex-direction:column;gap:.5rem;";
+
+      termOrder.forEach(function (item) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.setAttribute("style", cardStyle("font-weight:700;"));
+        btn.textContent = item.term;
+        btn.dataset.term = item.term;
+        btn.dataset.kind = "term";
+        btn.addEventListener("click", onCardClick);
+        termCol.appendChild(btn);
+      });
+
+      defOrder.forEach(function (item) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.setAttribute("style", cardStyle("color:var(--text,#111);"));
+        btn.textContent = item.short;
+        btn.dataset.term = item.term;
+        btn.dataset.kind = "def";
+        btn.addEventListener("click", onCardClick);
+        defCol.appendChild(btn);
+      });
+
+      board.appendChild(termCol);
+      board.appendChild(defCol);
+    }
+
+    function onCardClick(e) {
+      var btn = e.currentTarget;
+      // ignore locked cards
+      if (btn.dataset.locked === "1") return;
+
+      if (btn.dataset.kind === "term") {
+        // deselect previous term if any
+        if (selectedTerm && selectedTerm !== btn) {
+          selectedTerm.setAttribute("style", cardStyle("font-weight:700;"));
+        }
+        selectedTerm = btn;
+        btn.setAttribute("style", cardStyle("font-weight:700;border-color:#2563eb;background:#eff6ff;"));
+        return;
+      }
+
+      // clicked a definition card
+      if (!selectedTerm) {
+        // highlight briefly to hint user should pick term first
+        btn.setAttribute("style", cardStyle("border-color:#f59e0b;background:#fffbeb;"));
+        setTimeout(function () {
+          if (btn.dataset.locked !== "1") {
+            btn.setAttribute("style", cardStyle(""));
+          }
+        }, 500);
+        return;
+      }
+
+      var termKey = selectedTerm.dataset.term;
+      var defKey = btn.dataset.term;
+
+      if (termKey === defKey) {
+        // Correct match
+        var lockStyle = "display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem .75rem;border:2px solid #16a34a;border-radius:.5rem;background:#f0fdf4;font-size:.9rem;line-height:1.4;min-height:4rem;width:100%;box-sizing:border-box;cursor:default;";
+        selectedTerm.setAttribute("style", lockStyle + "font-weight:700;color:#166534;");
+        btn.setAttribute("style", lockStyle + "color:#166534;");
+        selectedTerm.dataset.locked = "1";
+        btn.dataset.locked = "1";
+        selectedTerm.removeEventListener("click", onCardClick);
+        btn.removeEventListener("click", onCardClick);
+        selectedTerm = null;
+        matchedCount++;
+        statusEl.textContent = matchedCount + " / " + PICK + " 맞췄어요!";
+        if (matchedCount === PICK) {
+          statusEl.textContent = "잘했어요! 모두 맞췄어요! 🎉";
+          controls.style.display = "block";
+        }
+      } else {
+        // Wrong match — flash red then reset
+        var wrongStyleTerm = cardStyle("font-weight:700;border-color:#dc2626;background:#fef2f2;");
+        var wrongStyleDef = cardStyle("border-color:#dc2626;background:#fef2f2;");
+        selectedTerm.setAttribute("style", wrongStyleTerm);
+        btn.setAttribute("style", wrongStyleDef);
+        var prevTerm = selectedTerm;
+        selectedTerm = null;
+        setTimeout(function () {
+          if (prevTerm.dataset.locked !== "1") {
+            prevTerm.setAttribute("style", cardStyle("font-weight:700;"));
+          }
+          if (btn.dataset.locked !== "1") {
+            btn.setAttribute("style", cardStyle(""));
+          }
+        }, 700);
+      }
+    }
+
+    restartBtn.addEventListener("click", startRound);
+    startRound();
+  })();
+  </script>
+
+  <!-- 전체 용어 목록 -->
+  <h2>전체 용어 목록</h2>
   <dl>
     {terms.map((t) => (
       <div id={t.data.term} style="margin:1rem 0;padding-bottom:1rem;border-bottom:1px solid var(--border)">

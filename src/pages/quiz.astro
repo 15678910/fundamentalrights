@@ -1,17 +1,24 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CATEGORIES } from "../lib/categories";
 
 const rights = await getCollection("rights");
 const pool = rights.flatMap((r) =>
-  (r.data.quiz ?? []).map((q) => ({
-    q: q.question,
-    options: q.options,
-    answer: q.answer,
-    explanation: q.explanation,
-    article: r.data.article,
-    title: r.data.title,
-  }))
+  (r.data.quiz ?? []).map((q) => {
+    const cat = CATEGORIES.find((c) => c.key === r.data.category);
+    return {
+      q: q.question,
+      options: q.options,
+      answer: q.answer,
+      explanation: q.explanation,
+      article: r.data.article,
+      title: r.data.title,
+      category: r.data.category ?? "",
+      categoryLabel: cat?.label ?? "",
+      categoryColor: cat?.color ?? "",
+    };
+  })
 );
 const base = import.meta.env.BASE_URL;
 const dataJson = JSON.stringify(pool);
@@ -32,7 +39,18 @@ const dataJson = JSON.stringify(pool);
         <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center">
           <div style="font-size:3rem;margin-bottom:.5rem">🏛️</div>
           <h2 style="margin:.2rem 0 .6rem">기본권 퀴즈</h2>
-          <p style="color:var(--muted);margin-bottom:1.5rem">총 <strong id="pool-count"></strong>개 문제 중 10개를 골라 풀어볼 거예요.<br>한 문제씩 읽고 정답을 골라 보세요!</p>
+          <p style="color:var(--muted);margin-bottom:1.25rem">문제를 골라 풀어볼 거예요.<br>한 문제씩 읽고 정답을 골라 보세요!</p>
+
+          <!-- Category selector -->
+          <div style="margin-bottom:1.5rem">
+            <p style="font-size:.85rem;font-weight:700;color:var(--muted);margin:0 0 .6rem;letter-spacing:.03em;text-transform:uppercase">주제별 선택</p>
+            <div id="cat-buttons" style="display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center"></div>
+          </div>
+
+          <p style="color:var(--muted);margin-bottom:1.25rem;font-size:.93rem">
+            선택한 분야에서 <strong id="pool-count"></strong>개 문제를 풀게 됩니다.
+          </p>
+
           <button id="btn-start" style="background:var(--accent);color:#fff;border:none;border-radius:999px;padding:.75rem 2.5rem;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:inherit">
             퀴즈 시작
           </button>
@@ -47,6 +65,9 @@ const dataJson = JSON.stringify(pool);
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
           <span id="q-counter" style="font-size:.9rem;color:var(--muted);font-weight:600"></span>
           <span id="q-score-live" style="font-size:.9rem;color:var(--muted)"></span>
+        </div>
+        <div id="q-category-badge" style="display:none;margin-bottom:.75rem;text-align:center">
+          <span id="q-category-label" style="display:inline-block;padding:.25rem .85rem;border-radius:999px;font-size:.8rem;font-weight:700;color:#fff"></span>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem 1.75rem">
           <p id="q-context" style="font-size:.82rem;font-weight:700;color:var(--accent);margin:0 0 .6rem;letter-spacing:.01em"></p>
@@ -66,8 +87,9 @@ const dataJson = JSON.stringify(pool);
         <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center">
           <div id="result-emoji" style="font-size:3.5rem;margin-bottom:.5rem"></div>
           <h2 style="margin:.2rem 0 .4rem">퀴즈 완료!</h2>
+          <p id="result-category-line" style="font-size:.85rem;color:var(--muted);margin:.1rem 0 .3rem"></p>
           <p style="font-size:1.35rem;font-weight:700;margin:.4rem 0 .2rem">
-            10문제 중 <span id="result-score"></span>개 정답
+            <span id="result-total"></span>문제 중 <span id="result-score"></span>개 정답
           </p>
           <p id="result-msg" style="color:var(--muted);margin:.4rem 0 1.6rem"></p>
           <button id="btn-retry" style="background:var(--accent);color:#fff;border:none;border-radius:999px;padding:.75rem 2.5rem;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:inherit">
@@ -137,6 +159,30 @@ const dataJson = JSON.stringify(pool);
   #btn-start:hover, #btn-retry:hover, #btn-next:hover {
     opacity: .88;
   }
+
+  /* Category selector buttons */
+  .cat-btn {
+    border-radius: 999px;
+    padding: .38rem 1rem;
+    font-size: .88rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: opacity .15s, box-shadow .15s, border-color .15s;
+    line-height: 1.4;
+  }
+  .cat-btn:hover {
+    opacity: .85;
+  }
+  .cat-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .cat-btn[aria-pressed="true"] {
+    box-shadow: 0 0 0 3px rgba(0,0,0,.18);
+    border-color: rgba(255,255,255,.5);
+  }
 </style>
 
 <script is:inline>
@@ -148,13 +194,22 @@ const dataJson = JSON.stringify(pool);
   try { allPool = JSON.parse(dataEl.textContent); } catch (e) { return; }
   if (!allPool || allPool.length === 0) return;
 
-  var ROUND_SIZE = Math.min(10, allPool.length);
+  // Derive distinct categories present in pool (preserving order by first appearance)
+  var catMap = {};
+  var catOrder = [];
+  allPool.forEach(function (item) {
+    if (item.category && !catMap[item.category]) {
+      catMap[item.category] = { key: item.category, label: item.categoryLabel, color: item.categoryColor };
+      catOrder.push(item.category);
+    }
+  });
 
   // Elements
   var screenStart    = document.getElementById('screen-start');
   var screenQuestion = document.getElementById('screen-question');
   var screenResult   = document.getElementById('screen-result');
   var poolCountEl    = document.getElementById('pool-count');
+  var catButtonsEl   = document.getElementById('cat-buttons');
   var qCounter       = document.getElementById('q-counter');
   var qScoreLive     = document.getElementById('q-score-live');
   var qContext       = document.getElementById('q-context');
@@ -164,16 +219,83 @@ const dataJson = JSON.stringify(pool);
   var btnNext        = document.getElementById('btn-next');
   var resultEmoji    = document.getElementById('result-emoji');
   var resultScore    = document.getElementById('result-score');
+  var resultTotal    = document.getElementById('result-total');
   var resultMsg      = document.getElementById('result-msg');
+  var resultCatLine  = document.getElementById('result-category-line');
   var btnStart       = document.getElementById('btn-start');
   var btnRetry       = document.getElementById('btn-retry');
-
-  if (poolCountEl) poolCountEl.textContent = allPool.length;
+  var qCatBadge      = document.getElementById('q-category-badge');
+  var qCatLabel      = document.getElementById('q-category-label');
 
   // State
+  var selectedCategory = null; // null = 전체
   var round = [];
+  var roundSize = 0;
   var current = 0;
   var score = 0;
+
+  // Build category buttons
+  function buildCatButtons() {
+    catButtonsEl.innerHTML = '';
+
+    // "전체" button
+    var allBtn = document.createElement('button');
+    allBtn.className = 'cat-btn';
+    allBtn.textContent = '전체';
+    allBtn.setAttribute('aria-pressed', 'true');
+    allBtn.style.background = 'var(--accent)';
+    allBtn.style.color = '#fff';
+    allBtn.dataset.cat = '';
+    allBtn.addEventListener('click', function () { selectCategory(null, allBtn); });
+    catButtonsEl.appendChild(allBtn);
+
+    catOrder.forEach(function (key) {
+      var info = catMap[key];
+      var btn = document.createElement('button');
+      btn.className = 'cat-btn';
+      btn.textContent = info.label;
+      btn.setAttribute('aria-pressed', 'false');
+      btn.style.background = info.color;
+      btn.style.color = '#fff';
+      btn.dataset.cat = key;
+      btn.addEventListener('click', function () { selectCategory(key, btn); });
+      catButtonsEl.appendChild(btn);
+    });
+  }
+
+  function selectCategory(key, clickedBtn) {
+    selectedCategory = key || null;
+    // Update aria-pressed states
+    var allBtns = catButtonsEl.querySelectorAll('.cat-btn');
+    allBtns.forEach(function (b) {
+      var isSelected = (key == null ? b.dataset.cat === '' : b.dataset.cat === key);
+      b.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+      b.style.opacity = isSelected ? '1' : '.6';
+      if (isSelected) {
+        b.style.boxShadow = '0 0 0 3px rgba(0,0,0,.2)';
+        b.style.borderColor = 'rgba(255,255,255,.5)';
+      } else {
+        b.style.boxShadow = '';
+        b.style.borderColor = 'transparent';
+      }
+    });
+    updatePoolCount();
+  }
+
+  function getFilteredPool() {
+    if (!selectedCategory) return allPool;
+    return allPool.filter(function (item) { return item.category === selectedCategory; });
+  }
+
+  function updatePoolCount() {
+    var filtered = getFilteredPool();
+    var count = Math.min(10, filtered.length);
+    if (poolCountEl) poolCountEl.textContent = count;
+  }
+
+  buildCatButtons();
+  // Default selection highlight for "전체"
+  selectCategory(null, catButtonsEl.querySelector('.cat-btn'));
 
   function shuffle(arr) {
     var a = arr.slice();
@@ -185,7 +307,9 @@ const dataJson = JSON.stringify(pool);
   }
 
   function startRound() {
-    round = shuffle(allPool).slice(0, ROUND_SIZE);
+    var filtered = getFilteredPool();
+    roundSize = Math.min(10, filtered.length);
+    round = shuffle(filtered).slice(0, roundSize);
     current = 0;
     score = 0;
     showQuestion();
@@ -197,14 +321,32 @@ const dataJson = JSON.stringify(pool);
     screenResult.style.display   = name === 'result'   ? '' : 'none';
   }
 
+  function getCategoryLabel() {
+    if (!selectedCategory) return '전체';
+    var info = catMap[selectedCategory];
+    return info ? info.label : '전체';
+  }
+
+  function getCategoryColor() {
+    if (!selectedCategory) return 'var(--accent)';
+    var info = catMap[selectedCategory];
+    return info ? info.color : 'var(--accent)';
+  }
+
   function showQuestion() {
     showScreen('question');
     var item = round[current];
 
-    qCounter.textContent  = (current + 1) + ' / ' + ROUND_SIZE;
+    qCounter.textContent  = (current + 1) + ' / ' + roundSize;
     qScoreLive.textContent = '현재 점수: ' + score + '점';
     qContext.textContent  = '제' + item.article + '조 · ' + item.title;
     qText.textContent     = item.q;
+
+    // Show category badge
+    var catLabel = getCategoryLabel();
+    qCatLabel.textContent = catLabel;
+    qCatLabel.style.backgroundColor = getCategoryColor();
+    qCatBadge.style.display = 'block';
 
     // Clear previous state
     qOptions.innerHTML = '';
@@ -245,7 +387,7 @@ const dataJson = JSON.stringify(pool);
 
     // Show next / finish button
     btnNext.style.display = 'inline-block';
-    if (current === ROUND_SIZE - 1) {
+    if (current === roundSize - 1) {
       btnNext.textContent = '결과 보기';
     } else {
       btnNext.textContent = '다음 문제';
@@ -258,8 +400,12 @@ const dataJson = JSON.stringify(pool);
   function showResult() {
     showScreen('result');
     resultScore.textContent = score;
+    resultTotal.textContent = roundSize;
 
-    var ratio = score / ROUND_SIZE;
+    var catLabel = getCategoryLabel();
+    resultCatLine.textContent = '주제: ' + catLabel;
+
+    var ratio = score / roundSize;
     var emoji, msg;
     if (ratio >= 0.9) {
       emoji = '🎉'; msg = '훌륭해요! 기본권 박사네요!';
@@ -281,7 +427,7 @@ const dataJson = JSON.stringify(pool);
 
   btnNext.addEventListener('click', function () {
     current++;
-    if (current >= ROUND_SIZE) {
+    if (current >= roundSize) {
       showResult();
     } else {
       showQuestion();
@@ -289,7 +435,9 @@ const dataJson = JSON.stringify(pool);
   });
 
   btnRetry.addEventListener('click', function () {
-    startRound();
+    // Return to start screen so user can pick a category again
+    showScreen('start');
+    updatePoolCount();
   });
 
   // Keyboard: Enter on result/start screen triggers the primary button

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="혐오표현">
+  <title>혐오표현</title>
+  <rect width="120" height="120" rx="26" fill="#fde7e7"/>
+  <!-- Main speech bubble -->
+  <rect x="16" y="22" width="74" height="52" rx="14" fill="#dc2626"/>
+  <!-- Bubble tail -->
+  <polygon points="30,74 22,88 46,74" fill="#dc2626"/>
+  <!-- Bubble inner light area -->
+  <rect x="22" y="28" width="62" height="40" rx="10" fill="#fee2e2"/>
+  <!-- Jagged/harsh lines inside (hate speech suggestion - abstract) -->
+  <path d="M28 40 L40 34 L36 46 L52 38 L46 50" stroke="#dc2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M56 34 L66 38 L60 44 L72 40" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Gentle "stop" / "no" hand + circle - calm, not aggressive -->
+  <!-- Circle with gentle stop mark -->
+  <circle cx="88" cy="80" r="22" fill="#dc2626"/>
+  <circle cx="88" cy="80" r="17" fill="#fee2e2"/>
+  <!-- Palm/hand open (stop gesture - gentle) -->
+  <rect x="82" y="72" width="12" height="16" rx="6" fill="#fcd9b6"/>
+  <rect x="80" y="70" width="4" height="10" rx="2" fill="#fcd9b6"/>
+  <rect x="84" y="68" width="4" height="10" rx="2" fill="#fcd9b6"/>
+  <rect x="88" y="68" width="4" height="10" rx="2" fill="#fcd9b6"/>
+  <rect x="92" y="70" width="4" height="10" rx="2" fill="#fcd9b6"/>
+  <!-- Red diagonal bar over hand -->
+  <rect x="70" y="78" width="36" height="4" rx="2" fill="#dc2626" transform="rotate(-45 88 80)"/>
+  <!-- Small hearts around (positive counterpoint) -->
+  <path d="M24 100 C24 100 18 94 18 91 C18 88.5 20.5 87 24 90 C27.5 87 30 88.5 30 91 C30 94 24 100 24 100Z" fill="#f59e0b"/>
+  <path d="M102 24 C102 24 96 18 96 15 C96 12.5 98.5 11 102 14 C105.5 11 108 12.5 108 15 C108 18 102 24 102 24Z" fill="#f59e0b"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="학교 휴대폰">
+  <title>학교 휴대폰</title>
+  <rect width="120" height="120" rx="26" fill="#efe7fd"/>
+  <!-- Phone body -->
+  <rect x="30" y="18" width="44" height="76" rx="10" fill="#7c3aed"/>
+  <!-- Phone screen -->
+  <rect x="35" y="26" width="34" height="54" rx="6" fill="#ede9fe"/>
+  <!-- Home button -->
+  <circle cx="52" cy="88" r="4" fill="#6d28d9"/>
+  <!-- Camera dot -->
+  <circle cx="52" cy="22" r="2" fill="#6d28d9"/>
+  <!-- App icons on screen (simplified) -->
+  <rect x="38" y="30" width="10" height="10" rx="3" fill="#a78bfa"/>
+  <rect x="51" y="30" width="10" height="10" rx="3" fill="#c4b5fd"/>
+  <rect x="38" y="43" width="10" height="10" rx="3" fill="#c4b5fd"/>
+  <rect x="51" y="43" width="10" height="10" rx="3" fill="#a78bfa"/>
+  <!-- Notification bar -->
+  <rect x="35" y="56" width="34" height="3" rx="1.5" fill="#7c3aed" opacity="0.3"/>
+  <!-- Balance scale (small, beside phone) -->
+  <!-- Pole -->
+  <rect x="84" y="34" width="4" height="48" rx="2" fill="#6d28d9"/>
+  <!-- Base -->
+  <rect x="78" y="80" width="16" height="5" rx="2.5" fill="#6d28d9"/>
+  <!-- Pivot -->
+  <circle cx="86" cy="34" r="4" fill="#a78bfa"/>
+  <!-- Beam (slightly tilted) -->
+  <rect x="68" y="32" width="36" height="4" rx="2" fill="#a78bfa" transform="rotate(4 86 34)"/>
+  <!-- Left pan strings -->
+  <line x1="72" y1="36" x2="70" y2="48" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="80" y1="34" x2="82" y2="48" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Right pan strings -->
+  <line x1="92" y1="34" x2="90" y2="46" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="100" y1="36" x2="102" y2="46" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Left pan (phone symbol - heavier) -->
+  <rect x="66" y="48" width="18" height="4" rx="2" fill="#6d28d9"/>
+  <rect x="69" y="40" width="12" height="9" rx="3" fill="#7c3aed"/>
+  <!-- Right pan (book/school) -->
+  <rect x="86" y="46" width="18" height="4" rx="2" fill="#6d28d9"/>
+  <rect x="89" y="38" width="12" height="9" rx="3" fill="#a78bfa"/>
+  <rect x="89" y="38" width="4" height="9" rx="2" fill="#7c3aed"/>
+  <!-- Stars of thought -->
+  <circle cx="24" cy="24" r="4" fill="#f59e0b"/>
+  <circle cx="22" cy="36" r="2.5" fill="#c4b5fd"/>
+  <circle cx="16" cy="28" r="2" fill="#c4b5fd"/>
+</svg>

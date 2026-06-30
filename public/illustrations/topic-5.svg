@@ -1,0 +1,31 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="인권">
+  <title>인권</title>
+  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
+  <!-- Open cupped hands (left) -->
+  <path d="M18 78 Q22 68 30 64 Q36 62 40 66 Q44 70 44 76" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Open cupped hands (right) -->
+  <path d="M102 78 Q98 68 90 64 Q84 62 80 66 Q76 70 76 76" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Palm base -->
+  <ellipse cx="60" cy="80" rx="28" ry="12" fill="#fcd9b6"/>
+  <!-- Fingers left hand -->
+  <rect x="20" y="74" width="10" height="14" rx="5" fill="#fcd9b6"/>
+  <rect x="32" y="70" width="10" height="14" rx="5" fill="#fcd9b6"/>
+  <!-- Fingers right hand -->
+  <rect x="90" y="74" width="10" height="14" rx="5" fill="#fcd9b6"/>
+  <rect x="78" y="70" width="10" height="14" rx="5" fill="#fcd9b6"/>
+  <!-- Heart resting in hands -->
+  <path d="M60 68 C60 68 44 56 44 46 C44 39 50 35 56 40 C58 42 60 44 60 44 C60 44 62 42 64 40 C70 35 76 39 76 46 C76 56 60 68 60 68Z" fill="#db2777"/>
+  <!-- Heart inner highlight -->
+  <path d="M60 62 C60 62 49 53 49 46 C49 42 53 39 57 43 C58.5 44.5 60 46 60 46 C60 46 61.5 44.5 63 43 C67 39 71 42 71 46 C71 53 60 62 60 62Z" fill="#f472b6"/>
+  <!-- Dove (simplified) -->
+  <ellipse cx="60" cy="28" rx="12" ry="8" fill="#ffffff"/>
+  <path d="M48 26 Q40 20 36 24" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M72 26 Q80 20 84 24" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Dove head -->
+  <circle cx="60" cy="22" r="6" fill="#ffffff"/>
+  <circle cx="63" cy="21" r="1.5" fill="#1f2937"/>
+  <!-- Small glow dots -->
+  <circle cx="32" cy="42" r="3.5" fill="#f9a8d4"/>
+  <circle cx="88" cy="42" r="3.5" fill="#f9a8d4"/>
+  <circle cx="60" cy="10" r="3" fill="#f9a8d4"/>
+</svg>
