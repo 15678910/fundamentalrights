@@ -10,6 +10,13 @@ const rights = (await getCollection("rights")).sort((a, b) => a.data.order - b.d
   <h1>우리 헌법이 지켜주는 권리</h1>
   <p style="color:var(--muted)">대한민국 헌법 제2장의 기본권을 <b>쉬운 말 · 보통 · 자세히</b> 세 단계로 읽어보세요. 누구나 자기 수준에서 이해할 수 있어요.</p>
 
+  <section style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0">
+    <h2 style="margin:.2rem 0">기본권이란 무엇인가요?</h2>
+    <p>사람은 저마다 생각도, 좋아하는 것도, 꿈도 달라요. 그런데 모두가 자기 마음대로만 하면 서로 부딪히게 돼요. 그래서 함께 살아가려면 약속, 즉 <b>규칙</b>이 필요해요. 이 규칙 가운데 특히 중요한 것을 <b>법</b>이라고 하고, 모든 법 가운데 으뜸이 되는 법이 바로 <b>헌법</b>이에요.</p>
+    <p>헌법은 나라가 어떻게 움직여야 하는지를 정하고, 동시에 <b>사람이라는 이유만으로 누구나 누려야 할 권리</b>를 정해 두었어요. 이렇게 헌법이 보장하는 가장 기본적인 권리를 <b>기본권</b>이라고 불러요.</p>
+    <p style="margin-bottom:0"><b>기본권은 어른만의 것이 아니에요.</b> 나이가 많든 적든, 학생이든 아니든 모든 사람에게 똑같이 있어요. 이 권리들이 우리의 학교생활과 일상에 얼마나 많이 닿아 있는지 알면 깜짝 놀랄 거예요.</p>
+  </section>
+
   {CATEGORIES.map((cat) => {
     const items = rights.filter((r) => r.data.category === cat.key);
     if (items.length === 0) return null;
