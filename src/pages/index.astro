@@ -4,15 +4,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import RightCard from "../components/RightCard.astro";
 import { CATEGORIES } from "../lib/categories";
 import Illustration from "../components/Illustration.astro";
+import MascotScene from "../components/MascotScene.astro";
 
 const rights = (await getCollection("rights")).sort((a, b) => a.data.order - b.data.order);
 const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout>
-  <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
-    <Illustration name="hero" alt="" size={96} />
-    <h1 style="margin:0">우리 헌법이 지켜주는 권리</h1>
-  </div>
+  <MascotScene />
+  <h1 style="margin:.4rem 0 0">우리 헌법이 지켜주는 권리</h1>
   <p style="color:var(--muted)">대한민국 헌법 제2장의 기본권을 <b>쉬운 말 · 보통 · 자세히</b> 세 단계로 읽어보세요. 누구나 자기 수준에서 이해할 수 있어요.</p>
 
   <section style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0">

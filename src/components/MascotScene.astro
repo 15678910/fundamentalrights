@@ -1,0 +1,112 @@
+---
+// 기하학 마스코트(세모·네모·동그라미) 애니메이션 SVG. 인라인으로 렌더되어 CSS 애니메이션이 동작한다.
+const { max = 420 } = Astro.props;
+---
+<div class="mascot-scene" style={`max-width:${max}px`}>
+  <svg viewBox="0 0 380 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="세모, 네모, 동그라미 모양의 기본권 친구들이 인사하는 모습">
+    <title>기본권 친구들 — 세모, 네모, 동그라미</title>
+    <desc>삼각형, 사각형, 원 모양의 캐릭터가 통통 튀며 손을 흔드는 애니메이션입니다.</desc>
+
+    <!-- 떠다니는 빨간 조각 -->
+    <g fill="#e11d2a">
+      <rect class="f1" x="26" y="22" width="12" height="7" rx="2" transform="rotate(-20 32 25)"/>
+      <rect class="f2" x="338" y="36" width="12" height="7" rx="2" transform="rotate(18 344 39)"/>
+      <circle class="f1" cx="200" cy="20" r="3.5"/>
+      <circle class="f2" cx="356" cy="120" r="3.5"/>
+    </g>
+    <g stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round">
+      <path class="f2" d="M20 60 q8 -10 18 -6"/>
+      <path class="f1" d="M352 80 q-8 10 -18 6"/>
+    </g>
+
+    <!-- 세모(삼각형) -->
+    <g class="bob" style="animation-delay:0s">
+      <path d="M70 40 L44 104 L96 104 Z" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+      <g stroke="#e11d2a" stroke-width="3" stroke-linecap="round">
+        <path d="M70 40 L64 26"/><path d="M70 40 L72 24"/><path d="M70 40 L78 28"/>
+      </g>
+      <!-- 다리 -->
+      <g stroke="#1f2937" stroke-width="3" stroke-linecap="round">
+        <path d="M62 104 L58 124"/><path d="M78 104 L82 124"/>
+      </g>
+      <ellipse cx="56" cy="126" rx="6" ry="3.5" fill="#1f2937"/>
+      <ellipse cx="84" cy="126" rx="6" ry="3.5" fill="#1f2937"/>
+      <!-- 왼팔 -->
+      <path d="M52 84 L36 78" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="34" cy="78" r="4" fill="#1f2937"/>
+      <!-- 오른팔(흔들기) -->
+      <g class="wave">
+        <path d="M88 84 L104 70" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="106" cy="68" r="4.5" fill="#1f2937"/>
+      </g>
+      <!-- 얼굴 -->
+      <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="61" cy="74" r="7"/><circle cx="79" cy="74" r="7"/><path d="M68 74 h4"/></g>
+      <circle class="blink" cx="61" cy="74" r="3" fill="#1f2937"/>
+      <circle class="blink" cx="79" cy="74" r="3" fill="#1f2937"/>
+      <path d="M62 88 Q70 95 78 88" stroke="#1f2937" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      <circle cx="55" cy="86" r="3.5" fill="#e11d2a" opacity="0.3"/>
+      <circle cx="85" cy="86" r="3.5" fill="#e11d2a" opacity="0.3"/>
+    </g>
+
+    <!-- 네모(사각형) -->
+    <g class="bob" style="animation-delay:.4s">
+      <rect x="166" y="56" width="54" height="54" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+      <path d="M174 56 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+      <!-- 빨간 다리 -->
+      <g stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none">
+        <path d="M180 110 q-4 10 2 16"/><path d="M206 110 q4 10 -2 16"/>
+      </g>
+      <rect x="172" y="126" width="14" height="7" rx="3" fill="#e11d2a" transform="rotate(-12 179 129)"/>
+      <rect x="200" y="126" width="14" height="7" rx="3" fill="#e11d2a" transform="rotate(12 207 129)"/>
+      <!-- 빨간 팔 -->
+      <path d="M166 80 q-12 2 -16 12" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+      <path d="M220 80 q12 2 16 12" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+      <!-- 얼굴 -->
+      <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="184" cy="80" r="7"/><circle cx="202" cy="80" r="7"/><path d="M191 80 h4"/></g>
+      <circle class="blink" cx="184" cy="80" r="3" fill="#1f2937"/>
+      <circle class="blink" cx="202" cy="80" r="3" fill="#1f2937"/>
+      <path d="M185 94 Q193 101 201 94" stroke="#1f2937" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      <circle cx="178" cy="92" r="3.5" fill="#e11d2a" opacity="0.3"/>
+      <circle cx="208" cy="92" r="3.5" fill="#e11d2a" opacity="0.3"/>
+    </g>
+
+    <!-- 동그라미(원) -->
+    <g class="bob" style="animation-delay:.8s">
+      <circle cx="310" cy="84" r="30" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+      <path d="M310 54 q-6 -12 4 -16 q-8 0 -2 8" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+      <!-- 다리 -->
+      <g stroke="#1f2937" stroke-width="3" stroke-linecap="round"><path d="M300 110 L296 128"/><path d="M320 110 L324 128"/></g>
+      <ellipse cx="294" cy="130" rx="6" ry="3.5" fill="#1f2937"/>
+      <ellipse cx="326" cy="130" rx="6" ry="3.5" fill="#1f2937"/>
+      <!-- 팔 -->
+      <path d="M282 84 L268 80" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="266" cy="80" r="4" fill="#1f2937"/>
+      <path d="M338 84 L352 80" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="354" cy="80" r="4" fill="#1f2937"/>
+      <!-- 얼굴 -->
+      <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="301" cy="82" r="7"/><circle cx="319" cy="82" r="7"/><path d="M308 82 h4"/></g>
+      <circle class="blink" cx="301" cy="82" r="3" fill="#1f2937"/>
+      <circle class="blink" cx="319" cy="82" r="3" fill="#1f2937"/>
+      <path d="M302 95 Q310 102 318 95" stroke="#1f2937" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      <circle cx="295" cy="93" r="3.5" fill="#e11d2a" opacity="0.3"/>
+      <circle cx="325" cy="93" r="3.5" fill="#e11d2a" opacity="0.3"/>
+    </g>
+  </svg>
+</div>
+
+<style>
+  .mascot-scene { width: 100%; margin: 0 auto; }
+  .mascot-scene svg { width: 100%; height: auto; display: block; }
+  .bob { animation: bob 3s ease-in-out infinite; }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+  .wave { transform-box: fill-box; transform-origin: bottom left; animation: wave 1.6s ease-in-out infinite; }
+  @keyframes wave { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-20deg); } }
+  .blink { transform-box: fill-box; transform-origin: center; animation: blink 4.5s infinite; }
+  @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 96% { transform: scaleY(0.1); } }
+  .f1 { animation: float 4s ease-in-out infinite; }
+  .f2 { animation: float 5s ease-in-out infinite .5s; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  @media (prefers-reduced-motion: reduce) {
+    .bob, .wave, .blink, .f1, .f2 { animation: none; }
+  }
+</style>
