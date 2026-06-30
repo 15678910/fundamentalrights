@@ -36,4 +36,20 @@ const glossary = defineCollection({
   }),
 });
 
-export const collections = { rights, glossary };
+const issues = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/issues" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    icon: z.string().default("💬"),
+    order: z.number().int(),
+    relatedRights: z.array(z.number().int()).default([]),
+    helplines: z.array(z.object({
+      name: z.string(),
+      number: z.string(),
+      desc: z.string().optional(),
+    })).default([]),
+  }),
+});
+
+export const collections = { rights, glossary, issues };

@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const issues = (await getCollection("issues")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="쟁점으로 배우는 기본권 | 우리 헌법 기본권">
+  <h1>쟁점으로 배우는 기본권</h1>
+  <p style="color:var(--muted)">하나의 현실 문제에는 여러 권리가 함께 얽혀 있어요. 권리들이 부딪힐 때 헌법이 어떻게 균형을 잡는지, '누가 이기나'가 아니라 '어떻게 모두의 존엄을 지키나'의 눈으로 살펴봅니다.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem;margin-top:1rem">
+    {issues.map((i) => (
+      <a href={`${base}issues/${i.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg)">
+        <div style="font-size:1.6rem">{i.data.icon}</div>
+        <strong style="display:block;margin-top:.3rem">{i.data.title}</strong>
+        <span style="color:var(--muted);font-size:.9rem">{i.data.summary}</span>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
