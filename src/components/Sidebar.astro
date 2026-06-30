@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import { CATEGORIES } from "../lib/categories";
+const { currentId } = Astro.props;
+const rights = (await getCollection("rights")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
+---
+<nav class="sidebar" aria-label="기본권 목록">
+  <p class="sidebar-title">자신의 기본권을 알아두세요</p>
+  {CATEGORIES.map((cat) => {
+    const items = rights.filter((r) => r.data.category === cat.key);
+    if (items.length === 0) return null;
+    return (
+      <div class="sidebar-group">
+        <h3 style={`color:${cat.color}`}>{cat.label}</h3>
+        {items.map((r) => (
+          <a href={`${base}rights/${r.id}`} aria-current={r.id === currentId ? "page" : undefined}>제{r.data.article}조 {r.data.title}</a>
+        ))}
+      </div>
+    );
+  })}
+</nav>

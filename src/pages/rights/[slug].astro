@@ -6,6 +6,7 @@ import OriginalText from "../../components/OriginalText.astro";
 import Quiz from "../../components/Quiz.astro";
 import InfoSection from "../../components/InfoSection.astro";
 import { getCategory } from "../../lib/categories";
+import Sidebar from "../../components/Sidebar.astro";
 
 export async function getStaticPaths() {
   const rights = await getCollection("rights");
@@ -19,6 +20,7 @@ const cat = getCategory(entry.data.category);
 const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout title={`${entry.data.title} | 우리 헌법 기본권`}>
+  <Sidebar slot="sidebar" currentId={entry.id} />
   <p style="color:var(--muted);font-size:.85rem">
     <a href={base}>홈</a> ›
     <span style={`color:${cat?.color}`}>{cat?.label}</span>

@@ -3,6 +3,7 @@ import "../styles/global.css";
 import AccessibilityBar from "../components/AccessibilityBar.astro";
 const { title = "우리 헌법 기본권" } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const hasSidebar = Astro.slots.has("sidebar");
 ---
 <!doctype html>
 <html lang="ko">
@@ -11,29 +12,31 @@ const base = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   </head>
   <body>
     <a href="#main" class="skip-link">본문 바로가기</a>
-    <header class="no-print" style="border-bottom:1px solid var(--border)">
-      <nav style="max-width:var(--maxw);margin:0 auto;padding:.75rem 1rem;display:flex;gap:1rem;align-items:center">
-        <a href={base} style="font-weight:700;text-decoration:none;color:var(--fg)">우리 헌법 기본권</a>
-        <span style="flex:1"></span>
+    <header class="site-header no-print">
+      <div class="header-inner">
+        <a class="brand" href={base}>우리 헌법 기본권<small>대한민국 헌법으로 배우는 기본권 입문</small></a>
+        <div class="header-right">
+          <a class="header-search" href={`${base}search`}>🔍 검색</a>
+          <AccessibilityBar />
+        </div>
+      </div>
+      <nav class="tabs" aria-label="주요 메뉴">
+        <a href={base}>기본권 설명</a>
         <a href={`${base}issues`}>쟁점</a>
         <a href={`${base}glossary`}>용어사전</a>
         <a href={`${base}about`}>소개</a>
-        <a href={`${base}search`}>검색</a>
-        <AccessibilityBar />
       </nav>
     </header>
-    <main id="main">
-      <slot />
-    </main>
-    <footer class="no-print" style="border-top:1px solid var(--border);color:var(--muted);font-size:.85rem">
-      <div style="max-width:var(--maxw);margin:0 auto;padding:1rem">
+    <div class={`page ${hasSidebar ? "" : "no-sidebar"}`}>
+      {hasSidebar && <slot name="sidebar" />}
+      <main id="main"><slot /></main>
+    </div>
+    <footer class="no-print">
+      <div class="footer-inner">
         본 설명은 학습용 요약이며 법적 효력이 있는 해석이 아닙니다. 정확한 내용은 헌법 원문과 공식 자료를 확인하세요.
       </div>
     </footer>
