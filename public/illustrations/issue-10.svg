@@ -1,0 +1,39 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="교직 사회의 패거리 문화">
+  <title>교직 사회의 패거리 문화</title>
+  <rect width="120" height="120" rx="26" fill="#e4f7ec"/>
+  <!-- Connecting arc ring behind figures - symbol of inclusive circle -->
+  <circle cx="60" cy="62" r="28" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4" opacity="0.35"/>
+  <!-- Figure TOP (12 o'clock) -->
+  <circle cx="60" cy="26" r="7.5" fill="#fcd9b6"/>
+  <ellipse cx="60" cy="19" rx="6.5" ry="3.5" fill="#1f2937"/>
+  <rect x="54" y="32" width="12" height="13" rx="6" fill="#16a34a"/>
+  <!-- Figure RIGHT (3 o'clock) -->
+  <circle cx="92" cy="60" r="7" fill="#fcd9b6"/>
+  <ellipse cx="92" cy="53.5" rx="6" ry="3" fill="#f59e0b"/>
+  <rect x="86.5" y="65.5" width="11" height="12" rx="5.5" fill="#f59e0b"/>
+  <!-- Figure BOTTOM (6 o'clock) -->
+  <circle cx="60" cy="94" r="7" fill="#fcd9b6"/>
+  <ellipse cx="60" cy="87.5" rx="6" ry="3.5" fill="#1f2937"/>
+  <rect x="54.5" y="99.5" width="11" height="12" rx="5.5" fill="#16a34a"/>
+  <!-- Figure LEFT (9 o'clock) -->
+  <circle cx="28" cy="60" r="7" fill="#fcd9b6"/>
+  <ellipse cx="28" cy="53.5" rx="6" ry="3" fill="#1f2937"/>
+  <rect x="22.5" y="65.5" width="11" height="12" rx="5.5" fill="#f59e0b"/>
+  <!-- Linking arms / hands: arcs between figures suggesting handholding -->
+  <!-- TOP to RIGHT arm -->
+  <path d="M65 32 Q80 38 87 55" stroke="#16a34a" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- RIGHT to BOTTOM arm -->
+  <path d="M87 70 Q84 82 66 95" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- BOTTOM to LEFT arm -->
+  <path d="M54 95 Q36 84 34 71" stroke="#16a34a" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- LEFT to TOP arm -->
+  <path d="M33 55 Q40 38 55 32" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Central warm glow / sun symbol — fairness at the center -->
+  <circle cx="60" cy="60" r="8" fill="#ffffff" opacity="0.9"/>
+  <circle cx="60" cy="60" r="5" fill="#16a34a"/>
+  <!-- Small sparkle dots radiating from center — equality shining outward -->
+  <circle cx="60" cy="48" r="2" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="72" cy="60" r="2" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="60" cy="72" r="2" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="48" cy="60" r="2" fill="#f59e0b" opacity="0.8"/>
+</svg>
