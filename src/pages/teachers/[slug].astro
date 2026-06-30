@@ -1,0 +1,61 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const items = await getCollection("teachers");
+  return items.map((i) => ({ params: { slug: i.id }, props: { entry: i } }));
+}
+
+type Props = { entry: CollectionEntry<"teachers"> };
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const base = import.meta.env.BASE_URL;
+const rights = await getCollection("rights");
+const related = entry.data.relatedRights.map((n: number) => rights.find((r) => r.data.article === n)).filter(Boolean);
+
+const typeColors: Record<string, string> = {
+  "수업안":    "#dbeafe",
+  "워크시트":  "#dcfce7",
+  "토론가이드":"#fef9c3",
+};
+const badgeBg = typeColors[entry.data.type] ?? "var(--card)";
+---
+<BaseLayout title={`${entry.data.title} | 교사 자료실`}>
+  <p style="color:var(--muted);font-size:.85rem">
+    <a href={base}>홈</a> › <a href={`${base}teachers`}>교사 자료</a>
+  </p>
+
+  <h1 style="margin:.2rem 0 .6rem">{entry.data.title}</h1>
+
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.2rem">
+    <span style={`font-size:.8rem;background:${badgeBg};border:1px solid var(--border);border-radius:999px;padding:.2rem .65rem`}>{entry.data.type}</span>
+    <span style="font-size:.8rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .65rem">{entry.data.level}</span>
+    {entry.data.duration && (
+      <span style="font-size:.8rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .65rem">⏱ {entry.data.duration}</span>
+    )}
+    <span class="no-print" style="margin-left:auto">
+      <button class="no-print" onclick="window.print()" style="border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer;padding:.4rem .8rem">🖨 인쇄하기</button>
+    </span>
+  </div>
+
+  <article>
+    <Content />
+  </article>
+
+  {related.length > 0 && (
+    <section style="margin:1.5rem 0">
+      <h2 style="font-size:1.1rem">🔗 관련 기본권</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem">
+        {related.map((r: any) => (
+          <a
+            href={`${base}rights/${r.id}`}
+            style="border:1px solid var(--border);border-radius:999px;padding:.3rem .8rem;text-decoration:none;color:var(--fg)"
+          >
+            제{r.data.article}조 · {r.data.title}
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

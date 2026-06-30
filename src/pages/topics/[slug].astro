@@ -1,0 +1,34 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export async function getStaticPaths() {
+  const items = await getCollection("topics");
+  return items.map((i) => ({ params: { slug: i.id }, props: { entry: i } }));
+}
+type Props = { entry: CollectionEntry<"topics"> };
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const base = import.meta.env.BASE_URL;
+const rights = await getCollection("rights");
+const related = entry.data.relatedRights.map((n: number) => rights.find((r) => r.data.article === n)).filter(Boolean);
+---
+<BaseLayout title={`${entry.data.title} | 주제 특집`}>
+  <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}topics`}>주제 특집</a></p>
+  <h1 style="margin:.2rem 0">{entry.data.icon} {entry.data.title}</h1>
+  <p style="font-size:1.05rem;color:var(--muted);margin:.3rem 0 0">{entry.data.summary}</p>
+
+  <article>
+    <Content />
+  </article>
+
+  {related.length > 0 && (
+    <section style="margin:1.5rem 0">
+      <h2 style="font-size:1.15rem">🔗 관련 기본권</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem">
+        {related.map((r: any) => (
+          <a href={`${base}rights/${r.id}`} style="border:1px solid var(--border);border-radius:999px;padding:.3rem .8rem;text-decoration:none;color:var(--fg)">제{r.data.article}조 · {r.data.title}</a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

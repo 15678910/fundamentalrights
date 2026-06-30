@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const topics = (await getCollection("topics")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="주제 특집 | 우리 헌법 기본권">
+  <h1>주제 특집</h1>
+  <p style="color:var(--muted)">기본권을 넘어 민주주의·국가·시민의 삶을 더 넓게 살펴봐요.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem;margin-top:1rem">
+    {topics.map((i) => (
+      <a href={`${base}topics/${i.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg)">
+        <div style="font-size:1.6rem">{i.data.icon}</div>
+        <strong style="display:block;margin-top:.3rem">{i.data.title}</strong>
+        <span style="color:var(--muted);font-size:.9rem">{i.data.summary}</span>
+      </a>
+    ))}
+  </div>
+</BaseLayout>

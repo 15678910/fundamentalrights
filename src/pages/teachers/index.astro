@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const all = (await getCollection("teachers")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
+
+const groups: Record<string, typeof all> = { "수업안": [], "워크시트": [], "토론가이드": [] };
+for (const item of all) {
+  if (groups[item.data.type]) groups[item.data.type].push(item);
+}
+
+const groupMeta: Record<string, { label: string; icon: string }> = {
+  "수업안":    { label: "수업안",    icon: "📋" },
+  "워크시트":  { label: "워크시트",  icon: "📝" },
+  "토론가이드":{ label: "토론가이드",icon: "💬" },
+};
+---
+<BaseLayout title="교사 자료실 | 우리 헌법 기본권">
+  <h1>교사 자료실</h1>
+  <p style="color:var(--muted)">수업에 바로 쓰는 수업안·워크시트·토론 가이드.</p>
+
+  {Object.entries(groups).filter(([, items]) => items.length > 0).map(([type, items]) => (
+    <section style="margin-top:2rem">
+      <h2 style="font-size:1.15rem;margin-bottom:.75rem">
+        {groupMeta[type].icon} {groupMeta[type].label}
+      </h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem">
+        {items.map((item) => (
+          <a
+            href={`${base}teachers/${item.id}`}
+            style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.4rem"
+          >
+            <strong style="font-size:1rem">{item.data.title}</strong>
+            <span style="color:var(--muted);font-size:.875rem;flex:1">{item.data.summary}</span>
+            <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.25rem">
+              <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">{item.data.type}</span>
+              <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">{item.data.level}</span>
+              {item.data.duration && (
+                <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">⏱ {item.data.duration}</span>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+</BaseLayout>
