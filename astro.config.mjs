@@ -1,9 +1,8 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  // TODO(user): replace with your GitHub Pages URL.
-  //   - Project site:  https://<your-username>.github.io   (keep `base` below)
-  //   - User/Org site or custom domain: set your domain and change `base` to "/"
-  site: "https://example.github.io",
+  // GitHub Pages project site for github.com/15678910/fundamentalrights
+  //   - Custom domain or user/org site: change `site` and set `base` to "/"
+  site: "https://15678910.github.io",
   base: "/fundamentalrights/",
 });
