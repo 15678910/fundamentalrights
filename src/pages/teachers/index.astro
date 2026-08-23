@@ -5,7 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const all = (await getCollection("teachers")).sort((a, b) => a.data.order - b.data.order);
 const base = import.meta.env.BASE_URL;
 
-const groups: Record<string, typeof all> = { "수업안": [], "워크시트": [], "토론가이드": [] };
+const groups: Record<string, typeof all> = { "수업안": [], "워크시트": [], "토론가이드": [], "평가지": [], "가정통신문": [] };
 for (const item of all) {
   if (groups[item.data.type]) groups[item.data.type].push(item);
 }
@@ -14,11 +14,13 @@ const groupMeta: Record<string, { label: string; icon: string }> = {
   "수업안":    { label: "수업안",    icon: "📋" },
   "워크시트":  { label: "워크시트",  icon: "📝" },
   "토론가이드":{ label: "토론가이드",icon: "💬" },
+  "평가지":    { label: "형성평가지", icon: "✅" },
+  "가정통신문":{ label: "가정통신문", icon: "✉️" },
 };
 ---
 <BaseLayout title="교사 자료실 | 우리 헌법 기본권">
   <h1>교사 자료실</h1>
-  <p style="color:var(--muted)">수업에 바로 쓰는 수업안·워크시트·토론 가이드.</p>
+  <p style="color:var(--muted)">수업에 바로 쓰는 수업안·워크시트·토론 가이드·형성평가지·가정통신문. 모든 자료는 🖨 인쇄 버튼으로 바로 출력할 수 있어요.</p>
 
   {Object.entries(groups).filter(([, items]) => items.length > 0).map(([type, items]) => (
     <section style="margin-top:2rem">
