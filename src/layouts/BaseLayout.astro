@@ -19,14 +19,9 @@ const hasSidebar = Astro.slots.has("sidebar");
     <header class="site-header no-print">
       <div class="header-inner">
         <a class="brand" href={base}>기본권<small>대한민국 헌법으로 배우는 기본권</small></a>
-        <div class="header-right">
-          <a class="header-search" href={`${base}search`}>🔍 검색</a>
-          <AccessibilityBar />
-        </div>
-      </div>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle sr-only" />
-      <label for="nav-toggle" class="nav-burger no-print">☰ 메뉴</label>
-      <nav class="tabs" aria-label="주요 메뉴">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle sr-only" />
+        <label for="nav-toggle" class="nav-burger no-print">☰ 메뉴</label>
+        <nav class="tabs" aria-label="주요 메뉴">
         <a href={`${base}intro`}>기본권이란?</a>
         <a href={base}>기본권 목록</a>
         <a href={`${base}issues`}>쟁점</a>
@@ -35,7 +30,12 @@ const hasSidebar = Astro.slots.has("sidebar");
         <a href={`${base}teachers`}>교사 자료</a>
         <a href={`${base}glossary`}>용어사전</a>
         <a href={`${base}about`}>소개</a>
-      </nav>
+        </nav>
+        <div class="header-right">
+          <a class="header-search" href={`${base}search`}>🔍 검색</a>
+          <AccessibilityBar />
+        </div>
+      </div>
     </header>
     <div class={`page ${hasSidebar ? "" : "no-sidebar"}`}>
       {hasSidebar && <slot name="sidebar" />}
