@@ -5,22 +5,69 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const all = (await getCollection("teachers")).sort((a, b) => a.data.order - b.data.order);
 const base = import.meta.env.BASE_URL;
 
-const groups: Record<string, typeof all> = { "수업안": [], "워크시트": [], "토론가이드": [], "평가지": [], "가정통신문": [] };
+const groups: Record<string, typeof all> = { "활용안내": [], "수업안": [], "워크시트": [], "토론가이드": [], "평가지": [], "가정통신문": [] };
 for (const item of all) {
   if (groups[item.data.type]) groups[item.data.type].push(item);
 }
 
 const groupMeta: Record<string, { label: string; icon: string }> = {
+  "활용안내":  { label: "사이트 활용 안내", icon: "📖" },
   "수업안":    { label: "수업안",    icon: "📋" },
   "워크시트":  { label: "워크시트",  icon: "📝" },
   "토론가이드":{ label: "토론가이드",icon: "💬" },
   "평가지":    { label: "형성평가지", icon: "✅" },
   "가정통신문":{ label: "가정통신문", icon: "✉️" },
 };
+
+const bundles = [
+  { icon: "⚖️", title: "평등과 차별", desc: "평등권 수업안·워크시트와 노키즈존·혐오표현 쟁점, 영화 주토피아·히든 피겨스", links: [
+    { label: "제11조 수업안", href: "teachers/111-수업안-제11조-평등권" },
+    { label: "쟁점: 혐오 표현", href: "issues/혐오표현" },
+    { label: "영화: 주토피아", href: "films/주토피아" },
+  ]},
+  { icon: "🏫", title: "학교생활과 권리", desc: "학생인권·교권, 학교 휴대폰, 학교폭력 쟁점과 회복적 토론가이드", links: [
+    { label: "토론가이드: 학생인권과 교권", href: "teachers/03-토론가이드-학생인권과-교권" },
+    { label: "쟁점: 학교에서의 휴대폰", href: "issues/학교-휴대폰" },
+    { label: "쟁점: 학교폭력", href: "issues/학교폭력" },
+  ]},
+  { icon: "🗳️", title: "민주주의와 선거", desc: "선거권 수업안(모의투표), 주제 특집 민주주의·선거·국회", links: [
+    { label: "제24조 수업안", href: "teachers/124-수업안-제24조-선거권" },
+    { label: "주제: 선거", href: "topics/02-선거" },
+    { label: "주제: 보이텔스바흐 합의", href: "topics/06-보이텔스바흐-합의" },
+  ]},
+  { icon: "💬", title: "표현과 미디어", desc: "표현의 자유, 딥페이크·AI 개인정보 쟁점, 권리와 책임 워크시트", links: [
+    { label: "제21조 수업안", href: "teachers/121-수업안-제21조-표현의-자유" },
+    { label: "쟁점: 딥페이크", href: "issues/딥페이크-디지털성범죄" },
+    { label: "워크시트: 권리와 책임(고등)", href: "teachers/43-워크시트-권리와-책임-고등" },
+  ]},
+  { icon: "🤝", title: "노동과 사회권", desc: "근로·노동3권·인간다운 생활 수업안, 영화 카트 대신 형성평가지로 마무리", links: [
+    { label: "제33조 수업안", href: "teachers/133-수업안-제33조-노동3권" },
+    { label: "평가지: 사회권과 의무", href: "teachers/33-평가지-사회권과-의무" },
+    { label: "제34조 수업안", href: "teachers/134-수업안-제34조-인간다운-생활" },
+  ]},
+];
 ---
 <BaseLayout title="교사 자료실 | 우리 헌법 기본권">
   <h1>교사 자료실</h1>
-  <p style="color:var(--muted)">수업에 바로 쓰는 수업안·워크시트·토론 가이드·형성평가지·가정통신문. 모든 자료는 🖨 인쇄 버튼으로 바로 출력할 수 있어요.</p>
+  <p style="color:var(--muted)">수업에 바로 쓰는 수업안·워크시트·토론 가이드·형성평가지·가정통신문. 모든 자료는 🖨 인쇄 버튼으로 바로 출력할 수 있어요. 교실 게시용 <a href={`${base}posters`}>인쇄 포스터 3종</a>도 준비되어 있습니다.</p>
+
+  <section style="margin-top:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem">
+    <h2 style="font-size:1.15rem;margin:.2rem 0 .6rem">🧭 주제별 꾸러미</h2>
+    <p style="color:var(--muted);font-size:.9rem;margin:0 0 .8rem">다루고 싶은 주제에서 출발해 보세요 — 수업안·쟁점·영화·평가지를 묶어 놓았어요.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem">
+      {bundles.map((b) => (
+        <div style="border:1px solid var(--border);border-radius:10px;padding:.8rem;background:var(--bg)">
+          <strong>{b.icon} {b.title}</strong>
+          <p style="color:var(--muted);font-size:.85rem;margin:.3rem 0 .5rem">{b.desc}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.35rem">
+            {b.links.map((l) => (
+              <a href={`${base}${l.href}`} style="font-size:.78rem;border:1px solid var(--border);border-radius:999px;padding:.15rem .6rem;text-decoration:none;color:var(--fg)">{l.label}</a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
 
   {Object.entries(groups).filter(([, items]) => items.length > 0).map(([type, items]) => (
     <section style="margin-top:2rem">

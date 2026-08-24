@@ -68,7 +68,7 @@ const teachers = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/teachers" }),
   schema: z.object({
     title: z.string(),
-    type: z.enum(["수업안", "워크시트", "토론가이드", "평가지", "가정통신문"]),
+    type: z.enum(["수업안", "워크시트", "토론가이드", "평가지", "가정통신문", "활용안내"]),
     summary: z.string(),
     level: z.string().default("전체"),
     duration: z.string().optional(),

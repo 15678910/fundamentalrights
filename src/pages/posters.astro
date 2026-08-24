@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { CATEGORIES } from "../lib/categories";
+const base = import.meta.env.BASE_URL;
+const catRanges: Record<string, string> = {
+  comprehensive: "제10조 · 제37조",
+  equality: "제11조",
+  freedom: "제12조 ~ 제23조",
+  participation: "제24조 · 제25조",
+  claim: "제26조 ~ 제30조",
+  social: "제31조 ~ 제36조",
+  duty: "제38조 · 제39조",
+};
+---
+<BaseLayout title="교실 포스터 | 기본권">
+  <p style="color:var(--muted);font-size:.85rem" class="no-print"><a href={base}>홈</a> › <a href={`${base}teachers`}>교사 자료</a></p>
+  <h1 class="no-print">교실 게시용 포스터 3종</h1>
+  <p class="no-print" style="color:var(--muted)">🖨 <button onclick="window.print()" style="border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer;padding:.4rem .9rem;font-weight:600">인쇄하기</button> — A4 세로 기준, 포스터마다 한 장씩 인쇄됩니다.</p>
+
+  <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:2.2rem 1.8rem;margin:1.5rem 0;text-align:center">
+    <p style="letter-spacing:.2em;font-weight:700;color:var(--accent);margin:0">우리 교실의 세 가지 약속</p>
+    <h2 style="font-size:1.9rem;margin:.4rem 0 1.4rem">논쟁적인 것은 논쟁적으로</h2>
+    <div style="text-align:left;max-width:34rem;margin:0 auto;display:grid;gap:1rem">
+      <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">하나.</b> 누구도 남에게 생각을 강요하지 않습니다.</p>
+      <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">둘.</b> 여러 입장이 있는 문제는 여러 입장 그대로 다룹니다.</p>
+      <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">셋.</b> 판단은 각자 스스로, 근거와 함께 내립니다.</p>
+    </div>
+    <p style="color:var(--muted);font-size:.85rem;margin:1.6rem 0 0">보이텔스바흐 합의(1976) · 기본권 배움터</p>
+  </section>
+
+  <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:2.2rem 1.8rem;margin:1.5rem 0;text-align:center">
+    <h2 style="font-size:1.9rem;margin:.2rem 0 .4rem">헌법이 지켜주는 나의 권리</h2>
+    <p style="color:var(--muted);margin:0 0 1.4rem">대한민국 헌법 제2장 · 제10조~제39조</p>
+    <div style="text-align:left;max-width:30rem;margin:0 auto;display:grid;gap:.55rem">
+      {CATEGORIES.map((c) => (
+        <div style="display:flex;align-items:center;gap:.7rem">
+          <span style={`width:14px;height:14px;border-radius:4px;background:${c.color};flex:none`}></span>
+          <b style="min-width:7.5rem">{c.label}</b>
+          <span style="color:var(--muted)">{catRanges[c.key]}</span>
+        </div>
+      ))}
+    </div>
+    <p style="font-size:1.05rem;margin:1.6rem 0 0"><b>기본권은 어른만의 것이 아닙니다 — 모두의 것입니다.</b></p>
+  </section>
+
+  <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:2.2rem 1.8rem;margin:1.5rem 0;text-align:center">
+    <h2 style="font-size:1.9rem;margin:.2rem 0 1rem">권리에는 책임이 따릅니다</h2>
+    <blockquote style="max-width:34rem;margin:0 auto;border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1rem;text-align:left;font-size:1.05rem;line-height:1.9">
+      국민의 모든 자유와 권리는 … 필요한 경우에 한하여 법률로써 제한할 수 있으며,
+      제한하는 경우에도 자유와 권리의 <b>본질적인 내용을 침해할 수 없다</b>.
+      <span style="display:block;color:var(--muted);font-size:.85rem;margin-top:.4rem">— 헌법 제37조 제2항</span>
+    </blockquote>
+    <p style="font-size:1.15rem;margin:1.4rem 0 0;line-height:1.9">
+      내 권리가 소중한 만큼<br>
+      <b>네 권리도 같은 무게로 소중합니다.</b>
+    </p>
+  </section>
+
+  <style>
+    @media print {
+      .poster { page-break-after: always; border-color: #000; }
+      .poster:last-of-type { page-break-after: auto; }
+    }
+  </style>
+</BaseLayout>
