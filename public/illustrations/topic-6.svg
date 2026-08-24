@@ -1,0 +1,25 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="보이텔스바흐 합의">
+  <title>보이텔스바흐 합의</title>
+  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
+  <!-- two speech bubbles (debate) -->
+  <path d="M20 26 Q20 18 28 18 L48 18 Q56 18 56 26 L56 38 Q56 46 48 46 L38 46 L31 53 L31 46 L28 46 Q20 46 20 38 Z" fill="#ffffff" stroke="#0891b2" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M64 26 Q64 18 72 18 L92 18 Q100 18 100 26 L100 38 Q100 46 92 46 L92 46 L89 53 L82 46 L72 46 Q64 46 64 38 Z" fill="#0891b2" stroke="#0891b2" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="3" fill="#0891b2"/>
+  <circle cx="42" cy="32" r="3" fill="#0891b2"/>
+  <circle cx="76" cy="32" r="3" fill="#ffffff"/>
+  <circle cx="86" cy="32" r="3" fill="#ffffff"/>
+  <!-- handshake -->
+  <path d="M22 82 Q30 70 42 74 L56 80" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+  <path d="M98 82 Q90 70 78 74 L64 80" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+  <rect x="50" y="72" width="20" height="15" rx="7" fill="#fcd9b6"/>
+  <g stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" opacity="0.5">
+    <path d="M54 76 h11"/><path d="M54 80 h11"/><path d="M54 84 h11"/>
+  </g>
+  <!-- sleeves -->
+  <rect x="14" y="76" width="14" height="13" rx="6" fill="#0891b2"/>
+  <rect x="92" y="76" width="14" height="13" rx="6" fill="#f59e0b"/>
+  <!-- spark of agreement -->
+  <path d="M60 58 L62 63 L67 63 L63 66 L65 71 L60 68 L55 71 L57 66 L53 63 L58 63 Z" fill="#f59e0b"/>
+  <!-- ground -->
+  <ellipse cx="60" cy="100" rx="34" ry="6" fill="#0891b2" opacity="0.15"/>
+</svg>
