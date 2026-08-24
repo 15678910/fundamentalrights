@@ -173,7 +173,7 @@ const dataJson = JSON.stringify(pool);
     line-height: 1.4;
   }
   .cat-btn:hover {
-    opacity: .85;
+    filter: brightness(1.12);
   }
   .cat-btn:focus-visible {
     outline: 3px solid var(--accent);
@@ -270,7 +270,7 @@ const dataJson = JSON.stringify(pool);
     allBtns.forEach(function (b) {
       var isSelected = (key == null ? b.dataset.cat === '' : b.dataset.cat === key);
       b.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
-      b.style.opacity = isSelected ? '1' : '.9';
+      b.style.opacity = '1';
       if (isSelected) {
         b.style.boxShadow = '0 0 0 3px rgba(0,0,0,.2)';
         b.style.borderColor = 'rgba(255,255,255,.5)';
