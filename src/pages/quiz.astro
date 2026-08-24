@@ -17,6 +17,7 @@ const pool = rights.flatMap((r) =>
       category: r.data.category ?? "",
       categoryLabel: cat?.label ?? "",
       categoryColor: cat?.color ?? "",
+      level: q.level ?? "중등",
     };
   })
 );
@@ -40,6 +41,12 @@ const dataJson = JSON.stringify(pool);
           <div style="font-size:3rem;margin-bottom:.5rem">🏛️</div>
           <h2 style="margin:.2rem 0 .6rem">기본권 퀴즈</h2>
           <p style="color:var(--muted);margin-bottom:1.25rem">문제를 골라 풀어볼 거예요.<br>한 문제씩 읽고 정답을 골라 보세요!</p>
+
+          <!-- Level selector -->
+          <div style="margin-bottom:1.2rem">
+            <p style="font-size:.85rem;font-weight:700;color:var(--muted);margin:0 0 .6rem;letter-spacing:.03em;text-transform:uppercase">수준별 선택</p>
+            <div id="level-buttons" style="display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center"></div>
+          </div>
 
           <!-- Category selector -->
           <div style="margin-bottom:1.5rem">
@@ -227,8 +234,11 @@ const dataJson = JSON.stringify(pool);
   var qCatBadge      = document.getElementById('q-category-badge');
   var qCatLabel      = document.getElementById('q-category-label');
 
+  var levelButtonsEl = document.getElementById('level-buttons');
+
   // State
   var selectedCategory = null; // null = 전체
+  var selectedLevel = null;    // null = 전체, '초등'|'중등'|'고등'
   var round = [];
   var roundSize = 0;
   var current = 0;
@@ -282,9 +292,61 @@ const dataJson = JSON.stringify(pool);
     updatePoolCount();
   }
 
+  // Build level buttons (초등/중등/고등)
+  var LEVELS = [
+    { key: '초등', color: '#16a34a' },
+    { key: '중등', color: '#2563eb' },
+    { key: '고등', color: '#7c3aed' }
+  ];
+  function buildLevelButtons() {
+    if (!levelButtonsEl) return;
+    levelButtonsEl.innerHTML = '';
+    var allBtn = document.createElement('button');
+    allBtn.className = 'cat-btn';
+    allBtn.textContent = '전체';
+    allBtn.setAttribute('aria-pressed', 'true');
+    allBtn.style.background = 'var(--accent)';
+    allBtn.style.color = '#fff';
+    allBtn.dataset.level = '';
+    allBtn.addEventListener('click', function () { selectLevel(null, allBtn); });
+    levelButtonsEl.appendChild(allBtn);
+    LEVELS.forEach(function (lv) {
+      var btn = document.createElement('button');
+      btn.className = 'cat-btn';
+      btn.textContent = lv.key;
+      btn.setAttribute('aria-pressed', 'false');
+      btn.style.background = lv.color;
+      btn.style.color = '#fff';
+      btn.dataset.level = lv.key;
+      btn.addEventListener('click', function () { selectLevel(lv.key, btn); });
+      levelButtonsEl.appendChild(btn);
+    });
+  }
+
+  function selectLevel(key, clickedBtn) {
+    selectedLevel = key || null;
+    var allBtns = levelButtonsEl.querySelectorAll('.cat-btn');
+    allBtns.forEach(function (b) {
+      var isSelected = (key == null ? b.dataset.level === '' : b.dataset.level === key);
+      b.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+      b.style.opacity = '1';
+      if (isSelected) {
+        b.style.boxShadow = '0 0 0 3px rgba(0,0,0,.2)';
+        b.style.borderColor = 'rgba(255,255,255,.5)';
+      } else {
+        b.style.boxShadow = '';
+        b.style.borderColor = 'transparent';
+      }
+    });
+    updatePoolCount();
+  }
+
   function getFilteredPool() {
-    if (!selectedCategory) return allPool;
-    return allPool.filter(function (item) { return item.category === selectedCategory; });
+    return allPool.filter(function (item) {
+      if (selectedCategory && item.category !== selectedCategory) return false;
+      if (selectedLevel && item.level !== selectedLevel) return false;
+      return true;
+    });
   }
 
   function updatePoolCount() {
@@ -294,7 +356,9 @@ const dataJson = JSON.stringify(pool);
   }
 
   buildCatButtons();
+  buildLevelButtons();
   // Default selection highlight for "전체"
+  selectLevel(null, levelButtonsEl.querySelector('.cat-btn'));
   selectCategory(null, catButtonsEl.querySelector('.cat-btn'));
 
   function shuffle(arr) {

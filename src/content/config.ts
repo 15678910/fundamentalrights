@@ -7,6 +7,7 @@ const quizQuestion = z.object({
   options: z.array(z.string()).min(2),
   answer: z.number().int().min(0),
   explanation: z.string(),
+  level: z.enum(["초등", "중등", "고등"]).default("중등"),
 });
 
 const rights = defineCollection({
