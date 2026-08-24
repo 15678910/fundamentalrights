@@ -162,10 +162,10 @@ const dataJson = JSON.stringify(pool);
 
   /* Category selector buttons */
   .cat-btn {
-    border-radius: 999px;
-    padding: .38rem 1rem;
-    font-size: .88rem;
-    font-weight: 600;
+    border-radius: 10px;
+    padding: .5rem 1.1rem;
+    font-size: 1.02rem;
+    font-weight: 700;
     font-family: inherit;
     cursor: pointer;
     border: 2px solid transparent;
@@ -270,7 +270,7 @@ const dataJson = JSON.stringify(pool);
     allBtns.forEach(function (b) {
       var isSelected = (key == null ? b.dataset.cat === '' : b.dataset.cat === key);
       b.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
-      b.style.opacity = isSelected ? '1' : '.6';
+      b.style.opacity = isSelected ? '1' : '.9';
       if (isSelected) {
         b.style.boxShadow = '0 0 0 3px rgba(0,0,0,.2)';
         b.style.borderColor = 'rgba(255,255,255,.5)';
