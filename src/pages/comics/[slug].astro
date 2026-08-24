@@ -1,0 +1,49 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const comics = await getCollection("comics");
+  return comics.map((c) => ({ params: { slug: c.id }, props: { entry: c } }));
+}
+
+type Props = { entry: CollectionEntry<"comics"> };
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const base = import.meta.env.BASE_URL;
+const rights = await getCollection("rights");
+const related = entry.data.relatedRights
+  .map((n: number) => rights.find((r) => r.data.article === n))
+  .filter(Boolean);
+const panels = [1, 2, 3, 4];
+---
+<BaseLayout title={`${entry.data.title} | 기본권 만화`}>
+  <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}comics`}>만화</a></p>
+  <h1 style="margin:.2rem 0">{entry.data.title}</h1>
+  <p style="color:var(--muted);margin:.3rem 0 1rem">{entry.data.summary}</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.8rem;max-width:760px">
+    {panels.map((i) => (
+      <img
+        src={`${base}comics/ep${entry.data.order}-p${i}.svg`}
+        alt={entry.data.alts[i - 1]}
+        style="width:100%;border:2px solid var(--fg);border-radius:12px;background:#fff"
+      />
+    ))}
+  </div>
+
+  <article style="margin-top:1.2rem">
+    <Content />
+  </article>
+
+  {related.length > 0 && (
+    <section style="margin:1.5rem 0">
+      <h2 style="font-size:1.15rem">🔗 이 만화로 배우는 기본권</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem">
+        {related.map((r: any) => (
+          <a href={`${base}rights/${r.id}`} style="border:1px solid var(--border);border-radius:999px;padding:.3rem .8rem;text-decoration:none;color:var(--fg)">제{r.data.article}조 · {r.data.title}</a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+const terms = (await getCollection("glossary")).sort((a, b) => a.data.term.localeCompare(b.data.term, "ko"));
+---
+<BaseLayout title="용어 카드게임 | 기본권">
+  <div class="no-print">
+    <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}teachers`}>교사 자료</a></p>
+    <h1>인쇄용 용어 카드게임</h1>
+    <p style="color:var(--muted)">용어 카드 {terms.length}장 + 뜻 카드 {terms.length}장, 총 {terms.length * 2}장. 🖨
+      <button onclick="window.print()" style="border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer;padding:.4rem .9rem;font-weight:600">인쇄하기</button>
+      — 두꺼운 종이에 인쇄해 가위선대로 잘라 쓰세요.</p>
+  </div>
+
+  <section style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;margin:1rem 0">
+    <h2 style="font-size:1.1rem;margin:.2rem 0 .6rem">🎲 게임 방법 세 가지</h2>
+    <ol style="line-height:1.9;margin:0;padding-left:1.2rem">
+      <li><b>기억력 짝맞추기</b> — 카드를 모두 뒤집어 놓고 두 장씩 열어, 용어와 뜻이 짝이면 가져갑니다. 많이 모으면 승리. (2~4명)</li>
+      <li><b>스피드 퀴즈</b> — 한 명이 뜻 카드를 읽으면 나머지가 용어를 먼저 외칩니다. 정답자가 카드 획득. (3명 이상)</li>
+      <li><b>설명하기 게임</b> — 용어 카드를 뽑아, 카드에 적힌 단어를 말하지 않고 설명해 팀원이 맞히게 합니다. 1분에 몇 개 맞힐까요? (팀전)</li>
+    </ol>
+  </section>
+
+  <div class="card-grid">
+    {terms.map((t) => (
+      <div class="game-card term-card">
+        <span class="card-tag">용어</span>
+        <strong>{t.data.term}</strong>
+      </div>
+    ))}
+    {terms.map((t) => (
+      <div class="game-card def-card">
+        <span class="card-tag">뜻</span>
+        <p>{t.data.short}</p>
+      </div>
+    ))}
+  </div>
+
+  <style>
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .6rem; margin-top: 1rem; }
+    .game-card {
+      border: 2px dashed var(--muted); border-radius: 12px; min-height: 120px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: .8rem; page-break-inside: avoid; background: #fff; color: #1f2937;
+    }
+    .term-card strong { font-size: 1.25rem; }
+    .def-card p { font-size: .92rem; margin: 0; line-height: 1.6; }
+    .card-tag {
+      font-size: .7rem; font-weight: 700; letter-spacing: .15em; margin-bottom: .45rem;
+      border-radius: 999px; padding: .1rem .6rem; color: #fff;
+    }
+    .term-card .card-tag { background: #2563eb; }
+    .def-card .card-tag { background: #db2777; }
+    @media print {
+      .card-grid { grid-template-columns: repeat(2, 1fr); gap: 4mm; }
+      .game-card { min-height: 45mm; border-color: #999; }
+    }
+  </style>
+</BaseLayout>

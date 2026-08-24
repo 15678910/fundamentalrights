@@ -1,0 +1,76 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모는 전부 금지를 외치고 동그라미는 너무하다고 답하는 장면">
+  <title>네모는 전부 금지를 외치고 동그라미는 너무하다고 답하는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 네모 말풍선 -->
+  <rect x="3" y="14" width="178" height="44" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="38,58 50,84 64,58" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="38" y="56" width="26" height="6" fill="#ffffff"/>
+  <text x="92" y="42" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">무조건 전부 금지!</text>
+
+  <!-- 동그라미 말풍선 -->
+  <rect x="184" y="14" width="134" height="44" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="255,58 270,84 288,58" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="255" y="56" width="33" height="6" fill="#ffffff"/>
+  <text x="251" y="42" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">그건 너무해!</text>
+  <text x="302" y="118" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="22" font-weight="700" fill="#e11d2a">!</text>
+
+  <!-- 네모 : 팔 들며 강경 -->
+  <g transform="translate(20,108)">
+    <rect x="5" y="15" width="50" height="50" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="8,15 16,3 24,15 32,3 40,15 48,3 55,15" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="14" y1="28" x2="25" y2="32" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="35" y1="32" x2="46" y2="28" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="22" cy="38" r="2.2" fill="#1f2937"/>
+    <circle cx="38" cy="38" r="2.2" fill="#1f2937"/>
+    <line x1="21" y1="60" x2="39" y2="60" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="8" y1="45" x2="0" y2="60" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="52" y1="45" x2="62" y2="15" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="60" r="4" fill="#e11d2a"/>
+    <circle cx="62" cy="15" r="4.5" fill="#e11d2a"/>
+    <line x1="20" y1="65" x2="20" y2="88" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="65" x2="40" y2="88" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="20" cy="90" rx="7" ry="3" fill="#e11d2a"/>
+    <ellipse cx="40" cy="90" rx="7" ry="3" fill="#e11d2a"/>
+  </g>
+
+  <!-- 세모 : 중앙, 담담히 지켜봄 -->
+  <g transform="translate(130,108)">
+    <polygon points="30,14 56,78 4,78" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M18,16 L10,2" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M30,14 L30,0" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M42,16 L50,2" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="20" cy="44" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="40" cy="44" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <line x1="26" y1="44" x2="34" y2="44" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="20" cy="44" r="1.6" fill="#1f2937"/>
+    <circle cx="40" cy="44" r="1.6" fill="#1f2937"/>
+    <circle cx="13" cy="54" r="4" fill="#e11d2a" opacity=".3"/>
+    <circle cx="47" cy="54" r="4" fill="#e11d2a" opacity=".3"/>
+    <path d="M25,58 Q30,62 35,58" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <line x1="10" y1="50" x2="2" y2="68" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="50" y1="50" x2="58" y2="68" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="78" x2="16" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="78" x2="44" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="14" cy="91" rx="7" ry="3" fill="#1f2937"/>
+    <ellipse cx="46" cy="91" rx="7" ry="3" fill="#1f2937"/>
+  </g>
+
+  <!-- 동그라미 : 당황 -->
+  <g transform="translate(240,108)">
+    <circle cx="30" cy="48" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M40,22 Q50,14 44,6 Q40,2 46,-4" stroke="#e11d2a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="44" r="2.4" fill="#1f2937"/>
+    <circle cx="40" cy="44" r="2.4" fill="#1f2937"/>
+    <circle cx="14" cy="54" r="4" fill="#e11d2a" opacity=".3"/>
+    <circle cx="46" cy="54" r="4" fill="#e11d2a" opacity=".3"/>
+    <circle cx="30" cy="59" r="3" stroke="#1f2937" stroke-width="2" fill="none"/>
+    <line x1="8" y1="55" x2="-2" y2="32" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="52" y1="55" x2="62" y2="32" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="22" y1="74" x2="18" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="38" y1="74" x2="42" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="16" cy="91" rx="7" ry="3" fill="#1f2937"/>
+    <ellipse cx="44" cy="91" rx="7" ry="3" fill="#1f2937"/>
+  </g>
+</svg>

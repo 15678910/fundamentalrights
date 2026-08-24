@@ -91,4 +91,15 @@ const films = defineCollection({
   }),
 });
 
-export const collections = { rights, glossary, issues, topics, teachers, films };
+const comics = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/comics" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    order: z.number().int(),
+    relatedRights: z.array(z.number().int()).default([]),
+    alts: z.array(z.string()).length(4), // 패널 4컷 대체 텍스트
+  }),
+});
+
+export const collections = { rights, glossary, issues, topics, teachers, films, comics };

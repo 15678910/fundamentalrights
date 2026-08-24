@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const comics = (await getCollection("comics")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="기본권 만화 | 기본권">
+  <h1>기본권 만화</h1>
+  <p style="color:var(--muted)">세모·네모·동그라미 친구들의 네 컷 이야기로 기본권을 만나요.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem;margin-top:1rem">
+    {comics.map((c) => (
+      <a href={`${base}comics/${c.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.4rem">
+        <img src={`${base}comics/ep${c.data.order}-p1.svg`} alt="" loading="lazy" style="width:100%;border-radius:8px;border:1px solid var(--border)" />
+        <strong style="margin-top:.3rem">{c.data.title}</strong>
+        <span style="color:var(--muted);font-size:.9rem">{c.data.summary}</span>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
