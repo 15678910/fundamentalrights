@@ -1,0 +1,49 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Sidebar from "../../components/Sidebar.astro";
+import Illustration from "../../components/Illustration.astro";
+
+export async function getStaticPaths() {
+  const films = await getCollection("films");
+  return films.map((f) => ({ params: { slug: f.id }, props: { entry: f } }));
+}
+
+type Props = { entry: CollectionEntry<"films"> };
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const base = import.meta.env.BASE_URL;
+const rights = await getCollection("rights");
+const related = entry.data.relatedRights
+  .map((n: number) => rights.find((r) => r.data.article === n))
+  .filter(Boolean);
+---
+<BaseLayout title={`${entry.data.title} | 영화로 배우는 기본권`}>
+  <Sidebar slot="sidebar" />
+  <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}films`}>영화</a></p>
+  <div style="display:flex;gap:1rem;align-items:center;margin:.2rem 0">
+    <Illustration name={`film-${entry.data.order}`} alt="" size={72} />
+    <h1 style="margin:0">{entry.data.title}</h1>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0">
+    <span style="font-size:.8rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .7rem">{entry.data.year}</span>
+    {entry.data.director && <span style="font-size:.8rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .7rem">감독 {entry.data.director}</span>}
+    <span style="font-size:.8rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .7rem">{entry.data.rating}</span>
+    <span style="font-size:.8rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .7rem">권장 {entry.data.level}</span>
+  </div>
+
+  <article>
+    <Content />
+  </article>
+
+  {related.length > 0 && (
+    <section style="margin:1.5rem 0">
+      <h2 style="font-size:1.15rem">🔗 이 영화로 배우는 기본권</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem">
+        {related.map((r: any) => (
+          <a href={`${base}rights/${r.id}`} style="border:1px solid var(--border);border-radius:999px;padding:.3rem .8rem;text-decoration:none;color:var(--fg)">제{r.data.article}조 · {r.data.title}</a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Illustration from "../../components/Illustration.astro";
+const films = (await getCollection("films")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="영화로 배우는 기본권 | 기본권">
+  <h1>영화로 배우는 기본권</h1>
+  <p style="color:var(--muted)">좋은 영화 한 편은 훌륭한 헌법 교과서가 됩니다. 영화 속 이야기에서 어떤 기본권이 살아 움직이는지 함께 살펴봐요.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem;margin-top:1rem">
+    {films.map((f) => (
+      <a href={`${base}films/${f.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.4rem">
+        <Illustration name={`film-${f.data.order}`} alt="" size={48} />
+        <strong style="margin-top:.3rem">{f.data.title} <span style="font-weight:400;color:var(--muted)">({f.data.year})</span></strong>
+        <span style="color:var(--muted);font-size:.9rem;flex:1">{f.data.summary}</span>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.25rem">
+          <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">{f.data.rating}</span>
+          <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">{f.data.level}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+  <p style="color:var(--muted);font-size:.85rem;margin-top:1.5rem">※ 관람등급을 확인하고 학년에 맞게 활용하세요. 본 소개는 학습용이며, 영화의 저작권은 각 제작사에 있습니다.</p>
+</BaseLayout>

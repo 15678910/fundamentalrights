@@ -1,0 +1,30 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="민주화의 촛불">
+  <title>민주화의 촛불</title>
+  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
+  <!-- Ground -->
+  <rect x="14" y="88" width="92" height="5" rx="2.5" fill="#be185d"/>
+  <!-- Candles -->
+  <rect x="25" y="54" width="10" height="24" rx="5" fill="#ffffff"/>
+  <rect x="25" y="62" width="10" height="4" fill="#db2777"/>
+  <rect x="55" y="40" width="10" height="38" rx="5" fill="#ffffff"/>
+  <rect x="55" y="52" width="10" height="4" fill="#db2777"/>
+  <rect x="85" y="54" width="10" height="24" rx="5" fill="#ffffff"/>
+  <rect x="85" y="62" width="10" height="4" fill="#db2777"/>
+  <!-- Flames -->
+  <path d="M30 40 C26 46 26 50 30 54 C34 50 34 46 30 40 Z" fill="#f59e0b"/>
+  <path d="M30 44 C28 47 28 50 30 52 C32 50 32 47 30 44 Z" fill="#fde68a"/>
+  <path d="M60 26 C56 32 56 36 60 40 C64 36 64 32 60 26 Z" fill="#f59e0b"/>
+  <path d="M60 30 C58 33 58 36 60 38 C62 36 62 33 60 30 Z" fill="#fde68a"/>
+  <path d="M90 40 C86 46 86 50 90 54 C94 50 94 46 90 40 Z" fill="#f59e0b"/>
+  <path d="M90 44 C88 47 88 50 90 52 C92 50 92 47 90 44 Z" fill="#fde68a"/>
+  <!-- Hands -->
+  <rect x="22" y="76" width="16" height="16" rx="8" fill="#fcd9b6"/>
+  <rect x="52" y="76" width="16" height="16" rx="8" fill="#fcd9b6"/>
+  <rect x="82" y="76" width="16" height="16" rx="8" fill="#fcd9b6"/>
+  <!-- Film strip -->
+  <rect x="16" y="99" width="88" height="14" rx="6" fill="#db2777"/>
+  <rect x="24" y="102.5" width="8" height="8" rx="2" fill="#fde7f1"/>
+  <rect x="46" y="102.5" width="8" height="8" rx="2" fill="#fde7f1"/>
+  <rect x="68" y="102.5" width="8" height="8" rx="2" fill="#fde7f1"/>
+  <rect x="90" y="102.5" width="8" height="8" rx="2" fill="#fde7f1"/>
+</svg>

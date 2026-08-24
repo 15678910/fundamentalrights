@@ -76,4 +76,18 @@ const teachers = defineCollection({
   }),
 });
 
-export const collections = { rights, glossary, issues, topics, teachers };
+const films = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/films" }),
+  schema: z.object({
+    title: z.string(),
+    director: z.string().optional(),
+    year: z.number().int(),
+    rating: z.string(),   // 관람등급
+    level: z.string(),    // 권장 학년
+    summary: z.string(),
+    order: z.number().int(),
+    relatedRights: z.array(z.number().int()).default([]),
+  }),
+});
+
+export const collections = { rights, glossary, issues, topics, teachers, films };

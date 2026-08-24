@@ -1,0 +1,25 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="재판과 조력받을 권리">
+  <title>재판과 조력받을 권리</title>
+  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
+  <!-- Scale -->
+  <circle cx="60" cy="6" r="4" fill="#0891b2"/>
+  <rect x="36" y="8" width="48" height="4" rx="2" fill="#0891b2"/>
+  <rect x="58" y="10" width="4" height="26" rx="2" fill="#0891b2"/>
+  <line x1="40" y1="10" x2="32" y2="24" stroke="#0891b2" stroke-width="2" stroke-linecap="round"/>
+  <line x1="80" y1="10" x2="88" y2="24" stroke="#0891b2" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="32" cy="26" rx="11" ry="5" fill="#ffffff" stroke="#0891b2" stroke-width="2.5"/>
+  <ellipse cx="88" cy="26" rx="11" ry="5" fill="#ffffff" stroke="#0891b2" stroke-width="2.5"/>
+  <rect x="48" y="36" width="24" height="6" rx="3" fill="#0891b2"/>
+  <!-- Briefcase -->
+  <path d="M50 56 Q60 44 70 56" stroke="#0891b2" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <rect x="28" y="54" width="64" height="36" rx="11" fill="#0891b2"/>
+  <rect x="28" y="70" width="64" height="3" rx="1.5" fill="#ffffff"/>
+  <rect x="53" y="66" width="14" height="10" rx="3" fill="#ffffff"/>
+  <circle cx="60" cy="71" r="2" fill="#f59e0b"/>
+  <!-- Film strip -->
+  <rect x="16" y="99" width="88" height="14" rx="6" fill="#0891b2"/>
+  <rect x="24" y="102.5" width="8" height="8" rx="2" fill="#e0f5fa"/>
+  <rect x="46" y="102.5" width="8" height="8" rx="2" fill="#e0f5fa"/>
+  <rect x="68" y="102.5" width="8" height="8" rx="2" fill="#e0f5fa"/>
+  <rect x="90" y="102.5" width="8" height="8" rx="2" fill="#e0f5fa"/>
+</svg>
