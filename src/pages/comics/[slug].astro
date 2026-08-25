@@ -26,10 +26,10 @@ const labelText =
 <BaseLayout title={`${entry.data.title} | 기본권 만화`}>
   <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}comics`}>만화</a></p>
   {related.length > 0 && (
-    <p style={`margin:.2rem 0 0;font-size:.95rem;font-weight:700;color:${labelColor}`}>{labelText}</p>
+    <p style={`margin:.2rem 0 0;font-size:1.05rem;font-weight:700;color:${labelColor}`}>{labelText}</p>
   )}
   <h1 style="margin:.2rem 0">{entry.data.title}</h1>
-  <p style="color:var(--muted);margin:.3rem 0 1rem">{entry.data.summary}</p>
+  <p style="color:var(--fg);margin:.3rem 0 1rem">{entry.data.summary}</p>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.8rem;max-width:760px">
     {panels.map((i) => (
