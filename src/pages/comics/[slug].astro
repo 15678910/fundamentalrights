@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCategory } from "../../lib/categories";
 
 export async function getStaticPaths() {
   const comics = await getCollection("comics");
@@ -19,6 +20,13 @@ const panels = [1, 2, 3, 4];
 ---
 <BaseLayout title={`${entry.data.title} | 기본권 만화`}>
   <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}comics`}>만화</a></p>
+  {related.length > 0 && (
+    <p style={`margin:.2rem 0 0;font-size:.95rem;font-weight:700;color:${getCategory((related[0] as any).data.category)?.color ?? "var(--accent)"}`}>
+      {related.length === 1
+        ? `제${(related[0] as any).data.article}조 · ${(related[0] as any).data.title}`
+        : related.map((r: any) => `제${r.data.article}조`).join(" · ")}
+    </p>
+  )}
   <h1 style="margin:.2rem 0">{entry.data.title}</h1>
   <p style="color:var(--muted);margin:.3rem 0 1rem">{entry.data.summary}</p>
 

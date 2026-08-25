@@ -1,19 +1,37 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCategory } from "../../lib/categories";
 const comics = (await getCollection("comics")).sort((a, b) => a.data.order - b.data.order);
+const rights = await getCollection("rights");
 const base = import.meta.env.BASE_URL;
+
+function articleLabel(c: (typeof comics)[number]) {
+  const arts = c.data.relatedRights;
+  if (!arts.length) return null;
+  const first = rights.find((r) => r.data.article === arts[0]);
+  const color = first ? getCategory(first.data.category)?.color ?? "var(--accent)" : "var(--accent)";
+  const text =
+    arts.length === 1 && first
+      ? `제${arts[0]}조 · ${first.data.title}`
+      : arts.map((n) => `제${n}조`).join(" · ");
+  return { text, color };
+}
 ---
 <BaseLayout title="기본권 만화 | 기본권">
   <h1>기본권 만화</h1>
   <p style="color:var(--muted)">세모·네모·동그라미 친구들의 네 컷 이야기로 기본권을 만나요.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem;margin-top:1rem">
-    {comics.map((c) => (
-      <a href={`${base}comics/${c.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.4rem">
-        <img src={`${base}comics/ep${c.data.order}-p1.svg`} alt="" loading="lazy" style="width:100%;border-radius:8px;border:1px solid var(--border)" />
-        <strong style="margin-top:.3rem">{c.data.title}</strong>
-        <span style="color:var(--muted);font-size:.9rem">{c.data.summary}</span>
-      </a>
-    ))}
+    {comics.map((c) => {
+      const label = articleLabel(c);
+      return (
+        <a href={`${base}comics/${c.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.35rem">
+          <img src={`${base}comics/ep${c.data.order}-p1.svg`} alt="" loading="lazy" style="width:100%;border-radius:8px;border:1px solid var(--border)" />
+          {label && <span style={`margin-top:.35rem;font-size:.78rem;font-weight:700;color:${label.color}`}>{label.text}</span>}
+          <strong>{c.data.title}</strong>
+          <span style="color:var(--muted);font-size:.9rem">{c.data.summary}</span>
+        </a>
+      );
+    })}
   </div>
 </BaseLayout>
