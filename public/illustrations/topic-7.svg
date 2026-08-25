@@ -1,0 +1,26 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="인공지능과 기본권">
+  <title>인공지능과 기본권</title>
+  <rect width="120" height="120" rx="26" fill="#ede9fe"/>
+  <!-- robot head -->
+  <rect x="30" y="34" width="60" height="46" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+  <!-- antenna -->
+  <line x1="60" y1="34" x2="60" y2="22" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="60" cy="18" r="4.5" fill="#f59e0b"/>
+  <!-- eyes -->
+  <circle cx="46" cy="52" r="6" fill="#7c3aed"/>
+  <circle cx="74" cy="52" r="6" fill="#7c3aed"/>
+  <circle cx="48" cy="50" r="2" fill="#ffffff"/>
+  <circle cx="76" cy="50" r="2" fill="#ffffff"/>
+  <!-- smile -->
+  <path d="M48 66 Q60 74 72 66" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+  <!-- ears -->
+  <rect x="22" y="48" width="8" height="18" rx="4" fill="#7c3aed"/>
+  <rect x="90" y="48" width="8" height="18" rx="4" fill="#7c3aed"/>
+  <!-- heart on chest: rights at the core -->
+  <path d="M60 104 L50 94 Q45 89 49 84 Q54 79 60 85 Q66 79 71 84 Q75 89 70 94 Z" fill="#ef4444"/>
+  <!-- circuit sparks -->
+  <g stroke="#a78bfa" stroke-width="2" stroke-linecap="round">
+    <path d="M14 30 h8"/><path d="M18 26 v8"/>
+    <path d="M98 26 h8"/><path d="M102 22 v8"/>
+  </g>
+</svg>
