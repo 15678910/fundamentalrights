@@ -1,0 +1,29 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="교사·공무원의 정치적 기본권">
+  <title>교사·공무원의 정치적 기본권</title>
+  <rect width="120" height="120" rx="26" fill="#fdeeee"/>
+  <!-- ballot box -->
+  <rect x="38" y="58" width="44" height="34" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+  <rect x="52" y="54" width="16" height="5" rx="2.5" fill="#dc2626"/>
+  <!-- ballot paper going in -->
+  <rect x="50" y="34" width="20" height="16" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2.5" transform="rotate(-8 60 42)"/>
+  <path d="M55 41 l3 3 l6 -6" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-8 60 42)"/>
+  <!-- teacher figure (left, with book) reaching but held by dashed line -->
+  <circle cx="20" cy="66" r="7" fill="#fcd9b6"/>
+  <ellipse cx="20" cy="59.5" rx="6" ry="3" fill="#1f2937"/>
+  <rect x="14.5" y="72" width="11" height="14" rx="5.5" fill="#2563eb"/>
+  <rect x="12" y="88" width="16" height="5" rx="2" fill="#f59e0b"/>
+  <!-- question mark between teacher and box -->
+  <text x="32" y="80" font-size="14" font-weight="bold" fill="#dc2626" font-family="sans-serif">?</text>
+  <!-- professor figure (right) walking freely toward box -->
+  <circle cx="100" cy="64" r="7" fill="#fcd9b6"/>
+  <path d="M92 58 h16 l-2 -4 h-12 Z" fill="#1f2937"/>
+  <rect x="94.5" y="70" width="11" height="14" rx="5.5" fill="#16a34a"/>
+  <path d="M96 86 l-2 7 M104 86 l2 7" stroke="#16a34a" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- scale hint on box: equality question -->
+  <g stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.7">
+    <path d="M48 74 h24"/>
+    <path d="M52 74 v6 M68 74 v6"/>
+    <path d="M49 82 h6 M65 82 h6"/>
+  </g>
+  <ellipse cx="60" cy="102" rx="36" ry="6" fill="#dc2626" opacity="0.12"/>
+</svg>
