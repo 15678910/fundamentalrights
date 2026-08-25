@@ -51,19 +51,19 @@ const bundles = [
 <BaseLayout title="교사 자료실 | 기본권">
   <TeachersSidebar slot="sidebar" />
   <h1>교사 자료실</h1>
-  <p style="color:var(--muted)">수업에 바로 쓰는 수업안·워크시트·토론 가이드·형성평가지·가정통신문. 모든 자료는 🖨 인쇄 버튼으로 바로 출력할 수 있어요. 교실 게시용 <a href={`${base}posters`}>인쇄 포스터 3종</a>과 <a href={`${base}cards`}>용어 카드게임(인쇄용)</a>도 준비되어 있습니다.</p>
+  <p style="font-size:1.02rem">수업에 바로 쓰는 수업안·워크시트·토론 가이드·형성평가지·가정통신문. 모든 자료는 🖨 인쇄 버튼으로 바로 출력할 수 있어요. 교실 게시용 <a href={`${base}posters`}>인쇄 포스터 3종</a>과 <a href={`${base}cards`}>용어 카드게임(인쇄용)</a>도 준비되어 있습니다.</p>
 
-  <section id="bundles" style="margin-top:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem">
-    <h2 style="font-size:1.15rem;margin:.2rem 0 .6rem">🧭 주제별 꾸러미</h2>
-    <p style="color:var(--muted);font-size:.9rem;margin:0 0 .8rem">다루고 싶은 주제에서 출발해 보세요 — 수업안·쟁점·영화·평가지를 묶어 놓았어요.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem">
+  <section id="bundles" style="margin-top:2rem">
+    <h2 style="font-size:1.4rem;margin:0 0 .4rem">🧭 주제별 꾸러미</h2>
+    <p style="font-size:1rem;margin:0 0 1rem">다루고 싶은 주제에서 출발해 보세요 — 수업안·쟁점·영화·평가지를 묶어 놓았어요.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.9rem">
       {bundles.map((b) => (
-        <div style="border:1px solid var(--border);border-radius:10px;padding:.8rem;background:var(--bg)">
-          <strong>{b.icon} {b.title}</strong>
-          <p style="color:var(--muted);font-size:.85rem;margin:.3rem 0 .5rem">{b.desc}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:.35rem">
+        <div style="border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;background:var(--card)">
+          <strong style="font-size:1.08rem">{b.icon} {b.title}</strong>
+          <p style="font-size:.95rem;line-height:1.65;margin:.4rem 0 .6rem">{b.desc}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem">
             {b.links.map((l) => (
-              <a href={`${base}${l.href}`} style="font-size:.78rem;border:1px solid var(--border);border-radius:999px;padding:.15rem .6rem;text-decoration:none;color:var(--fg)">{l.label}</a>
+              <a href={`${base}${l.href}`} style="font-size:.85rem;border:1px solid var(--border);border-radius:999px;padding:.25rem .75rem;text-decoration:none;color:var(--fg);background:var(--bg)">{l.label}</a>
             ))}
           </div>
         </div>
@@ -72,23 +72,22 @@ const bundles = [
   </section>
 
   {Object.entries(groups).filter(([, items]) => items.length > 0).map(([type, items]) => (
-    <section id={`type-${type}`} style="margin-top:2rem">
-      <h2 style="font-size:1.15rem;margin-bottom:.75rem">
+    <section id={`type-${type}`} style="margin-top:2.75rem">
+      <h2 style="font-size:1.4rem;margin-bottom:1rem">
         {groupMeta[type].icon} {groupMeta[type].label}
       </h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.9rem">
         {items.map((item) => (
           <a
             href={`${base}teachers/${item.id}`}
-            style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.4rem"
+            style="border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.45rem"
           >
-            <strong style="font-size:1rem">{item.data.title}</strong>
-            <span style="color:var(--muted);font-size:.875rem;flex:1">{item.data.summary}</span>
-            <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.25rem">
-              <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">{item.data.type}</span>
-              <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">{item.data.level}</span>
+            <strong style="font-size:1.08rem;line-height:1.45">{item.data.title}</strong>
+            <span style="font-size:.95rem;line-height:1.65;flex:1">{item.data.summary}</span>
+            <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.3rem">
+              <span style="font-size:.82rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .65rem">{item.data.level}</span>
               {item.data.duration && (
-                <span style="font-size:.75rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem">⏱ {item.data.duration}</span>
+                <span style="font-size:.82rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .65rem">⏱ {item.data.duration}</span>
               )}
             </div>
           </a>
