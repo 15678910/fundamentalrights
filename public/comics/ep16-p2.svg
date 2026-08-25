@@ -54,10 +54,10 @@
   </g>
 
   <!-- 말풍선: 네모 -->
-  <path d="M 32,12 H 188 A12,12 0 0 1 200,24 V 46 A12,12 0 0 1 188,58 H 119 L 110,100 L 101,58 H 32 A12,12 0 0 1 20,46 V 24 A12,12 0 0 1 32,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="110" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">짜잔! 나왔지!</text>
+  <path d="M 28,12 H 152 A12,12 0 0 1 164,24 V 46 A12,12 0 0 1 152,58 H 119 L 110,100 L 101,58 H 28 A12,12 0 0 1 16,46 V 24 A12,12 0 0 1 28,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="90" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">짜잔! 나왔지!</text>
 
   <!-- 말풍선: 동그라미 -->
-  <path d="M 172,14 H 298 A12,12 0 0 1 310,26 V 44 A12,12 0 0 1 298,56 H 244 L 235,95 L 226,56 H 172 A12,12 0 0 1 160,44 V 26 A12,12 0 0 1 172,14 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="235" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">꺅! 노크는?!</text>
+  <path d="M 190,14 H 298 A12,12 0 0 1 310,26 V 44 A12,12 0 0 1 298,56 H 244 L 235,95 L 226,56 H 190 A12,12 0 0 1 178,44 V 26 A12,12 0 0 1 190,14 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="244" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">꺅! 노크는?!</text>
 </svg>

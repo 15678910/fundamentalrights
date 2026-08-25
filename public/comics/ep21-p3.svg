@@ -70,17 +70,11 @@
     <path d="M -6,-44 Q 0,-41 6,-44" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
   </g>
 
-  <!-- 말풍선: 세모 (2줄) -->
-  <path d="M 44,8 H 262 A14,14 0 0 1 276,22 V 62 A14,14 0 0 1 262,76 H 167 L 158,87 L 149,76 H 44 A14,14 0 0 1 30,62 V 22 A14,14 0 0 1 44,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="153" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="153" dy="-11">의견 말할 자유는</tspan>
+  <!-- 말풍선: 세모 (3줄 — 보조 풍선 내용을 셋째 줄로 병합) -->
+  <path d="M 44,8 H 262 A14,14 0 0 1 276,22 V 87 A14,14 0 0 1 262,101 H 167 L 158,112 L 149,101 H 44 A14,14 0 0 1 30,87 V 22 A14,14 0 0 1 44,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="153" y="55" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="153" dy="-23">의견 말할 자유는</tspan>
     <tspan x="153" dy="23">모두의 것. 제21조!</tspan>
-  </text>
-
-  <!-- 말풍선: 세모 (작은 둘째 풍선) -->
-  <path d="M 232,92 H 306 A9,9 0 0 1 315,101 V 121 A9,9 0 0 1 306,130 H 268 L 260,140 L 256,130 H 232 A9,9 0 0 1 223,121 V 101 A9,9 0 0 1 232,92 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.6"/>
-  <text x="269" y="106" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="11" fill="#1f2937">
-    <tspan x="269" dy="0">남을 해치는</tspan>
-    <tspan x="269" dy="15">말은 빼고!</tspan>
+    <tspan x="153" dy="23">남을 해치는 말은 빼고!</tspan>
   </text>
 </svg>

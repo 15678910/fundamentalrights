@@ -49,10 +49,10 @@
   </g>
 
   <!-- 말풍선: 동그라미 -->
-  <path d="M 47,14 H 173 A12,12 0 0 1 185,26 V 44 A12,12 0 0 1 173,56 H 119 L 110,95 L 101,56 H 47 A12,12 0 0 1 35,44 V 26 A12,12 0 0 1 47,14 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="110" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">헉! 뭐야?!</text>
+  <path d="M 28,14 H 146 A12,12 0 0 1 158,26 V 44 A12,12 0 0 1 146,56 H 119 L 110,95 L 101,56 H 28 A12,12 0 0 1 16,44 V 26 A12,12 0 0 1 28,14 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="87" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">헉! 뭐야?!</text>
 
   <!-- 말풍선: 네모 (2줄) -->
-  <path d="M 152,10 H 278 A12,12 0 0 1 290,22 V 44 A12,12 0 0 1 278,56 H 225 L 215,92 L 205,56 H 152 A12,12 0 0 1 140,44 V 22 A12,12 0 0 1 152,10 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="215" y="33" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">사진 다 봤다~</text>
+  <path d="M 188,10 H 298 A12,12 0 0 1 310,22 V 44 A12,12 0 0 1 298,56 H 225 L 215,92 L 205,56 H 188 A12,12 0 0 1 176,44 V 22 A12,12 0 0 1 188,10 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="243" y="33" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">사진 다 봤다~</text>
 </svg>

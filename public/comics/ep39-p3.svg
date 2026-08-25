@@ -72,7 +72,7 @@
 
   <!-- 말풍선: 세모 (3줄) -->
   <path d="M 74,6 H 246 A16,16 0 0 1 262,22 V 76 A16,16 0 0 1 246,92 H 170 L 160,104 L 150,92 H 74 A16,16 0 0 1 58,76 V 22 A16,16 0 0 1 74,6 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+  <text text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
     <tspan x="160" y="34">나라를 지킨 사람에게</tspan>
     <tspan x="160" y="56">불이익은 안 돼!</tspan>
     <tspan x="160" y="78">제39조!</tspan>

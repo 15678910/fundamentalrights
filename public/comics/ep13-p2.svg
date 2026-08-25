@@ -54,16 +54,16 @@
   </g>
 
   <!-- 말풍선: 동그라미 -->
-  <path d="M 10,8 H 146 A14,14 0 0 1 160,22 V 56 A14,14 0 0 1 146,70 H 100 L 91,100 L 82,70 H 10 A14,14 0 0 1 -4,56 V 22 A14,14 0 0 1 10,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="78" y="39" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="78" dy="-11">어제는 규칙</tspan>
-    <tspan x="78" dy="22">없었잖아!</tspan>
+  <path d="M 28,8 H 118 A14,14 0 0 1 132,22 V 56 A14,14 0 0 1 118,70 H 100 L 91,100 L 82,70 H 28 A14,14 0 0 1 14,56 V 22 A14,14 0 0 1 28,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="73" y="39" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="73" dy="-11">어제는 규칙</tspan>
+    <tspan x="73" dy="22">없었잖아!</tspan>
   </text>
 
   <!-- 말풍선: 네모 -->
-  <path d="M 172,8 H 306 A14,14 0 0 1 320,22 V 56 A14,14 0 0 1 306,70 H 231 L 222,100 L 213,70 H 172 A14,14 0 0 1 158,56 V 22 A14,14 0 0 1 172,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="239" y="39" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="239" dy="-11">어제 뛴 것도</tspan>
-    <tspan x="239" dy="22">벌점이야!</tspan>
+  <path d="M 194,8 H 296 A14,14 0 0 1 310,22 V 56 A14,14 0 0 1 296,70 H 231 L 222,100 L 213,70 H 194 A14,14 0 0 1 180,56 V 22 A14,14 0 0 1 194,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="245" y="39" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="245" dy="-11">어제 뛴 것도</tspan>
+    <tspan x="245" dy="22">벌점이야!</tspan>
   </text>
 </svg>

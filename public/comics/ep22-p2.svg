@@ -47,14 +47,16 @@
     <circle cx="0" cy="-48" r="4" fill="#1f2937"/>
   </g>
 
-  <!-- 말풍선: 동그라미 -->
-  <path d="M 172,12 H 298 A12,12 0 0 1 310,24 V 46 A12,12 0 0 1 298,58 H 259 L 250,100 L 241,58 H 172 A12,12 0 0 1 160,46 V 24 A12,12 0 0 1 172,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="235" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">내 마음인데!</text>
-
-  <!-- 말풍선: 네모 (2줄) -->
-  <path d="M 29,8 H 221 A14,14 0 0 1 235,22 V 56 A14,14 0 0 1 221,70 H 79 L 70,104 L 61,70 H 29 A14,14 0 0 1 15,56 V 22 A14,14 0 0 1 29,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="125" y="39" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="125" dy="-11">하늘은 파란색으로만</tspan>
-    <tspan x="125" dy="22">그려야지! 다 틀렸어!</tspan>
+  <!-- 말풍선: 네모 (4줄, 좌측 · 패널 번호와 겹치지 않도록 x=18부터) -->
+  <path d="M 32,8 H 154 A14,14 0 0 1 168,22 V 94 A14,14 0 0 1 154,108 H 90 L 66,118 L 68,108 H 32 A14,14 0 0 1 18,94 V 22 A14,14 0 0 1 32,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="93" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">
+    <tspan x="93" y="28">하늘은</tspan>
+    <tspan x="93" y="48">파란색으로만</tspan>
+    <tspan x="93" y="68">그려야지!</tspan>
+    <tspan x="93" y="88">다 틀렸어!</tspan>
   </text>
+
+  <!-- 말풍선: 동그라미 (우측, 네모 풍선과 12px 이상 간격) -->
+  <path d="M 192,12 H 302 A12,12 0 0 1 314,24 V 46 A12,12 0 0 1 302,58 H 259 L 250,100 L 241,58 H 192 A12,12 0 0 1 180,46 V 24 A12,12 0 0 1 192,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="247" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">내 마음인데!</text>
 </svg>

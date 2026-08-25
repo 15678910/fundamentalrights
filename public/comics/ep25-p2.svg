@@ -48,17 +48,17 @@
   </g>
 
   <!-- 말풍선: 동그라미 -->
-  <rect x="6" y="12" width="172" height="48" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <polygon points="88,60 96,90 104,60" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <rect x="88" y="58" width="16" height="4" fill="#ffffff"/>
-  <text x="92" y="41" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">나도 나가 볼까…</text>
+  <rect x="6" y="12" width="140" height="48" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="78,60 94,60 100,90" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="78" y="58" width="16" height="4" fill="#ffffff"/>
+  <text x="76" y="41" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">나도 나가 볼까…</text>
 
   <!-- 말풍선: 네모 (2줄) -->
-  <rect x="128" y="4" width="182" height="66" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="156" y="4" width="156" height="66" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
   <polygon points="212,70 220,100 228,70" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
   <rect x="212" y="68" width="16" height="4" fill="#ffffff"/>
-  <text x="219" y="29" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="219" dy="0">회장은 키 큰</tspan>
-    <tspan x="219" dy="22">사람만 하는 거야!</tspan>
+  <text x="234" y="29" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="234" dy="0">회장은 키 큰</tspan>
+    <tspan x="234" dy="22">사람만 하는 거야!</tspan>
   </text>
 </svg>

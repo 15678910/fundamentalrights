@@ -71,20 +71,21 @@
   </g>
 
   <!-- 말풍선: 세모 (당부, 작게) -->
-  <rect x="18" y="8" width="118" height="44" rx="12" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <polygon points="106,52 126,52 140,86" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <rect x="107" y="50" width="18" height="4" fill="#ffffff"/>
-  <text x="77" y="30" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">
-    <tspan x="77" dy="0">어른에게 꼭</tspan>
-    <tspan x="77" dy="18">알리자!</tspan>
+  <rect x="6" y="8" width="118" height="44" rx="12" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="94,52 114,52 128,86" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="95" y="50" width="18" height="4" fill="#ffffff"/>
+  <text x="65" y="30" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">
+    <tspan x="65" dy="0">어른에게 꼭</tspan>
+    <tspan x="65" dy="18">알리자!</tspan>
   </text>
 
   <!-- 말풍선: 세모 (제30조, 크게) -->
-  <rect x="150" y="8" width="160" height="64" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <polygon points="168,72 188,72 178,96" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <rect x="169" y="70" width="18" height="4" fill="#ffffff"/>
-  <text x="230" y="40" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="230" dy="-11">피해를 입은 사람은</tspan>
-    <tspan x="230" dy="22">나라가 도와줘. 제30조!</tspan>
+  <rect x="134" y="4" width="180" height="80" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="158,84 178,84 168,108" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="159" y="82" width="18" height="4" fill="#ffffff"/>
+  <text x="224" y="44" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="224" dy="-22">피해를 입은 사람은</tspan>
+    <tspan x="224" dy="22">나라가 도와줘.</tspan>
+    <tspan x="224" dy="22">제30조!</tspan>
   </text>
 </svg>

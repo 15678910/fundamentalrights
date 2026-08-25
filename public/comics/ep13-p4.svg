@@ -84,8 +84,8 @@
   </g>
 
   <!-- 말풍선: 네모 -->
-  <path d="M 190,86 H 306 A12,12 0 0 1 318,98 V 116 A12,12 0 0 1 306,128 H 251 L 242,152 L 233,128 H 190 A12,12 0 0 1 178,116 V 98 A12,12 0 0 1 190,86 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="248" y="107" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">오늘부터네!</text>
+  <path d="M 182,86 H 298 A12,12 0 0 1 310,98 V 116 A12,12 0 0 1 298,128 H 243 L 234,152 L 225,128 H 182 A12,12 0 0 1 170,116 V 98 A12,12 0 0 1 182,86 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="240" y="107" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">오늘부터네!</text>
 
   <!-- 캡션 -->
   <text x="160" y="250" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#64748b">제13조 죄형법정주의</text>

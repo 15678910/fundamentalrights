@@ -59,11 +59,17 @@
     <path d="M -6,-51 Q 0,-54 6,-51" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
   </g>
 
-  <!-- 말풍선: 네모 -->
-  <path d="M 10,138 H 128 A12,12 0 0 1 140,150 V 172 A12,12 0 0 1 128,184 H 105 L 100,196 L 89,184 H 10 A12,12 0 0 1 -2,172 V 150 A12,12 0 0 1 10,138 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="69" y="161" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">마음에 안 들어.</text>
+  <!-- 말풍선: 네모 (2줄, 게시판 오른쪽 위 · 네모 머리 위) -->
+  <path d="M 124,6 H 204 A12,12 0 0 1 216,18 V 42 A12,12 0 0 1 204,54 H 150 L 118,84 L 130,54 H 124 A12,12 0 0 1 112,42 V 18 A12,12 0 0 1 124,6 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="164" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="164" y="20">마음에</tspan>
+    <tspan x="164" y="40">안 들어.</tspan>
+  </text>
 
-  <!-- 말풍선: 동그라미 -->
-  <path d="M 178,10 H 306 A12,12 0 0 1 318,22 V 44 A12,12 0 0 1 306,56 H 254 L 245,86 L 236,56 H 178 A12,12 0 0 1 166,44 V 22 A12,12 0 0 1 178,10 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="242" y="32" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">안 돼! 내 의견이야!</text>
+  <!-- 말풍선: 동그라미 (동그라미 머리 위, 네모 풍선과 세로로 어긋나게 배치) -->
+  <path d="M 188,66 H 300 A12,12 0 0 1 312,78 V 106 A12,12 0 0 1 300,118 H 252 L 240,129 L 228,118 H 188 A12,12 0 0 1 176,106 V 78 A12,12 0 0 1 188,66 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="244" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">
+    <tspan x="244" y="82">안 돼!</tspan>
+    <tspan x="244" y="104">내 의견이야!</tspan>
+  </text>
 </svg>

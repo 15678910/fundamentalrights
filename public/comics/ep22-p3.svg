@@ -70,14 +70,11 @@
     <path d="M -6,-44 Q 0,-41 6,-44" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
   </g>
 
-  <!-- 말풍선: 세모 (2줄) -->
-  <path d="M 59,8 H 241 A14,14 0 0 1 255,22 V 64 A14,14 0 0 1 241,78 H 159 L 150,89 L 141,78 H 59 A14,14 0 0 1 45,64 V 22 A14,14 0 0 1 59,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="150" y="43" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="150" dy="-11">상상하고 표현하는 건</tspan>
+  <!-- 말풍선: 세모 (3줄 — 보조 풍선 내용을 셋째 줄로 병합) -->
+  <path d="M 59,8 H 241 A14,14 0 0 1 255,22 V 87 A14,14 0 0 1 241,101 H 159 L 150,112 L 141,101 H 59 A14,14 0 0 1 45,87 V 22 A14,14 0 0 1 59,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="150" dy="-23">상상하고 표현하는 건</tspan>
     <tspan x="150" dy="23">자유야. 제22조!</tspan>
+    <tspan x="150" dy="23">만든 것도 보호!</tspan>
   </text>
-
-  <!-- 말풍선: 세모 (작은 보충) -->
-  <path d="M 160,2 H 300 A10,10 0 0 1 310,12 V 32 A10,10 0 0 1 300,42 H 254 L 245,54 L 236,42 H 160 A10,10 0 0 1 150,32 V 12 A10,10 0 0 1 160,2 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="230" y="23" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="13" fill="#1f2937">만든 것도 보호!</text>
 </svg>

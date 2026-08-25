@@ -3,10 +3,6 @@
   <rect width="320" height="260" fill="#ffffff"/>
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
 
-  <!-- 칠판 (교실 배경) -->
-  <rect x="14" y="16" width="92" height="48" rx="4" fill="#e3ede2" stroke="#1f2937" stroke-width="2"/>
-  <line x1="14" y1="64" x2="106" y2="64" stroke="#1f2937" stroke-width="2"/>
-
   <!-- 패널 번호 -->
   <circle cx="298" cy="22" r="13" fill="#e11d2a"/>
   <text x="298" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">1</text>

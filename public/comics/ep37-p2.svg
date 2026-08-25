@@ -76,7 +76,7 @@
 
   <!-- 말풍선: 네모 (3줄) -->
   <path d="M 156,6 H 302 A16,16 0 0 1 318,22 V 76 A16,16 0 0 1 302,92 H 280 L 265,104 L 250,92 H 156 A16,16 0 0 1 140,76 V 22 A16,16 0 0 1 156,6 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+  <text text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
     <tspan x="229" y="34">시끄러워!</tspan>
     <tspan x="229" y="56">쉬는 시간엔</tspan>
     <tspan x="229" y="78">말하기 전면 금지!</tspan>

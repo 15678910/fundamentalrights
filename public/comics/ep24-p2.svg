@@ -55,6 +55,11 @@
   <text x="80" y="22" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">엥?!</text>
 
   <!-- 말풍선: 네모 -->
-  <path d="M 102,12 H 298 A12,12 0 0 1 310,24 V 46 A12,12 0 0 1 298,58 H 209 L 200,100 L 191,58 H 102 A12,12 0 0 1 90,46 V 24 A12,12 0 0 1 102,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="200" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">난 목소리 크니까 두 표!</text>
+  <rect x="135" y="10" width="170" height="60" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="195,70 215,70 205,98" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="196" y="68" width="18" height="4" fill="#ffffff"/>
+  <text x="220" y="40" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="220" dy="-11">난 목소리 크니까</tspan>
+    <tspan x="220" dy="22">두 표!</tspan>
+  </text>
 </svg>
