@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeachersSidebar from "../../components/TeachersSidebar.astro";
 
 export async function getStaticPaths() {
   const items = await getCollection("teachers");
@@ -22,6 +23,7 @@ const typeColors: Record<string, string> = {
 const badgeBg = typeColors[entry.data.type] ?? "var(--card)";
 ---
 <BaseLayout title={`${entry.data.title} | 교사 자료실`}>
+  <TeachersSidebar slot="sidebar" currentId={entry.id} />
   <p style="color:var(--muted);font-size:.85rem">
     <a href={base}>홈</a> › <a href={`${base}teachers`}>교사 자료</a>
   </p>

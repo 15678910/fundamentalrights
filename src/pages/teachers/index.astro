@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeachersSidebar from "../../components/TeachersSidebar.astro";
 
 const all = (await getCollection("teachers")).sort((a, b) => a.data.order - b.data.order);
 const base = import.meta.env.BASE_URL;
@@ -47,11 +48,12 @@ const bundles = [
   ]},
 ];
 ---
-<BaseLayout title="교사 자료실 | 우리 헌법 기본권">
+<BaseLayout title="교사 자료실 | 기본권">
+  <TeachersSidebar slot="sidebar" />
   <h1>교사 자료실</h1>
   <p style="color:var(--muted)">수업에 바로 쓰는 수업안·워크시트·토론 가이드·형성평가지·가정통신문. 모든 자료는 🖨 인쇄 버튼으로 바로 출력할 수 있어요. 교실 게시용 <a href={`${base}posters`}>인쇄 포스터 3종</a>과 <a href={`${base}cards`}>용어 카드게임(인쇄용)</a>도 준비되어 있습니다.</p>
 
-  <section style="margin-top:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem">
+  <section id="bundles" style="margin-top:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem">
     <h2 style="font-size:1.15rem;margin:.2rem 0 .6rem">🧭 주제별 꾸러미</h2>
     <p style="color:var(--muted);font-size:.9rem;margin:0 0 .8rem">다루고 싶은 주제에서 출발해 보세요 — 수업안·쟁점·영화·평가지를 묶어 놓았어요.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem">
@@ -70,7 +72,7 @@ const bundles = [
   </section>
 
   {Object.entries(groups).filter(([, items]) => items.length > 0).map(([type, items]) => (
-    <section style="margin-top:2rem">
+    <section id={`type-${type}`} style="margin-top:2rem">
       <h2 style="font-size:1.15rem;margin-bottom:.75rem">
         {groupMeta[type].icon} {groupMeta[type].label}
       </h2>
