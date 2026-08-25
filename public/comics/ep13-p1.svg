@@ -3,9 +3,6 @@
   <rect width="320" height="260" fill="#ffffff"/>
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
 
-  <!-- 게시판 (교실 배경) -->
-  <rect x="14" y="16" width="92" height="48" rx="4" fill="#f3e6d8" stroke="#1f2937" stroke-width="2"/>
-  <line x1="14" y1="64" x2="106" y2="64" stroke="#1f2937" stroke-width="2"/>
   <line x1="24" y1="30" x2="96" y2="30" stroke="#c9b6a0" stroke-width="2"/>
   <line x1="24" y1="42" x2="86" y2="42" stroke="#c9b6a0" stroke-width="2"/>
   <line x1="24" y1="54" x2="90" y2="54" stroke="#c9b6a0" stroke-width="2"/>
