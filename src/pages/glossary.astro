@@ -51,7 +51,7 @@ const gameData = terms.map((t) => ({ term: t.data.term, short: t.data.short }));
     }
 
     function cardStyle(base) {
-      return "display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem .75rem;border:2px solid var(--border,#d1d5db);border-radius:.5rem;cursor:pointer;background:var(--card-bg,#fff);font-size:.9rem;line-height:1.4;min-height:4rem;width:100%;box-sizing:border-box;transition:background .15s,border-color .15s;" + (base || "");
+      return "display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem .75rem;border:2px solid var(--border,#d1d5db);border-radius:.5rem;cursor:pointer;background:var(--card-bg,#fff);font-size:1rem;line-height:1.45;min-height:4rem;width:100%;box-sizing:border-box;transition:background .15s,border-color .15s;" + (base || "");
     }
 
     function startRound() {
@@ -73,7 +73,7 @@ const gameData = terms.map((t) => ({ term: t.data.term, short: t.data.short }));
       termOrder.forEach(function (item) {
         var btn = document.createElement("button");
         btn.type = "button";
-        btn.setAttribute("style", cardStyle("font-weight:700;"));
+        btn.setAttribute("style", cardStyle("font-weight:700;font-size:1.08rem;"));
         btn.textContent = item.term;
         btn.dataset.term = item.term;
         btn.dataset.kind = "term";
@@ -104,10 +104,10 @@ const gameData = terms.map((t) => ({ term: t.data.term, short: t.data.short }));
       if (btn.dataset.kind === "term") {
         // deselect previous term if any
         if (selectedTerm && selectedTerm !== btn) {
-          selectedTerm.setAttribute("style", cardStyle("font-weight:700;"));
+          selectedTerm.setAttribute("style", cardStyle("font-weight:700;font-size:1.08rem;"));
         }
         selectedTerm = btn;
-        btn.setAttribute("style", cardStyle("font-weight:700;border-color:#2563eb;background:#eff6ff;"));
+        btn.setAttribute("style", cardStyle("font-weight:700;font-size:1.08rem;border-color:#2563eb;background:#eff6ff;"));
         return;
       }
 
@@ -128,8 +128,8 @@ const gameData = terms.map((t) => ({ term: t.data.term, short: t.data.short }));
 
       if (termKey === defKey) {
         // Correct match
-        var lockStyle = "display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem .75rem;border:2px solid #16a34a;border-radius:.5rem;background:#f0fdf4;font-size:.9rem;line-height:1.4;min-height:4rem;width:100%;box-sizing:border-box;cursor:default;";
-        selectedTerm.setAttribute("style", lockStyle + "font-weight:700;color:#166534;");
+        var lockStyle = "display:flex;align-items:center;justify-content:center;text-align:center;padding:.6rem .75rem;border:2px solid #16a34a;border-radius:.5rem;background:#f0fdf4;font-size:1rem;line-height:1.45;min-height:4rem;width:100%;box-sizing:border-box;cursor:default;";
+        selectedTerm.setAttribute("style", lockStyle + "font-weight:700;font-size:1.08rem;color:#166534;");
         btn.setAttribute("style", lockStyle + "color:#166534;");
         selectedTerm.dataset.locked = "1";
         btn.dataset.locked = "1";
@@ -144,7 +144,7 @@ const gameData = terms.map((t) => ({ term: t.data.term, short: t.data.short }));
         }
       } else {
         // Wrong match — flash red then reset
-        var wrongStyleTerm = cardStyle("font-weight:700;border-color:#dc2626;background:#fef2f2;");
+        var wrongStyleTerm = cardStyle("font-weight:700;font-size:1.08rem;border-color:#dc2626;background:#fef2f2;");
         var wrongStyleDef = cardStyle("border-color:#dc2626;background:#fef2f2;");
         selectedTerm.setAttribute("style", wrongStyleTerm);
         btn.setAttribute("style", wrongStyleDef);
@@ -152,7 +152,7 @@ const gameData = terms.map((t) => ({ term: t.data.term, short: t.data.short }));
         selectedTerm = null;
         setTimeout(function () {
           if (prevTerm.dataset.locked !== "1") {
-            prevTerm.setAttribute("style", cardStyle("font-weight:700;"));
+            prevTerm.setAttribute("style", cardStyle("font-weight:700;font-size:1.08rem;"));
           }
           if (btn.dataset.locked !== "1") {
             btn.setAttribute("style", cardStyle(""));
