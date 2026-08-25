@@ -23,7 +23,7 @@ const typeColors: Record<string, string> = {
 const badgeBg = typeColors[entry.data.type] ?? "var(--card)";
 ---
 <BaseLayout title={`${entry.data.title} | 교사 자료실`}>
-  <TeachersSidebar slot="sidebar" currentId={entry.id} />
+  <TeachersSidebar slot="sidebar" currentType={entry.data.type} />
   <p style="color:var(--muted);font-size:.85rem">
     <a href={base}>홈</a> › <a href={`${base}teachers`}>교사 자료</a>
   </p>
