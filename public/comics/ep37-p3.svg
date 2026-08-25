@@ -1,0 +1,79 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="세모가 기본권 제한은 꼭 필요한 만큼만, 헌법 제37조라고 설명하는 장면">
+  <title>세모가 기본권 제한은 꼭 필요한 만큼만, 헌법 제37조라고 설명하는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+
+  <!-- 동그라미 (경청) -->
+  <g transform="translate(58,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-58 Q -30,-46 -27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-58 Q 30,-46 27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
+    <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
+    <line x1="-12" y1="-67" x2="-5" y2="-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-66" x2="12" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-49 Q 0,-46 6,-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 세모 (설명 중) -->
+  <g transform="translate(160,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-8" y1="-35" x2="-10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="8" y1="-35" x2="10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <polygon points="0,-100 -28,-35 28,-35" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M -8,-98 L -13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -24,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 24,-70 Q 34,-80 30,-92" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <line x1="-16" y1="-84" x2="-6" y2="-82" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-82" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="-11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="-20" cy="-63" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="20" cy="-63" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -8,-59 Q 0,-53 8,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (수긍하며 경청) -->
+  <g transform="translate(262,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-13" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="14" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-19" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-66 Q -34,-54 -32,-40" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-66 Q 34,-54 32,-40" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-14" y1="-71" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-70" x2="14" y2="-71" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-48 Q 0,-45 6,-48" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 말풍선: 세모 (2줄) -->
+  <path d="M 84,8 H 236 A14,14 0 0 1 250,22 V 56 A14,14 0 0 1 236,70 H 170 L 160,90 L 150,70 H 84 A14,14 0 0 1 70,56 V 22 A14,14 0 0 1 84,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="160" y="43" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="160" dy="-11">규칙은 꼭 필요한</tspan>
+    <tspan x="160" dy="23">만큼만! 제37조!</tspan>
+  </text>
+</svg>

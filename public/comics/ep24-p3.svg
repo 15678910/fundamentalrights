@@ -1,0 +1,81 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="세모가 누구나 똑같이 한 표를 가지는 평등선거이며 헌법 제24조라고 설명하는 장면">
+  <title>세모가 누구나 똑같이 한 표를 가지는 평등선거이며 헌법 제24조라고 설명하는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+
+  <!-- 동그라미 (경청) -->
+  <g transform="translate(55,206)">
+    <ellipse cx="0" cy="2" rx="22" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-30" x2="-10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-30" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -25,-58 Q -29,-46 -27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 25,-58 Q 29,-46 27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-8" cy="-59" r="2.4" fill="#1f2937"/>
+    <circle cx="8" cy="-59" r="2.4" fill="#1f2937"/>
+    <line x1="-12" y1="-65" x2="-5" y2="-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-64" x2="12" y2="-65" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-49 Q 0,-45 6,-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 세모 (설명 중) -->
+  <g transform="translate(160,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-8" y1="-35" x2="-10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="8" y1="-35" x2="10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <polygon points="0,-100 -28,-35 28,-35" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M -8,-98 L -13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -24,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 24,-70 Q 34,-80 30,-92" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <line x1="-16" y1="-84" x2="-6" y2="-82" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-82" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="-11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="-20" cy="-63" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="20" cy="-63" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -8,-59 Q 0,-53 8,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (머쓱하게 한 표만 들고 경청) -->
+  <g transform="translate(265,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-28" x2="-10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-28" x2="10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-15" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -23,-56 Q -28,-46 -24,-36" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 23,-56 Q 26,-48 22,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="16" y="-40" width="13" height="18" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <line x1="19" y1="-33" x2="26" y2="-33" stroke="#94a3b8" stroke-width="1"/>
+    <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
+    <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
+    <line x1="-13" y1="-60" x2="-5" y2="-61" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-61" x2="13" y2="-60" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-6" y1="-44" x2="6" y2="-44" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- 말풍선: 세모 (2줄) -->
+  <path d="M 54,8 H 266 A14,14 0 0 1 280,22 V 64 A14,14 0 0 1 266,78 H 169 L 160,89 L 151,78 H 54 A14,14 0 0 1 40,64 V 22 A14,14 0 0 1 54,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="160" y="43" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="160" dy="-11">누구나 똑같이 한 표!</tspan>
+    <tspan x="160" dy="23">평등선거야. 제24조!</tspan>
+  </text>
+</svg>

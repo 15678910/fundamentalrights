@@ -1,0 +1,85 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="셋이 함께 쓴 건의문을 세모가 빨간 건의함에 넣고 다 같이 기뻐하는 장면">
+  <title>셋이 함께 쓴 건의문을 세모가 빨간 건의함에 넣고 다 같이 기뻐하는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 반짝임 -->
+  <path d="M 285,26 L 288,34 L 296,37 L 288,40 L 285,48 L 282,40 L 274,37 L 282,34 Z" fill="#e11d2a" opacity="0.5"/>
+  <path d="M 40,20 L 42,25 L 47,27 L 42,29 L 40,34 L 38,29 L 33,27 L 38,25 Z" fill="#e11d2a" opacity="0.35"/>
+
+  <!-- 동그라미 (기쁨) -->
+  <g transform="translate(70,206)">
+    <ellipse cx="0" cy="2" rx="22" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-30" x2="-10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-30" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -24,-58 Q -32,-68 -30,-80" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 24,-58 Q 30,-48 26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -11,-59 Q -8,-56 -5,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 5,-59 Q 8,-56 11,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <line x1="-14" y1="-66" x2="-5" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-68" x2="14" y2="-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-49 Q 0,-44 6,-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 세모 (건의문을 건의함에 넣는 중) -->
+  <g transform="translate(160,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-8" y1="-35" x2="-10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="8" y1="-35" x2="10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <polygon points="0,-100 -28,-35 28,-35" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M -8,-98 L -13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -24,-68 Q -32,-58 -30,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 22,-66 Q 30,-52 20,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <line x1="-16" y1="-84" x2="-6" y2="-86" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-86" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="-11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="-20" cy="-64" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="20" cy="-64" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -9,-59 Q 0,-51 9,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (기쁨) -->
+  <g transform="translate(250,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-28" x2="-10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-28" x2="10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-15" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-60 Q -20,-50 -14,-46" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-60 Q 20,-50 14,-46" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
+    <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
+    <line x1="-14" y1="-63" x2="-5" y2="-61" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-61" x2="14" y2="-63" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-18" cy="-51" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="18" cy="-51" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -8,-47 Q 0,-40 8,-47" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 건의함 -->
+  <rect x="136" y="180" width="48" height="26" rx="4" fill="#e11d2a" stroke="#1f2937" stroke-width="3"/>
+  <rect x="146" y="180" width="28" height="5" fill="#1f2937"/>
+  <text x="160" y="200" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" font-weight="bold" fill="#ffffff">건의함</text>
+  <rect x="151" y="166" width="17" height="20" rx="1" fill="#ffffff" stroke="#1f2937" stroke-width="1.5" transform="rotate(-10 160 176)"/>
+  <line x1="154" y1="172" x2="164" y2="170" stroke="#94a3b8" stroke-width="1" transform="rotate(-10 160 176)"/>
+  <line x1="154" y1="177" x2="164" y2="175" stroke="#94a3b8" stroke-width="1" transform="rotate(-10 160 176)"/>
+
+  <!-- 캡션 -->
+  <text x="160" y="248" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#64748b">제26조 청원권</text>
+</svg>

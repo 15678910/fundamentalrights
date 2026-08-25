@@ -1,0 +1,69 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="동그라미의 쪽지와 네모의 반대 의견 쪽지가 나란히 붙고 둘이 악수하는 장면">
+  <title>동그라미의 쪽지와 네모의 반대 의견 쪽지가 나란히 붙고 둘이 악수하는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">4</text>
+
+  <!-- 반짝임 -->
+  <path d="M 285,18 L 288,26 L 296,29 L 288,32 L 285,40 L 282,32 L 274,29 L 282,26 Z" fill="#e11d2a" opacity="0.4"/>
+
+  <!-- 벽신문 (쪽지 두 장) -->
+  <line x1="160" y1="24" x2="160" y2="200" stroke="#1f2937" stroke-width="3" stroke-linecap="round" opacity="0.15"/>
+  <rect x="88" y="14" width="54" height="34" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(-3 115 31)"/>
+  <circle cx="115" cy="19" r="2.4" fill="#e11d2a" transform="rotate(-3 115 31)"/>
+  <text x="115" y="30" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(-3 115 31)">급식에</text>
+  <text x="115" y="41" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(-3 115 31)">과일을!</text>
+
+  <rect x="150" y="14" width="54" height="34" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(3 177 31)"/>
+  <circle cx="177" cy="19" r="2.4" fill="#e11d2a" transform="rotate(3 177 31)"/>
+  <text x="177" y="30" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(3 177 31)">난 빵이</text>
+  <text x="177" y="41" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(3 177 31)">좋아!</text>
+
+  <!-- 동그라미 (악수) -->
+  <g transform="translate(115,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-60 Q -30,-48 -24,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-58 Q 42,-56 55,-52" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
+    <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
+    <line x1="-13" y1="-67" x2="-5" y2="-65" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-65" x2="13" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -7,-51 Q 0,-46 7,-51" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (악수) -->
+  <g transform="translate(200,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-13" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="14" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-19" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-58 Q -42,-56 -55,-52" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-65 Q 30,-55 20,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="18" y="-52" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-15" y1="-72" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-70" x2="15" y2="-72" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -7,-48 Q 0,-43 7,-48" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 손 맞잡음 -->
+  <ellipse cx="157" cy="151" rx="7" ry="6" fill="#f3d9c4" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- 캡션 -->
+  <text x="160" y="250" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#64748b">제21조 표현의 자유</text>
+</svg>

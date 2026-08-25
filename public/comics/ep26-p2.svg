@@ -1,0 +1,64 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모는 말해 봤자 소용없다고 하고 동그라미는 낙담한 표정을 짓는 장면">
+  <title>네모는 말해 봤자 소용없다고 하고 동그라미는 낙담한 표정을 짓는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+
+  <!-- 동그라미 (낙담) -->
+  <g transform="translate(100,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-53" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-54 Q -28,-44 -25,-36" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-54 Q 28,-44 25,-36" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-19" cy="-52" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-52" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-57" r="2.5" fill="#1f2937"/>
+    <circle cx="9" cy="-57" r="2.5" fill="#1f2937"/>
+    <line x1="-6" y1="-66" x2="-13" y2="-62" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="13" y1="-62" x2="6" y2="-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-43 Q 0,-47 6,-43" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (어깨 으쓱, 시큰둥) -->
+  <g transform="translate(220,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-16" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-62 Q -37,-58 -39,-46" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="-47" y="-48" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <path d="M 26,-62 Q 37,-58 39,-46" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="39" y="-48" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-13" y1="-65" x2="-6" y2="-65" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-65" x2="13" y2="-65" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-6" y1="-46" x2="6" y2="-46" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- 말풍선: 동그라미 -->
+  <rect x="60" y="18" width="60" height="34" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="88,52 96,80 104,52" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="88" y="50" width="16" height="4" fill="#ffffff"/>
+  <text x="90" y="40" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">…</text>
+
+  <!-- 말풍선: 네모 (2줄) -->
+  <rect x="118" y="6" width="192" height="64" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <polygon points="212,70 220,100 228,70" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <rect x="212" y="68" width="16" height="4" fill="#ffffff"/>
+  <text x="214" y="30" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="214" dy="0">말해 봤자</tspan>
+    <tspan x="214" dy="22">소용없어~</tspan>
+  </text>
+</svg>

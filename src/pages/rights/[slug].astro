@@ -19,6 +19,8 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const cat = getCategory(entry.data.category);
 const base = import.meta.env.BASE_URL;
+const comics = await getCollection("comics");
+const comic = comics.find((c) => c.data.order === entry.data.article);
 ---
 <BaseLayout title={`${entry.data.title} | 우리 헌법 기본권`}>
   <Sidebar slot="sidebar" currentId={entry.id} />
@@ -31,6 +33,7 @@ const base = import.meta.env.BASE_URL;
     <h1 style="margin:0">제{entry.data.article}조 · {entry.data.title}</h1>
   </div>
   {entry.data.intro && <p style="font-size:1.05rem;color:var(--muted);margin:.3rem 0 0">{entry.data.intro}</p>}
+  {comic && <p style="margin:.6rem 0 0"><a href={`${base}comics/${comic.id}`} style="display:inline-block;border:1px solid var(--border);border-radius:999px;padding:.3rem .9rem;text-decoration:none;color:var(--fg);font-size:.9rem">🖼️ 이 권리, 만화로 보기</a></p>}
 
   <DifficultyToggle />
 

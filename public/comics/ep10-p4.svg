@@ -1,0 +1,85 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모가 사과하고 셋이 함께 웃는 장면">
+  <title>네모가 사과하고 셋이 함께 웃는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">4</text>
+
+  <!-- 반짝임 -->
+  <path d="M 285,30 L 288,38 L 296,41 L 288,44 L 285,52 L 282,44 L 274,41 L 282,38 Z" fill="#e11d2a" opacity="0.5"/>
+  <path d="M 250,18 L 252,23 L 257,25 L 252,27 L 250,32 L 248,27 L 243,25 L 248,23 Z" fill="#e11d2a" opacity="0.35"/>
+
+  <!-- 동그라미 (환하게 웃음) -->
+  <g transform="translate(55,206)">
+    <ellipse cx="0" cy="2" rx="22" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-30" x2="-10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-30" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <path d="M -25,-58 Q -32,-70 -28,-84" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 25,-58 Q 29,-46 27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -12,-60 Q -9,-57 -6,-60" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 6,-60 Q 9,-57 12,-60" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <line x1="-14" y1="-67" x2="-5" y2="-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-64" x2="14" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-49 Q 0,-45 6,-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 세모 (기쁨) -->
+  <g transform="translate(160,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-8" y1="-35" x2="-10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="8" y1="-35" x2="10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <polygon points="0,-100 -28,-35 28,-35" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M -8,-98 L -13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -24,-68 Q -32,-58 -30,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 24,-68 Q 32,-58 30,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <line x1="-16" y1="-84" x2="-6" y2="-86" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-86" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="-11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="-20" cy="-64" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="20" cy="-64" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -9,-59 Q 0,-51 9,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (고개 숙여 사과) -->
+  <g transform="translate(265,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-28" x2="-10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-28" x2="10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-15" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <g transform="rotate(18 0 -30)">
+      <path d="M -22,-56 Q -14,-42 -4,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M 22,-56 Q 14,-42 4,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <rect x="-8" y="-40" width="16" height="8" rx="3" fill="#e11d2a"/>
+      <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+      <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M 20,-70 c3,4 3,7 0,10 c-3,-3 -3,-6 0,-10 Z" fill="#60a5fa"/>
+      <path d="M -13,-64 Q -9,-61 -5,-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M 5,-64 Q 9,-61 13,-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M -6,-52 Q 0,-49 6,-52" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+
+  <!-- 말풍선: 네모 -->
+  <path d="M 120,8 H 300 A12,12 0 0 1 312,20 V 42 A12,12 0 0 1 300,54 H 275 L 266,88 L 257,54 H 120 A12,12 0 0 1 108,42 V 20 A12,12 0 0 1 120,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="210" y="32" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">내가 심했어, 미안해.</text>
+
+  <!-- 캡션 -->
+  <text x="160" y="250" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#64748b">제10조 인간의 존엄과 가치</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모가 노크 없이 문을 벌컥 열고 들어와 동그라미가 깜짝 놀라는 장면">
+  <title>네모가 노크 없이 문을 벌컥 열고 들어와 동그라미가 깜짝 놀라는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 문 (벌컥 열림) -->
+  <rect x="12" y="60" width="46" height="140" rx="2" fill="#e2e8f0" stroke="#1f2937" stroke-width="2"/>
+  <path d="M 58,60 A 60,60 0 0 1 96,190" stroke="#1f2937" stroke-width="1.5" stroke-dasharray="3 4" fill="none" opacity="0.4"/>
+  <polygon points="58,60 90,50 96,190 58,200" fill="#f8fafc" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="70" cy="128" r="2.6" fill="#1f2937"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+
+  <!-- 네모 (문을 벌컥 열고 등장) -->
+  <g transform="translate(110,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-16" y1="-28" x2="-20" y2="-2" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="14" y1="-30" x2="10" y2="-2" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-25" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="4" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-68 Q -40,-72 -48,-64" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-68 Q 40,-72 48,-64" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-16" y1="-72" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-70" x2="16" y2="-72" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-48" rx="6" ry="5" fill="#1f2937"/>
+    <line x1="-56" y1="-70" x2="-42" y2="-66" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-58" y1="-56" x2="-44" y2="-54" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- 동그라미 (깜짝 놀람) -->
+  <g transform="translate(235,206)">
+    <ellipse cx="0" cy="2" rx="22" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-30" x2="-10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-30" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-81 Q 6,-93 -1,-98 Q -8,-102 0,-108" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -24,-60 Q -34,-70 -30,-82" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 24,-60 Q 34,-70 30,-82" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-59" r="3.4" fill="#1f2937"/>
+    <circle cx="9" cy="-59" r="3.4" fill="#1f2937"/>
+    <line x1="-15" y1="-68" x2="-4" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="4" y1="-70" x2="15" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-49" rx="4" ry="5" fill="#1f2937"/>
+  </g>
+
+  <!-- 말풍선: 네모 -->
+  <path d="M 32,12 H 188 A12,12 0 0 1 200,24 V 46 A12,12 0 0 1 188,58 H 119 L 110,100 L 101,58 H 32 A12,12 0 0 1 20,46 V 24 A12,12 0 0 1 32,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="110" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">짜잔! 나왔지!</text>
+
+  <!-- 말풍선: 동그라미 -->
+  <path d="M 172,14 H 298 A12,12 0 0 1 310,26 V 44 A12,12 0 0 1 298,56 H 244 L 235,95 L 226,56 H 172 A12,12 0 0 1 160,44 V 26 A12,12 0 0 1 172,14 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="235" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">꺅! 노크는?!</text>
+</svg>

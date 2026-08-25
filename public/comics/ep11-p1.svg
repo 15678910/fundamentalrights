@@ -1,0 +1,83 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="셋이 운동장에서 공놀이를 하려고 모이는 장면">
+  <title>셋이 운동장에서 공놀이를 하려고 모이는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+
+  <!-- 축구공 -->
+  <g transform="translate(160,222)">
+    <circle cx="0" cy="0" r="13" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <polygon points="0,-6 5,-2 3,5 -3,5 -5,-2" fill="#1f2937"/>
+    <path d="M -13,0 Q 0,6 13,0" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- 세모 -->
+  <g transform="translate(60,206)">
+    <ellipse cx="0" cy="2" rx="20" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-7" y1="-31" x2="-9" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="7" y1="-31" x2="9" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-9" cy="-2" rx="5" ry="2.6" fill="#1f2937"/>
+    <ellipse cx="9" cy="-2" rx="5" ry="2.6" fill="#1f2937"/>
+    <polygon points="0,-88 -24,-31 24,-31" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M -7,-86 L -11,-97" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 0,-90 L 0,-101" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 7,-86 L 11,-97" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -21,-62 Q -25,-52 -23,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 21,-62 Q 25,-52 23,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-9" cy="-66" r="6" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="9" cy="-66" r="6" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <line x1="-3" y1="-66" x2="3" y2="-66" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="-9" cy="-66" r="1.4" fill="#1f2937"/>
+    <circle cx="9" cy="-66" r="1.4" fill="#1f2937"/>
+    <circle cx="-17" cy="-55" r="2.6" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="17" cy="-55" r="2.6" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -7,-51 Q 0,-46 7,-51" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 동그라미 -->
+  <g transform="translate(160,206)">
+    <ellipse cx="0" cy="2" rx="20" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-28" x2="-10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-28" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="5" ry="2.8" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="5" ry="2.8" fill="#1f2937"/>
+    <path d="M -22,-52 Q -27,-44 -25,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 22,-52 Q 27,-44 25,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="0" cy="-50" r="24" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-74 Q 3,-84 -2,-89 Q -6,-92 -1,-96" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-16" cy="-49" r="2.6" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="16" cy="-49" r="2.6" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-8" cy="-54" r="2.2" fill="#1f2937"/>
+    <circle cx="8" cy="-54" r="2.2" fill="#1f2937"/>
+    <line x1="-12" y1="-60" x2="-5" y2="-58" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-58" x2="12" y2="-60" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-44 Q 0,-40 6,-44" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (신남) -->
+  <g transform="translate(260,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-28" x2="-10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-28" x2="10" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-15" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="9" height="6" rx="2" fill="#e11d2a"/>
+    <path d="M -24,-58 Q -34,-74 -30,-92" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="-36" y="-98" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <path d="M 24,-58 Q 34,-74 30,-92" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="28" y="-98" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
+    <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
+    <line x1="-13" y1="-63" x2="-5" y2="-61" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-61" x2="13" y2="-63" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -7,-47 Q 0,-42 7,-47" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 말풍선: 네모 -->
+  <path d="M 162,10 H 302 A12,12 0 0 1 314,22 V 44 A12,12 0 0 1 302,56 H 284 L 275,86 L 266,56 H 162 A12,12 0 0 1 150,44 V 22 A12,12 0 0 1 162,10 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="232" y="33" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">얘들아, 축구할까?</text>
+</svg>

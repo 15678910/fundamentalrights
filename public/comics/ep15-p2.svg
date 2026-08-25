@@ -1,0 +1,59 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모가 에이 멋없어, 의사 해 라고 핀잔을 주고 동그라미의 표정이 굳는 장면">
+  <title>네모가 에이 멋없어, 의사 해 라고 핀잔을 주고 동그라미의 표정이 굳는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+
+  <!-- 동그라미 (냄비 안고 시무룩) -->
+  <g transform="translate(100,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-60 Q -30,-48 -26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-60 Q 30,-48 26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -12,-59 Q -9,-62 -6,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 6,-59 Q 9,-62 12,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <line x1="-15" y1="-67" x2="-5" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-70" x2="15" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-49 Q -1,-52 4,-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- 냄비를 품에 안음 -->
+    <g transform="translate(0,-30)">
+      <path d="M -12,0 A12,7 0 0 0 12,0 L 10,10 A10,5 0 0 1 -10,10 Z" fill="#c9d3dc" stroke="#1f2937" stroke-width="2"/>
+      <ellipse cx="0" cy="0" rx="12" ry="4" fill="#e2e8f0" stroke="#1f2937" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- 네모 (거만, 팔짱) -->
+  <g transform="translate(220,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-16" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-58 Q -14,-50 -2,-54" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-58 Q 14,-50 2,-54" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-15" y1="-70" x2="-4" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="4" y1="-68" x2="15" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-48 Q 0,-51 6,-48" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 말풍선: 네모 (2줄) -->
+  <path d="M 152,8 H 300 A14,14 0 0 1 314,22 V 56 A14,14 0 0 1 300,70 H 229 L 220,104 L 211,70 H 152 A14,14 0 0 1 138,56 V 22 A14,14 0 0 1 152,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="226" y="39" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="226" dy="-11">에이, 멋없어.</tspan>
+    <tspan x="226" dy="22">의사 해!</tspan>
+  </text>
+</svg>

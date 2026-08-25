@@ -1,0 +1,69 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="동그라미가 투표함에 한 표를 넣고 셋이 두근거리며 개표를 기다리는 장면">
+  <title>동그라미가 투표함에 한 표를 넣고 셋이 두근거리며 개표를 기다리는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="298" cy="22" r="13" fill="#e11d2a"/>
+  <text x="298" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">4</text>
+
+  <!-- 두근거림 점 -->
+  <circle cx="255" cy="120" r="3" fill="#e11d2a" opacity="0.5"/>
+  <circle cx="266" cy="116" r="3" fill="#e11d2a" opacity="0.35"/>
+  <circle cx="277" cy="120" r="3" fill="#e11d2a" opacity="0.2"/>
+
+  <!-- 투표함 -->
+  <g transform="translate(160,206)">
+    <ellipse cx="0" cy="2" rx="30" ry="5" fill="#1f2937" opacity="0.08"/>
+    <rect x="-30" y="-50" width="60" height="46" rx="4" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <rect x="-30" y="-58" width="60" height="10" rx="3" fill="#e11d2a"/>
+    <rect x="-14" y="-63" width="28" height="6" rx="2" fill="#1f2937"/>
+    <line x1="-30" y1="-30" x2="30" y2="-30" stroke="#1f2937" stroke-width="1.5" opacity="0.3"/>
+  </g>
+
+  <!-- 동그라미 (한 표 넣는 중, 두근두근) -->
+  <g transform="translate(90,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-60 Q -20,-48 -13,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-60 Q 46,-66 60,-64" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="52" y="-72" width="13" height="18" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(-10 58 -63)"/>
+    <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
+    <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
+    <line x1="-14" y1="-70" x2="-6" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-68" x2="14" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -7,-50 Q 0,-46 7,-50" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (두근두근 기다림) -->
+  <g transform="translate(240,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-16" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-60 Q -32,-50 -34,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-60 Q 32,-50 34,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-15" y1="-72" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-70" x2="15" y2="-72" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-48" rx="4" ry="5" fill="#1f2937"/>
+  </g>
+
+  <!-- 말풍선: 동그라미 -->
+  <path d="M 27,12 H 153 A12,12 0 0 1 165,24 V 46 A12,12 0 0 1 153,58 H 99 L 90,100 L 81,58 H 27 A12,12 0 0 1 15,46 V 24 A12,12 0 0 1 27,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="90" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">두근두근!</text>
+
+  <!-- 캡션 -->
+  <text x="160" y="250" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#64748b">제24조 선거권</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모가 마음에 안 든다며 동그라미의 쪽지를 떼어버리고 동그라미가 항의하는 장면">
+  <title>네모가 마음에 안 든다며 동그라미의 쪽지를 떼어버리고 동그라미가 항의하는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+
+  <!-- 빈 벽신문 -->
+  <line x1="60" y1="130" x2="60" y2="200" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="60" cy="200" rx="18" ry="4" fill="#1f2937" opacity="0.1"/>
+  <rect x="18" y="46" width="84" height="90" rx="6" fill="#e9dcc3" stroke="#1f2937" stroke-width="3"/>
+  <circle cx="45" cy="66" r="2.2" fill="#e11d2a" opacity="0.6"/>
+
+  <!-- 네모 (쪽지 떼는 중) -->
+  <g transform="translate(100,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-13" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="14" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-19" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- 오른팔 허리 -->
+    <path d="M 26,-65 Q 30,-55 20,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="18" y="-52" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <!-- 왼팔 뻗어 쪽지를 든 손 -->
+    <path d="M -26,-65 Q -55,-70 -80,-90" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="-88" y="-96" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-16" y1="-71" x2="-6" y2="-69" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-69" x2="16" y2="-71" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-7" y1="-49" x2="7" y2="-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- 떼어진 쪽지 (구겨짐) -->
+  <rect x="4" y="98" width="46" height="30" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(18 27 113)"/>
+  <text x="27" y="118" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(18 27 113)">급식에 과일을!</text>
+
+  <!-- 동그라미 (항의) -->
+  <g transform="translate(240,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-60 Q -40,-68 -46,-88" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-60 Q 30,-48 24,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
+    <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
+    <path d="M -14,-70 Q -9,-73 -4,-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 4,-70 Q 9,-73 14,-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M -6,-51 Q 0,-54 6,-51" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 말풍선: 네모 -->
+  <path d="M 10,138 H 128 A12,12 0 0 1 140,150 V 172 A12,12 0 0 1 128,184 H 105 L 100,196 L 89,184 H 10 A12,12 0 0 1 -2,172 V 150 A12,12 0 0 1 10,138 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="69" y="161" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">마음에 안 들어.</text>
+
+  <!-- 말풍선: 동그라미 -->
+  <path d="M 178,10 H 306 A12,12 0 0 1 318,22 V 44 A12,12 0 0 1 306,56 H 254 L 245,86 L 236,56 H 178 A12,12 0 0 1 166,44 V 22 A12,12 0 0 1 178,10 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="242" y="32" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">안 돼! 내 의견이야!</text>
+</svg>

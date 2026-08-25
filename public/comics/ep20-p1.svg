@@ -1,0 +1,63 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모가 반짝이 모자를 쓰고 별님 클럽 의식을 하며 별님께 인사하자고 외치는 장면">
+  <title>네모가 반짝이 모자를 쓰고 별님 클럽 의식을 하며 별님께 인사하자고 외치는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+
+  <!-- 반짝임 -->
+  <path d="M 250,32 L 253,40 L 261,43 L 253,46 L 250,54 L 247,46 L 239,43 L 247,40 Z" fill="#fbbf24" stroke="#1f2937" stroke-width="1" opacity="0.9"/>
+  <path d="M 95,26 L 97,32 L 103,34 L 97,36 L 95,42 L 93,36 L 87,34 L 93,32 Z" fill="#fbbf24" stroke="#1f2937" stroke-width="1" opacity="0.9"/>
+
+  <!-- 동그라미 (구경) -->
+  <g transform="translate(245,206)">
+    <ellipse cx="0" cy="2" rx="22" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-9" y1="-30" x2="-10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="9" y1="-30" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -25,-58 Q -29,-46 -27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 25,-58 Q 29,-46 27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-8" cy="-59" r="2.4" fill="#1f2937"/>
+    <circle cx="8" cy="-59" r="2.4" fill="#1f2937"/>
+    <line x1="-12" y1="-66" x2="-5" y2="-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-64" x2="12" y2="-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -6,-49 Q 0,-46 6,-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (반짝이 모자 쓰고 의식 중) -->
+  <g transform="translate(120,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-13" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="14" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-19" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <!-- 반짝이 고깔모자 -->
+    <polygon points="0,-146 -20,-95 20,-95" fill="#fbbf24" stroke="#1f2937" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="0" cy="-146" r="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+    <circle cx="-9" cy="-118" r="2.5" fill="#ffffff"/>
+    <circle cx="8" cy="-108" r="2.5" fill="#ffffff"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- 팔 양쪽 위로 (의식 자세) -->
+    <path d="M -26,-68 Q -42,-75 -48,-100" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="-54" y="-106" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <path d="M 26,-68 Q 42,-75 48,-100" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="46" y="-106" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <path d="M -15,-70 Q -10,-73 -5,-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 5,-70 Q 10,-73 15,-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="0" cy="-48" r="5" fill="#1f2937"/>
+  </g>
+
+  <!-- 말풍선: 네모 -->
+  <path d="M 30,8 H 200 A13,13 0 0 1 213,21 V 45 A13,13 0 0 1 200,58 H 130 L 121,98 L 112,58 H 30 A13,13 0 0 1 17,45 V 21 A13,13 0 0 1 30,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="115" y="32" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">별님께 인사하자!</text>
+</svg>

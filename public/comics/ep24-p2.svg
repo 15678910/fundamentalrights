@@ -1,0 +1,60 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모가 목소리가 크다며 투표용지 두 장을 들고 두 표를 달라고 우기는 장면">
+  <title>네모가 목소리가 크다며 투표용지 두 장을 들고 두 표를 달라고 우기는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+
+  <!-- 동그라미 (당황) -->
+  <g transform="translate(80,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-60 Q -32,-48 -26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-60 Q 32,-48 26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
+    <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
+    <line x1="-14" y1="-70" x2="-6" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-68" x2="14" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="-48" r="4" fill="#1f2937"/>
+  </g>
+
+  <!-- 네모 (두 표 요구, 우쭐) -->
+  <g transform="translate(200,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="11" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-16" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="6" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-65 Q -30,-55 -20,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="-26" y="-52" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <path d="M 26,-65 Q 40,-80 34,-98" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="24" y="-112" width="16" height="22" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(-8 32 -101)"/>
+    <rect x="33" y="-105" width="16" height="22" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(10 41 -94)"/>
+    <line x1="28" y1="-104" x2="36" y2="-104" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="37" y1="-97" x2="45" y2="-97" stroke="#94a3b8" stroke-width="1"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-15" y1="-72" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="4" y1="-72" x2="14" y2="-76" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -8,-49 Q -1,-44 9,-51" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 말풍선: 동그라미 -->
+  <path d="M 45,2 H 115 A10,10 0 0 1 125,12 V 30 A10,10 0 0 1 115,40 H 89 L 80,70 L 71,40 H 45 A10,10 0 0 1 35,30 V 12 A10,10 0 0 1 45,2 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="80" y="22" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#1f2937">엥?!</text>
+
+  <!-- 말풍선: 네모 -->
+  <path d="M 102,12 H 298 A12,12 0 0 1 310,24 V 46 A12,12 0 0 1 298,58 H 209 L 200,100 L 191,58 H 102 A12,12 0 0 1 90,46 V 24 A12,12 0 0 1 102,12 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="200" y="35" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">난 목소리 크니까 두 표!</text>
+</svg>

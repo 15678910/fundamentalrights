@@ -1,0 +1,84 @@
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모가 쉬는 시간 말하기 전면 금지를 선언하고 동그라미가 항의하는 장면">
+  <title>네모가 쉬는 시간 말하기 전면 금지를 선언하고 동그라미가 항의하는 장면</title>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <rect y="200" width="320" height="60" fill="#eef2f7"/>
+
+  <!-- 패널 번호 -->
+  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
+  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+
+  <!-- 동그라미 (항의) -->
+  <g transform="translate(58,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-32" x2="-11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-62 Q -34,-74 -30,-86" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-62 Q 20,-50 14,-46" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
+    <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
+    <line x1="-14" y1="-70" x2="-5" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-67" x2="14" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-49" rx="4" ry="5" fill="#1f2937"/>
+  </g>
+
+  <!-- 세모 (지켜봄) -->
+  <g transform="translate(160,206)">
+    <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-8" y1="-35" x2="-10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="8" y1="-35" x2="10" y2="-4" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <ellipse cx="10" cy="-2" rx="6" ry="3" fill="#1f2937"/>
+    <polygon points="0,-100 -28,-35 28,-35" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M -8,-98 L -13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -24,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 24,-70 Q 28,-58 26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <line x1="-16" y1="-84" x2="-6" y2="-82" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-82" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
+    <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="-11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="11" cy="-75" r="1.6" fill="#1f2937"/>
+    <circle cx="-20" cy="-63" r="3" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="20" cy="-63" r="3" fill="#e11d2a" opacity="0.3"/>
+    <path d="M -8,-59 Q 0,-55 8,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- 네모 (강경 선언) -->
+  <g transform="translate(262,206)">
+    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
+    <line x1="-10" y1="-30" x2="-13" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-30" x2="14" y2="-3" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-19" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
+    <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -26,-66 Q -38,-60 -44,-44" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 26,-66 Q 38,-80 40,-98" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
+    <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <line x1="-16" y1="-84" x2="-6" y2="-77" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="-77" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-48" rx="7" ry="6" fill="#1f2937"/>
+  </g>
+
+  <!-- 말풍선: 동그라미 -->
+  <path d="M 14,10 H 114 A12,12 0 0 1 126,22 V 44 A12,12 0 0 1 114,56 H 78 L 68,98 L 58,56 H 14 A12,12 0 0 1 2,44 V 22 A12,12 0 0 1 14,10 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="64" y="33" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" fill="#1f2937">그건 심해!</text>
+
+  <!-- 말풍선: 네모 (3줄) -->
+  <path d="M 156,6 H 302 A16,16 0 0 1 318,22 V 76 A16,16 0 0 1 302,92 H 280 L 265,104 L 250,92 H 156 A16,16 0 0 1 140,76 V 22 A16,16 0 0 1 156,6 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
+    <tspan x="229" y="34">시끄러워!</tspan>
+    <tspan x="229" y="56">쉬는 시간엔</tspan>
+    <tspan x="229" y="78">말하기 전면 금지!</tspan>
+  </text>
+</svg>
