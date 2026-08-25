@@ -12,8 +12,8 @@ const base = import.meta.env.BASE_URL;
     {issues.map((i) => (
       <a href={`${base}issues/${i.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg)">
         <Illustration name={`issue-${i.data.order}`} alt="" size={48} />
-        <strong style="display:block;margin-top:.3rem">{i.data.title}</strong>
-        <span style="color:var(--muted);font-size:.9rem">{i.data.summary}</span>
+        <strong style="display:block;margin-top:.3rem;font-size:1.15rem">{i.data.title}</strong>
+        <span style="color:var(--fg);font-size:.98rem">{i.data.summary}</span>
       </a>
     ))}
   </div>
