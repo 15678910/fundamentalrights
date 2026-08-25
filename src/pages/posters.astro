@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { CATEGORIES } from "../lib/categories";
 const base = import.meta.env.BASE_URL;
+const siteUrl = "15678910.github.io/fundamentalrights";
 const catRanges: Record<string, string> = {
   comprehensive: "제10조 · 제37조",
   equality: "제11조",
@@ -25,7 +26,10 @@ const catRanges: Record<string, string> = {
       <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">둘.</b> 여러 입장이 있는 문제는 여러 입장 그대로 다룹니다.</p>
       <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">셋.</b> 판단은 각자 스스로, 근거와 함께 내립니다.</p>
     </div>
-    <p style="color:var(--muted);font-size:.85rem;margin:1.6rem 0 0">보이텔스바흐 합의(1976) · 기본권 배움터</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.6rem">
+      <img src={`${base}qr-site.svg`} alt="사이트 QR코드" style="width:72px;height:72px" />
+      <p style="color:var(--muted);font-size:.85rem;margin:0;text-align:left">보이텔스바흐 합의(1976) · 기본권 배움터<br>{siteUrl}</p>
+    </div>
   </section>
 
   <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:2.2rem 1.8rem;margin:1.5rem 0;text-align:center">
@@ -41,6 +45,10 @@ const catRanges: Record<string, string> = {
       ))}
     </div>
     <p style="font-size:1.05rem;margin:1.6rem 0 0"><b>기본권은 어른만의 것이 아닙니다 — 모두의 것입니다.</b></p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.2rem">
+      <img src={`${base}qr-site.svg`} alt="사이트 QR코드" style="width:72px;height:72px" />
+      <p style="color:var(--muted);font-size:.85rem;margin:0;text-align:left">더 알아보기 · 기본권 배움터<br>{siteUrl}</p>
+    </div>
   </section>
 
   <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:2.2rem 1.8rem;margin:1.5rem 0;text-align:center">
@@ -54,6 +62,10 @@ const catRanges: Record<string, string> = {
       내 권리가 소중한 만큼<br>
       <b>네 권리도 같은 무게로 소중합니다.</b>
     </p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.2rem">
+      <img src={`${base}qr-site.svg`} alt="사이트 QR코드" style="width:72px;height:72px" />
+      <p style="color:var(--muted);font-size:.85rem;margin:0;text-align:left">더 알아보기 · 기본권 배움터<br>{siteUrl}</p>
+    </div>
   </section>
 
   <style>

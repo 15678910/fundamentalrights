@@ -1,10 +1,23 @@
-# 우리 헌법 기본권 (Fundamental Rights)
+# 기본권 배움터 (Fundamental Rights)
+
+**https://15678910.github.io/fundamentalrights/**
 
 대한민국 헌법 제2장(국민의 권리와 의무, 제10조~제39조)의 기본권을 **초등학생부터 성인까지**
 누구나 자기 수준에서 이해할 수 있도록 **쉬운 말 · 보통 · 자세히** 세 단계로 설명하는 정적 교육 웹사이트입니다.
 
 독일의 [Grundrechte-Fibel](https://www.grundrechte-fibel.de/)과 [bpb](https://www.bpb.de/)의
-쉬운 정치 교육 자료에서 영감을 받았습니다.
+쉬운 정치 교육 자료에서 영감을 받았고, 쟁점·토론 자료는 [보이텔스바흐 합의](https://ko.wikipedia.org/wiki/보이텔스바흐_합의)의
+세 원칙(교화 금지·논쟁성 재현·학습자 지향)을 따릅니다.
+
+## 함께 만들기 (기여 안내)
+
+이 프로젝트는 오픈소스로 운영됩니다. 개발 지식이 없어도 참여할 수 있습니다.
+
+- **오류 제보**: 잘못된 내용, 바뀐 전화번호·법령, 오탈자 → [GitHub 이슈](https://github.com/15678910/fundamentalrights/issues)에 남겨 주세요.
+- **콘텐츠 수정 제안**: 권리 설명·수업안·워크시트는 모두 `src/content/` 아래 Markdown 파일입니다.
+  GitHub 웹에서 파일을 열어 ✏️(편집) 버튼으로 바로 수정 제안(Pull Request)을 보낼 수 있습니다.
+- **감수 참여**: 헌법 연구자·법조인·현직 교사의 감수를 기다립니다. 이슈로 연락해 주세요.
+- **정기 점검**: 상담전화·관련 법령 등 현행 정보는 연 2회(3월·9월) 점검하는 것을 원칙으로 합니다.
 
 ## 기능
 
@@ -38,6 +51,14 @@ npm run preview  # 빌드 결과 미리보기
    - 사용자/조직 사이트 또는 커스텀 도메인: `base`를 `"/"`로 변경
 2. GitHub 저장소 Settings → Pages → Source를 **GitHub Actions**로 설정
 3. `main` 브랜치에 push하면 `.github/workflows/deploy.yml`이 자동 빌드·배포합니다.
+
+## 라이선스
+
+- **콘텐츠**(권리 설명, 쟁점, 수업안, 워크시트, 포스터, 만화, 삽화 등):
+  [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko) — 출처(기본권 배움터)를 밝히면
+  비영리 목적으로 자유롭게 복사·배포·수정할 수 있습니다.
+- **코드**(사이트 소스): [MIT License](./LICENSE)
+- 헌법 조문 원문은 공공 저작물이며, 인용된 판례·통계는 각 원출처를 따릅니다.
 
 ## ⚠️ 정확성 및 면책
 
