@@ -1,6 +1,6 @@
 # 기본권 배움터 (Fundamental Rights)
 
-**https://15678910.github.io/fundamentalrights/**
+**https://fundamentalrights.kr/**
 
 대한민국 헌법 제2장(국민의 권리와 의무, 제10조~제39조)의 기본권을 **초등학생부터 성인까지**
 누구나 자기 수준에서 이해할 수 있도록 **쉬운 말 · 보통 · 자세히** 세 단계로 설명하는 정적 교육 웹사이트입니다.
@@ -46,9 +46,9 @@ npm run preview  # 빌드 결과 미리보기
 
 ## 배포 (GitHub Pages)
 
-1. `astro.config.mjs`의 `site`를 본인 GitHub Pages 주소로 변경하세요.
-   - 프로젝트 사이트: `https://<사용자명>.github.io` (현재 `base: "/fundamentalrights/"` 유지)
-   - 사용자/조직 사이트 또는 커스텀 도메인: `base`를 `"/"`로 변경
+1. `astro.config.mjs`의 `site`를 본인 주소로 변경하세요.
+   - 커스텀 도메인·사용자/조직 사이트: `base: "/"` (현재 설정, `public/CNAME`에 도메인 명시)
+   - 프로젝트 사이트로 포크해 쓰는 경우: `site`를 `https://<사용자명>.github.io`로, `base`를 `"/<저장소명>/"`으로 변경하고 `public/CNAME`을 삭제
 2. GitHub 저장소 Settings → Pages → Source를 **GitHub Actions**로 설정
 3. `main` 브랜치에 push하면 `.github/workflows/deploy.yml`이 자동 빌드·배포합니다.
 
