@@ -2,8 +2,12 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCategory } from "../../lib/categories";
-const comics = (await getCollection("comics")).sort((a, b) => a.data.order - b.data.order);
+import ComicsSidebar from "../../components/ComicsSidebar.astro";
 const rights = await getCollection("rights");
+const firstArt = (c: any) => Math.min(...c.data.relatedRights);
+const comics = (await getCollection("comics")).sort(
+  (a, b) => firstArt(a) - firstArt(b) || a.data.order - b.data.order
+);
 const base = import.meta.env.BASE_URL;
 
 function articleLabel(c: (typeof comics)[number]) {
@@ -19,6 +23,7 @@ function articleLabel(c: (typeof comics)[number]) {
 }
 ---
 <BaseLayout title="기본권 만화 | 기본권">
+  <ComicsSidebar slot="sidebar" />
   <h1>기본권 만화</h1>
   <p style="color:var(--muted)">세모·네모·동그라미 친구들의 네 컷 이야기로 기본권을 만나요.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem;margin-top:1rem">

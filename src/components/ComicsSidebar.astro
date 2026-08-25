@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import { CATEGORIES } from "../lib/categories";
+const { currentId } = Astro.props;
+const comics = await getCollection("comics");
+const rights = await getCollection("rights");
+const base = import.meta.env.BASE_URL;
+
+const enriched = comics.map((c) => {
+  const art = Math.min(...c.data.relatedRights);
+  const right = rights.find((r) => r.data.article === art);
+  return { c, art, category: right?.data.category ?? "comprehensive" };
+}).sort((a, b) => a.art - b.art || a.c.data.order - b.c.data.order);
+---
+<nav class="sidebar" aria-label="만화 목록">
+  <p class="sidebar-title">만화 목차 (조항순)</p>
+  {CATEGORIES.map((cat) => {
+    const items = enriched.filter((e) => e.category === cat.key);
+    if (items.length === 0) return null;
+    return (
+      <div class="sidebar-group">
+        <h3 style={`color:${cat.color}`}>{cat.label}</h3>
+        {items.map((e) => (
+          <a href={`${base}comics/${e.c.id}`} aria-current={e.c.id === currentId ? "page" : undefined}>제{e.art}조 {e.c.data.title}</a>
+        ))}
+      </div>
+    );
+  })}
+</nav>
