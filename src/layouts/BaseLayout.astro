@@ -48,6 +48,10 @@ const hasSidebar = Astro.slots.has("sidebar");
         본 설명은 학습용 요약이며 법적 효력이 있는 해석이 아닙니다. 정확한 내용은 헌법 원문과 공식 자료를 확인하세요.
       </div>
     </footer>
+    <div class="scroll-btns no-print">
+      <button onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로" title="맨 위로">↑</button>
+      <button onclick="window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})" aria-label="맨 아래로" title="맨 아래로">↓</button>
+    </div>
     <script src={`${base}scripts/a11y.js`} is:inline></script>
   </body>
 </html>

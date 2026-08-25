@@ -6,7 +6,7 @@ import TeachersSidebar from "../../components/TeachersSidebar.astro";
 const all = (await getCollection("teachers")).sort((a, b) => a.data.order - b.data.order);
 const base = import.meta.env.BASE_URL;
 
-const groups: Record<string, typeof all> = { "활용안내": [], "수업안": [], "워크시트": [], "토론가이드": [], "평가지": [], "가정통신문": [] };
+const groups: Record<string, typeof all> = { "활용안내": [], "수업안": [], "워크시트": [], "토론가이드": [], "가정통신문": [], "평가지": [] };
 for (const item of all) {
   if (groups[item.data.type]) groups[item.data.type].push(item);
 }
