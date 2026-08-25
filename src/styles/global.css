@@ -52,11 +52,11 @@ a { color: var(--accent); }
 .tabs a:hover { background: var(--bg); color: var(--fg); }
 .page { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; display: grid; grid-template-columns: 250px 1fr; gap: 2.5rem; }
 .page.no-sidebar { grid-template-columns: 1fr; max-width: 760px; }
-.sidebar { font-size: .9rem; align-self: start; }
-.sidebar-title { font-weight: 700; margin: 0 0 .5rem; }
-.sidebar-group { margin-bottom: 1rem; }
-.sidebar-group h3 { font-size: .82rem; margin: .6rem 0 .3rem; }
-.sidebar a { display: block; padding: .25rem .4rem; border-radius: 6px; text-decoration: none; color: var(--fg); }
+.sidebar { font-size: 1rem; align-self: start; line-height: 1.6; }
+.sidebar-title { font-weight: 700; font-size: 1.08rem; margin: 0 0 .7rem; }
+.sidebar-group { margin-bottom: 1.3rem; }
+.sidebar-group h3 { font-size: .95rem; margin: .7rem 0 .4rem; }
+.sidebar a { display: block; padding: .35rem .55rem; border-radius: 8px; text-decoration: none; color: var(--fg); }
 .sidebar a:hover { background: var(--card); }
 .sidebar a[aria-current="page"] { background: var(--accent); color: #fff; }
 .footer-inner { max-width: 1100px; margin: 0 auto; padding: 1rem; color: var(--muted); font-size: .85rem; }
