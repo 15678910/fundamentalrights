@@ -52,20 +52,94 @@ const sections = [
     </div>
   </section>
 
-  <section style="margin-top:2rem">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1rem">
+  <section class="slider" aria-roledescription="carousel" aria-label="주요 소식" style="margin-top:2rem">
+    <div class="slider-track" id="slider-track">
       {features.map((f) => (
-        <a href={f.href} style="border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;background:var(--bg)">
-          <img src={`${base}illustrations/${f.img}.svg`} alt="" style="width:100%;display:block;aspect-ratio:600/260;object-fit:cover" />
-          <div style="padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.45rem;flex:1">
-            <strong style="font-size:1.2rem">{f.title}</strong>
-            <span style="font-size:.95rem;line-height:1.6;flex:1">{f.desc}</span>
-            <span style="color:var(--accent);font-weight:700">{f.cta} →</span>
+        <a class="slide" href={f.href}>
+          <img src={`${base}illustrations/${f.img}.svg`} alt="" />
+          <div class="slide-caption">
+            <strong>{f.title}</strong>
+            <span>{f.desc}</span>
+            <em>{f.cta} →</em>
           </div>
         </a>
       ))}
     </div>
+    <div class="slider-controls">
+      {features.map((f, i) => (
+        <button class="slider-dot" data-slide={i} aria-label={`${i + 1}번째: ${f.title}`}></button>
+      ))}
+      <button class="slider-pause" id="slider-pause" aria-label="자동 넘김 일시정지">⏸</button>
+    </div>
   </section>
+
+  <style>
+    .slider { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .slider-track { display: flex; transition: transform .6s ease; }
+    .slide { flex: 0 0 100%; position: relative; display: block; text-decoration: none; color: var(--fg); }
+    .slide img { width: 100%; display: block; aspect-ratio: 600 / 260; object-fit: cover; }
+    .slide-caption {
+      position: absolute; left: 1.2rem; bottom: 1.1rem; max-width: 62%;
+      background: var(--bg); border-radius: 10px; padding: .85rem 1.1rem;
+      box-shadow: 0 3px 14px rgba(0,0,0,.18);
+      display: flex; flex-direction: column; gap: .3rem;
+    }
+    .slide-caption strong { font-size: 1.25rem; }
+    .slide-caption span { font-size: .92rem; line-height: 1.55; }
+    .slide-caption em { font-style: normal; color: var(--accent); font-weight: 700; }
+    .slider-controls {
+      position: absolute; right: 1rem; bottom: 1rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .slider-dot {
+      width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent);
+      background: var(--bg); cursor: pointer; padding: 0;
+    }
+    .slider-dot[aria-current="true"] { background: var(--accent); }
+    .slider-pause {
+      width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;
+      background: var(--accent); color: #fff; font-size: .85rem; line-height: 1;
+    }
+    @media (max-width: 640px) {
+      .slide-caption { position: static; max-width: none; border-radius: 0; box-shadow: none; border-top: 1px solid var(--border); }
+      .slider-controls { position: static; justify-content: center; padding: .6rem 0 .8rem; background: var(--bg); }
+      .slide-caption strong { font-size: 1.1rem; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var track = document.getElementById("slider-track");
+      var dots = Array.prototype.slice.call(document.querySelectorAll(".slider-dot"));
+      var pauseBtn = document.getElementById("slider-pause");
+      var n = dots.length, cur = 0, timer = null, playing = true;
+
+      function show(i) {
+        cur = (i + n) % n;
+        track.style.transform = "translateX(-" + cur * 100 + "%)";
+        dots.forEach(function (d, k) { d.setAttribute("aria-current", k === cur ? "true" : "false"); });
+      }
+      function start() {
+        stop();
+        timer = setInterval(function () { show(cur + 1); }, 6000);
+        playing = true; pauseBtn.textContent = "⏸"; pauseBtn.setAttribute("aria-label", "자동 넘김 일시정지");
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      dots.forEach(function (d) {
+        d.addEventListener("click", function () { show(parseInt(d.dataset.slide, 10)); if (playing) start(); });
+      });
+      pauseBtn.addEventListener("click", function () {
+        if (playing) { stop(); playing = false; pauseBtn.textContent = "▶"; pauseBtn.setAttribute("aria-label", "자동 넘김 재생"); }
+        else { show(cur + 1); start(); }
+      });
+      var slider = track.parentElement;
+      slider.addEventListener("mouseenter", function () { if (playing) stop(); });
+      slider.addEventListener("mouseleave", function () { if (playing) start(); });
+
+      show(0); start();
+    })();
+  </script>
 
   <section style="margin-top:2.2rem">
     <h2 style="font-size:1.3rem;margin-bottom:.7rem">둘러보기</h2>
