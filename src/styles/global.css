@@ -62,6 +62,9 @@ a { color: var(--accent); }
 }
 .site-header .nav-drop-panel a { color: var(--fg); padding: .45rem .7rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .95rem; white-space: nowrap; }
 .site-header .nav-drop-panel a:hover { background: var(--card); }
+.nav-drop[open] .nav-drop-panel { animation: navDropIn .18s ease; }
+@keyframes navDropIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .nav-drop[open] .nav-drop-panel { animation: none; } }
 .page { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; display: grid; grid-template-columns: 250px 1fr; gap: 2.5rem; }
 .page.no-sidebar { grid-template-columns: 1fr; max-width: 760px; }
 .sidebar { font-size: 1rem; align-self: start; line-height: 1.6; }

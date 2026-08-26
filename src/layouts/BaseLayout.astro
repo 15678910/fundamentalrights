@@ -78,6 +78,22 @@ const hasSidebar = Astro.slots.has("sidebar");
         document.addEventListener("click", function (e) {
           drops.forEach(function (d) { if (d.open && !d.contains(e.target)) d.open = false; });
         });
+        if (window.matchMedia("(hover: hover)").matches) {
+          drops.forEach(function (d) {
+            var timer = null;
+            d.addEventListener("mouseenter", function () {
+              clearTimeout(timer);
+              drops.forEach(function (o) { if (o !== d) o.open = false; });
+              d.open = true;
+            });
+            d.addEventListener("mouseleave", function () {
+              timer = setTimeout(function () { d.open = false; }, 200);
+            });
+            d.querySelector("summary").addEventListener("click", function (e) {
+              if (d.open) e.preventDefault();
+            });
+          });
+        }
       })();
     </script>
     <script src={`${base}scripts/a11y.js`} is:inline></script>
