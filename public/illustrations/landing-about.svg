@@ -1,0 +1,35 @@
+<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기본권 배움터 소개 — 세모, 네모, 동그라미와 헌법 책">
+  <title>기본권 배움터 소개</title>
+  <rect width="600" height="260" fill="#eef4ff"/>
+  <rect y="200" width="600" height="60" fill="#dbe7fb"/>
+  <!-- big open book center -->
+  <path d="M230 120 Q300 100 300 110 L300 190 Q300 180 230 196 Z" fill="#ffffff" stroke="#1e3a8a" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M370 120 Q300 100 300 110 L300 190 Q300 180 370 196 Z" fill="#ffffff" stroke="#1e3a8a" stroke-width="4" stroke-linejoin="round"/>
+  <g stroke="#93b4e8" stroke-width="3" stroke-linecap="round">
+    <path d="M245 135 L288 125"/><path d="M245 150 L288 140"/><path d="M245 165 L288 155"/>
+    <path d="M355 135 L312 125"/><path d="M355 150 L312 140"/><path d="M355 165 L312 155"/>
+  </g>
+  <text x="300" y="95" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e3a8a" font-family="sans-serif">헌법</text>
+  <!-- 세모 (triangle, glasses, red hair) left -->
+  <path d="M105 20 l6 14 M112 22 l1 13" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  <path d="M110 30 L155 118 L65 118 Z" fill="#ffffff" stroke="#1f2937" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="97" cy="88" r="10" fill="#ffffff" stroke="#1f2937" stroke-width="4"/>
+  <circle cx="123" cy="88" r="10" fill="#ffffff" stroke="#1f2937" stroke-width="4"/>
+  <path d="M107 88 h6" stroke="#1f2937" stroke-width="4"/>
+  <circle cx="97" cy="88" r="3" fill="#1f2937"/><circle cx="123" cy="88" r="3" fill="#1f2937"/>
+  <path d="M100 106 Q110 112 120 106" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+  <path d="M85 120 l-8 40 M135 120 l8 40" stroke="#1f2937" stroke-width="6" stroke-linecap="round"/>
+  <path d="M75 105 l-22 -14 M145 105 l22 -14" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+  <!-- 동그라미 (circle, red curl) right -->
+  <path d="M492 26 q10 -12 20 -2 q-8 2 -6 10" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="495" cy="80" r="48" fill="#ffffff" stroke="#1f2937" stroke-width="5"/>
+  <circle cx="480" cy="72" r="4" fill="#1f2937"/><circle cx="510" cy="72" r="4" fill="#1f2937"/>
+  <path d="M482 96 Q495 104 508 96" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="470" cy="86" r="6" fill="#fca5a5" opacity="0.7"/><circle cx="520" cy="86" r="6" fill="#fca5a5" opacity="0.7"/>
+  <path d="M478 126 l-8 36 M512 126 l8 36" stroke="#1f2937" stroke-width="6" stroke-linecap="round"/>
+  <path d="M452 96 l-24 -16 M538 96 l24 -16" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+  <!-- hearts -->
+  <path d="M300 46 l-8 -8 q-5 -5 0 -10 q5 -5 8 0 q3 -5 8 0 q5 5 0 10 Z" fill="#ef4444"/>
+  <path d="M205 60 l-5 -5 q-3 -3 0 -6 q3 -3 5 0 q2 -3 5 0 q3 3 0 6 Z" fill="#f59e0b"/>
+  <path d="M395 60 l-5 -5 q-3 -3 0 -6 q3 -3 5 0 q2 -3 5 0 q3 3 0 6 Z" fill="#f59e0b"/>
+</svg>

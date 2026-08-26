@@ -1,39 +1,82 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import RightCard from "../components/RightCard.astro";
-import { CATEGORIES } from "../lib/categories";
-import Illustration from "../components/Illustration.astro";
 import MascotScene from "../components/MascotScene.astro";
-import HomeSidebar from "../components/HomeSidebar.astro";
-
-const rights = (await getCollection("rights")).sort((a, b) => a.data.order - b.data.order);
 const base = import.meta.env.BASE_URL;
----
-<BaseLayout>
-  <HomeSidebar slot="sidebar" />
-  <MascotScene />
-  <h1 style="margin:.4rem 0 0">우리 헌법이 지켜주는 권리</h1>
-  <p style="color:var(--muted)">대한민국 헌법 제2장의 기본권을 <b>쉬운 말 · 보통 · 자세히</b> 세 단계로 읽어보세요. 누구나 자기 수준에서 이해할 수 있어요.</p>
 
-  <section id="what-is" style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0">
-    <h2 style="margin:.2rem 0">기본권이란 무엇인가요?</h2>
-    <p>사람은 저마다 생각도, 좋아하는 것도, 꿈도 달라요. 그런데 모두가 자기 마음대로만 하면 서로 부딪히게 돼요. 그래서 함께 살아가려면 약속, 즉 <b>규칙</b>이 필요해요. 이 규칙 가운데 특히 중요한 것을 <b>법</b>이라고 하고, 모든 법 가운데 으뜸이 되는 법이 바로 <b>헌법</b>이에요.</p>
-    <p>헌법은 나라가 어떻게 움직여야 하는지를 정하고, 동시에 <b>사람이라는 이유만으로 누구나 누려야 할 권리</b>를 정해 두었어요. 이렇게 헌법이 보장하는 가장 기본적인 권리를 <b>기본권</b>이라고 불러요.</p>
-    <p style="margin-bottom:0"><b>기본권은 어른만의 것이 아니에요.</b> 나이가 많든 적든, 학생이든 아니든 모든 사람에게 똑같이 있어요. 이 권리들이 우리의 학교생활과 일상에 얼마나 많이 닿아 있는지 알면 깜짝 놀랄 거예요.</p>
-    <p style="margin:.8rem 0 0"><a href={`${base}intro`}>→ 기본권이란 무엇인지 자세히 알아보기</a></p>
+const features = [
+  {
+    img: "landing-about",
+    title: "우리 사이트 소개",
+    desc: "독일 정치교육에서 영감을 받아, 헌법 제2장의 기본권을 쉬운 말·보통·자세히 세 단계로 풀어냅니다. 편집 원칙과 이용 방법을 알아보세요.",
+    href: `${base}about`,
+    cta: "소개 보기",
+  },
+  {
+    img: "landing-teacher",
+    title: "교권 침해, 함께 풀기",
+    desc: "학생인권과 교권은 부딪히는 걸까요? 교권 침해와 학부모 갑질, 그리고 서로의 존엄을 지키는 교실을 헌법의 눈으로 살펴봅니다.",
+    href: `${base}issues/교권침해-학부모갑질`,
+    cta: "쟁점 읽기",
+  },
+  {
+    img: "landing-law",
+    title: "법률 제·개정 제안",
+    desc: "기본권 교육을 모두에게 — 「기본권교육지원법」 시민 법률안 초안과 정책 제언을 읽고, 법이 만들어지는 과정을 함께 생각해 봅니다.",
+    href: `${base}bill`,
+    cta: "법률안 보기",
+  },
+];
+
+const sections = [
+  { icon: "📜", label: "기본권 목록", desc: "제10조~제39조", href: `${base}rights` },
+  { icon: "💬", label: "쟁점", desc: "12가지 현실 논쟁", href: `${base}issues` },
+  { icon: "🔎", label: "주제 특집", desc: "민주주의·AI·보이텔스바흐", href: `${base}topics` },
+  { icon: "🎲", label: "놀이·퀴즈", desc: "90문항 3단계", href: `${base}quiz` },
+  { icon: "🎨", label: "만화", desc: "네 컷 만화 33편", href: `${base}comics` },
+  { icon: "🎬", label: "영화", desc: "영화로 배우는 기본권", href: `${base}films` },
+  { icon: "🧑‍🏫", label: "교사 자료", desc: "수업안·워크시트 55종", href: `${base}teachers` },
+  { icon: "📖", label: "용어사전", desc: "20개 용어 + 짝맞추기", href: `${base}glossary` },
+];
+---
+<BaseLayout title="기본권 배움터 — 대한민국 헌법으로 배우는 기본권">
+  <section style="text-align:center;padding:.5rem 0 0">
+    <MascotScene />
+    <h1 style="margin:.6rem 0 .4rem;font-size:2rem">우리 헌법이 지켜주는 권리</h1>
+    <p style="color:var(--muted);max-width:34rem;margin:0 auto;font-size:1.05rem">
+      대한민국 헌법 제2장의 기본권을 <b>쉬운 말 · 보통 · 자세히</b> 세 단계로 —
+      초등학생부터 어른까지 누구나 자기 수준에서 읽을 수 있어요.
+    </p>
+    <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin:1.1rem 0 .4rem">
+      <a href={`${base}rights`} style="background:var(--accent);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:.6rem 1.4rem">기본권 목록 보기</a>
+      <a href={`${base}intro`} style="border:2px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;border-radius:999px;padding:.55rem 1.4rem">기본권이란?</a>
+    </div>
   </section>
 
-  {CATEGORIES.map((cat) => {
-    const items = rights.filter((r) => r.data.category === cat.key);
-    if (items.length === 0) return null;
-    return (
-      <section id={`cat-${cat.key}`} style="margin:1.5rem 0">
-        <h2 style={`color:${cat.color};border-bottom:2px solid ${cat.color};padding-bottom:.2rem;display:flex;align-items:center;gap:.5rem`}><Illustration name={`cat-${cat.key}`} alt="" size={32} />{cat.label}</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem;margin-top:.75rem">
-          {items.map((entry) => <RightCard entry={entry} />)}
-        </div>
-      </section>
-    );
-  })}
+  <section style="margin-top:2rem">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1rem">
+      {features.map((f) => (
+        <a href={f.href} style="border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;background:var(--bg)">
+          <img src={`${base}illustrations/${f.img}.svg`} alt="" style="width:100%;display:block;aspect-ratio:600/260;object-fit:cover" />
+          <div style="padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.45rem;flex:1">
+            <strong style="font-size:1.2rem">{f.title}</strong>
+            <span style="font-size:.95rem;line-height:1.6;flex:1">{f.desc}</span>
+            <span style="color:var(--accent);font-weight:700">{f.cta} →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section style="margin-top:2.2rem">
+    <h2 style="font-size:1.3rem;margin-bottom:.7rem">둘러보기</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.7rem">
+      {sections.map((s) => (
+        <a href={s.href} style="border:1px solid var(--border);border-radius:12px;padding:.9rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.15rem;background:var(--card)">
+          <span style="font-size:1.6rem">{s.icon}</span>
+          <strong style="font-size:1.02rem">{s.label}</strong>
+          <span style="color:var(--muted);font-size:.85rem">{s.desc}</span>
+        </a>
+      ))}
+    </div>
+  </section>
 </BaseLayout>

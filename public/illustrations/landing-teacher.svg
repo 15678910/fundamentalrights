@@ -1,0 +1,27 @@
+<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="교권 보호 — 칠판 앞의 교사와 방패">
+  <title>교권 보호</title>
+  <rect width="600" height="260" fill="#fdf6ec"/>
+  <rect y="200" width="600" height="60" fill="#f5e6cf"/>
+  <!-- blackboard -->
+  <rect x="70" y="34" width="300" height="140" rx="10" fill="#14532d" stroke="#7c5a2e" stroke-width="8"/>
+  <text x="220" y="86" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff" font-family="sans-serif">존중하는 교실</text>
+  <g stroke="#a7d3b8" stroke-width="4" stroke-linecap="round">
+    <path d="M110 116 h150"/><path d="M110 140 h100"/>
+  </g>
+  <!-- teacher figure -->
+  <circle cx="430" cy="86" r="26" fill="#fcd9b6"/>
+  <path d="M404 78 q26 -22 52 0 v-8 q-26 -18 -52 0 Z" fill="#1f2937"/>
+  <circle cx="421" cy="84" r="3.5" fill="#1f2937"/><circle cx="439" cy="84" r="3.5" fill="#1f2937"/>
+  <path d="M423 98 Q430 103 437 98" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+  <rect x="408" y="114" width="44" height="60" rx="18" fill="#2563eb"/>
+  <path d="M412 172 l-4 26 M448 172 l4 26" stroke="#1f2937" stroke-width="7" stroke-linecap="round"/>
+  <!-- pointing arm to board -->
+  <path d="M408 128 L372 108" stroke="#2563eb" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="368" cy="106" r="6" fill="#fcd9b6"/>
+  <!-- book arm -->
+  <path d="M452 130 L484 142" stroke="#2563eb" stroke-width="9" stroke-linecap="round"/>
+  <rect x="478" y="132" width="30" height="22" rx="3" fill="#f59e0b" stroke="#b45309" stroke-width="3"/>
+  <!-- protective shield -->
+  <path d="M530 60 q26 10 40 6 q0 52 -40 70 q-40 -18 -40 -70 q14 4 40 -6 Z" fill="#16a34a" opacity="0.92"/>
+  <path d="M515 96 l10 12 l22 -26" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="법률 제·개정 — 국회 돔과 법률안 문서">
+  <title>법률 제·개정</title>
+  <rect width="600" height="260" fill="#f3efff"/>
+  <rect y="200" width="600" height="60" fill="#e4dcf7"/>
+  <!-- assembly building -->
+  <ellipse cx="150" cy="96" rx="78" ry="44" fill="#7c3aed" opacity="0.9"/>
+  <rect x="60" y="118" width="180" height="66" fill="#ffffff" stroke="#7c3aed" stroke-width="4"/>
+  <g fill="#ede9fe" stroke="#7c3aed" stroke-width="3">
+    <rect x="76" y="130" width="16" height="54"/><rect x="106" y="130" width="16" height="54"/>
+    <rect x="136" y="130" width="16" height="54"/><rect x="166" y="130" width="16" height="54"/>
+    <rect x="196" y="130" width="16" height="54"/>
+  </g>
+  <circle cx="150" cy="52" r="7" fill="#f59e0b"/>
+  <!-- bill document -->
+  <rect x="330" y="44" width="150" height="150" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="4"/>
+  <text x="405" y="76" text-anchor="middle" font-size="19" font-weight="bold" fill="#7c3aed" font-family="sans-serif">법률안</text>
+  <g stroke="#c9c1e8" stroke-width="4" stroke-linecap="round">
+    <path d="M348 96 h114"/><path d="M348 116 h114"/><path d="M348 136 h84"/>
+  </g>
+  <!-- stamp -->
+  <circle cx="452" cy="164" r="17" fill="none" stroke="#ef4444" stroke-width="4"/>
+  <text x="452" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444" font-family="sans-serif">가결</text>
+  <!-- big pencil writing -->
+  <g transform="rotate(40 520 120)">
+    <rect x="504" y="52" width="30" height="104" rx="4" fill="#f59e0b"/>
+    <rect x="504" y="42" width="30" height="14" rx="4" fill="#fca5a5"/>
+    <path d="M504 156 L519 186 L534 156 Z" fill="#fcd9b6"/>
+    <path d="M513 168 L519 186 L525 168 Z" fill="#1f2937"/>
+  </g>
+  <!-- raised hands voting -->
+  <g stroke="#7c3aed" stroke-width="7" stroke-linecap="round">
+    <path d="M282 190 v-34"/><path d="M304 190 v-44"/>
+  </g>
+  <circle cx="282" cy="150" r="8" fill="#fcd9b6"/><circle cx="304" cy="140" r="8" fill="#fcd9b6"/>
+</svg>

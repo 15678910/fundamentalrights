@@ -7,12 +7,12 @@ const base = import.meta.env.BASE_URL;
 <nav class="sidebar" aria-label="기본권 목록 바로가기">
   <p class="sidebar-title">기본권 목록</p>
   <div class="sidebar-group">
-    <a href={`${base}#what-is`}>기본권이란 무엇인가요?</a>
+    <a href={`${base}rights#what-is`}>기본권이란 무엇인가요?</a>
     {CATEGORIES.map((cat) => {
       const count = rights.filter((r) => r.data.category === cat.key).length;
       if (count === 0) return null;
       return (
-        <a href={`${base}#cat-${cat.key}`} style={`border-left:4px solid ${cat.color};border-radius:0 8px 8px 0`}>{cat.label} ({count})</a>
+        <a href={`${base}rights#cat-${cat.key}`} style={`border-left:4px solid ${cat.color};border-radius:0 8px 8px 0`}>{cat.label} ({count})</a>
       );
     })}
   </div>
