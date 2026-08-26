@@ -102,4 +102,17 @@ const comics = defineCollection({
   }),
 });
 
-export const collections = { rights, glossary, issues, topics, teachers, films, comics };
+const lessons = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/lessons" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    periods: z.string(),        // 권장 수업시수 (예: "2차시 (90분)")
+    level: z.string(),          // 대상 학년
+    icon: z.string().default("🧑‍🏫"),
+    order: z.number().int(),
+    relatedRights: z.array(z.number().int()).default([]),
+  }),
+});
+
+export const collections = { rights, glossary, issues, topics, teachers, films, comics, lessons };

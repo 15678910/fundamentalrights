@@ -1,0 +1,103 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const lessons = await getCollection("lessons");
+  return lessons.map((l) => ({ params: { slug: l.id }, props: { entry: l } }));
+}
+
+type Props = { entry: CollectionEntry<"lessons"> };
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title={`${entry.data.title} | 수업하기`}>
+  <p style="color:var(--muted);font-size:.85rem" class="no-print"><a href={base}>홈</a> › <a href={`${base}lessons`}>수업하기</a></p>
+  <h1 style="margin:.2rem 0">{entry.data.icon} {entry.data.title}</h1>
+  <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0 1rem">
+    <span style="font-size:.85rem;background:var(--accent);color:#fff;border-radius:999px;padding:.2rem .7rem;font-weight:700">⏱ {entry.data.periods}</span>
+    <span style="font-size:.85rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .7rem">{entry.data.level}</span>
+    {entry.data.relatedRights.map((n: number) => (
+      <span style="font-size:.85rem;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.2rem .7rem">제{n}조</span>
+    ))}
+  </div>
+
+  <div class="lesson-controls no-print">
+    <button id="lesson-prev" disabled>← 이전 단계</button>
+    <span id="lesson-progress" aria-live="polite"></span>
+    <button id="lesson-next">다음 단계 →</button>
+    <button id="lesson-all" aria-pressed="false">전체 보기</button>
+  </div>
+
+  <article id="lesson-article" class="lesson-article">
+    <Content />
+  </article>
+
+  <style is:global>
+    .lesson-article { font-size: 1.12rem; line-height: 1.85; }
+    .lesson-article .lesson-step { display: none; border: 2px solid var(--border); border-radius: 14px; padding: 1.2rem 1.5rem; margin: 1rem 0; }
+    .lesson-article .lesson-step.active { display: block; }
+    .lesson-article.show-all .lesson-step { display: block; }
+    .lesson-article h2 { margin-top: 0; color: var(--accent); font-size: 1.45rem; }
+    .lesson-article blockquote { border-left: 5px solid var(--accent); margin: .8rem 0; padding: .3rem 0 .3rem 1rem; background: var(--card); border-radius: 0 8px 8px 0; }
+    .lesson-article table { border-collapse: collapse; }
+    .lesson-article th, .lesson-article td { border: 1px solid var(--border); padding: .45rem .7rem; }
+    .lesson-controls { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin: 1rem 0; }
+    .lesson-controls button { border: none; border-radius: 999px; padding: .55rem 1.2rem; font-weight: 700; font-size: 1rem; cursor: pointer; background: var(--accent); color: #fff; }
+    .lesson-controls button:disabled { opacity: .35; cursor: default; }
+    .lesson-controls #lesson-all { background: var(--card); color: var(--fg); border: 1px solid var(--border); }
+    .lesson-controls #lesson-all[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+    #lesson-progress { font-weight: 700; color: var(--muted); }
+    @media print { .lesson-article .lesson-step { display: block; } }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var article = document.getElementById("lesson-article");
+      var prev = document.getElementById("lesson-prev");
+      var next = document.getElementById("lesson-next");
+      var allBtn = document.getElementById("lesson-all");
+      var progress = document.getElementById("lesson-progress");
+
+      // H2 단위로 단계 묶기
+      var steps = [];
+      var cur = null;
+      Array.prototype.slice.call(article.childNodes).forEach(function (node) {
+        if (node.nodeType === 1 && node.tagName === "H2") {
+          cur = document.createElement("section");
+          cur.className = "lesson-step";
+          article.insertBefore(cur, node);
+          cur.appendChild(node);
+          steps.push(cur);
+        } else if (cur && (node.nodeType === 1 || (node.nodeType === 3 && node.textContent.trim()))) {
+          cur.appendChild(node);
+        }
+      });
+      if (steps.length === 0) return;
+
+      var i = 0, showAll = false;
+      function update() {
+        steps.forEach(function (s, k) { s.classList.toggle("active", k === i); });
+        progress.textContent = (i + 1) + " / " + steps.length;
+        prev.disabled = i === 0 || showAll;
+        next.disabled = i === steps.length - 1 || showAll;
+      }
+      prev.addEventListener("click", function () { if (i > 0) { i--; update(); article.scrollIntoView({ behavior: "smooth" }); } });
+      next.addEventListener("click", function () { if (i < steps.length - 1) { i++; update(); article.scrollIntoView({ behavior: "smooth" }); } });
+      allBtn.addEventListener("click", function () {
+        showAll = !showAll;
+        article.classList.toggle("show-all", showAll);
+        allBtn.setAttribute("aria-pressed", showAll ? "true" : "false");
+        allBtn.textContent = showAll ? "단계 보기" : "전체 보기";
+        update();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+        if (e.key === "ArrowRight") next.click();
+        if (e.key === "ArrowLeft") prev.click();
+      });
+      update();
+    })();
+  </script>
+</BaseLayout>
