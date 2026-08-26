@@ -1,27 +1,38 @@
-<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="교권 보호 — 칠판 앞의 교사와 방패">
+<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="교권 보호 — 동그라미 선생님과 존중하는 교실 칠판, 보호 방패">
   <title>교권 보호</title>
   <rect width="600" height="260" fill="#fdf6ec"/>
-  <rect y="200" width="600" height="60" fill="#f5e6cf"/>
-  <!-- blackboard -->
-  <rect x="70" y="34" width="300" height="140" rx="10" fill="#14532d" stroke="#7c5a2e" stroke-width="8"/>
-  <text x="220" y="86" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff" font-family="sans-serif">존중하는 교실</text>
+  <rect y="205" width="600" height="55" fill="#f5e6cf"/>
+
+  <!-- blackboard (top-left, title visible above caption) -->
+  <rect x="60" y="26" width="290" height="120" rx="10" fill="#14532d" stroke="#7c5a2e" stroke-width="8"/>
+  <text x="205" y="78" text-anchor="middle" font-size="27" font-weight="bold" fill="#ffffff" font-family="sans-serif">존중하는 교실</text>
   <g stroke="#a7d3b8" stroke-width="4" stroke-linecap="round">
-    <path d="M110 116 h150"/><path d="M110 140 h100"/>
+    <path d="M105 104 h150"/><path d="M105 126 h100"/>
   </g>
-  <!-- teacher figure -->
-  <circle cx="430" cy="86" r="26" fill="#fcd9b6"/>
-  <path d="M404 78 q26 -22 52 0 v-8 q-26 -18 -52 0 Z" fill="#1f2937"/>
-  <circle cx="421" cy="84" r="3.5" fill="#1f2937"/><circle cx="439" cy="84" r="3.5" fill="#1f2937"/>
-  <path d="M423 98 Q430 103 437 98" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
-  <rect x="408" y="114" width="44" height="60" rx="18" fill="#2563eb"/>
-  <path d="M412 172 l-4 26 M448 172 l4 26" stroke="#1f2937" stroke-width="7" stroke-linecap="round"/>
-  <!-- pointing arm to board -->
-  <path d="M408 128 L372 108" stroke="#2563eb" stroke-width="9" stroke-linecap="round"/>
-  <circle cx="368" cy="106" r="6" fill="#fcd9b6"/>
-  <!-- book arm -->
-  <path d="M452 130 L484 142" stroke="#2563eb" stroke-width="9" stroke-linecap="round"/>
-  <rect x="478" y="132" width="30" height="22" rx="3" fill="#f59e0b" stroke="#b45309" stroke-width="3"/>
-  <!-- protective shield -->
-  <path d="M530 60 q26 10 40 6 q0 52 -40 70 q-40 -18 -40 -70 q14 4 40 -6 Z" fill="#16a34a" opacity="0.92"/>
-  <path d="M515 96 l10 12 l22 -26" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 동그라미 as the teacher (right side, safe zone) -->
+  <g transform="translate(60,20) scale(1.35)">
+    <circle cx="310" cy="84" r="30" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <path d="M310 54 q-6 -12 4 -16 q-8 0 -2 8" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+    <g stroke="#1f2937" stroke-width="3" stroke-linecap="round"><path d="M300 110 L296 128"/><path d="M320 110 L324 128"/></g>
+    <ellipse cx="294" cy="130" rx="6" ry="3.5" fill="#1f2937"/>
+    <ellipse cx="326" cy="130" rx="6" ry="3.5" fill="#1f2937"/>
+    <!-- left arm points to the blackboard -->
+    <path d="M282 80 L258 66" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="256" cy="64" r="4.5" fill="#1f2937"/>
+    <!-- right arm holds a book -->
+    <path d="M338 86 L356 94" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <rect x="350" y="88" width="22" height="16" rx="2" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="301" cy="82" r="7"/><circle cx="319" cy="82" r="7"/><path d="M308 82 h4"/></g>
+    <circle cx="301" cy="82" r="3" fill="#1f2937"/><circle cx="319" cy="82" r="3" fill="#1f2937"/>
+    <path d="M302 95 Q310 102 318 95" stroke="#1f2937" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <circle cx="295" cy="93" r="3.5" fill="#e11d2a" opacity="0.3"/>
+    <circle cx="325" cy="93" r="3.5" fill="#e11d2a" opacity="0.3"/>
+  </g>
+
+  <!-- protective shield (top-right corner) -->
+  <g transform="translate(408,4) scale(0.82)">
+    <path d="M130 30 q26 10 40 6 q0 52 -40 70 q-40 -18 -40 -70 q14 4 40 -6 Z" fill="#16a34a" opacity="0.92"/>
+    <path d="M115 66 l10 12 l22 -26" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>
