@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeachersSidebar from "../../components/TeachersSidebar.astro";
 
 export async function getStaticPaths() {
   const lessons = await getCollection("lessons");
@@ -13,6 +14,7 @@ const { Content } = await render(entry);
 const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout title={`${entry.data.title} | 수업하기`}>
+  <TeachersSidebar slot="sidebar" current="lessons" />
   <p style="color:var(--muted);font-size:.85rem" class="no-print"><a href={base}>홈</a> › <a href={`${base}lessons`}>수업하기</a></p>
   <h1 style="margin:.2rem 0">{entry.data.icon} {entry.data.title}</h1>
   <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0 1rem">

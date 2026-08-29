@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TeachersSidebar from "../components/TeachersSidebar.astro";
 const base = import.meta.env.BASE_URL;
 const terms = (await getCollection("glossary")).sort((a, b) => a.data.term.localeCompare(b.data.term, "ko"));
 ---

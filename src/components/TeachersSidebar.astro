@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-const { currentType } = Astro.props;
+const { currentType, current } = Astro.props;
 const all = await getCollection("teachers");
 const base = import.meta.env.BASE_URL;
 const typeMeta: Record<string, string> = {
@@ -25,11 +25,11 @@ const types = Object.keys(typeMeta).filter((t) => all.some((i) => i.data.type ==
   </div>
   <div class="sidebar-group">
     <h3>수업 진행</h3>
-    <a href={`${base}lessons`}>🧑‍🏫 수업하기 (단계별 진행)</a>
+    <a href={`${base}lessons`} aria-current={current === "lessons" ? "page" : undefined}>🧑‍🏫 수업하기 (단계별 진행)</a>
   </div>
   <div class="sidebar-group">
     <h3>인쇄 자료</h3>
-    <a href={`${base}posters`}>🖼️ 교실 포스터</a>
-    <a href={`${base}cards`}>🃏 용어 카드게임</a>
+    <a href={`${base}posters`} aria-current={current === "posters" ? "page" : undefined}>🖼️ 교실 포스터</a>
+    <a href={`${base}cards`} aria-current={current === "cards" ? "page" : undefined}>🃏 용어 카드게임</a>
   </div>
 </nav>

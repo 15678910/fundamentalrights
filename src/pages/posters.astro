@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TeachersSidebar from "../components/TeachersSidebar.astro";
 import { CATEGORIES } from "../lib/categories";
 const base = import.meta.env.BASE_URL;
 const siteUrl = "fundamentalrights.kr";
@@ -14,6 +15,7 @@ const catRanges: Record<string, string> = {
 };
 ---
 <BaseLayout title="교실 포스터 | 기본권">
+  <TeachersSidebar slot="sidebar" current="posters" />
   <p style="color:var(--muted);font-size:.85rem" class="no-print"><a href={base}>홈</a> › <a href={`${base}teachers`}>교사 자료</a></p>
   <h1 class="no-print">교실 게시용 포스터 3종</h1>
   <p class="no-print" style="color:var(--muted)">🖨 <button onclick="window.print()" style="border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer;padding:.4rem .9rem;font-weight:600">인쇄하기</button> — A4 세로 기준, 포스터마다 한 장씩 인쇄됩니다.</p>
