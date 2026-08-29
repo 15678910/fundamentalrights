@@ -35,6 +35,7 @@
     <rect x="52" y="-72" width="13" height="18" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(-10 58 -63)"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-61" r="7"/><circle cx="9" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
     <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
     <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
     <line x1="-14" y1="-70" x2="-6" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -53,6 +54,7 @@
     <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
     <path d="M -26,-60 Q -32,-50 -34,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 26,-60 Q 32,-50 34,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
     <line x1="-15" y1="-72" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

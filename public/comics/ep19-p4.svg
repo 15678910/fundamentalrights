@@ -21,12 +21,15 @@
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -26,-60 Q -30,-48 -24,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 26,-60 Q 36,-70 40,-90" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-24" cy="-38" r="4" fill="#1f2937"/>
+    <circle cx="40" cy="-90" r="4" fill="#1f2937"/>
     <line x1="40" y1="-92" x2="40" y2="-130" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
     <polygon points="40,-130 68,-120 40,-110" fill="#60a5fa" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
     <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-61" r="7"/><circle cx="9" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
     <line x1="-13" y1="-67" x2="-5" y2="-65" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <line x1="5" y1="-65" x2="13" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <path d="M -7,-51 Q 0,-46 7,-51" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
@@ -49,6 +52,7 @@
     <polygon points="44,-140 72,-130 44,-120" fill="#e11d2a" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>
     <line x1="-15" y1="-72" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <line x1="6" y1="-70" x2="15" y2="-72" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <path d="M -7,-48 Q 0,-43 7,-48" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>

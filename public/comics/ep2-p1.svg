@@ -7,6 +7,7 @@
   <g>
     <rect x="50" y="120" width="70" height="70" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <polyline points="50,120 60,104 70,120 80,104 90,120 100,104 110,120 120,120" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="72" cy="148" r="7"/><circle cx="98" cy="148" r="7"/><path d="M 79,148 h12"/></g>
     <circle cx="72" cy="148" r="3" fill="#1f2937"/>
     <circle cx="98" cy="148" r="3" fill="#1f2937"/>
     <line x1="64" y1="136" x2="78" y2="132" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
@@ -30,11 +31,14 @@
     <circle cx="241" cy="161" r="1.6" fill="#1f2937"/>
     <circle cx="269" cy="160" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
     <circle cx="269" cy="161" r="1.6" fill="#1f2937"/>
+    <path d="M 246,160 h18" fill="none" stroke="#1f2937" stroke-width="2"/>
     <line x1="230" y1="144" x2="246" y2="140" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="264" y1="140" x2="280" y2="144" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="255" cy="180" rx="4" ry="6" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
     <line x1="220" y1="165" x2="198" y2="182" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="290" y1="165" x2="312" y2="182" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="198" cy="182" r="4" fill="#1f2937"/>
+    <circle cx="312" cy="182" r="4" fill="#1f2937"/>
     <line x1="240" y1="200" x2="240" y2="216" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="270" y1="200" x2="270" y2="216" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="240" cy="219" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>

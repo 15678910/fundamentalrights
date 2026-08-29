@@ -35,9 +35,12 @@
     <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -24,-58 Q -32,-70 -28,-86" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-28" cy="-86" r="4" fill="#1f2937"/>
     <path d="M 24,-58 Q 34,-68 40,-82" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="40" cy="-82" r="4" fill="#1f2937"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-59" r="7"/><circle cx="8" cy="-59" r="7"/><path d="M -1,-59 h2"/></g>
     <circle cx="-8" cy="-59" r="2.4" fill="#1f2937"/>
     <circle cx="8" cy="-59" r="2.4" fill="#1f2937"/>
     <line x1="-12" y1="-66" x2="-5" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -57,7 +60,9 @@
     <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -24,-70 Q -36,-78 -40,-90" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-40" cy="-90" r="4" fill="#1f2937"/>
     <path d="M 24,-70 Q 34,-82 30,-98" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="30" cy="-98" r="4" fill="#1f2937"/>
     <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
@@ -79,6 +84,7 @@
     <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
     <path d="M -22,-58 Q -34,-68 -38,-82" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 22,-58 Q 30,-68 28,-84" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-56" r="7"/><circle cx="9" cy="-56" r="7"/><path d="M -2,-56 h4"/></g>
     <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
     <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
     <line x1="-13" y1="-64" x2="-4" y2="-63" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

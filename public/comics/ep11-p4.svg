@@ -50,6 +50,7 @@
     <path d="M -3,-74 Q 3,-84 -2,-89 Q -6,-92 -1,-96" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-16" cy="-49" r="2.6" fill="#e11d2a" opacity="0.3"/>
     <circle cx="16" cy="-49" r="2.6" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-54" r="7"/><circle cx="8" cy="-54" r="7"/><path d="M -1,-54 h2"/></g>
     <circle cx="-8" cy="-54" r="2.2" fill="#1f2937"/>
     <circle cx="8" cy="-54" r="2.2" fill="#1f2937"/>
     <line x1="-13" y1="-61" x2="-5" y2="-58" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -70,6 +71,7 @@
     <rect x="28" y="-98" width="8" height="8" rx="3" fill="#e11d2a"/>
     <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-63" r="7"/><circle cx="9" cy="-63" r="7"/><path d="M -2,-63 h4"/></g>
     <path d="M -13,-64 Q -9,-61 -5,-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
     <path d="M 5,-64 Q 9,-61 13,-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
     <ellipse cx="0" cy="-47" rx="7" ry="6" fill="#1f2937"/>

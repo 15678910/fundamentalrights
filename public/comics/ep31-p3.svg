@@ -19,8 +19,11 @@
     <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -24,-56 Q -29,-46 -25,-36" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 24,-56 Q 29,-46 25,-36" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-25" cy="-36" r="4" fill="#1f2937"/>
+    <circle cx="25" cy="-36" r="4" fill="#1f2937"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-59" r="7"/><circle cx="8" cy="-59" r="7"/><path d="M -1.5,-59 h3"/></g>
     <circle cx="-8" cy="-59" r="2.4" fill="#1f2937"/>
     <circle cx="8" cy="-59" r="2.4" fill="#1f2937"/>
     <line x1="-12" y1="-65" x2="-5" y2="-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -41,6 +44,8 @@
     <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -24,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 24,-70 Q 34,-80 30,-92" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-26" cy="-45" r="4" fill="#1f2937"/>
+    <circle cx="30" cy="-92" r="4" fill="#1f2937"/>
     <line x1="-16" y1="-84" x2="-6" y2="-82" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <line x1="6" y1="-82" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
@@ -64,6 +69,7 @@
     <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
     <path d="M -23,-62 Q -30,-52 -26,-42" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 23,-62 Q 30,-52 26,-42" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-56" r="7"/><circle cx="9" cy="-56" r="7"/><path d="M -2,-56 h4"/></g>
     <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
     <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
     <line x1="-13" y1="-62" x2="-5" y2="-61" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

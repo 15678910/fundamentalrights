@@ -26,12 +26,15 @@
     <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <path d="M -26,-58 Q -28,-42 -25,-28" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-25" cy="-28" r="4" fill="#1f2937"/>
     <path d="M 26,-58 Q 28,-42 25,-28" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="25" cy="-28" r="4" fill="#1f2937"/>
     <g transform="rotate(20 0 -30)">
       <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
       <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
       <circle cx="-9" cy="-61" r="2.3" fill="#1f2937"/>
       <circle cx="9" cy="-61" r="2.3" fill="#1f2937"/>
+      <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-61" r="7"/><circle cx="9" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
       <path d="M -14,-67 Q -10,-64 -5,-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
       <path d="M 5,-66 Q 10,-64 14,-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
       <path d="M -6,-49 Q 0,-52 6,-49" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>

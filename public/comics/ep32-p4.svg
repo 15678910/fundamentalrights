@@ -17,9 +17,12 @@
     <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -24,-56 Q -14,-48 -6,-46" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 24,-56 Q 30,-42 22,-30" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-6" cy="-46" r="4" fill="#1f2937"/>
+    <circle cx="22" cy="-30" r="4" fill="#1f2937"/>
     <line x1="18" y1="-30" x2="26" y2="-14" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-59" r="7"/><circle cx="9" cy="-59" r="7"/><path d="M -2,-59 h4"/></g>
     <path d="M -12,-59 Q -9,-56 -6,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
     <path d="M 6,-59 Q 9,-56 12,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
     <line x1="-14" y1="-66" x2="-5" y2="-63" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -40,6 +43,8 @@
     <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -24,-68 Q -30,-58 -26,-46" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 24,-68 Q 30,-58 26,-46" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-26" cy="-46" r="4" fill="#1f2937"/>
+    <circle cx="26" cy="-46" r="4" fill="#1f2937"/>
     <line x1="-16" y1="-84" x2="-6" y2="-86" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <line x1="6" y1="-86" x2="16" y2="-84" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
@@ -80,6 +85,7 @@
       <path d="M -46,-96 L -29,-82 L -12,-96" fill="none" stroke="#1f2937" stroke-width="2"/>
       <text x="-29" y="-80" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" font-weight="bold" fill="#e11d2a">₩</text>
     </g>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-56" r="7"/><circle cx="9" cy="-56" r="7"/><path d="M -2,-56 h4"/></g>
     <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
     <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
     <path d="M -13,-63 Q -9,-61 -5,-63" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>

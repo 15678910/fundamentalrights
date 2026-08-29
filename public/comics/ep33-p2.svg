@@ -19,10 +19,13 @@
       <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
       <path d="M -25,-58 Q -30,-48 -28,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
       <path d="M 25,-58 Q 30,-48 28,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <circle cx="-28" cy="-38" r="4" fill="#1f2937"/>
+      <circle cx="28" cy="-38" r="4" fill="#1f2937"/>
       <circle cx="-19" cy="-54" r="3" fill="#e11d2a" opacity="0.2"/>
       <circle cx="19" cy="-54" r="3" fill="#e11d2a" opacity="0.2"/>
       <path d="M -13,-64 Q -9,-68 -4,-65" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
       <path d="M 4,-65 Q 9,-68 13,-64" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-59" r="7"/><circle cx="8" cy="-59" r="7"/><path d="M -1.5,-59 h3"/></g>
       <line x1="-11" y1="-59" x2="-5" y2="-59" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
       <line x1="5" y1="-59" x2="11" y2="-59" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
       <path d="M -6,-44 Q 0,-48 6,-44" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
@@ -42,6 +45,7 @@
     <path d="M 26,-62 Q 30,-50 28,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -14,-66 Q -9,-70 -4,-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
     <path d="M 4,-67 Q 9,-70 14,-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8.5" cy="-61" r="7"/><circle cx="8.5" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
     <line x1="-12" y1="-61" x2="-5" y2="-61" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="5" y1="-61" x2="12" y2="-61" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <path d="M -7,-46 Q 0,-51 7,-46" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>

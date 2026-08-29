@@ -28,6 +28,7 @@
     <path d="M 21,-89 c3,4 3,8 0,11 c-3,-3 -3,-7 0,-11 Z" fill="#60a5fa"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-61" r="7"/><circle cx="9" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
     <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
     <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
     <line x1="-14" y1="-70" x2="-5" y2="-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

@@ -37,12 +37,15 @@
     <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -25,-58 Q -32,-48 -34,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-34" cy="-34" r="4" fill="#1f2937"/>
     <path d="M 25,-56 Q 29,-44 27,-32" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="27" cy="-32" r="4" fill="#1f2937"/>
     <!-- 봉투 -->
     <path d="M -44,-34 Q -46,-52 -34,-54 Q -22,-52 -24,-34 Z" fill="#eef2f7" stroke="#1f2937" stroke-width="1.5"/>
     <rect x="-45" y="-58" width="22" height="6" rx="2" fill="#e11d2a"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-59" r="7"/><circle cx="8" cy="-59" r="7"/><path d="M -1,-59 h2"/></g>
     <circle cx="-8" cy="-59" r="2.4" fill="#1f2937"/>
     <circle cx="8" cy="-59" r="2.4" fill="#1f2937"/>
     <line x1="-12" y1="-66" x2="-5" y2="-67" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -62,7 +65,9 @@
     <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -24,-70 Q -34,-82 -30,-98" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-30" cy="-98" r="4" fill="#1f2937"/>
     <path d="M 24,-70 Q 28,-58 26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="26" cy="-45" r="4" fill="#1f2937"/>
     <!-- 집게 -->
     <g transform="translate(30,-40) rotate(24)">
       <rect x="-2" y="-22" width="4" height="26" rx="2" fill="#f3f4f6" stroke="#1f2937" stroke-width="1.5"/>
@@ -96,6 +101,7 @@
       <rect x="-2" y="-20" width="4" height="24" rx="2" fill="#f3f4f6" stroke="#1f2937" stroke-width="1.5" transform="rotate(-16)"/>
       <circle cx="0" cy="-13" r="2" fill="#1f2937"/>
     </g>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-56" r="7"/><circle cx="9" cy="-56" r="7"/><path d="M -2,-56 h4"/></g>
     <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
     <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
     <line x1="-13" y1="-62" x2="-5" y2="-61" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

@@ -16,10 +16,11 @@
     <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M -26,-60 Q -30,-48 -26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 26,-60 Q 30,-48 26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-60 Q -30,-48 -26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-26" cy="-38" r="4" fill="#1f2937"/>
+    <path d="M 26,-60 Q 30,-48 26,-38" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="26" cy="-38" r="4" fill="#1f2937"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-61" r="7"/><circle cx="9" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
     <path d="M -12,-59 Q -9,-62 -6,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
     <path d="M 6,-59 Q 9,-62 12,-59" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
     <line x1="-15" y1="-67" x2="-5" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -43,6 +44,7 @@
     <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
     <path d="M -26,-58 Q -14,-50 -2,-54" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 26,-58 Q 14,-50 2,-54" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
     <line x1="-15" y1="-70" x2="-4" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

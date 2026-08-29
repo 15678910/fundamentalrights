@@ -27,6 +27,7 @@
     <polyline points="8,15 16,3 24,15 32,3 40,15 48,3 55,15" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M14,29 Q20,25 26,29" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
     <path d="M34,29 Q40,25 46,29" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="22" cy="38" r="7"/><circle cx="38" cy="38" r="7"/><path d="M 29,38 h2"/></g>
     <circle cx="22" cy="38" r="2.2" fill="#1f2937"/>
     <circle cx="38" cy="38" r="2.2" fill="#1f2937"/>
     <path d="M18,56 Q30,66 42,56" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
@@ -56,6 +57,8 @@
     <path d="M23,57 Q30,64 37,57" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
     <line x1="10" y1="50" x2="2" y2="68" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="50" y1="50" x2="62" y2="20" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="2" cy="68" r="4" fill="#1f2937"/>
+    <circle cx="62" cy="20" r="4" fill="#1f2937"/>
     <line x1="20" y1="78" x2="16" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="40" y1="78" x2="44" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="14" cy="91" rx="7" ry="3" fill="#1f2937"/>
@@ -66,6 +69,7 @@
   <g transform="translate(240,108)">
     <circle cx="30" cy="48" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M40,22 Q50,14 44,6 Q40,2 46,-4" stroke="#e11d2a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="20" cy="44" r="7"/><circle cx="40" cy="44" r="7"/><path d="M 27,44 h6"/></g>
     <circle cx="20" cy="44" r="2.2" fill="#1f2937"/>
     <circle cx="40" cy="44" r="2.2" fill="#1f2937"/>
     <circle cx="14" cy="54" r="4" fill="#e11d2a" opacity=".3"/>
@@ -73,6 +77,8 @@
     <path d="M21,57 Q30,65 39,57" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
     <line x1="8" y1="55" x2="0" y2="70" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="52" y1="55" x2="60" y2="25" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="70" r="4" fill="#1f2937"/>
+    <circle cx="60" cy="25" r="4" fill="#1f2937"/>
     <line x1="22" y1="74" x2="18" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="38" y1="74" x2="42" y2="90" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="16" cy="91" rx="7" ry="3" fill="#1f2937"/>

@@ -21,9 +21,12 @@
     <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -25,-56 Q -30,-66 -25,-76" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-25" cy="-76" r="4" fill="#1f2937"/>
     <path d="M 25,-56 Q 29,-44 27,-32" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="27" cy="-32" r="4" fill="#1f2937"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-59" r="7"/><circle cx="8" cy="-59" r="7"/><path d="M -1,-59 h2"/></g>
     <circle cx="-8" cy="-59" r="2.8" fill="#1f2937"/>
     <circle cx="8" cy="-59" r="2.8" fill="#1f2937"/>
     <line x1="-13" y1="-67" x2="-4" y2="-68" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -43,7 +46,9 @@
     <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -25,-65 Q -30,-75 -24,-85" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-24" cy="-85" r="4" fill="#1f2937"/>
     <path d="M 25,-65 Q 29,-53 27,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="27" cy="-40" r="4" fill="#1f2937"/>
     <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
@@ -69,6 +74,7 @@
     <path d="M 23,-58 Q 36,-70 32,-90" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <!-- 손에 쥔 쓰레기 -->
     <polygon points="0,-6 4,-3 7,2 3,6 -3,5 -7,0 -4,-5" fill="#f3f4f6" stroke="#1f2937" stroke-width="1.5" stroke-linejoin="round" transform="translate(33,-94) rotate(15)"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-56" r="7"/><circle cx="9" cy="-56" r="7"/><path d="M -2,-56 h4"/></g>
     <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
     <circle cx="9" cy="-56" r="2.4" fill="#1f2937"/>
     <line x1="-13" y1="-63" x2="-5" y2="-62" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

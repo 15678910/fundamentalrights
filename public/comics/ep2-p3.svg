@@ -21,6 +21,8 @@
     <circle cx="118" cy="126" r="5" fill="#e11d2a" opacity=".3"/>
     <line x1="55" y1="130" x2="35" y2="150" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="145" y1="130" x2="170" y2="140" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="35" cy="150" r="4" fill="#1f2937"/>
+    <circle cx="170" cy="140" r="4" fill="#1f2937"/>
     <line x1="75" y1="180" x2="75" y2="200" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="125" y1="180" x2="125" y2="200" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="75" cy="203" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
@@ -35,6 +37,7 @@
     <circle cx="227" cy="139" r="1.8" fill="#1f2937"/>
     <circle cx="253" cy="138" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
     <circle cx="253" cy="139" r="1.8" fill="#1f2937"/>
+    <path d="M 232,138 h16" fill="none" stroke="#1f2937" stroke-width="2"/>
     <line x1="216" y1="118" x2="232" y2="114" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="248" y1="114" x2="264" y2="118" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="240" cy="156" rx="5" ry="7" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>

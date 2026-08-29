@@ -18,12 +18,15 @@
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -26,-60 Q -20,-48 -13,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 26,-60 Q 20,-48 13,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-13" cy="-44" r="4" fill="#1f2937"/>
+    <circle cx="13" cy="-44" r="4" fill="#1f2937"/>
     <rect x="-16" y="-55" width="32" height="22" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
     <line x1="-11" y1="-49" x2="11" y2="-49" stroke="#94a3b8" stroke-width="1"/>
     <line x1="-11" y1="-44" x2="11" y2="-44" stroke="#94a3b8" stroke-width="1"/>
     <line x1="-11" y1="-39" x2="6" y2="-39" stroke="#94a3b8" stroke-width="1"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-61" r="7"/><circle cx="9" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
     <circle cx="-9" cy="-61" r="2.5" fill="#1f2937"/>
     <circle cx="9" cy="-61" r="2.5" fill="#1f2937"/>
     <line x1="-13" y1="-68" x2="-6" y2="-66" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -44,6 +47,7 @@
     <rect x="-42" y="-42" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 26,-68 Q 38,-80 42,-96" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="38" y="-102" width="8" height="8" rx="3" fill="#e11d2a"/>
+    <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
     <line x1="-15" y1="-72" x2="-6" y2="-69" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
