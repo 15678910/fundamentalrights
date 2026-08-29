@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeSidebar from "../components/HomeSidebar.astro";
 import { CATEGORIES } from "../lib/categories";
 
 const rights = await getCollection("rights");
@@ -26,6 +27,7 @@ const dataJson = JSON.stringify(pool);
 ---
 
 <BaseLayout title="놀이·퀴즈 — 우리 헌법 기본권">
+  <HomeSidebar slot="sidebar" current="quiz" />
   <h1>놀이·퀴즈</h1>
   <p style="color:var(--muted);margin-top:-.2rem">헌법 기본권 퀴즈로 즐겁게 확인해 봐요.</p>
 
