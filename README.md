@@ -1,4 +1,4 @@
-# 기본권 배움터 (Fundamental Rights)
+# 기본권 학습터 (Fundamental Rights)
 
 **https://fundamentalrights.kr/**
 
@@ -55,7 +55,7 @@ npm run preview  # 빌드 결과 미리보기
 ## 라이선스
 
 - **콘텐츠**(권리 설명, 쟁점, 수업안, 워크시트, 포스터, 만화, 삽화 등):
-  [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko) — 출처(기본권 배움터)를 밝히면
+  [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko) — 출처(기본권 학습터)를 밝히면
   비영리 목적으로 자유롭게 복사·배포·수정할 수 있습니다.
 - **코드**(사이트 소스): [MIT License](./LICENSE)
 - 헌법 조문 원문은 공공 저작물이며, 인용된 판례·통계는 각 원출처를 따릅니다.
