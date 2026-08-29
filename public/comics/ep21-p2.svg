@@ -34,7 +34,8 @@
 
   <!-- 떼어진 쪽지 (구겨짐) -->
   <rect x="4" y="98" width="46" height="30" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(18 27 113)"/>
-  <text x="27" y="118" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(18 27 113)">급식에 과일을!</text>
+  <text x="27" y="112" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(18 27 113)">급식에</text>
+  <text x="27" y="123" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#1f2937" transform="rotate(18 27 113)">과일을!</text>
 
   <!-- 동그라미 (항의) -->
   <g transform="translate(240,206)">
