@@ -20,7 +20,10 @@ const hasSidebar = Astro.slots.has("sidebar");
     <meta property="og:image" content="https://fundamentalrights.kr/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, "https://fundamentalrights.kr").href} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:image" content="https://fundamentalrights.kr/og-image.png" />
     <meta name="naver-site-verification" content="ffc2b24a13c5c1c344b530b571c064a242a7693f" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
