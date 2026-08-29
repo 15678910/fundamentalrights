@@ -68,7 +68,7 @@ a { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) { .nav-drop[open] .nav-drop-panel { animation: none; } }
 .page { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; display: grid; grid-template-columns: 250px 1fr; gap: 2.5rem; }
 .page.no-sidebar { grid-template-columns: 1fr; max-width: 760px; }
-.sidebar { font-size: 1rem; align-self: start; line-height: 1.6; }
+.sidebar { font-size: 1rem; align-self: start; line-height: 1.6; position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding-right: .3rem; }
 .sidebar-title { font-weight: 700; font-size: 1.08rem; margin: 0 0 .7rem; }
 .sidebar-group { margin-bottom: 1.3rem; }
 .sidebar-group h3 { font-size: .95rem; margin: .7rem 0 .4rem; }
@@ -89,7 +89,7 @@ a { color: var(--accent); }
 
 @media (max-width: 820px) {
   .page { grid-template-columns: 1fr; gap: 1.5rem; }
-  .sidebar { order: 2; border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 1.5rem; }
+  .sidebar { order: 2; border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 1.5rem; position: static; max-height: none; overflow-y: visible; }
   .nav-burger { display: inline-block; }
   .header-right { margin-left: auto; }
   .tabs { display: none; flex-direction: column; width: 100%; padding-bottom: .5rem; margin: 0; }
