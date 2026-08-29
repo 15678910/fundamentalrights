@@ -12,6 +12,15 @@ const hasSidebar = Astro.slots.has("sidebar");
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="description" content="대한민국 헌법 제2장의 기본권을 쉬운 말·보통·자세히 3단계로 — 수업·쟁점·퀴즈·만화까지, 무료·무광고 기본권 교육 사이트" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="기본권 배움터" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="대한민국 헌법 제2장의 기본권을 쉬운 말·보통·자세히 3단계로 — 수업·쟁점·퀴즈·만화까지, 무료·무광고 기본권 교육 사이트" />
+    <meta property="og:image" content="https://fundamentalrights.kr/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="naver-site-verification" content="ffc2b24a13c5c1c344b530b571c064a242a7693f" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
