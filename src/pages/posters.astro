@@ -24,10 +24,19 @@ const catRanges: Record<string, string> = {
   <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:2.2rem 1.8rem;margin:1.5rem 0;text-align:center">
     <p style="letter-spacing:.2em;font-weight:700;color:var(--accent);margin:0">우리 교실의 세 가지 약속</p>
     <h2 style="font-size:1.9rem;margin:.4rem 0 1.4rem">논쟁적인 것은 논쟁적으로</h2>
-    <div style="text-align:left;max-width:34rem;margin:0 auto;display:grid;gap:1rem">
-      <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">하나.</b> 누구도 남에게 생각을 강요하지 않습니다.</p>
-      <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">둘.</b> 여러 입장이 있는 문제는 여러 입장 그대로 다룹니다.</p>
-      <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">셋.</b> 판단은 각자 스스로, 근거와 함께 내립니다.</p>
+    <div style="text-align:left;max-width:36rem;margin:0 auto;display:grid;gap:1rem">
+      <div style="display:flex;align-items:center;gap:.9rem">
+        <img src={`${base}illustrations/mascot-semo.svg`} alt="세모" style="width:46px;height:62px;flex:none" />
+        <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">하나.</b> 누구도 남에게 생각을 강요하지 않습니다.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:.9rem">
+        <img src={`${base}illustrations/mascot-nemo.svg`} alt="네모" style="width:48px;height:50px;flex:none" />
+        <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">둘.</b> 여러 입장이 있는 문제는 여러 입장 그대로 다룹니다.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:.9rem">
+        <img src={`${base}illustrations/mascot-donggeurami.svg`} alt="동그라미" style="width:50px;height:50px;flex:none" />
+        <p style="margin:0;font-size:1.15rem"><b style="color:var(--accent)">셋.</b> 판단은 각자 스스로, 근거와 함께 내립니다.</p>
+      </div>
     </div>
     <div style="display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.6rem">
       <a href="https://fundamentalrights.kr/" style="line-height:0"><img src={`${base}qr-site.svg`} alt="사이트 QR코드 — 클릭하면 홈으로" style="width:72px;height:72px" /></a>
@@ -61,13 +70,18 @@ const catRanges: Record<string, string> = {
       제한하는 경우에도 자유와 권리의 <b>본질적인 내용을 침해할 수 없다</b>.
       <span style="display:block;color:var(--muted);font-size:.85rem;margin-top:.4rem">— 헌법 제37조 제2항</span>
     </blockquote>
-    <p style="font-size:1.15rem;margin:1.4rem 0 0;line-height:1.9">
-      내 권리가 소중한 만큼<br>
-      <b>네 권리도 같은 무게로 소중합니다.</b>
-    </p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:1.4rem">
+      <img src={`${base}illustrations/mascot-semo.svg`} alt="세모" style="width:58px;height:78px;transform:rotate(-8deg)" />
+      <p style="font-size:1.15rem;margin:0;line-height:1.9">
+        내 권리가 소중한 만큼<br>
+        <b>네 권리도 같은 무게로 소중합니다.</b>
+      </p>
+      <img src={`${base}illustrations/mascot-donggeurami.svg`} alt="동그라미" style="width:64px;height:64px;transform:rotate(8deg) scaleX(-1)" />
+    </div>
     <div style="display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.2rem">
       <a href="https://fundamentalrights.kr/" style="line-height:0"><img src={`${base}qr-site.svg`} alt="사이트 QR코드 — 클릭하면 홈으로" style="width:72px;height:72px" /></a>
       <p style="color:var(--muted);font-size:.85rem;margin:0;text-align:left">더 알아보기 · 기본권 배움터<br>{siteUrl}</p>
+      <img src={`${base}illustrations/mascot-nemo.svg`} alt="네모" style="width:44px;height:46px;transform:rotate(14deg);margin-left:.3rem" />
     </div>
   </section>
 

@@ -1,0 +1,14 @@
+<svg viewBox="146 40 94 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="네모">
+  <title>네모</title>
+  <rect x="166" y="56" width="54" height="54" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
+  <path d="M174 56 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+  <g stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"><path d="M180 110 q-4 10 2 16"/><path d="M206 110 q4 10 -2 16"/></g>
+  <rect x="172" y="126" width="14" height="7" rx="3" fill="#e11d2a" transform="rotate(-12 179 129)"/>
+  <rect x="200" y="126" width="14" height="7" rx="3" fill="#e11d2a" transform="rotate(12 207 129)"/>
+  <path d="M166 80 q-12 2 -16 12" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 80 q12 2 16 12" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
+  <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="184" cy="80" r="7"/><circle cx="202" cy="80" r="7"/><path d="M191 80 h4"/></g>
+  <circle cx="184" cy="80" r="3" fill="#1f2937"/><circle cx="202" cy="80" r="3" fill="#1f2937"/>
+  <path d="M185 94 Q193 101 201 94" stroke="#1f2937" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <circle cx="178" cy="92" r="3.5" fill="#e11d2a" opacity="0.3"/><circle cx="208" cy="92" r="3.5" fill="#e11d2a" opacity="0.3"/>
+</svg>
