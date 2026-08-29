@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TeachersSidebar from "../components/TeachersSidebar.astro";
+import MascotScene from "../components/MascotScene.astro";
 import { CATEGORIES } from "../lib/categories";
 const base = import.meta.env.BASE_URL;
 const siteUrl = "fundamentalrights.kr";
@@ -70,8 +71,9 @@ const catRanges: Record<string, string> = {
     </div>
   </section>
 
-  <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:2rem 1.8rem;margin:1.5rem 0;text-align:center">
-    <p style="letter-spacing:.2em;font-weight:700;color:var(--accent);margin:0">헌법이 지켜주는 나의 권리, 여기서 배워요</p>
+  <section class="poster" style="border:3px solid var(--fg);border-radius:16px;padding:1.6rem 1.8rem 2rem;margin:1.5rem 0;text-align:center">
+    <div style="display:flex;justify-content:center"><MascotScene max={290} /></div>
+    <p style="letter-spacing:.2em;font-weight:700;color:var(--accent);margin:.2rem 0 0">헌법이 지켜주는 나의 권리, 여기서 배워요</p>
     <h2 style="font-size:2.1rem;margin:.4rem 0 .2rem">기본권 배움터</h2>
     <p style="color:var(--muted);margin:0 0 1.3rem">초등학생부터 어른까지 · 무료 · 광고 없음 · 가입 없음</p>
 
