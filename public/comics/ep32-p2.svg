@@ -40,9 +40,7 @@
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -26,-62 Q -30,-50 -28,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="-33" y="-42" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 26,-62 Q 32,-50 30,-36" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="26" y="-40" width="8" height="8" rx="3" fill="#e11d2a"/>
     <g transform="rotate(-15 32 -30)">
       <rect x="20" y="-46" width="24" height="30" rx="2" fill="#f3f4f6" stroke="#1f2937" stroke-width="2"/>
       <rect x="23" y="-42" width="24" height="30" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>

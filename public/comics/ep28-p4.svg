@@ -55,7 +55,6 @@
     <path d="M -26,-60 Q -46,-58 -62,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="-70" y="-54" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 26,-68 Q 30,-56 24,-48" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="18" y="-50" width="8" height="8" rx="3" fill="#e11d2a"/>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>

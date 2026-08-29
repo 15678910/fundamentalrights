@@ -38,7 +38,6 @@
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -26,-65 Q -30,-55 -20,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="-26" y="-52" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 26,-65 Q 40,-80 34,-98" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="24" y="-112" width="16" height="22" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(-8 32 -101)"/>
     <rect x="33" y="-105" width="16" height="22" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2" transform="rotate(10 41 -94)"/>

@@ -53,7 +53,6 @@
     <path d="M -17,-78 q5 -10 10 -4 q5 -10 10 -4 q5 -9 10 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 23,-60 Q 30,-50 26,-40" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -26,-58 Q -42,-64 -48,-78" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <circle cx="-48" cy="-80" r="5" fill="#e11d2a"/>
     <circle cx="-9" cy="-56" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <circle cx="9" cy="-56" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <line x1="-2" y1="-56" x2="2" y2="-56" stroke="#1f2937" stroke-width="2"/>

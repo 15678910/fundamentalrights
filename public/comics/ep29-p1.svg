@@ -50,9 +50,7 @@
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -26,-65 Q -42,-64 -54,-56" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="-62" y="-60" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 26,-68 Q 30,-56 24,-48" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="18" y="-50" width="8" height="8" rx="3" fill="#e11d2a"/>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>

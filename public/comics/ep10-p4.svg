@@ -67,7 +67,6 @@
     <g transform="rotate(18 0 -30)">
       <path d="M -22,-56 Q -14,-42 -4,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
       <path d="M 22,-56 Q 14,-42 4,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-      <rect x="-8" y="-40" width="16" height="8" rx="3" fill="#e11d2a"/>
       <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
       <path d="M -18,-78 q6 -11 11 -4 q6 -11 11 -4 q6 -9 11 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
       <path d="M 20,-70 c3,4 3,7 0,10 c-3,-3 -3,-6 0,-10 Z" fill="#60a5fa"/>

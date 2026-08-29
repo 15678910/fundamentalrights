@@ -45,7 +45,6 @@
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -26,-65 Q -32,-52 -28,-40" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="-33" y="-42" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 26,-68 Q 38,-80 44,-100" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="40" y="-106" width="8" height="8" rx="3" fill="#e11d2a"/>
     <line x1="44" y1="-104" x2="44" y2="-140" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>

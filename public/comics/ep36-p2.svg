@@ -67,9 +67,7 @@
     <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -17,-78 q6,-11 11,-4 q6,-11 11,-4 q6,-9 11,-2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -23,-58 Q -27,-48 -19,-42" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="-25" y="-44" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 23,-58 Q 27,-48 19,-42" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="17" y="-44" width="8" height="8" rx="3" fill="#e11d2a"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-56" r="7"/><circle cx="9" cy="-56" r="7"/><path d="M -2,-56 h4"/></g>
     <line x1="-12" y1="-56" x2="-6" y2="-56" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="6" y1="-56" x2="12" y2="-56" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>

@@ -14,9 +14,7 @@
     <line x1="92" y1="130" x2="106" y2="136" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <path d="M70,160 Q85,172 104,158" stroke="#1f2937" stroke-width="3" fill="none" stroke-linecap="round"/>
     <line x1="50" y1="155" x2="28" y2="172" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="26" cy="175" r="7" fill="#e11d2a"/>
     <line x1="120" y1="150" x2="168" y2="142" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="172" cy="140" r="7" fill="#e11d2a"/>
     <line x1="68" y1="190" x2="68" y2="208" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <line x1="102" y1="190" x2="102" y2="208" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="68" cy="211" rx="9" ry="5" fill="#e11d2a"/>

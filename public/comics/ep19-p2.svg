@@ -18,7 +18,6 @@
     <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <!-- 왼팔 허리 -->
     <path d="M -26,-65 Q -30,-55 -20,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="-26" y="-52" width="8" height="8" rx="3" fill="#e11d2a"/>
     <!-- 오른팔 쭉 내밀며 깃발 -->
     <path d="M 26,-65 Q 55,-62 88,-58" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="86" y="-63" width="9" height="8" rx="3" fill="#e11d2a"/>

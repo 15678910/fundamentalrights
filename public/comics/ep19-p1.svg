@@ -44,7 +44,6 @@
     <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <!-- 왼팔 위로 -->
     <path d="M -26,-68 Q -38,-78 -40,-95" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="-46" y="-101" width="8" height="8" rx="3" fill="#e11d2a"/>
     <!-- 오른팔 깃발 -->
     <path d="M 26,-68 Q 38,-80 44,-100" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="40" y="-106" width="8" height="8" rx="3" fill="#e11d2a"/>

@@ -44,9 +44,7 @@
     <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <!-- 팔: 동그라미 쪽으로 뻗어 붙잡음 -->
     <path d="M -26,-65 Q -50,-58 -78,-48" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <circle cx="-80" cy="-46" r="5" fill="#e11d2a"/>
     <path d="M 26,-65 Q 32,-55 22,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <rect x="18" y="-53" width="8" height="8" rx="3" fill="#e11d2a"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
