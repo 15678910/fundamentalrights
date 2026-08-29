@@ -1,0 +1,25 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기후 보호와 사회 변화">
+  <title>기후 보호와 사회 변화</title>
+  <rect width="120" height="120" rx="26" fill="#e8f6ee"/>
+  <!-- earth -->
+  <circle cx="46" cy="52" r="26" fill="#bfdbfe" stroke="#16a34a" stroke-width="3"/>
+  <path d="M30 44 q8 -6 14 0 q6 4 2 9 q-8 3 -12 -2 q-6 -2 -4 -7 Z" fill="#16a34a"/>
+  <path d="M52 60 q9 -3 12 3 q2 6 -5 8 q-8 1 -9 -5 q-1 -4 2 -6 Z" fill="#16a34a"/>
+  <!-- thermometer rising (right of earth) -->
+  <rect x="84" y="26" width="10" height="46" rx="5" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+  <circle cx="89" cy="80" r="10" fill="#dc2626"/>
+  <rect x="86.5" y="44" width="5" height="32" rx="2.5" fill="#dc2626"/>
+  <g stroke="#dc2626" stroke-width="2.5" stroke-linecap="round">
+    <path d="M98 36 h7"/><path d="M98 48 h7"/><path d="M98 60 h7"/>
+  </g>
+  <!-- sprout in open hands: future generation -->
+  <path d="M28 96 q14 10 32 0" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 92 v-10" stroke="#16a34a" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M44 84 q-9 -2 -10 -10 q10 0 10 10 Z" fill="#16a34a"/>
+  <path d="M44 84 q9 -2 10 -10 q-10 0 -10 10 Z" fill="#4ade80"/>
+  <!-- balance hint: small scale at bottom-right -->
+  <g stroke="#0e7490" stroke-width="2.5" stroke-linecap="round">
+    <path d="M88 100 v-8"/><path d="M80 92 h16"/>
+    <path d="M80 92 l-3 6 h6 Z" fill="#0e7490"/><path d="M96 92 l-3 6 h6 Z" fill="#0e7490"/>
+  </g>
+</svg>
