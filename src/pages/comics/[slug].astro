@@ -26,7 +26,6 @@ const labelText =
 ---
 <BaseLayout title={`${entry.data.title} | 기본권 만화`}>
   <ComicsSidebar slot="sidebar" currentId={entry.id} />
-  <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}comics`}>만화</a></p>
   {related.length > 0 && (
     <p style={`margin:.2rem 0 0;font-size:1.05rem;font-weight:700;color:${labelColor}`}>{labelText}</p>
   )}

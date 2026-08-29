@@ -43,8 +43,8 @@
     <circle cx="85" cy="75" r="4" fill="#1f2937"/>
     <line x1="15" y1="100" x2="15" y2="122" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="55" y1="100" x2="55" y2="122" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
-    <ellipse cx="15" cy="125" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-    <ellipse cx="55" cy="125" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <ellipse cx="15" cy="125" rx="8" ry="4" fill="#1f2937"/>
+    <ellipse cx="55" cy="125" rx="8" ry="4" fill="#1f2937"/>
   </g>
 
   <!-- 동그라미 (미소) -->
@@ -63,8 +63,8 @@
     <circle cx="88" cy="66" r="4" fill="#1f2937"/>
     <line x1="22" y1="75" x2="22" y2="95" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="48" y1="75" x2="48" y2="95" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
-    <ellipse cx="22" cy="98" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-    <ellipse cx="48" cy="98" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <ellipse cx="22" cy="98" rx="8" ry="4" fill="#1f2937"/>
+    <ellipse cx="48" cy="98" rx="8" ry="4" fill="#1f2937"/>
   </g>
 
   <!-- 말풍선 (네모의 사과) -->

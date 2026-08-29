@@ -30,7 +30,7 @@
     <circle cx="192" cy="205" r="4" fill="#1f2937"/>
     <line x1="125" y1="214" x2="125" y2="234" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="155" y1="214" x2="155" y2="234" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
-    <ellipse cx="125" cy="237" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-    <ellipse cx="155" cy="237" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <ellipse cx="125" cy="237" rx="8" ry="4" fill="#1f2937"/>
+    <ellipse cx="155" cy="237" rx="8" ry="4" fill="#1f2937"/>
   </g>
 </svg>

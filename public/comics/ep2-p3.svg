@@ -25,8 +25,8 @@
     <circle cx="170" cy="140" r="4" fill="#1f2937"/>
     <line x1="75" y1="180" x2="75" y2="200" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="125" y1="180" x2="125" y2="200" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
-    <ellipse cx="75" cy="203" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-    <ellipse cx="125" cy="203" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <ellipse cx="75" cy="203" rx="8" ry="4" fill="#1f2937"/>
+    <ellipse cx="125" cy="203" rx="8" ry="4" fill="#1f2937"/>
   </g>
 
   <!-- 네모 (놀란 표정) -->

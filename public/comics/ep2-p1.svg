@@ -39,8 +39,8 @@
     <circle cx="312" cy="182" r="4" fill="#1f2937"/>
     <line x1="240" y1="200" x2="240" y2="216" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="270" y1="200" x2="270" y2="216" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
-    <ellipse cx="240" cy="219" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-    <ellipse cx="270" cy="219" rx="8" ry="4" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+    <ellipse cx="240" cy="219" rx="8" ry="4" fill="#1f2937"/>
+    <ellipse cx="270" cy="219" rx="8" ry="4" fill="#1f2937"/>
   </g>
 
   <!-- 말풍선 -->
