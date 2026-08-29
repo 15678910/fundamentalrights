@@ -22,8 +22,6 @@
     <path d="M 25.98,-56.04 Q 32,-68 20,-76" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="20" cy="-76" r="4" fill="#1f2937"/>
     <!-- 목도리 -->
-    <path d="M -18,-33 Q 0,-21 18,-33 Q 18,-24 0,-15 Q -18,-24 -18,-33 Z" fill="#e11d2a" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
-    <rect x="-8" y="-18" width="7" height="15" rx="2" fill="#e11d2a" stroke="#1f2937" stroke-width="2" transform="rotate(10 -4 -10)"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-59" r="7"/><circle cx="8" cy="-59" r="7"/><path d="M -1,-59 h2"/></g>
@@ -50,8 +48,6 @@
     <path d="M 16.63,-61.39 Q 29,-53 27,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="27" cy="-40" r="4" fill="#1f2937"/>
     <!-- 목도리 -->
-    <path d="M -20,-39 Q 0,-27 20,-39 Q 20,-30 0,-21 Q -20,-30 -20,-39 Z" fill="#e11d2a" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
-    <rect x="4" y="-24" width="7" height="15" rx="2" fill="#e11d2a" stroke="#1f2937" stroke-width="2" transform="rotate(-10 8 -16)"/>
     <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
@@ -76,8 +72,6 @@
     <path d="M -25,-56 Q -27,-46 -19,-40" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 25,-56 Q 27,-46 19,-40" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <!-- 목도리 -->
-    <path d="M -18,-33 Q 0,-21 18,-33 Q 18,-24 0,-15 Q -18,-24 -18,-33 Z" fill="#e11d2a" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
-    <rect x="-8" y="-18" width="7" height="15" rx="2" fill="#e11d2a" stroke="#1f2937" stroke-width="2" transform="rotate(8 -4 -10)"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-56" r="7"/><circle cx="9" cy="-56" r="7"/><path d="M -2,-56 h4"/></g>
     <circle cx="-9" cy="-56" r="2.8" fill="#1f2937"/>
     <circle cx="9" cy="-56" r="2.8" fill="#1f2937"/>
