@@ -43,7 +43,13 @@ const hasSidebar = Astro.slots.has("sidebar");
           </div>
         </details>
         <a href={`${base}glossary`}>용어사전</a>
-        <a href={`${base}about`}>소개</a>
+        <details class="nav-drop">
+          <summary>소개 ▾</summary>
+          <div class="nav-drop-panel">
+            <a href={`${base}about`}>ℹ️ 소개</a>
+            <a href={`${base}faq`}>❓ 자주 묻는 질문</a>
+          </div>
+        </details>
         </nav>
         <div class="header-right">
           <a class="header-search" href={`${base}search`}>🔍 검색</a>

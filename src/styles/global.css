@@ -60,6 +60,7 @@ a { color: var(--accent); }
   box-shadow: 0 6px 18px rgba(0,0,0,.16); padding: .35rem; min-width: 160px;
   display: flex; flex-direction: column;
 }
+.tabs .nav-drop:last-of-type .nav-drop-panel { left: auto; right: 0; }
 .site-header .nav-drop-panel a { color: var(--fg); padding: .45rem .7rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .95rem; white-space: nowrap; }
 .site-header .nav-drop-panel a:hover { background: var(--card); }
 .nav-drop[open] .nav-drop-panel { animation: navDropIn .18s ease; }
