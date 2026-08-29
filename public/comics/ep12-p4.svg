@@ -20,8 +20,8 @@
     <line x1="9" y1="-30" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="-10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
     <ellipse cx="10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
-    <path d="M -25,-58 Q -29,-46 -27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 25,-58 Q 32,-70 28,-84" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -25,-58 Q -29,-46 -27,-34" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-27" cy="-34" r="4" fill="#1f2937"/>
+    <path d="M 25,-58 Q 32,-70 28,-84" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="28" cy="-84" r="4" fill="#1f2937"/>
     <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-81 Q 4,-92 -2,-97 Q -7,-101 -1,-105" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
@@ -45,8 +45,8 @@
     <path d="M -8,-98 L -13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M -24,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 24,-70 Q 28,-58 26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -24,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-26" cy="-45" r="4" fill="#1f2937"/>
+    <path d="M 24,-70 Q 28,-58 26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="26" cy="-45" r="4" fill="#1f2937"/>
     <circle cx="-11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <circle cx="11" cy="-75" r="7" fill="#ffffff" fill-opacity="0.5" stroke="#1f2937" stroke-width="2"/>
     <line x1="-4" y1="-75" x2="4" y2="-75" stroke="#1f2937" stroke-width="2"/>
@@ -68,7 +68,7 @@
     <path d="M 23,-58 Q 30,-70 24,-82" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="18" y="-88" width="8" height="8" rx="3" fill="#e11d2a"/>
     <rect x="-25" y="-78" width="50" height="50" rx="9" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
-    <polyline points="-21,-78 -15,-89 -8,-78 0,-90 8,-78 15,-89 21,-78" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -18,-78 q6 -11 11 -4 q6 -11 11 -4 q6 -9 11 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -22,-74 c3,4 3,7 0,10 c-3,-3 -3,-6 0,-10 Z" fill="#60a5fa"/>
     <circle cx="-18" cy="-58" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-58" r="3" fill="#e11d2a" opacity="0.3"/>

@@ -19,7 +19,7 @@
   <!-- 네모 -->
   <g transform="translate(20,108)">
     <rect x="5" y="15" width="50" height="50" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
-    <polyline points="8,15 16,3 24,15 32,3 40,15 48,3 55,15" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 12,15 q6 -11 11 -4 q6 -11 11 -4 q6 -9 11 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <line x1="16" y1="29" x2="26" y2="27" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <line x1="34" y1="27" x2="44" y2="29" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="22" cy="38" r="7"/><circle cx="38" cy="38" r="7"/><path d="M 29,38 h2"/></g>

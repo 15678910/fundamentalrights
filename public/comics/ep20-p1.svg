@@ -47,7 +47,7 @@
     <circle cx="0" cy="-146" r="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
     <circle cx="-9" cy="-118" r="2.5" fill="#ffffff"/>
     <circle cx="8" cy="-108" r="2.5" fill="#ffffff"/>
-    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <!-- 팔 양쪽 위로 (의식 자세) -->
     <path d="M -26,-68 Q -42,-75 -48,-100" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="-54" y="-106" width="8" height="8" rx="3" fill="#e11d2a"/>

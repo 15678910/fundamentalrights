@@ -32,7 +32,7 @@
   <!-- 네모 (놀란 표정) -->
   <g>
     <rect x="205" y="110" width="70" height="70" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
-    <polyline points="205,110 215,94 225,110 235,94 245,110 255,94 265,110 275,110" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 215,110 q8 -16 16 -5 q8 -16 16 -5 q8 -13 16 -3" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <circle cx="227" cy="138" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
     <circle cx="227" cy="139" r="1.8" fill="#1f2937"/>
     <circle cx="253" cy="138" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>

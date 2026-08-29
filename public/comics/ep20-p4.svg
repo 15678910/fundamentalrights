@@ -43,7 +43,7 @@
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <polygon points="0,-146 -20,-95 20,-95" fill="#fbbf24" stroke="#1f2937" stroke-width="2.5" stroke-linejoin="round"/>
     <circle cx="0" cy="-146" r="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
-    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M -26,-65 Q -33,-52 -26,-42" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="-31" y="-44" width="8" height="8" rx="3" fill="#e11d2a"/>
     <path d="M 26,-65 Q 33,-52 26,-42" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>

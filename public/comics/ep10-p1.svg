@@ -15,8 +15,8 @@
     <line x1="10" y1="-32" x2="11" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="-11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
-    <path d="M -26,-60 Q -34,-75 -30,-90" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 26,-60 Q 32,-50 30,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -26,-60 Q -34,-75 -30,-90" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-30" cy="-90" r="4" fill="#1f2937"/>
+    <path d="M 26,-60 Q 32,-50 30,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="30" cy="-40" r="4" fill="#1f2937"/>
     <g transform="translate(-32,-97) rotate(-14)">
       <rect x="-11" y="-9" width="22" height="18" rx="1" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
       <line x1="-6" y1="-3" x2="6" y2="-3" stroke="#94a3b8" stroke-width="1"/>

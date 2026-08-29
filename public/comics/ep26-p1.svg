@@ -17,7 +17,9 @@
     <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M -26,-56 Q -24,-48 -18,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="-18" cy="-44" r="4" fill="#1f2937"/>
     <path d="M 26,-56 Q 24,-48 18,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="18" cy="-44" r="4" fill="#1f2937"/>
     <!-- 식판 -->
     <rect x="-22" y="-50" width="44" height="18" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
     <line x1="-6" y1="-50" x2="-6" y2="-32" stroke="#94a3b8" stroke-width="1"/>

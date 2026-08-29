@@ -36,7 +36,7 @@
     <rect x="-16" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
     <rect x="6" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
-    <polyline points="-24,-85 -17,-97 -9,-85 0,-98 9,-85 17,-97 24,-85" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <circle cx="14" cy="-64" r="7" fill="#e11d2a"/>
     <text x="14" y="-61" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="8" font-weight="bold" fill="#ffffff">반</text>
     <path d="M -26,-65 Q -38,-58 -50,-56" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
