@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const tools = [
+  { icon: "📊", name: "방문 통계 (GoatCounter)", desc: "당일·일별 방문 수, 페이지별 조회, 유입 경로, CSV 내보내기", href: "https://fundamentalrights.goatcounter.com" },
+  { icon: "🐛", name: "오류 제보함 (GitHub 이슈)", desc: "방문자 제보 확인·답변 — 새 이슈는 이메일로도 알림", href: "https://github.com/15678910/fundamentalrights/issues" },
+  { icon: "📝", name: "콘텐츠 저장소 (GitHub)", desc: "소스 코드와 모든 콘텐츠, 배포 기록", href: "https://github.com/15678910/fundamentalrights" },
+  { icon: "🔍", name: "구글 서치 콘솔", desc: "구글 검색 노출·색인 현황, 검색어 리포트", href: "https://search.google.com/search-console" },
+  { icon: "🟢", name: "네이버 서치어드바이저", desc: "네이버 검색 노출·수집 현황", href: "https://searchadvisor.naver.com/console/board" },
+  { icon: "🌐", name: "가비아 DNS 관리", desc: "도메인 fundamentalrights.kr 레코드 관리 (구글 인증 TXT 삭제 금지)", href: "https://dns.gabia.com" },
+  { icon: "✉️", name: "운영 메일함", desc: "fundamentalrights2026@gmail.com — 제보·감수 문의 수신", href: "https://mail.google.com" },
+];
+---
+<BaseLayout title="운영 도구 | 기본권" noindex={true}>
+  <h1>운영 도구</h1>
+  <p style="color:var(--muted)">사이트 운영자용 바로가기 모음입니다. 이 페이지는 검색엔진에 색인되지 않으며, 각 도구의 실제 데이터는 해당 서비스의 로그인으로 보호됩니다.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.8rem;margin-top:1.2rem">
+    {tools.map((t) => (
+      <a href={t.href} target="_blank" rel="noopener" style="border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.35rem">
+        <span style="font-size:1.6rem">{t.icon}</span>
+        <strong style="font-size:1.05rem">{t.name}</strong>
+        <span style="color:var(--muted);font-size:.9rem">{t.desc}</span>
+      </a>
+    ))}
+  </div>
+
+  <section style="margin-top:2rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem">
+    <h2 style="font-size:1.1rem;margin:.2rem 0 .6rem">운영 점검 목록</h2>
+    <ul style="margin:0;line-height:1.9">
+      <li>연 2회 (3월·9월): 쟁점 페이지의 상담전화·법령 현행성 점검</li>
+      <li>보안 유지: 가비아의 구글 인증 TXT 레코드, 사이트의 네이버 인증 메타 태그 삭제 금지</li>
+      <li>제보 처리: 이슈·메일 확인 → 수정 → 배포 → 제보자에게 회신</li>
+      <li>감수 참여 연락이 오면: 소개 페이지의 감수 안내 절에 감수자·범위 기록</li>
+    </ul>
+  </section>
+</BaseLayout>
