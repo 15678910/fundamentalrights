@@ -1,5 +1,5 @@
-<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="세모가 의견을 말할 자유는 모두의 것이며 남을 해치는 말은 빼야 한다고 헌법 제21조를 설명하는 장면">
-  <title>세모가 의견을 말할 자유는 모두의 것이며 남을 해치는 말은 빼야 한다고 헌법 제21조를 설명하는 장면</title>
+<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="세모가 의견을 말할 자유는 모두의 것이며 남을 기분 나쁘게 하는 말은 빼야 한다고 헌법 제21조를 설명하는 장면">
+  <title>세모가 의견을 말할 자유는 모두의 것이며 남을 기분 나쁘게 하는 말은 빼야 한다고 헌법 제21조를 설명하는 장면</title>
   <rect width="320" height="260" fill="#ffffff"/>
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
 
@@ -74,9 +74,9 @@
 
   <!-- 말풍선: 세모 (3줄 — 보조 풍선 내용을 셋째 줄로 병합) -->
   <path d="M 44,8 H 262 A14,14 0 0 1 276,22 V 87 A14,14 0 0 1 262,101 H 167 L 158,112 L 149,101 H 44 A14,14 0 0 1 30,87 V 22 A14,14 0 0 1 44,8 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
-  <text x="153" y="55" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="15" fill="#1f2937">
-    <tspan x="153" dy="-23">의견 말할 자유는</tspan>
-    <tspan x="153" dy="23">모두의 것. 제21조!</tspan>
-    <tspan x="153" dy="23">남을 해치는 말은 빼고!</tspan>
+  <text x="153" y="55" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="13" fill="#1f2937">
+    <tspan x="153" dy="-21">의견 말할 자유는</tspan>
+    <tspan x="153" dy="21">모두의 것. 제21조!</tspan>
+    <tspan x="153" dy="21">남을 기분 나쁘게 하는 말은 빼고!</tspan>
   </text>
 </svg>
