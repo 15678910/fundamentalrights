@@ -1,21 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="통신의 자유">
-  <title>통신의 자유</title>
-  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
-  <!-- Left speech bubble -->
-  <path d="M18 30 Q18 22 26 22 L58 22 Q66 22 66 30 L66 52 Q66 60 58 60 L44 60 L36 70 L36 60 L26 60 Q18 60 18 52 Z" fill="#0891b2"/>
-  <!-- Left bubble dots -->
-  <circle cx="32" cy="41" r="3.5" fill="#ffffff" opacity="0.9"/>
-  <circle cx="42" cy="41" r="3.5" fill="#ffffff" opacity="0.9"/>
-  <circle cx="52" cy="41" r="3.5" fill="#ffffff" opacity="0.9"/>
-  <!-- Right speech bubble -->
-  <path d="M54 58 Q54 50 62 50 L94 50 Q102 50 102 58 L102 80 Q102 88 94 88 L84 88 L84 98 L76 88 L62 88 Q54 88 54 80 Z" fill="#ffffff" stroke="#0891b2" stroke-width="2.5"/>
-  <!-- Right bubble dots -->
-  <circle cx="68" cy="69" r="3.5" fill="#0891b2" opacity="0.9"/>
-  <circle cx="78" cy="69" r="3.5" fill="#0891b2" opacity="0.9"/>
-  <circle cx="88" cy="69" r="3.5" fill="#0891b2" opacity="0.9"/>
-  <!-- Lock badge connecting the two bubbles -->
-  <circle cx="60" cy="60" r="12" fill="#f59e0b"/>
-  <rect x="55" y="61" width="10" height="8" rx="2.5" fill="#ffffff"/>
-  <path d="M56.5 61 Q56.5 55 60 55 Q63.5 55 63.5 61" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <circle cx="60" cy="65" r="1.5" fill="#f59e0b"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제18조 - 통신의 비밀">
+  <title>제18조 - 통신의 비밀</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f7fb"/><stop offset="1" stop-color="#d4eff6"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <rect x="30" y="40" width="60" height="44" rx="8" fill="#0891b2" fill-opacity="0.13" stroke="#0891b2" stroke-width="5" stroke-linejoin="round"/><path d="M32 46 L60 66 L88 46" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="83" cy="79" r="10" fill="#e9f7fb" stroke="#0891b2" stroke-width="4.5"/><path d="M83 75 v6 m-3 -3 h6" stroke="#0891b2" stroke-width="3.5" stroke-linecap="round"/>
 </svg>

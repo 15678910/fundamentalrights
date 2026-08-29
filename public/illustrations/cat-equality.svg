@@ -1,39 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="평등권 - 균형 저울">
-  <title>평등권 - 균형 저울</title>
-  <rect width="120" height="120" rx="26" fill="#e5edff"/>
-  <!-- Scale center pole -->
-  <rect x="57" y="42" width="6" height="52" rx="3" fill="#2563eb"/>
-  <!-- Scale base -->
-  <rect x="38" y="90" width="44" height="8" rx="4" fill="#2563eb"/>
-  <rect x="52" y="86" width="16" height="8" rx="4" fill="#2563eb"/>
-  <!-- Scale top pivot -->
-  <circle cx="60" cy="42" r="6" fill="#2563eb"/>
-  <circle cx="60" cy="42" r="3.5" fill="#ffffff"/>
-  <!-- Scale beam (horizontal, perfectly level) -->
-  <rect x="20" y="52" width="80" height="6" rx="3" fill="#2563eb"/>
-  <!-- Left chain -->
-  <rect x="26" y="57" width="4" height="14" rx="2" fill="#93c5fd"/>
-  <!-- Right chain -->
-  <rect x="90" y="57" width="4" height="14" rx="2" fill="#93c5fd"/>
-  <!-- Left pan -->
-  <ellipse cx="28" cy="74" rx="18" ry="6" fill="#2563eb"/>
-  <!-- Right pan -->
-  <ellipse cx="92" cy="74" rx="18" ry="6" fill="#2563eb"/>
-  <!-- Left figure dot on pan -->
-  <circle cx="28" cy="67" r="8" fill="#fcd9b6"/>
-  <circle cx="24" cy="65" r="2.2" fill="#1f2937"/>
-  <circle cx="32" cy="65" r="2.2" fill="#1f2937"/>
-  <path d="M24.5 70 Q28 73 31.5 70" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-  <!-- Right figure dot on pan -->
-  <circle cx="92" cy="67" r="8" fill="#fcd9b6"/>
-  <circle cx="88" cy="65" r="2.2" fill="#1f2937"/>
-  <circle cx="96" cy="65" r="2.2" fill="#1f2937"/>
-  <path d="M88.5 70 Q92 73 95.5 70" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-  <!-- Equal marks on beam -->
-  <rect x="54" y="50" width="5" height="2" rx="1" fill="#ffffff" opacity="0.7"/>
-  <rect x="61" y="50" width="5" height="2" rx="1" fill="#ffffff" opacity="0.7"/>
-  <!-- Stars (decorative equality sparks) -->
-  <circle cx="20" cy="28" r="3" fill="#f59e0b"/>
-  <circle cx="100" cy="28" r="3" fill="#f59e0b"/>
-  <circle cx="60" cy="20" r="4" fill="#2563eb" opacity="0.4"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="평등권">
+  <title>평등권</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef4fe"/><stop offset="1" stop-color="#dce8fb"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <circle cx="60" cy="60" r="27" fill="#2563eb" fill-opacity="0.13" stroke="#2563eb" stroke-width="5" stroke-linejoin="round"/><path d="M48 53 h24 M48 67 h24" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>

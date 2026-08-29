@@ -1,39 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="학문과 예술의 자유">
-  <title>학문과 예술의 자유</title>
-  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
-  <!-- Open book (학문) bottom layer -->
-  <rect x="18" y="62" width="84" height="42" rx="8" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
-  <!-- Book spine -->
-  <rect x="57" y="62" width="6" height="42" rx="3" fill="#0891b2" opacity="0.4"/>
-  <!-- Left page lines -->
-  <line x1="26" y1="74" x2="54" y2="74" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <line x1="26" y1="82" x2="54" y2="82" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <line x1="26" y1="90" x2="54" y2="90" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <!-- Right page lines -->
-  <line x1="66" y1="74" x2="94" y2="74" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <line x1="66" y1="82" x2="94" y2="82" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <line x1="66" y1="90" x2="94" y2="90" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <!-- Artist palette (예술) -->
-  <ellipse cx="46" cy="46" rx="24" ry="20" fill="#0891b2"/>
-  <ellipse cx="46" cy="44" rx="16" ry="13" fill="#e0f5fa"/>
-  <!-- Palette thumb hole -->
-  <ellipse cx="36" cy="54" rx="6" ry="5" fill="#0891b2"/>
-  <!-- Paint dabs on palette -->
-  <circle cx="38" cy="36" r="4.5" fill="#f59e0b"/>
-  <circle cx="48" cy="33" r="4.5" fill="#ffffff"/>
-  <circle cx="58" cy="36" r="4.5" fill="#1f2937"/>
-  <circle cx="62" cy="46" r="4.5" fill="#0891b2" stroke="#ffffff" stroke-width="1.5"/>
-  <!-- Paintbrush -->
-  <rect x="62" y="20" width="5" height="30" rx="2.5" fill="#1f2937" transform="rotate(-25 62 20)"/>
-  <ellipse cx="57" cy="42" rx="4" ry="2.5" fill="#f59e0b" transform="rotate(-25 57 42)"/>
-  <!-- Lightbulb idea (학문 insight) -->
-  <circle cx="88" cy="32" r="14" fill="#f59e0b"/>
-  <rect x="84" y="44" width="8" height="5" rx="2" fill="#ffffff" opacity="0.9"/>
-  <!-- Bulb filament -->
-  <path d="M84 36 Q88 40 92 36" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <!-- Bulb shine -->
-  <circle cx="84" cy="27" r="3" fill="#ffffff" opacity="0.45"/>
-  <!-- Bulb screw lines -->
-  <line x1="84" y1="44" x2="92" y2="44" stroke="#0891b2" stroke-width="1.2" opacity="0.5"/>
-  <line x1="84" y1="47" x2="92" y2="47" stroke="#0891b2" stroke-width="1.2" opacity="0.5"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제22조 - 학문과 예술의 자유">
+  <title>제22조 - 학문과 예술의 자유</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f7fb"/><stop offset="1" stop-color="#d4eff6"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <path d="M32 44 Q46 37 58 44 V82 Q46 75 32 82 Z" fill="#0891b2" fill-opacity="0.13" stroke="#0891b2" stroke-width="5" stroke-linejoin="round"/><path d="M88 44 Q74 37 62 44 V82 Q74 75 88 82 Z" fill="#0891b2" fill-opacity="0.13" stroke="#0891b2" stroke-width="5" stroke-linejoin="round"/><path d="M60 44 v38" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M60 26 l2.4 6 6.4 .6 -4.8 4.3 1.4 6.3 -5.4 -3.4 -5.4 3.4 1.4 -6.3 -4.8 -4.3 6.4 -.6 Z" fill="#0891b2"/>
 </svg>

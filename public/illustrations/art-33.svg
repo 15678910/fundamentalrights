@@ -1,48 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="노동3권">
-  <title>노동3권</title>
-  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
-  <!-- Figure left - body -->
-  <rect x="18" y="68" width="22" height="28" rx="8" fill="#db2777"/>
-  <!-- Figure left - head -->
-  <circle cx="29" cy="55" r="10" fill="#fcd9b6"/>
-  <!-- Figure left - eyes -->
-  <circle cx="26" cy="53" r="1.5" fill="#1f2937"/>
-  <circle cx="32" cy="53" r="1.5" fill="#1f2937"/>
-  <!-- Figure left - arm raised -->
-  <rect x="26" y="38" width="7" height="18" rx="3.5" fill="#fcd9b6" transform="rotate(-10 30 47)"/>
-  <!-- Figure left - arm side -->
-  <rect x="36" y="68" width="14" height="7" rx="3.5" fill="#fcd9b6"/>
-
-  <!-- Figure middle - body (center, slightly taller) -->
-  <rect x="49" y="64" width="22" height="32" rx="8" fill="#be185d"/>
-  <!-- Figure middle - head -->
-  <circle cx="60" cy="50" r="11" fill="#fcd9b6"/>
-  <!-- Figure middle - eyes -->
-  <circle cx="57" cy="48" r="1.5" fill="#1f2937"/>
-  <circle cx="63" cy="48" r="1.5" fill="#1f2937"/>
-  <!-- Figure middle - smile -->
-  <path d="M56 54 Q60 58 64 54" stroke="#1f2937" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <!-- Figure middle - arm raised high -->
-  <rect x="56" y="30" width="8" height="22" rx="4" fill="#fcd9b6" transform="rotate(5 60 41)"/>
-  <!-- Raised fist circle -->
-  <circle cx="60" cy="28" r="6" fill="#fcd9b6"/>
-
-  <!-- Figure right - body -->
-  <rect x="80" y="68" width="22" height="28" rx="8" fill="#db2777"/>
-  <!-- Figure right - head -->
-  <circle cx="91" cy="55" r="10" fill="#fcd9b6"/>
-  <!-- Figure right - eyes -->
-  <circle cx="88" cy="53" r="1.5" fill="#1f2937"/>
-  <circle cx="94" cy="53" r="1.5" fill="#1f2937"/>
-  <!-- Figure right - arm raised -->
-  <rect x="88" y="38" width="7" height="18" rx="3.5" fill="#fcd9b6" transform="rotate(10 91 47)"/>
-  <!-- Figure right - arm side -->
-  <rect x="70" y="68" width="14" height="7" rx="3.5" fill="#fcd9b6"/>
-
-  <!-- Unity band / ground line connecting all three -->
-  <rect x="24" y="94" width="72" height="6" rx="3" fill="#f9a8d4"/>
-  <!-- Three dots above band showing union -->
-  <circle cx="37" cy="91" r="3" fill="#ffffff"/>
-  <circle cx="60" cy="89" r="3" fill="#ffffff"/>
-  <circle cx="83" cy="91" r="3" fill="#ffffff"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제33조 - 노동3권">
+  <title>제33조 - 노동3권</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdeff5"/><stop offset="1" stop-color="#fadcea"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <circle cx="40" cy="48" r="7.5" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="60" cy="42" r="7.5" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="80" cy="48" r="7.5" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M28 78 q12 -16 24 -1" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M48 74 q12 -16 24 -1" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M68 78 q12 -16 24 -1" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M34 88 h52" stroke="#db2777" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
 </svg>

@@ -1,37 +1,7 @@
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제12조 - 신체의 자유">
   <title>제12조 - 신체의 자유</title>
-  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
-  <!-- Standing figure, free and open -->
-  <!-- Body -->
-  <rect x="48" y="66" width="24" height="30" rx="10" fill="#0891b2"/>
-  <!-- Head -->
-  <circle cx="60" cy="52" r="17" fill="#fcd9b6"/>
-  <!-- Hair -->
-  <ellipse cx="60" cy="37" rx="14" ry="7" fill="#1f2937"/>
-  <ellipse cx="47" cy="41" rx="6" ry="5" fill="#1f2937"/>
-  <ellipse cx="73" cy="41" rx="6" ry="5" fill="#1f2937"/>
-  <!-- Eyes (bright and free) -->
-  <circle cx="53.5" cy="50" r="3" fill="#1f2937"/>
-  <circle cx="66.5" cy="50" r="3" fill="#1f2937"/>
-  <circle cx="54.6" cy="48.8" r="1" fill="#ffffff"/>
-  <circle cx="67.6" cy="48.8" r="1" fill="#ffffff"/>
-  <!-- Smile -->
-  <path d="M53 58 Q60 64 67 58" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <!-- Arms spread wide (freedom gesture) -->
-  <path d="M48 74 Q36 70 22 72" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <circle cx="20" cy="72" r="5.5" fill="#fcd9b6"/>
-  <path d="M72 74 Q84 70 98 72" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <circle cx="100" cy="72" r="5.5" fill="#fcd9b6"/>
-  <!-- Broken chain link - left side (open) -->
-  <path d="M18 82 Q12 82 12 88 Q12 94 18 94 L26 94" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <!-- Broken chain link - right side (open, floating away) -->
-  <path d="M30 86 Q30 78 38 78 Q46 78 46 86 Q46 90 42 92" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <!-- Break gap sparkle -->
-  <circle cx="28" cy="84" r="2.5" fill="#f59e0b"/>
-  <!-- Legs -->
-  <rect x="50" y="91" width="8" height="16" rx="4" fill="#0891b2"/>
-  <rect x="62" y="91" width="8" height="16" rx="4" fill="#0891b2"/>
-  <!-- Shoes -->
-  <ellipse cx="54" cy="108" rx="6" ry="4" fill="#1f2937"/>
-  <ellipse cx="66" cy="108" rx="6" ry="4" fill="#1f2937"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f7fb"/><stop offset="1" stop-color="#d4eff6"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <circle cx="66" cy="34" r="7" fill="#0891b2"/><path d="M62 44 L54 62" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M56 50 L40 44 M58 54 L74 50" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M54 62 L40 78 M54 62 L68 76 L64 88" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M28 58 h8 M24 68 h8 M30 78 h6" stroke="#0891b2" stroke-width="4" stroke-linecap="round" opacity="0.45" fill="none"/>
 </svg>

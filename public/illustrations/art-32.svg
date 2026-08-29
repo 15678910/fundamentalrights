@@ -1,30 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="근로의 권리">
-  <title>근로의 권리</title>
-  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
-  <!-- Worker body -->
-  <rect x="44" y="62" width="32" height="36" rx="10" fill="#db2777"/>
-  <!-- Worker head -->
-  <circle cx="60" cy="46" r="14" fill="#fcd9b6"/>
-  <!-- Hard hat brim -->
-  <ellipse cx="60" cy="34" rx="18" ry="5" fill="#f59e0b"/>
-  <!-- Hard hat dome -->
-  <path d="M42 34 Q42 22 60 22 Q78 22 78 34 Z" fill="#f59e0b"/>
-  <!-- Hat highlight strip -->
-  <path d="M48 34 Q48 26 60 26 Q72 26 72 34" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
-  <!-- Face eyes -->
-  <circle cx="54" cy="44" r="2" fill="#1f2937"/>
-  <circle cx="66" cy="44" r="2" fill="#1f2937"/>
-  <!-- Smile -->
-  <path d="M54 52 Q60 57 66 52" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <!-- Left arm holding wrench -->
-  <rect x="24" y="64" width="22" height="10" rx="5" fill="#fcd9b6"/>
-  <!-- Wrench head -->
-  <rect x="18" y="58" width="12" height="18" rx="6" fill="#db2777"/>
-  <rect x="20" y="62" width="8" height="6" rx="2" fill="#fde7f1"/>
-  <!-- Wrench handle -->
-  <rect x="23" y="74" width="6" height="14" rx="3" fill="#db2777"/>
-  <!-- Right arm -->
-  <rect x="74" y="64" width="22" height="10" rx="5" fill="#fcd9b6"/>
-  <!-- Collar / vest detail -->
-  <rect x="50" y="62" width="20" height="8" rx="4" fill="#be185d"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제32조 - 근로의 권리">
+  <title>제32조 - 근로의 권리</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdeff5"/><stop offset="1" stop-color="#fadcea"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <circle cx="60" cy="62" r="15" fill="#db2777" fill-opacity="0.13" stroke="#db2777" stroke-width="5" stroke-linejoin="round"/><circle cx="60" cy="62" r="5.5" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><g stroke="#db2777" stroke-width="5" stroke-linecap="round"><path d="M60 40 v-8"/><path d="M60 84 v8"/><path d="M38 62 h-8"/><path d="M82 62 h8"/><path d="M45 47 l-6 -6"/><path d="M75 47 l6 -6"/><path d="M45 77 l-6 6"/><path d="M75 77 l6 6"/></g>
 </svg>

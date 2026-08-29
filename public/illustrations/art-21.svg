@@ -1,26 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="표현의 자유">
-  <title>표현의 자유</title>
-  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
-  <!-- Megaphone body -->
-  <path d="M22 52 L22 72 L46 72 L46 52 Z" fill="#0891b2" rx="4"/>
-  <rect x="22" y="52" width="24" height="20" rx="4" fill="#0891b2"/>
-  <!-- Megaphone bell / horn -->
-  <path d="M46 46 L80 30 L80 94 L46 78 Z" fill="#0891b2"/>
-  <!-- Bell rim highlight -->
-  <ellipse cx="80" cy="62" rx="8" ry="32" fill="#1f2937" opacity="0.2"/>
-  <!-- Bell rim stroke -->
-  <ellipse cx="80" cy="62" rx="7" ry="30" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
-  <!-- Handle -->
-  <rect x="26" y="72" width="8" height="16" rx="4" fill="#1f2937" opacity="0.75"/>
-  <!-- Sound waves (right side of bell) -->
-  <path d="M90 46 Q100 55 100 62 Q100 69 90 78" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <path d="M94 38 Q108 50 108 62 Q108 74 94 86" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.55"/>
-  <!-- Speech bubble coming from megaphone -->
-  <path d="M20 28 Q20 20 28 20 L56 20 Q64 20 64 28 L64 44 Q64 52 56 52 L44 52 L36 60 L36 52 L28 52 Q20 52 20 44 Z" fill="#ffffff" stroke="#0891b2" stroke-width="2.5"/>
-  <!-- Exclamation / expression dots inside bubble -->
-  <rect x="36" y="28" width="5" height="12" rx="2.5" fill="#0891b2"/>
-  <circle cx="38.5" cy="44" r="2.5" fill="#0891b2"/>
-  <!-- Stars of emphasis -->
-  <circle cx="50" cy="34" r="2" fill="#f59e0b"/>
-  <circle cx="28" cy="34" r="2" fill="#f59e0b"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제21조 - 표현의 자유">
+  <title>제21조 - 표현의 자유</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f7fb"/><stop offset="1" stop-color="#d4eff6"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <rect x="28" y="36" width="64" height="40" rx="11" fill="#0891b2" fill-opacity="0.13" stroke="#0891b2" stroke-width="5" stroke-linejoin="round"/><path d="M46 76 l-7 14 16 -12" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M41 50 h38 M41 62 h24" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>

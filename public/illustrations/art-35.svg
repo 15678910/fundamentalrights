@@ -1,35 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="환경권">
-  <title>환경권</title>
-  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
-  <!-- Sun -->
-  <circle cx="84" cy="32" r="14" fill="#f59e0b"/>
-  <!-- Sun rays -->
-  <rect x="82" y="13" width="4" height="8" rx="2" fill="#f59e0b"/>
-  <rect x="82" y="43" width="4" height="8" rx="2" fill="#f59e0b"/>
-  <rect x="63" y="30" width="8" height="4" rx="2" fill="#f59e0b"/>
-  <rect x="93" y="30" width="8" height="4" rx="2" fill="#f59e0b"/>
-  <rect x="68" y="18" width="4" height="8" rx="2" fill="#f59e0b" transform="rotate(45 70 22)"/>
-  <rect x="96" y="18" width="4" height="8" rx="2" fill="#f59e0b" transform="rotate(-45 98 22)"/>
-  <rect x="68" y="40" width="4" height="8" rx="2" fill="#f59e0b" transform="rotate(-45 70 44)"/>
-  <rect x="96" y="40" width="4" height="8" rx="2" fill="#f59e0b" transform="rotate(45 98 44)"/>
-  <!-- Sun inner highlight -->
-  <circle cx="84" cy="32" r="8" fill="#fbbf24"/>
-  <!-- Tree trunk -->
-  <rect x="52" y="76" width="16" height="28" rx="6" fill="#db2777"/>
-  <!-- Root left -->
-  <rect x="36" y="94" width="20" height="8" rx="4" fill="#db2777" transform="rotate(-20 46 98)"/>
-  <!-- Root right -->
-  <rect x="64" y="94" width="20" height="8" rx="4" fill="#db2777" transform="rotate(20 74 98)"/>
-  <!-- Tree canopy bottom -->
-  <ellipse cx="60" cy="74" rx="28" ry="18" fill="#db2777"/>
-  <!-- Tree canopy top -->
-  <ellipse cx="60" cy="58" rx="22" ry="20" fill="#be185d"/>
-  <!-- Canopy highlight blob -->
-  <ellipse cx="53" cy="52" rx="10" ry="8" fill="#db2777" opacity="0.6"/>
-  <!-- Leaf accent -->
-  <ellipse cx="78" cy="60" rx="8" ry="5" fill="#db2777" transform="rotate(-30 78 60)"/>
-  <!-- Small white leaf shape -->
-  <path d="M60 42 C60 36 68 36 68 42 C68 48 60 50 60 50 C60 50 60 48 60 42 Z" fill="#ffffff" opacity="0.5"/>
-  <!-- Ground base -->
-  <ellipse cx="60" cy="102" rx="32" ry="8" fill="#f9a8d4"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제35조 - 환경권">
+  <title>제35조 - 환경권</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdeff5"/><stop offset="1" stop-color="#fadcea"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <path d="M40 82 Q34 46 86 36 Q84 80 50 84 Q44 84 40 82 Z" fill="#db2777" fill-opacity="0.13" stroke="#db2777" stroke-width="5" stroke-linejoin="round"/><path d="M46 78 Q58 60 78 44" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>

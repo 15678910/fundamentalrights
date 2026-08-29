@@ -1,37 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자유권 - 새장과 날아오르는 새">
-  <title>자유권 - 새장과 날아오르는 새</title>
-  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
-  <!-- Birdcage body (open door) -->
-  <ellipse cx="44" cy="78" rx="18" ry="22" fill="none" stroke="#0891b2" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- Cage bars vertical -->
-  <line x1="30" y1="58" x2="30" y2="98" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-  <line x1="37" y1="56.5" x2="37" y2="99.5" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-  <line x1="44" y1="56" x2="44" y2="100" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-  <!-- Cage bars horizontal -->
-  <line x1="26" y1="70" x2="62" y2="70" stroke="#0891b2" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <line x1="26" y1="86" x2="62" y2="86" stroke="#0891b2" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <!-- Cage top hook -->
-  <line x1="44" y1="56" x2="44" y2="46" stroke="#0891b2" stroke-width="3" stroke-linecap="round"/>
-  <path d="M40 46 Q44 40 48 46" stroke="#0891b2" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <!-- Cage door (open, swinging right) -->
-  <rect x="51" y="64" width="12" height="22" rx="3" fill="none" stroke="#0891b2" stroke-width="2.5"/>
-  <!-- Bird flying up-right (simple rounded bird) -->
-  <ellipse cx="82" cy="38" rx="12" ry="8" fill="#0891b2" transform="rotate(-20 82 38)"/>
-  <!-- Bird head -->
-  <circle cx="92" cy="30" r="7" fill="#0891b2"/>
-  <!-- Bird eye -->
-  <circle cx="94" cy="28.5" r="2" fill="#ffffff"/>
-  <circle cx="94.5" cy="28.5" r="1" fill="#1f2937"/>
-  <!-- Bird beak -->
-  <path d="M97 30 L102 28 L97 32Z" fill="#f59e0b"/>
-  <!-- Left wing up -->
-  <path d="M76 32 Q64 18 58 24" stroke="#0891b2" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <!-- Right wing up -->
-  <path d="M84 28 Q80 14 88 12" stroke="#0891b2" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <!-- Tail feathers -->
-  <path d="M70 42 Q64 52 60 50" stroke="#0891b2" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <path d="M72 44 Q68 56 64 56" stroke="#0891b2" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <!-- Motion trail -->
-  <path d="M68 48 Q62 42 56 44" stroke="#0891b2" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.3"/>
-  <path d="M66 54 Q58 50 52 54" stroke="#0891b2" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.2"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자유권">
+  <title>자유권</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f7fb"/><stop offset="1" stop-color="#d4eff6"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <path d="M30 62 q14 -16 28 -2 q14 -16 28 -2" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M40 78 q11 -12 21 -2 q11 -12 21 -2" stroke="#0891b2" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/><circle cx="88" cy="38" r="4" fill="#0891b2"/>
 </svg>

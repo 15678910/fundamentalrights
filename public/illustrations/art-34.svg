@@ -1,33 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="인간다운 생활을 할 권리">
-  <title>인간다운 생활을 할 권리</title>
-  <rect width="120" height="120" rx="26" fill="#fde7f1"/>
-  <!-- Supporting hand palm -->
-  <ellipse cx="60" cy="95" rx="30" ry="10" fill="#fcd9b6"/>
-  <!-- Hand fingers -->
-  <rect x="32" y="82" width="9" height="18" rx="4.5" fill="#fcd9b6"/>
-  <rect x="44" y="78" width="9" height="22" rx="4.5" fill="#fcd9b6"/>
-  <rect x="56" y="76" width="9" height="24" rx="4.5" fill="#fcd9b6"/>
-  <rect x="68" y="78" width="9" height="22" rx="4.5" fill="#fcd9b6"/>
-  <rect x="79" y="82" width="9" height="18" rx="4.5" fill="#fcd9b6"/>
-  <!-- Palm base -->
-  <rect x="32" y="90" width="56" height="12" rx="6" fill="#fcd9b6"/>
-  <!-- House body -->
-  <rect x="34" y="60" width="52" height="36" rx="6" fill="#db2777"/>
-  <!-- House roof -->
-  <polygon points="27,62 60,28 93,62" fill="#be185d"/>
-  <!-- Roof ridge cap -->
-  <rect x="52" y="26" width="16" height="8" rx="4" fill="#9d174d"/>
-  <!-- Door -->
-  <rect x="50" y="76" width="20" height="20" rx="5" fill="#9d174d"/>
-  <circle cx="67" cy="87" r="2" fill="#f9a8d4"/>
-  <!-- Window left -->
-  <rect x="37" y="66" width="14" height="12" rx="3" fill="#fde7f1"/>
-  <rect x="43" y="66" width="2" height="12" rx="1" fill="#db2777"/>
-  <rect x="37" y="71" width="14" height="2" rx="1" fill="#db2777"/>
-  <!-- Window right -->
-  <rect x="69" y="66" width="14" height="12" rx="3" fill="#fde7f1"/>
-  <rect x="75" y="66" width="2" height="12" rx="1" fill="#db2777"/>
-  <rect x="69" y="71" width="14" height="2" rx="1" fill="#db2777"/>
-  <!-- Heart on house -->
-  <path d="M54 47 C54 44 58 42 60 45 C62 42 66 44 66 47 C66 51 60 56 60 56 C60 56 54 51 54 47 Z" fill="#ffffff"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제34조 - 인간다운 생활을 할 권리">
+  <title>제34조 - 인간다운 생활을 할 권리</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdeff5"/><stop offset="1" stop-color="#fadcea"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <path d="M30 60 A30 30 0 0 1 90 60 q-7.5 6 -15 0 q-7.5 6 -15 0 q-7.5 6 -15 0 q-7.5 6 -15 0 Z" fill="#db2777" fill-opacity="0.13" stroke="#db2777" stroke-width="5" stroke-linejoin="round"/><path d="M60 30 v-2" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M60 62 v20 q0 8 -9 8" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>

@@ -1,31 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기본권 종합 - 인간의 존엄">
-  <title>기본권 종합 - 인간의 존엄</title>
-  <rect width="120" height="120" rx="26" fill="#efe7fd"/>
-  <!-- Body -->
-  <rect x="44" y="70" width="32" height="32" rx="14" fill="#7c3aed"/>
-  <!-- Head -->
-  <circle cx="60" cy="56" r="20" fill="#fcd9b6"/>
-  <!-- Hair -->
-  <ellipse cx="60" cy="37" rx="17" ry="8" fill="#1f2937"/>
-  <ellipse cx="46" cy="42" rx="7" ry="6" fill="#1f2937"/>
-  <!-- Eyes -->
-  <circle cx="53" cy="54" r="3" fill="#1f2937"/>
-  <circle cx="67" cy="54" r="3" fill="#1f2937"/>
-  <circle cx="54.2" cy="52.8" r="1" fill="#ffffff"/>
-  <circle cx="68.2" cy="52.8" r="1" fill="#ffffff"/>
-  <!-- Warm smile -->
-  <path d="M53 62 Q60 68 67 62" stroke="#1f2937" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <!-- Cheeks -->
-  <circle cx="47" cy="60" r="4" fill="#f59e0b" opacity="0.3"/>
-  <circle cx="73" cy="60" r="4" fill="#f59e0b" opacity="0.3"/>
-  <!-- Arms -->
-  <path d="M44 78 Q34 74 30 68" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <path d="M76 78 Q86 74 90 68" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <!-- Large heart floating above chest -->
-  <path d="M60 38 C60 38 48 28 48 20 C48 14 54 10 60 16 C66 10 72 14 72 20 C72 28 60 38 60 38Z" fill="#7c3aed"/>
-  <!-- Small heart glow -->
-  <path d="M60 34 C60 34 52 26 52 21 C52 17.5 56 15 60 19 C64 15 68 17.5 68 21 C68 26 60 34 60 34Z" fill="#c4b5fd"/>
-  <!-- Legs -->
-  <rect x="47" y="96" width="10" height="14" rx="5" fill="#7c3aed"/>
-  <rect x="63" y="96" width="10" height="14" rx="5" fill="#7c3aed"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="포괄적 기본권">
+  <title>포괄적 기본권</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4eefe"/><stop offset="1" stop-color="#e7dcfc"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <circle cx="60" cy="60" r="13" fill="#7c3aed" fill-opacity="0.13" stroke="#7c3aed" stroke-width="5" stroke-linejoin="round"/><g stroke="#7c3aed" stroke-width="5" stroke-linecap="round"><path d="M60 34 v-8"/><path d="M60 94 v-8"/><path d="M34 60 h-8"/><path d="M94 60 h-8"/><path d="M42 42 l-6 -6"/><path d="M78 42 l6 -6"/><path d="M42 78 l-6 6"/><path d="M78 78 l6 6"/></g>
 </svg>

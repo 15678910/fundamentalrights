@@ -1,41 +1,7 @@
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제11조 - 평등권">
   <title>제11조 - 평등권</title>
-  <rect width="120" height="120" rx="26" fill="#e5edff"/>
-  <!-- Scale pole -->
-  <rect x="58" y="38" width="4" height="58" rx="2" fill="#2563eb"/>
-  <!-- Scale base -->
-  <rect x="36" y="92" width="48" height="8" rx="4" fill="#2563eb"/>
-  <rect x="50" y="87" width="20" height="8" rx="4" fill="#2563eb"/>
-  <!-- Top pivot circle -->
-  <circle cx="60" cy="38" r="7" fill="#2563eb"/>
-  <circle cx="60" cy="38" r="4" fill="#ffffff"/>
-  <!-- Scale beam -->
-  <rect x="18" y="48" width="84" height="5" rx="2.5" fill="#2563eb"/>
-  <!-- Left suspension -->
-  <line x1="24" y1="53" x2="24" y2="66" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-  <!-- Right suspension -->
-  <line x1="96" y1="53" x2="96" y2="66" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-  <!-- Left pan -->
-  <path d="M10 70 Q24 76 38 70" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <ellipse cx="24" cy="70" rx="14" ry="4" fill="#2563eb" opacity="0.2"/>
-  <!-- Right pan -->
-  <path d="M82 70 Q96 76 110 70" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <ellipse cx="96" cy="70" rx="14" ry="4" fill="#2563eb" opacity="0.2"/>
-  <!-- Left figure (on pan) -->
-  <circle cx="24" cy="60" r="7.5" fill="#fcd9b6"/>
-  <!-- left hair -->
-  <ellipse cx="24" cy="53" rx="7" ry="4" fill="#1f2937"/>
-  <circle cx="22" cy="58.5" r="1.8" fill="#1f2937"/>
-  <circle cx="27" cy="58.5" r="1.8" fill="#1f2937"/>
-  <path d="M21 63 Q24 66 27 63" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-  <!-- Right figure (on pan) -->
-  <circle cx="96" cy="60" r="7.5" fill="#fcd9b6"/>
-  <!-- right hair -->
-  <ellipse cx="96" cy="53" rx="7" ry="4" fill="#f59e0b"/>
-  <circle cx="94" cy="58.5" r="1.8" fill="#1f2937"/>
-  <circle cx="99" cy="58.5" r="1.8" fill="#1f2937"/>
-  <path d="M93 63 Q96 66 99 63" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-  <!-- Equal sign between pans (on beam) -->
-  <rect x="56" y="44" width="8" height="2" rx="1" fill="#ffffff"/>
-  <rect x="56" y="48" width="8" height="2" rx="1" fill="#ffffff"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef4fe"/><stop offset="1" stop-color="#dce8fb"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <path d="M60 34 v46" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M38 42 h44" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="60" cy="30" r="4.5" fill="#2563eb"/><path d="M38 42 l-9 20 M38 42 l9 20" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M29 62 a9.5 8 0 0 0 18 0 Z" fill="#2563eb" fill-opacity="0.13" stroke="#2563eb" stroke-width="5" stroke-linejoin="round"/><path d="M82 42 l-9 20 M82 42 l9 20" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M73 62 a9.5 8 0 0 0 18 0 Z" fill="#2563eb" fill-opacity="0.13" stroke="#2563eb" stroke-width="5" stroke-linejoin="round"/><path d="M46 86 h28" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>

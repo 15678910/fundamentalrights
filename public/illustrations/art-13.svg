@@ -1,28 +1,7 @@
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제13조 - 죄형법정주의">
   <title>제13조 - 죄형법정주의</title>
-  <rect width="120" height="120" rx="26" fill="#e0f5fa"/>
-  <!-- Law book (large, closed) -->
-  <rect x="24" y="34" width="58" height="74" rx="8" fill="#0891b2"/>
-  <!-- Book spine highlight -->
-  <rect x="24" y="34" width="10" height="74" rx="6" fill="#0e7490"/>
-  <!-- Book pages (right side) -->
-  <rect x="74" y="38" width="10" height="66" rx="3" fill="#f0f9ff"/>
-  <!-- Book cover inner detail lines -->
-  <rect x="38" y="50" width="34" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
-  <rect x="38" y="60" width="30" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
-  <rect x="38" y="70" width="32" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
-  <rect x="38" y="80" width="28" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
-  <!-- Bookmark ribbon -->
-  <rect x="62" y="34" width="6" height="24" rx="3" fill="#f59e0b"/>
-  <polygon points="62,58 65,64 68,58" fill="#f59e0b"/>
-  <!-- Gavel head -->
-  <rect x="68" y="24" width="36" height="16" rx="7" fill="#78350f"/>
-  <!-- Gavel light face -->
-  <rect x="68" y="24" width="10" height="16" rx="5" fill="#92400e"/>
-  <rect x="94" y="24" width="10" height="16" rx="5" fill="#92400e"/>
-  <!-- Gavel handle -->
-  <rect x="84" y="36" width="6" height="34" rx="3" fill="#92400e" transform="rotate(35 87 53)"/>
-  <!-- Check mark (law is upheld) -->
-  <circle cx="98" cy="90" r="16" fill="#16a34a"/>
-  <path d="M90 90 L96 97 L107 82" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f7fb"/><stop offset="1" stop-color="#d4eff6"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <rect x="38" y="28" width="44" height="62" rx="7" fill="#0891b2" fill-opacity="0.13" stroke="#0891b2" stroke-width="5" stroke-linejoin="round"/><text x="60" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="34" font-weight="bold" fill="#0891b2">§</text><path d="M47 40 h26" stroke="#0891b2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>

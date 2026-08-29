@@ -1,22 +1,7 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="국가배상청구권">
-  <title>국가배상청구권</title>
-  <rect width="120" height="120" rx="26" fill="#fbf1da"/>
-  <!-- Shield outer -->
-  <path d="M60 18 L96 34 L96 72 Q96 96 60 108 Q24 96 24 72 L24 34 Z" fill="#ca8a04"/>
-  <!-- Shield inner face -->
-  <path d="M60 26 L88 39 L88 72 Q88 92 60 102 Q32 92 32 72 L32 39 Z" fill="#fde68a"/>
-  <!-- Shield rim highlight -->
-  <path d="M60 22 L92 37 L92 72 Q92 94 60 105" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
-  <!-- Coin circle (restitution / compensation) -->
-  <circle cx="60" cy="62" r="22" fill="#f59e0b"/>
-  <circle cx="60" cy="62" r="17" fill="#ca8a04"/>
-  <circle cx="60" cy="62" r="12" fill="#fde68a"/>
-  <!-- Bandage cross on coin (state makes amends / heals harm) -->
-  <!-- Horizontal band -->
-  <rect x="50" y="58" width="20" height="8" rx="4" fill="#ffffff"/>
-  <!-- Vertical band -->
-  <rect x="56" y="52" width="8" height="20" rx="4" fill="#ffffff"/>
-  <!-- Cross detail dots -->
-  <circle cx="54" cy="62" r="1.5" fill="#ca8a04" opacity="0.4"/>
-  <circle cx="66" cy="62" r="1.5" fill="#ca8a04" opacity="0.4"/>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="제29조 - 국가배상청구권">
+  <title>제29조 - 국가배상청구권</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdf7e8"/><stop offset="1" stop-color="#f7ecd2"/></linearGradient></defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="3.5" y="3.5" width="113" height="113" rx="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.55"/>
+  <path d="M32 50 L60 34 L88 50" stroke="#ca8a04" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M40 56 v22 M53 56 v22 M66 56 v22 M79 56 v22" stroke="#ca8a04" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M32 84 h56" stroke="#ca8a04" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="86" cy="86" r="11" fill="#fdf7e8" stroke="#ca8a04" stroke-width="4.5"/><path d="M82 86 h8" stroke="#ca8a04" stroke-width="3.5" stroke-linecap="round"/>
 </svg>
