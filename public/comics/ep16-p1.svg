@@ -8,10 +8,6 @@
   <line x1="58" y1="60" x2="58" y2="200" stroke="#1f2937" stroke-width="2"/>
   <circle cx="48" cy="132" r="2.6" fill="#1f2937"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="298" cy="22" r="13" fill="#e11d2a"/>
-  <text x="298" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">1</text>
-
   <!-- 이젤 -->
   <g transform="translate(230,206)">
     <line x1="-24" y1="-6" x2="0" y2="-140" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
@@ -31,9 +27,9 @@
     <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M -26,-60 Q -32,-48 -30,-36" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -27.8,-60.2 Q -32,-48 -30,-36" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-30" cy="-36" r="4" fill="#1f2937"/>
-    <path d="M 26,-60 Q 36,-66 42,-78" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 27.8,-60.2 Q 36,-66 42,-78" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <line x1="42" y1="-78" x2="54" y2="-90" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <circle cx="54" cy="-90" r="4" fill="#1f2937"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>

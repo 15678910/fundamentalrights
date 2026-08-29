@@ -7,10 +7,6 @@
   <path d="M 268,26 L 271,34 L 279,37 L 271,40 L 268,48 L 265,40 L 257,37 L 265,34 Z" fill="#e11d2a" opacity="0.5"/>
   <path d="M 40,20 L 42,25 L 47,27 L 42,29 L 40,34 L 38,29 L 33,27 L 38,25 Z" fill="#e11d2a" opacity="0.35"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
-  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">4</text>
-
   <!-- 아이스크림 -->
   <g transform="translate(170,150)">
     <polygon points="0,30 -9,4 9,4" fill="#f3f4f6" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
@@ -29,9 +25,9 @@
     <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M -26,-60 Q -22,-50 -16,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -27.8,-60.2 Q -22,-50 -16,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-16" cy="-45" r="4" fill="#1f2937"/>
-    <path d="M 26,-58 Q 44,-56 60,-48" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-58.1 Q 44,-56 60,-48" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="60" cy="-48" r="4" fill="#1f2937"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
@@ -52,9 +48,9 @@
     <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M -26,-60 Q -46,-58 -62,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -28,-60 Q -46,-58 -62,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <rect x="-70" y="-54" width="8" height="8" rx="3" fill="#e11d2a"/>
-    <path d="M 26,-68 Q 30,-56 24,-48" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-68 Q 30,-56 24,-48" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>

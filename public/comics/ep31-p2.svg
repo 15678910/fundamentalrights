@@ -4,10 +4,6 @@
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
   <path d="M 0,232 Q 80,216 160,228 T 320,220" stroke="#dbe4ee" stroke-width="10" fill="none"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
-  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
-
   <!-- 생각 구름 -->
   <ellipse cx="185" cy="45" rx="76" ry="38" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
   <circle cx="150" cy="90" r="9" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
@@ -31,8 +27,8 @@
     <line x1="-14" y1="-82" x2="-6" y2="-34" stroke="#1f2937" stroke-width="2"/>
     <line x1="14" y1="-82" x2="6" y2="-34" stroke="#1f2937" stroke-width="2"/>
     <circle cx="0" cy="-36" r="4" fill="#fbbf24" stroke="#1f2937" stroke-width="1.5"/>
-    <path d="M -25,-58 Q -30,-48 -22,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 25,-58 Q 30,-48 22,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -28,-58.1 Q -30,-48 -22,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-58.1 Q 30,-48 22,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-22" cy="-40" r="4" fill="#1f2937"/>
     <circle cx="22" cy="-40" r="4" fill="#1f2937"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.25"/>

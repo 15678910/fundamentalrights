@@ -3,10 +3,6 @@
   <rect width="320" height="260" fill="#ffffff"/>
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
-  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
-
   <!-- 동그라미 (속상함) -->
   <g transform="translate(95,206)">
     <ellipse cx="0" cy="2" rx="20" ry="5" fill="#1f2937" opacity="0.08"/>
@@ -14,8 +10,8 @@
     <line x1="9" y1="-28" x2="10" y2="-3" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <ellipse cx="-10" cy="-2" rx="5" ry="2.8" fill="#1f2937"/>
     <ellipse cx="10" cy="-2" rx="5" ry="2.8" fill="#1f2937"/>
-    <path d="M -22,-50 Q -26,-40 -24,-30" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-24" cy="-30" r="4" fill="#1f2937"/>
-    <path d="M 22,-50 Q 26,-40 24,-30" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="24" cy="-30" r="4" fill="#1f2937"/>
+    <path d="M -24,-50 Q -26,-40 -24,-30" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-24" cy="-30" r="4" fill="#1f2937"/>
+    <path d="M 24,-50 Q 26,-40 24,-30" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="24" cy="-30" r="4" fill="#1f2937"/>
     <circle cx="0" cy="-50" r="24" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-74 Q 3,-84 -2,-89 Q -6,-92 -1,-96" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-8" cy="-54" r="7"/><circle cx="8" cy="-54" r="7"/><path d="M -1,-54 h2"/></g>
@@ -35,8 +31,8 @@
     <rect x="6" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M -26,-65 Q -42,-60 -56,-54" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 26,-65 Q 30,-55 20,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -28,-65 Q -42,-60 -56,-54" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-65 Q 36,-58 42,-46" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>
     <line x1="-13" y1="-62" x2="-7" y2="-62" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <line x1="7" y1="-62" x2="13" y2="-62" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>

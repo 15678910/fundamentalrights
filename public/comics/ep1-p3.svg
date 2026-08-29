@@ -3,10 +3,6 @@
   <rect width="320" height="260" fill="#ffffff"/>
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
-  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">3</text>
-
   <!-- 동그라미 (경청) -->
   <g transform="translate(55,206)">
     <ellipse cx="0" cy="2" rx="22" ry="5" fill="#1f2937" opacity="0.08"/>
@@ -41,8 +37,8 @@
     <path d="M -8,-98 L -13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 0,-102 L 0,-115" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <path d="M 8,-98 L 13,-110" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M -24,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 24,-70 Q 34,-80 30,-92" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -12.9,-70 Q -28,-58 -26,-45" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 12.9,-70 Q 34,-80 30,-92" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-26" cy="-45" r="4" fill="#1f2937"/>
     <circle cx="30" cy="-92" r="4" fill="#1f2937"/>
     <line x1="-16" y1="-84" x2="-6" y2="-82" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>

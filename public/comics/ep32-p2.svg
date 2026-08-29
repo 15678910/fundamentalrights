@@ -3,10 +3,6 @@
   <rect width="320" height="260" fill="#ffffff"/>
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
-  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
-
   <!-- 동그라미 (걱정) -->
   <g transform="translate(100,206)">
     <ellipse cx="0" cy="2" rx="24" ry="5" fill="#1f2937" opacity="0.08"/>
@@ -16,8 +12,8 @@
     <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M -25,-58 Q -32,-50 -30,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 25,-58 Q 32,-52 34,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -28,-58.1 Q -32,-50 -30,-40" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-58.1 Q 32,-52 34,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-30" cy="-40" r="4" fill="#1f2937"/>
     <circle cx="34" cy="-44" r="4" fill="#1f2937"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.25"/>
@@ -39,8 +35,8 @@
     <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M -26,-62 Q -30,-50 -28,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 26,-62 Q 32,-50 30,-36" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -28,-62 Q -30,-50 -28,-38" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-62 Q 32,-50 30,-36" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <g transform="rotate(-15 32 -30)">
       <rect x="20" y="-46" width="24" height="30" rx="2" fill="#f3f4f6" stroke="#1f2937" stroke-width="2"/>
       <rect x="23" y="-42" width="24" height="30" rx="2" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>

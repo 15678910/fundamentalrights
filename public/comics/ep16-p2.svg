@@ -9,10 +9,6 @@
   <polygon points="58,60 90,50 96,190 58,200" fill="#f8fafc" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
   <circle cx="70" cy="128" r="2.6" fill="#1f2937"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
-  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
-
   <!-- 네모 (문을 벌컥 열고 등장) -->
   <g transform="translate(110,206)">
     <ellipse cx="0" cy="2" rx="26" ry="5" fill="#1f2937" opacity="0.08"/>
@@ -22,8 +18,8 @@
     <rect x="4" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -19,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M -26,-68 Q -40,-72 -48,-64" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 26,-68 Q 40,-72 48,-64" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -28,-68 Q -40,-72 -48,-64" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-68 Q 40,-72 48,-64" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
     <line x1="-16" y1="-72" x2="-6" y2="-70" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
@@ -45,9 +41,9 @@
     <ellipse cx="10" cy="-2" rx="5.5" ry="3" fill="#1f2937"/>
     <circle cx="0" cy="-55" r="26" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-81 Q 6,-93 -1,-98 Q -8,-102 0,-108" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M -24,-60 Q -34,-70 -30,-82" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -25.5,-60.3 Q -34,-70 -30,-82" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="-30" cy="-82" r="4" fill="#1f2937"/>
-    <path d="M 24,-60 Q 34,-70 30,-82" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 25.5,-60.3 Q 34,-70 30,-82" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/>
     <circle cx="30" cy="-82" r="4" fill="#1f2937"/>
     <circle cx="-18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="18" cy="-54" r="3" fill="#e11d2a" opacity="0.3"/>

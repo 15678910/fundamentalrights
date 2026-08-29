@@ -19,8 +19,8 @@
     <line x1="85" y1="135" x2="105" y2="135" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <circle cx="72" cy="126" r="5" fill="#e11d2a" opacity=".3"/>
     <circle cx="118" cy="126" r="5" fill="#e11d2a" opacity=".3"/>
-    <line x1="55" y1="130" x2="35" y2="150" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
-    <line x1="145" y1="130" x2="170" y2="140" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="75" y1="130" x2="35" y2="150" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="120" y1="130" x2="170" y2="140" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
     <circle cx="35" cy="150" r="4" fill="#1f2937"/>
     <circle cx="170" cy="140" r="4" fill="#1f2937"/>
     <line x1="75" y1="180" x2="75" y2="200" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>

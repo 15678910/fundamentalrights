@@ -3,10 +3,6 @@
   <rect width="320" height="260" fill="#ffffff"/>
   <rect y="200" width="320" height="60" fill="#eef2f7"/>
 
-  <!-- 패널 번호 -->
-  <circle cx="22" cy="22" r="13" fill="#e11d2a"/>
-  <text x="22" y="27" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2</text>
-
   <!-- 이삿짐 상자 (배경 소품) -->
   <rect x="14" y="160" width="34" height="32" rx="2" fill="#e9d5b8" stroke="#1f2937" stroke-width="2"/>
   <line x1="14" y1="176" x2="48" y2="176" stroke="#c9a878" stroke-width="1.5"/>
@@ -21,8 +17,8 @@
     <ellipse cx="11" cy="-2" rx="6" ry="3" fill="#1f2937"/>
     <circle cx="0" cy="-57" r="28" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
     <path d="M -3,-85 Q 4,-96 -2,-101 Q -7,-105 -1,-109" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M -26,-60 Q -20,-48 -13,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-13" cy="-44" r="4" fill="#1f2937"/>
-    <path d="M 26,-60 Q 20,-48 13,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="13" cy="-44" r="4" fill="#1f2937"/>
+    <path d="M -27.84,-60 Q -20,-48 -13,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="-13" cy="-44" r="4" fill="#1f2937"/>
+    <path d="M 27.84,-60 Q 20,-48 13,-44" stroke="#1f2937" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="13" cy="-44" r="4" fill="#1f2937"/>
     <circle cx="-19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <circle cx="19" cy="-56" r="3" fill="#e11d2a" opacity="0.3"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-9" cy="-61" r="7"/><circle cx="9" cy="-61" r="7"/><path d="M -2,-61 h4"/></g>
@@ -43,8 +39,8 @@
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
     <!-- 팔: 동그라미 쪽으로 뻗어 붙잡음 -->
-    <path d="M -26,-65 Q -50,-58 -78,-48" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 26,-65 Q 32,-55 22,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M -28,-65 Q -50,-58 -78,-48" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 28,-65 Q 32,-55 22,-50" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <g fill="none" stroke="#1f2937" stroke-width="2"><circle cx="-10" cy="-62" r="7"/><circle cx="10" cy="-62" r="7"/><path d="M -3,-62 h6"/></g>
     <circle cx="-10" cy="-62" r="3.2" fill="#1f2937"/>
     <circle cx="10" cy="-62" r="3.2" fill="#1f2937"/>
