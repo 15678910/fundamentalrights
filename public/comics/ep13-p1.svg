@@ -37,9 +37,6 @@
     <rect x="9" y="-6" width="10" height="6" rx="2" fill="#e11d2a"/>
     <rect x="-28" y="-85" width="56" height="56" rx="10" fill="#f3f4f6" stroke="#1f2937" stroke-width="3"/>
     <path d="M -20,-85 q6 -12 12 -4 q6 -12 12 -4 q6 -10 12 -2" fill="none" stroke="#e11d2a" stroke-width="3" stroke-linecap="round"/>
-    <!-- 반장 배지 -->
-    <circle cx="14" cy="-64" r="7" fill="#e11d2a"/>
-    <text x="14" y="-61" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="8" font-weight="bold" fill="#ffffff">반</text>
     <!-- 팔: 종이를 든 왼팔 -->
     <path d="M -28,-68 Q -40,-58 -46,-40" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
     <path d="M 28,-68 Q 34,-58 34,-46" stroke="#e11d2a" stroke-width="3" stroke-linecap="round" fill="none"/>
