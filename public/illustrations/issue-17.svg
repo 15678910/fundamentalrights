@@ -1,0 +1,22 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="장애인 이동권과 시위">
+  <title>장애인 이동권과 시위</title>
+  <rect width="120" height="120" rx="26" fill="#e0f2fe"/>
+  <!-- subway door frame -->
+  <rect x="66" y="24" width="34" height="66" rx="4" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+  <line x1="83" y1="24" x2="83" y2="90" stroke="#0369a1" stroke-width="2.5"/>
+  <rect x="70" y="34" width="9" height="14" rx="2" fill="#bae6fd"/>
+  <rect x="87" y="34" width="9" height="14" rx="2" fill="#bae6fd"/>
+  <!-- platform gap -->
+  <path d="M20 96 h80" stroke="#0369a1" stroke-width="3" stroke-linecap="round"/>
+  <!-- wheelchair user -->
+  <circle cx="36" cy="42" r="8" fill="#fcd9b6"/>
+  <path d="M36 50 v14 q0 4 4 4 h10" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="40" cy="78" r="14" fill="none" stroke="#0f172a" stroke-width="4"/>
+  <circle cx="40" cy="78" r="3" fill="#0f172a"/>
+  <path d="M52 68 l8 12" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+  <!-- speech: rights sign -->
+  <g transform="translate(14 14)">
+    <rect x="0" y="0" width="26" height="18" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+    <path d="M6 9 h14 M13 4 v10" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

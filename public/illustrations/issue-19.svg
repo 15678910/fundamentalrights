@@ -1,0 +1,20 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="여성과 병역의무">
+  <title>여성과 병역의무</title>
+  <rect width="120" height="120" rx="26" fill="#fce7f3"/>
+  <!-- balance scale -->
+  <path d="M60 26 v58" stroke="#9d174d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M28 36 h64" stroke="#9d174d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M44 92 h32" stroke="#9d174d" stroke-width="5" stroke-linecap="round"/>
+  <!-- left pan: figure A -->
+  <path d="M28 36 l-8 20 h16 Z" fill="none" stroke="#9d174d" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="28" cy="66" r="6" fill="#fcd9b6"/>
+  <path d="M28 72 v10 M22 78 h12" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- right pan: figure B with helmet -->
+  <path d="M92 36 l-8 20 h16 Z" fill="none" stroke="#9d174d" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="92" cy="66" r="6" fill="#fcd9b6"/>
+  <path d="M85 64 a7 7 0 0 1 14 0" fill="#365314"/>
+  <path d="M92 72 v10 M86 78 h12" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- question mark at pivot -->
+  <circle cx="60" cy="26" r="10" fill="#ffffff" stroke="#9d174d" stroke-width="3"/>
+  <text x="60" y="31" font-family="sans-serif" font-weight="700" font-size="13" fill="#9d174d" text-anchor="middle">?</text>
+</svg>
