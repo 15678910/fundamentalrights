@@ -1,0 +1,28 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="미디어 리터러시">
+  <title>미디어 리터러시</title>
+  <rect width="120" height="120" rx="26" fill="#cffafe"/>
+  <!-- smartphone with news feed -->
+  <rect x="28" y="26" width="44" height="70" rx="10" fill="#ffffff" stroke="#0e7490" stroke-width="3"/>
+  <rect x="35" y="36" width="30" height="9" rx="2" fill="#a5f3fc"/>
+  <g stroke="#67e8f9" stroke-width="3" stroke-linecap="round">
+    <path d="M35 53 h30"/><path d="M35 61 h22"/>
+  </g>
+  <rect x="35" y="68" width="30" height="9" rx="2" fill="#a5f3fc"/>
+  <g stroke="#67e8f9" stroke-width="3" stroke-linecap="round">
+    <path d="M35 85 h26"/>
+  </g>
+  <!-- broadcast waves from top-left -->
+  <g stroke="#0e7490" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <path d="M20 20 q-6 6 0 12"/>
+    <path d="M14 14 q-11 11 0 22"/>
+  </g>
+  <!-- magnifier examining the feed, with check -->
+  <circle cx="84" cy="70" r="18" fill="#ecfeff" stroke="#0e7490" stroke-width="4"/>
+  <path d="M96 84 l12 12" stroke="#0e7490" stroke-width="6" stroke-linecap="round"/>
+  <path d="M76 70 l6 6 l11 -12" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- question snippet floating -->
+  <g transform="rotate(8 96 28)">
+    <rect x="82" y="18" width="24" height="19" rx="5" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="94" y="32" font-family="sans-serif" font-weight="700" font-size="13" fill="#f59e0b" text-anchor="middle">?</text>
+  </g>
+</svg>
