@@ -1,0 +1,212 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="스스로 점검 | 기본권 형성평가">
+  <h1>스스로 점검 — 내가 아는 기본권</h1>
+  <p style="color:var(--muted);max-width:44rem">수업을 들은 뒤, 배운 것을 스스로 확인해 보세요. 답을 고르면 <b>바로 정답과 풀이</b>가 나옵니다. 점수는 저장되지 않아요 — 틀려도 괜찮습니다. 틀린 문제가 진짜 공부거리예요.</p>
+
+  <div id="check-app"></div>
+
+  <section style="border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;margin-top:2rem;background:var(--card)" class="no-print">
+    <p style="margin:0;font-size:.95rem"><b>선생님께</b> — 이 페이지는 수업 마무리 5~10분 자기 점검용입니다. 인쇄용 형성평가지는 <a href={`${base}teachers`}>교사 자료</a>의 '평가지' 항목에, 놀이형 문제는 <a href={`${base}quiz`}>놀이·퀴즈</a>에 있습니다. 독일 연방정치교육원(bpb) HanisauLand의 'Grundrechte interaktiv'를 한국 헌법에 맞게 재구성했습니다.</p>
+  </section>
+
+  <style>
+    .cx-set { border: 2px solid var(--border); border-radius: 14px; padding: 1.1rem 1.3rem; margin: 1.1rem 0; }
+    .cx-set h2 { margin: 0 0 .2rem; font-size: 1.25rem; color: var(--accent); }
+    .cx-sub { color: var(--muted); font-size: .92rem; margin: 0 0 .8rem; }
+    .cx-q { font-size: 1.08rem; line-height: 1.7; margin: .6rem 0 .8rem; font-weight: 600; }
+    .cx-opts { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .cx-opt { border: 2px solid var(--border); background: var(--bg); color: var(--fg); border-radius: 999px; padding: .5rem 1.1rem; font-size: 1rem; cursor: pointer; font-weight: 600; }
+    .cx-opt:hover { border-color: var(--accent); }
+    .cx-opt.right { background: #16a34a; border-color: #16a34a; color: #fff; }
+    .cx-opt.wrong { background: #dc2626; border-color: #dc2626; color: #fff; }
+    .cx-opt:disabled { cursor: default; opacity: .85; }
+    .cx-fb { border-radius: 10px; padding: .7rem 1rem; margin-top: .8rem; font-size: .98rem; line-height: 1.7; display: none; }
+    .cx-fb.show { display: block; }
+    .cx-fb.ok { background: rgba(22,163,74,.12); border: 1px solid #16a34a; }
+    .cx-fb.no { background: rgba(220,38,38,.10); border: 1px solid #dc2626; }
+    .cx-next { margin-top: .8rem; border: none; border-radius: 999px; padding: .5rem 1.2rem; font-weight: 700; cursor: pointer; background: var(--accent); color: #fff; display: none; }
+    .cx-next.show { display: inline-block; }
+    .cx-done { font-size: 1.02rem; line-height: 1.8; }
+    .cx-bar { height: 8px; background: var(--card); border-radius: 999px; overflow: hidden; margin: .4rem 0 .6rem; }
+    .cx-bar > span { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s; }
+    .cx-summary { border: 2px solid var(--accent); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.4rem 0; display: none; }
+    .cx-summary.show { display: block; }
+    .cx-summary h2 { margin: 0 0 .5rem; }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var BASE = document.querySelector("base") ? document.querySelector("base").href : "/";
+      var SETS = [
+        {
+          title: "연습 ① 기본권의 역사",
+          sub: "권리는 처음부터 당연히 있지 않았어요.",
+          link: { href: "/lessons/12-기본권-여행-네-가지-이야기", label: "수업: 기본권 여행" },
+          items: [
+            { q: "우리나라 첫 헌법(제헌헌법)이 만들어진 날은? (그래서 이 날이 제헌절!)", o: ["1919년 3월 1일", "1948년 7월 17일", "1987년 6월 10일"], a: 1,
+              e: "1948년 7월 17일 제헌헌법이 공포되었어요. 7월 17일 제헌절은 이 날을 기념합니다." },
+            { q: "지금 우리가 쓰는 헌법은 1987년에 무엇으로 확정되었을까요?", o: ["대통령의 명령", "국민투표", "법원의 판결"], a: 1,
+              e: "1987년 6월 항쟁 뒤, 국민투표로 확정되어 1988년부터 시행되고 있어요. 헌법의 주인이 국민이라는 뜻이지요." },
+            { q: "\"기본권은 옛날부터 누구에게나 당연히 있었다.\" — 맞을까요?", o: ["O", "X"], a: 1,
+              e: "X! 옛날에는 어린이도 온종일 일하고, 생각을 말했다고 벌받는 시대가 있었어요. 기본권은 사람들이 요구하고 지켜 온 약속입니다." },
+            { q: "독일이 아픈 역사를 반성하며 헌법(기본법) 맨 첫 조문에 쓴 것은?", o: ["재산은 소중하다", "인간의 존엄은 침해될 수 없다", "국가는 강해야 한다"], a: 1,
+              e: "1949년 독일 기본법 제1조입니다. 우리 헌법 제10조도 인간의 존엄을 기본권의 출발점으로 삼고 있어요." },
+            { q: "전 세계가 어린이의 권리를 따로 약속한 UN 아동권리협약이 채택된 해는?", o: ["1948년", "1989년", "2020년"], a: 1,
+              e: "1989년 채택되었고, 우리나라는 1991년에 가입(비준)했어요." }
+          ]
+        },
+        {
+          title: "연습 ② 기본권의 종류 — 갈래 찾기",
+          sub: "사례를 읽고 어느 갈래의 기본권인지 골라 보세요.",
+          link: { href: "/rights", label: "기본권 목록" },
+          items: [
+            { q: "학급 신문에 급식을 바꾸자는 내 의견을 썼다.", o: ["자유권", "참정권", "사회권"], a: 0,
+              e: "생각을 표현할 자유 — 제21조 표현의 자유, 자유권 갈래예요." },
+            { q: "\"여자라서 안 된대\"라는 말에 항의했다.", o: ["청구권", "평등권", "참정권"], a: 1,
+              e: "성별을 이유로 차별받지 않을 권리 — 제11조 평등권이에요." },
+            { q: "학급 회장 선거에서 한 표를 행사했다.", o: ["사회권", "자유권", "참정권"], a: 2,
+              e: "뽑을 권리 — 어른의 선거권(제24조)과 같은 갈래, 참정권이에요." },
+            { q: "학교 앞에 신호등을 놓아 달라고 구청에 문서로 요청했다.", o: ["청구권", "평등권", "자유권"], a: 0,
+              e: "국가기관에 요구하고 답을 받을 권리 — 제26조 청원권, 청구권 갈래예요." },
+            { q: "초등학교·중학교를 학비 없이 다닌다.", o: ["자유권", "사회권", "참정권"], a: 1,
+              e: "배울 권리를 나라가 뒷받침하는 것 — 제31조 교육을 받을 권리, 사회권이에요. 의무교육은 무상입니다." },
+            { q: "어떤 종교를 믿을지, 안 믿을지 스스로 정한다.", o: ["사회권", "청구권", "자유권"], a: 2,
+              e: "제20조 종교의 자유 — 국가가 간섭하지 못하는 자유권 갈래예요." }
+          ]
+        },
+        {
+          title: "연습 ③ 기본권의 의미 — 빈칸 채우기",
+          sub: "헌법의 문장을 완성해 보세요.",
+          link: { href: "/rights/10-인간의-존엄", label: "제10조 인간의 존엄" },
+          items: [
+            { q: "제10조: \"모든 국민은 인간으로서의 (    )과 가치를 가지며, 행복을 추구할 권리를 가진다.\"", o: ["존엄", "재산", "실력"], a: 0,
+              e: "존엄! 잘해서 받는 상이 아니라, 사람이라서 처음부터 갖고 태어나는 것이에요." },
+            { q: "제37조: 자유와 권리를 제한하는 경우에도 그 (    )인 내용은 침해할 수 없다.", o: ["부분적", "본질적", "일시적"], a: 1,
+              e: "본질적인 내용 — 아무리 규칙을 만들어도 건드리면 안 되는 '심장 같은 부분'이 있다는 뜻이에요." },
+            { q: "기본권을 제한하려면 반드시 (    )로써 해야 한다.", o: ["법률", "명령", "관습"], a: 0,
+              e: "국민의 대표가 만든 법률로만 제한할 수 있어요(제37조 제2항). 누군가의 기분이나 명령만으로는 안 됩니다." },
+            { q: "다수결로 정해도 되는 것은?", o: ["소풍 장소", "한 친구를 놀이에서 빼기", "특정 친구만 청소시키기"], a: 0,
+              e: "다수결로도 건드릴 수 없는 것이 기본권이에요. 사람의 존엄과 평등은 표결의 대상이 아닙니다." },
+            { q: "기본권은 누구의 것일까요?", o: ["어른", "국민 중 착한 사람", "모든 국민"], a: 2,
+              e: "헌법의 주어는 언제나 '모든 국민' — 어린이도, 실수한 사람도 들어 있어요." }
+          ]
+        },
+        {
+          title: "연습 ④ 종교의 자유 — 사례 판별",
+          sub: "제20조가 지켜 주는 모습이면 O, 어긋나면 X!",
+          link: { href: "/rights/20-종교의-자유", label: "제20조 종교의 자유" },
+          items: [
+            { q: "믿는 종교가 있어도 되고, 없어도 된다.", o: ["O", "X"], a: 0,
+              e: "O — 믿을 자유에는 믿지 않을 자유도 함께 들어 있어요." },
+            { q: "국공립학교가 특정 종교 행사에 모두 참여하라고 강요한다.", o: ["O", "X"], a: 1,
+              e: "X — 국가와 종교는 분리되고(정교분리), 누구도 종교 행사를 강요받지 않아요." },
+            { q: "종교가 다른 친구와도 똑같이 어울려 놀 수 있다.", o: ["O", "X"], a: 0,
+              e: "O — 종교가 달라도 존엄은 같아요. 종교를 이유로 차별하면 제11조 평등권에도 어긋납니다." },
+            { q: "나라가 하나의 종교를 국교로 정한다.", o: ["O", "X"], a: 1,
+              e: "X — 헌법 제20조 제2항: 국교는 인정되지 아니하며, 종교와 정치는 분리됩니다." },
+            { q: "종교를 바꾸거나 그만두는 것도 자유다.", o: ["O", "X"], a: 0,
+              e: "O — 무엇을 믿을지는 언제나 스스로 정할 수 있어요." }
+          ]
+        },
+        {
+          title: "연습 ⑤ 집회와 표현의 자유 — 사례 판별",
+          sub: "제21조가 지켜 주는 모습이면 O, 아니면 X!",
+          link: { href: "/rights/21-표현의-자유", label: "제21조 표현의 자유" },
+          items: [
+            { q: "여럿이 평화롭게 모여 의견을 알린다.", o: ["O", "X"], a: 0,
+              e: "O — 모여서 목소리를 내는 집회의 자유는 민주주의의 기본 장비예요." },
+            { q: "집회를 열려면 반드시 국가의 '허가'를 받아야만 한다.", o: ["O", "X"], a: 1,
+              e: "X — 헌법 제21조 제2항은 집회에 대한 허가제를 금지해요. 질서를 위한 '신고'와 국가 마음대로 막는 '허가'는 다릅니다." },
+            { q: "나와 생각이 다른 사람들의 집회도 보호된다.", o: ["O", "X"], a: 0,
+              e: "O — 표현의 자유는 내 편만의 자유가 아니에요. 다른 생각이 부딪힐 수 있어야 민주주의가 굴러갑니다." },
+            { q: "화가 나면 남을 다치게 하는 폭력 시위도 괜찮다.", o: ["O", "X"], a: 1,
+              e: "X — 평화로운 집회가 보호되는 것이지, 남의 몸과 권리를 해치는 폭력은 보호되지 않아요." },
+            { q: "신문과 방송이 정부를 비판하는 기사를 쓸 수 있다.", o: ["O", "X"], a: 0,
+              e: "O — 권력을 비판할 자유는 표현의 자유의 한가운데에 있어요. 허가와 검열은 금지됩니다." }
+          ]
+        }
+      ];
+
+      var app = document.getElementById("check-app");
+      var totalRight = 0, totalItems = 0, doneSets = 0;
+      SETS.forEach(function (s) { totalItems += s.items.length; });
+
+      SETS.forEach(function (set, si) {
+        var sec = document.createElement("section");
+        sec.className = "cx-set";
+        var h = document.createElement("h2"); h.textContent = set.title; sec.appendChild(h);
+        var sub = document.createElement("p"); sub.className = "cx-sub"; sub.textContent = set.sub; sec.appendChild(sub);
+        var bar = document.createElement("div"); bar.className = "cx-bar"; var fill = document.createElement("span"); bar.appendChild(fill); sec.appendChild(bar);
+        var qEl = document.createElement("p"); qEl.className = "cx-q"; sec.appendChild(qEl);
+        var opts = document.createElement("div"); opts.className = "cx-opts"; sec.appendChild(opts);
+        var fb = document.createElement("div"); fb.className = "cx-fb"; sec.appendChild(fb);
+        var next = document.createElement("button"); next.className = "cx-next"; next.textContent = "다음 문제 →"; sec.appendChild(next);
+        app.appendChild(sec);
+
+        var i = 0, right = 0;
+
+        function show() {
+          var it = set.items[i];
+          qEl.textContent = (i + 1) + ". " + it.q;
+          opts.innerHTML = ""; fb.className = "cx-fb"; fb.textContent = ""; next.className = "cx-next";
+          fill.style.width = (i / set.items.length * 100) + "%";
+          it.o.forEach(function (o, oi) {
+            var b = document.createElement("button");
+            b.className = "cx-opt"; b.textContent = o;
+            b.addEventListener("click", function () { pick(oi, b); });
+            opts.appendChild(b);
+          });
+        }
+        function pick(oi, btn) {
+          var it = set.items[i];
+          Array.prototype.forEach.call(opts.children, function (b) { b.disabled = true; });
+          if (oi === it.a) {
+            right++; totalRight++;
+            btn.classList.add("right");
+            fb.className = "cx-fb show ok"; fb.textContent = "🎉 정답! " + it.e;
+          } else {
+            btn.classList.add("wrong");
+            opts.children[it.a].classList.add("right");
+            fb.className = "cx-fb show no"; fb.textContent = "다시 생각해 봐요. 정답은 \"" + it.o[it.a] + "\" — " + it.e;
+          }
+          next.className = "cx-next show";
+          next.textContent = i < set.items.length - 1 ? "다음 문제 →" : "이 연습 마치기 ✔";
+        }
+        next.addEventListener("click", function () {
+          i++;
+          if (i < set.items.length) { show(); }
+          else {
+            fill.style.width = "100%";
+            qEl.textContent = "";
+            opts.innerHTML = ""; next.className = "cx-next";
+            fb.className = "cx-fb show " + (right === set.items.length ? "ok" : "no");
+            fb.innerHTML = "";
+            var d = document.createElement("div"); d.className = "cx-done";
+            d.innerHTML = "<b>" + set.items.length + "문제 중 " + right + "문제</b>를 맞혔어요." +
+              (right === set.items.length ? " 완벽해요! 🏆" : " 틀린 문제의 풀이를 한 번 더 읽어 보세요.") +
+              " 더 알아보기: <a href=\"" + set.link.href + "\">" + set.link.label + "</a>";
+            fb.className = "cx-fb show ok"; fb.appendChild(d);
+            doneSets++;
+            if (doneSets === SETS.length) {
+              var sum = document.getElementById("cx-summary");
+              sum.className = "cx-summary show";
+              document.getElementById("cx-score").textContent = totalRight + " / " + totalItems;
+              sum.scrollIntoView({ behavior: "smooth" });
+            }
+          }
+        });
+        show();
+      });
+
+      var sum = document.createElement("section");
+      sum.id = "cx-summary"; sum.className = "cx-summary";
+      sum.innerHTML = "<h2>🎓 모든 연습 끝!</h2><p style=\"font-size:1.15rem\">전체 점수: <b id=\"cx-score\"></b></p>" +
+        "<p>틀렸던 갈래가 있다면 그 조항을 다시 읽어 보세요 — <a href=\"/rights\">기본권 목록</a> · <a href=\"/lessons\">수업하기</a> · <a href=\"/quiz\">놀이·퀴즈로 더 연습하기</a></p>" +
+        "<p style=\"color:var(--muted);font-size:.9rem\">점수는 어디에도 저장되지 않아요. 새로고침하면 처음부터 다시 풀 수 있습니다.</p>";
+      app.appendChild(sum);
+    })();
+  </script>
+</BaseLayout>
