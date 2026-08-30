@@ -1,0 +1,38 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="지방자치와 주민참여">
+  <title>지방자치와 주민참여</title>
+  <rect width="120" height="120" rx="26" fill="#ecfdf5"/>
+  <!-- village: two houses -->
+  <g stroke="#047857" stroke-width="3" stroke-linejoin="round">
+    <rect x="18" y="58" width="26" height="24" fill="#ffffff"/>
+    <path d="M14 58 l17 -14 l17 14 Z" fill="#a7f3d0"/>
+    <rect x="26" y="68" width="10" height="14" fill="#a7f3d0" stroke-width="2.5"/>
+    <rect x="52" y="52" width="30" height="30" fill="#ffffff"/>
+    <path d="M48 52 l19 -16 l19 16 Z" fill="#a7f3d0"/>
+    <rect x="61" y="62" width="12" height="10" fill="#a7f3d0" stroke-width="2.5"/>
+  </g>
+  <path d="M12 84 h96" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+  <!-- raised hands of residents -->
+  <g stroke="#fcd9b6" stroke-width="7" stroke-linecap="round">
+    <path d="M28 104 v-10"/>
+    <path d="M52 106 v-12"/>
+    <path d="M76 104 v-10"/>
+    <path d="M98 106 v-12"/>
+  </g>
+  <g fill="#fcd9b6">
+    <circle cx="28" cy="91" r="5"/>
+    <circle cx="52" cy="91" r="5"/>
+    <circle cx="76" cy="91" r="5"/>
+    <circle cx="98" cy="91" r="5"/>
+  </g>
+  <!-- ballot / proposal paper above -->
+  <g transform="rotate(8 96 30)">
+    <rect x="84" y="18" width="24" height="18" rx="3" fill="#ffffff" stroke="#0e7490" stroke-width="2.5"/>
+    <path d="M89 24 h14 M89 30 h9" stroke="#0e7490" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <!-- speech bubble -->
+  <g transform="translate(14 18)">
+    <rect x="0" y="0" width="26" height="17" rx="6" fill="#ffffff" stroke="#047857" stroke-width="2.5"/>
+    <path d="M8 17 l3 6 l4 -6" fill="#ffffff" stroke="#047857" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="8" cy="8.5" r="1.8" fill="#047857"/><circle cx="13" cy="8.5" r="1.8" fill="#047857"/><circle cx="18" cy="8.5" r="1.8" fill="#047857"/>
+  </g>
+</svg>
