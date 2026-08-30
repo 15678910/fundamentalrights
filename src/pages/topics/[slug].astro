@@ -14,7 +14,6 @@ const rights = await getCollection("rights");
 const related = entry.data.relatedRights.map((n: number) => rights.find((r) => r.data.article === n)).filter(Boolean);
 ---
 <BaseLayout title={`${entry.data.title} | 주제 특집`}>
-  <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}topics`}>주제 특집</a></p>
   <div style="display:flex;gap:1rem;align-items:center;margin:.2rem 0"><Illustration name={`topic-${entry.data.order}`} alt="" size={72} /><h1 style="margin:0">{entry.data.title}</h1></div>
   <p style="font-size:1.05rem;color:var(--muted);margin:.3rem 0 0">{entry.data.summary}</p>
 

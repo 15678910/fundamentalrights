@@ -20,7 +20,6 @@ const related = entry.data.relatedRights
 ---
 <BaseLayout title={`${entry.data.title} | 영화로 배우는 기본권`}>
   <Sidebar slot="sidebar" />
-  <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}films`}>영화</a></p>
   <div style="display:flex;gap:1rem;align-items:center;margin:.2rem 0">
     <Illustration name={`film-${entry.data.order}`} alt="" size={72} />
     <h1 style="margin:0">{entry.data.title}</h1>

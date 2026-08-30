@@ -24,8 +24,7 @@ const comic = comics.find((c) => c.data.order === entry.data.article);
 ---
 <BaseLayout title={`${entry.data.title} | 우리 헌법 기본권`}>
   <Sidebar slot="sidebar" currentId={entry.id} />
-  <p style="color:var(--muted);font-size:.85rem">
-    <a href={base}>홈</a> ›
+  <p style="color:var(--muted);font-size:.85rem;font-weight:700">
     <span style={`color:${cat?.color}`}>{cat?.label}</span>
   </p>
   <div style="display:flex;gap:1rem;align-items:center;margin:.2rem 0">

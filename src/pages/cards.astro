@@ -8,7 +8,6 @@ const terms = (await getCollection("glossary")).sort((a, b) => a.data.term.local
 <BaseLayout title="용어 카드게임 | 기본권">
   <TeachersSidebar slot="sidebar" current="cards" />
   <div class="no-print">
-    <p style="color:var(--muted);font-size:.85rem"><a href={base}>홈</a> › <a href={`${base}teachers`}>교사 자료</a></p>
     <h1>인쇄용 용어 카드게임</h1>
     <p style="color:var(--muted)">용어 카드 {terms.length}장 + 뜻 카드 {terms.length}장, 총 {terms.length * 2}장. 🖨
       <button onclick="window.print()" style="border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer;padding:.4rem .9rem;font-weight:600">인쇄하기</button>
