@@ -1,0 +1,25 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="지속가능발전과 기본권">
+  <title>지속가능발전과 기본권</title>
+  <rect width="120" height="120" rx="26" fill="#ecfdf5"/>
+  <!-- earth -->
+  <circle cx="52" cy="56" r="30" fill="#bfdbfe" stroke="#047857" stroke-width="3.5"/>
+  <path d="M34 46 q9 -7 16 0 q7 5 2 10 q-9 4 -14 -2 q-7 -2 -4 -8 Z" fill="#16a34a"/>
+  <path d="M58 66 q10 -4 14 3 q2 7 -6 9 q-9 1 -10 -6 q-1 -4 2 -6 Z" fill="#16a34a"/>
+  <!-- orbit ring: 17 goals as colored dots -->
+  <g>
+    <circle cx="52" cy="12" r="4.5" fill="#dc2626"/>
+    <circle cx="76" cy="18" r="4.5" fill="#f59e0b"/>
+    <circle cx="92" cy="38" r="4.5" fill="#16a34a"/>
+    <circle cx="96" cy="62" r="4.5" fill="#0e7490"/>
+    <circle cx="86" cy="84" r="4.5" fill="#7c3aed"/>
+    <circle cx="18" cy="80" r="4.5" fill="#db2777"/>
+    <circle cx="9" cy="56" r="4.5" fill="#ea580c"/>
+    <circle cx="16" cy="32" r="4.5" fill="#0284c7"/>
+    <circle cx="32" cy="16" r="4.5" fill="#65a30d"/>
+  </g>
+  <!-- sprout handed to the future -->
+  <path d="M74 96 q14 8 28 0" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+  <path d="M88 92 v-10" stroke="#16a34a" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M88 84 q-8 -2 -9 -9 q9 0 9 9 Z" fill="#16a34a"/>
+  <path d="M88 84 q8 -2 9 -9 q-9 0 -9 9 Z" fill="#4ade80"/>
+</svg>
