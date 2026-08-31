@@ -36,10 +36,13 @@ const hasSidebar = Astro.slots.has("sidebar");
         <input type="checkbox" id="nav-toggle" class="nav-toggle sr-only" />
         <label for="nav-toggle" class="nav-burger no-print">☰ 메뉴</label>
         <nav class="tabs" aria-label="주요 메뉴">
-        <a href={`${base}intro`}>기본권이란?</a>
-        <a href={`${base}rights`}>기본권 목록</a>
-        <a href={`${base}topics`}>주제 특집</a>
-        <a href={`${base}sdgs`}>SDGs</a>
+        <details class="nav-drop">
+          <summary>기본권이란? ▾</summary>
+          <div class="nav-drop-panel">
+            <a href={`${base}intro`}>💡 기본권이란?</a>
+            <a href={`${base}rights`}>📜 기본권 목록</a>
+          </div>
+        </details>
         <details class="nav-drop">
           <summary>수업하기 ▾</summary>
           <div class="nav-drop-panel">
@@ -48,6 +51,7 @@ const hasSidebar = Astro.slots.has("sidebar");
             <a href={`${base}quiz`}>🎲 놀이·퀴즈</a>
             <a href={`${base}comics`}>🎨 만화</a>
             <a href={`${base}films`}>🎬 영화</a>
+            <a href={`${base}topics`}>🔎 주제 특집</a>
           </div>
         </details>
         <details class="nav-drop">
@@ -57,6 +61,7 @@ const hasSidebar = Astro.slots.has("sidebar");
             <a href={`${base}issues`}>💬 쟁점</a>
           </div>
         </details>
+        <a href={`${base}sdgs`}>SDGs</a>
         <a href={`${base}glossary`}>용어사전</a>
         <details class="nav-drop">
           <summary>소개 ▾</summary>
