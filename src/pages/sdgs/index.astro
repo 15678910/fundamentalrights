@@ -18,11 +18,20 @@ const base = import.meta.env.BASE_URL;
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px">
       {["빈곤퇴치","기아종식","건강과 웰빙","양질의 교육","성평등","깨끗한 물과 위생","적정 가격의 깨끗한 에너지","양질의 일자리와 경제성장","산업, 혁신, 사회기반 시설","불평등 감소","지속가능한 도시와 지역사회","책임 있는 소비와 생산","기후 행동","수생태계 보전","육상생태계 보전","평화, 정의, 강력한 제도","목표 달성을 위한 파트너십"].map((name, i) => (
-        <img src={`${base}illustrations/sdg/k_sdgs${String(i + 1).padStart(2, "0")}.svg`} alt={`목표 ${i + 1} ${name}`} style="width:100%" />
+        <a class="sdg-tile" href={`${base}sdgs/02-17가지-목표#목표-${i + 1}-${name.replace(/,/g, "").replace(/ /g, "-")}`} title={`목표 ${i + 1} ${name} — 자세히 보기`}>
+          <img src={`${base}illustrations/sdg/k_sdgs${String(i + 1).padStart(2, "0")}.svg`} alt={`목표 ${i + 1} ${name}`} style="width:100%" />
+        </a>
       ))}
-      <img src={`${base}illustrations/sdg/k_sdgs_logo.svg`} alt="국가지속가능발전목표 K-SDGs" style="width:100%" />
+      <a class="sdg-tile" href={`${base}sdgs/02-17가지-목표`} title="17가지 목표 하나씩 — 자료집 2권">
+        <img src={`${base}illustrations/sdg/k_sdgs_logo.svg`} alt="국가지속가능발전목표 K-SDGs" style="width:100%" />
+      </a>
     </div>
   </div>
+  <style>
+    .sdg-tile { display: block; transition: transform .18s ease; }
+    .sdg-tile:hover { transform: scale(1.08); position: relative; z-index: 2; }
+    .sdg-tile img { display: block; }
+  </style>
   <p style="color:var(--muted);font-size:.85rem;margin-top:.4rem">이미지: <a href="https://www.ncsd.go.kr/" target="_blank" rel="noopener">지속가능발전포털</a> 공식 심볼(출처 표시·비상업·변경 없음)</p>
 
   <h2 style="font-size:1.35rem;margin-top:1.6rem">자료집 목차</h2>
