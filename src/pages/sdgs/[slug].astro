@@ -1,0 +1,53 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export async function getStaticPaths() {
+  const items = await getCollection("sdgs");
+  return items.map((i) => ({ params: { slug: i.id }, props: { entry: i } }));
+}
+type Props = { entry: CollectionEntry<"sdgs"> };
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const toc = headings.filter((h) => h.depth === 2);
+const base = import.meta.env.BASE_URL;
+const rights = await getCollection("rights");
+const related = entry.data.relatedRights.map((n: number) => rights.find((r) => r.data.article === n)).filter(Boolean);
+const docs = (await getCollection("sdgs")).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout title={`${entry.data.title} | SDGs 자료집`}>
+  <p style="color:var(--muted);font-size:.9rem;margin:0"><a href={`${base}sdgs`}>SDGs 자료집</a></p>
+  <div style="display:flex;gap:.8rem;align-items:center;margin:.2rem 0"><span style="font-size:2.2rem">{entry.data.icon}</span><h1 style="margin:0">{entry.data.title}</h1></div>
+  <p style="font-size:1.05rem;color:var(--muted);margin:.3rem 0 0">{entry.data.summary}</p>
+
+  {toc.length > 1 && (
+    <nav aria-label="자료집 목차" style="border:2px solid var(--accent);border-radius:12px;padding:1rem 1.3rem;margin:1.2rem 0;background:var(--card)">
+      <strong style="display:block;font-size:1.1rem;margin-bottom:.5rem">📑 자료집 목차</strong>
+      <ol style="margin:0;padding-left:1.3rem;line-height:2">
+        {toc.map((h) => (
+          <li><a href={`#${h.slug}`} style="text-decoration:none">{h.text}</a></li>
+        ))}
+      </ol>
+    </nav>
+  )}
+
+  <article>
+    <Content />
+  </article>
+
+  {related.length > 0 && (
+    <section style="margin:1.5rem 0">
+      <h2 style="font-size:1.15rem">🔗 관련 기본권</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem">
+        {related.map((r: any) => (
+          <a href={`${base}rights/${r.id}`} style="border:1px solid var(--border);border-radius:999px;padding:.3rem .8rem;text-decoration:none;color:var(--fg)">제{r.data.article}조 · {r.data.title}</a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <nav style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;border-top:1px solid var(--border);padding-top:1rem" aria-label="자료집의 다른 문서">
+    {docs.filter((d) => d.id !== entry.id).map((d) => (
+      <a href={`${base}sdgs/${d.id}`} style="border:1px solid var(--border);border-radius:999px;padding:.35rem .9rem;text-decoration:none;color:var(--fg);font-size:.92rem">{d.data.icon} {d.data.title}</a>
+    ))}
+  </nav>
+</BaseLayout>

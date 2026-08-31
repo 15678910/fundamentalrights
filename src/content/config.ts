@@ -102,6 +102,17 @@ const comics = defineCollection({
   }),
 });
 
+const sdgs = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/sdgs" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    icon: z.string().default("🌍"),
+    order: z.number().int(),
+    relatedRights: z.array(z.number().int()).default([]),
+  }),
+});
+
 const lessons = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/lessons" }),
   schema: z.object({
@@ -115,4 +126,4 @@ const lessons = defineCollection({
   }),
 });
 
-export const collections = { rights, glossary, issues, topics, teachers, films, comics, lessons };
+export const collections = { rights, glossary, issues, topics, teachers, films, comics, lessons, sdgs };
