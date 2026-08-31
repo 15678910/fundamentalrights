@@ -15,7 +15,6 @@ const related = entry.data.relatedRights.map((n: number) => rights.find((r) => r
 const docs = (await getCollection("sdgs")).sort((a, b) => a.data.order - b.data.order);
 ---
 <BaseLayout title={`${entry.data.title} | SDGs 자료집`}>
-  <p style="color:var(--muted);font-size:.9rem;margin:0"><a href={`${base}sdgs`}>SDGs 자료집</a></p>
   <div style="display:flex;gap:.8rem;align-items:center;margin:.2rem 0"><span style="font-size:2.2rem">{entry.data.icon}</span><h1 style="margin:0">{entry.data.title}</h1></div>
   <p style="font-size:1.05rem;color:var(--muted);margin:.3rem 0 0">{entry.data.summary}</p>
 
