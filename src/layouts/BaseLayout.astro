@@ -92,8 +92,10 @@ const hasSidebar = Astro.slots.has("sidebar");
       </div>
     </footer>
     <div class="scroll-btns no-print">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로" title="맨 위로">↑</button>
-      <button onclick="window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})" aria-label="맨 아래로" title="맨 아래로">↓</button>
+      <button onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로" title="맨 위로">
+        <svg width="16" height="9" viewBox="0 0 16 9" aria-hidden="true"><path d="M2 7.5 L8 1.5 L14 7.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>TOP</span>
+      </button>
     </div>
     <script is:inline>
       (function () {
