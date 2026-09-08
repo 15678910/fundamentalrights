@@ -1,0 +1,36 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기본법이란 무엇인가">
+  <title>기본법이란 무엇인가</title>
+  <rect width="120" height="120" rx="26" fill="#fef9ec"/>
+  <!-- three-tier structure: constitution > framework acts > individual laws -->
+  <!-- top: constitution book -->
+  <g>
+    <rect x="42" y="14" width="36" height="24" rx="5" fill="#1d4ed8"/>
+    <path d="M60 14 v24" stroke="#93c5fd" stroke-width="2"/>
+    <text x="60" y="30" font-family="'Pretendard','Malgun Gothic',sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">헌법</text>
+  </g>
+  <path d="M60 38 v8" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- middle: framework acts row -->
+  <g font-family="'Pretendard','Malgun Gothic',sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">
+    <rect x="16" y="48" width="26" height="20" rx="4" fill="#16a34a"/>
+    <text x="29" y="61" fill="#ffffff">기본법</text>
+    <rect x="47" y="48" width="26" height="20" rx="4" fill="#0e7490"/>
+    <text x="60" y="61" fill="#ffffff">기본법</text>
+    <rect x="78" y="48" width="26" height="20" rx="4" fill="#b45309"/>
+    <text x="91" y="61" fill="#ffffff">기본법</text>
+  </g>
+  <g stroke="#b45309" stroke-width="2" stroke-linecap="round">
+    <path d="M29 68 v8"/><path d="M60 68 v8"/><path d="M91 68 v8"/>
+    <path d="M22 76 v6 M36 76 v6"/><path d="M53 76 v6 M67 76 v6"/><path d="M84 76 v6 M98 76 v6"/>
+  </g>
+  <!-- bottom: individual laws -->
+  <g fill="#e7dcc3">
+    <rect x="14" y="84" width="14" height="18" rx="3"/><rect x="31" y="84" width="14" height="18" rx="3"/>
+    <rect x="45" y="84" width="14" height="18" rx="3" fill="#efe6d2"/><rect x="62" y="84" width="14" height="18" rx="3"/>
+    <rect x="76" y="84" width="14" height="18" rx="3" fill="#efe6d2"/><rect x="93" y="84" width="14" height="18" rx="3"/>
+  </g>
+  <g stroke="#a8946f" stroke-width="1.6" stroke-linecap="round">
+    <path d="M17 89 h8 M17 93 h8 M17 97 h6"/><path d="M34 89 h8 M34 93 h8 M34 97 h6"/>
+    <path d="M48 89 h8 M48 93 h8 M48 97 h6"/><path d="M65 89 h8 M65 93 h8 M65 97 h6"/>
+    <path d="M79 89 h8 M79 93 h8 M79 97 h6"/><path d="M96 89 h8 M96 93 h8 M96 97 h6"/>
+  </g>
+</svg>
