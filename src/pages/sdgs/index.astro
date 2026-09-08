@@ -37,7 +37,7 @@ const base = import.meta.env.BASE_URL;
   <h2 style="font-size:1.35rem;margin-top:1.6rem">자료집 목차</h2>
   <div style="display:grid;gap:.8rem;margin-top:.8rem">
     {docs.map((d, i) => (
-      <a href={`${base}sdgs/${d.id}`} style="border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.3rem;text-decoration:none;color:var(--fg);display:flex;gap:1rem;align-items:flex-start;background:var(--card)">
+      <a class="lift" href={`${base}sdgs/${d.id}`} style="border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.3rem;text-decoration:none;color:var(--fg);display:flex;gap:1rem;align-items:flex-start;background:var(--card)">
         <span style="font-size:2rem;flex:none">{d.data.icon}</span>
         <span>
           <strong style="font-size:1.18rem;display:block">{i + 1}권 · {d.data.title}</strong>

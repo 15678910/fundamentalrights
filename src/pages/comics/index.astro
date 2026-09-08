@@ -30,7 +30,7 @@ function articleLabel(c: (typeof comics)[number]) {
     {comics.map((c) => {
       const label = articleLabel(c);
       return (
-        <a href={`${base}comics/${c.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.35rem">
+        <a class="lift" href={`${base}comics/${c.id}`} style="border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.35rem">
           <img src={`${base}comics/ep${c.data.order}-p1.svg`} alt="" loading="lazy" style="width:100%;border-radius:8px;border:1px solid var(--border)" />
           {label && <span style={`margin-top:.35rem;font-size:.95rem;font-weight:700;color:${label.color}`}>{label.text}</span>}
           <strong style="font-size:1.05rem">{c.data.title}</strong>
