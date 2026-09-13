@@ -73,6 +73,7 @@ const hasSidebar = Astro.slots.has("sidebar");
         </nav>
         <div class="header-right">
           <a class="header-search" href={`${base}search`}>🔍 검색</a>
+          <a class="header-search header-lang" href={`${base}language`} lang="en" aria-label="Languages · 다른 언어로 보기" title="Languages · 다른 언어로 보기">🌐 <span>Languages</span></a>
           <AccessibilityBar />
         </div>
       </div>
@@ -87,6 +88,7 @@ const hasSidebar = Astro.slots.has("sidebar");
         콘텐츠 이용: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> ·
         <a href={`${base}about`}>소개</a> ·
         <a href={`${base}faq`}>자주 묻는 질문</a> ·
+        <a href={`${base}language`}>🌐 Languages</a> ·
         <a href="https://github.com/15678910/fundamentalrights/issues" target="_blank" rel="noopener">오류 제보</a> ·
         <a href="mailto:fundamentalrights2026@gmail.com">fundamentalrights2026@gmail.com</a>
       </div>

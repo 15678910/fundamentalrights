@@ -47,7 +47,8 @@ a { color: var(--accent); }
 .brand { font-weight: 800; font-size: 1.45rem; text-decoration: none; line-height: 1.15; }
 .brand small { display: block; font-weight: 400; font-size: .82rem; opacity: .9; margin-top: 2px; }
 .header-right { display: flex; align-items: center; gap: .6rem; }
-.header-search { text-decoration: none; border: 1px solid var(--brand-fg); border-radius: 999px; padding: .25rem .7rem; font-size: .85rem; }
+.header-search { text-decoration: none; border: 1px solid var(--brand-fg); border-radius: 999px; padding: .25rem .7rem; font-size: .85rem; white-space: nowrap; }
+@media (max-width: 1100px) { .header-lang span { display: none; } }
 .tabs { display: flex; gap: .1rem; flex-wrap: wrap; margin: 0 auto; }
 .tabs a { text-decoration: none; padding: .45rem .6rem; border-radius: 8px; font-weight: 600; font-size: .95rem; white-space: nowrap; }
 .tabs a:hover { background: var(--bg); color: var(--fg); }

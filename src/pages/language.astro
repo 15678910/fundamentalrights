@@ -1,0 +1,226 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+
+// 각 언어: 브라우저 내장 번역 기능 안내(안드로이드 Chrome · iPhone Safari · PC)와
+// 기계번역 주의, 다국어 상담전화 1345(법무부 외국인종합안내센터, 20개 언어).
+const langs = [
+  {
+    code: "en", name: "English", ko: "영어",
+    intro: "This website is written in Korean. The browser on your phone or computer can translate every page into English.",
+    android: "Tap ⋮ at the top right → Translate… → English.",
+    iphone: "Tap ᴀA in the address bar → Translate to English. (Or open this site in the Chrome app.)",
+    pc: "Right-click the page → Translate to English, or click the translate icon at the right end of the address bar.",
+    note: "Machine translation can be inaccurate, especially for legal terms. This site is for learning and is not legal advice.",
+    help: "Multilingual help line: 1345 (Immigration Contact Center, Ministry of Justice; weekdays 9:00–22:00; 20 languages).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "Computer (Chrome / Edge)", "Note", "Help"],
+  },
+  {
+    code: "vi", name: "Tiếng Việt", ko: "베트남어",
+    intro: "Trang web này được viết bằng tiếng Hàn. Trình duyệt trên điện thoại hoặc máy tính của bạn có thể dịch mọi trang sang tiếng Việt.",
+    android: "Chạm vào ⋮ ở góc trên bên phải → Dịch… → Tiếng Việt.",
+    iphone: "Chạm vào ᴀA trên thanh địa chỉ → Dịch sang Tiếng Việt. (Hoặc mở trang này bằng ứng dụng Chrome.)",
+    pc: "Nhấp chuột phải vào trang → Dịch sang Tiếng Việt, hoặc nhấp vào biểu tượng dịch ở bên phải thanh địa chỉ.",
+    note: "Bản dịch máy có thể không chính xác, đặc biệt là các thuật ngữ pháp lý. Trang web này dùng để học tập và không phải là tư vấn pháp lý.",
+    help: "Đường dây hỗ trợ đa ngôn ngữ: 1345 (Trung tâm Hướng dẫn Tổng hợp cho Người nước ngoài, Bộ Tư pháp; ngày thường 9:00–22:00; 20 ngôn ngữ).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "Máy tính (Chrome / Edge)", "Lưu ý", "Trợ giúp"],
+  },
+  {
+    code: "zh-Hans", name: "中文", ko: "중국어",
+    intro: "本网站以韩语编写。您手机或电脑的浏览器可以把每一页翻译成中文。",
+    android: "点击右上角的 ⋮ → 翻译… → 中文（简体）。",
+    iphone: "点击地址栏中的 ᴀA → 翻译成中文。（或用 Chrome 应用打开本网站。）",
+    pc: "在页面上点击右键 → 翻译成中文，或点击地址栏右侧的翻译图标。",
+    note: "机器翻译可能不准确，尤其是法律术语。本网站仅供学习，不构成法律建议。",
+    help: "多语言咨询电话：1345（外国人综合咨询中心，法务部；工作日 9:00–22:00；20种语言）。",
+    labels: ["安卓（Chrome）", "iPhone（Safari）", "电脑（Chrome / Edge）", "注意", "帮助"],
+  },
+  {
+    code: "ne", name: "नेपाली", ko: "네팔어",
+    intro: "यो वेबसाइट कोरियाली भाषामा लेखिएको छ। तपाईंको फोन वा कम्प्युटरको ब्राउजरले हरेक पृष्ठलाई नेपालीमा अनुवाद गर्न सक्छ।",
+    android: "माथि दायाँ कुनाको ⋮ थिच्नुहोस् → अनुवाद गर्नुहोस्… → नेपाली।",
+    iphone: "ठेगाना पट्टीमा ᴀA थिच्नुहोस् → नेपालीमा अनुवाद गर्नुहोस्। (वा यो साइट Chrome एपमा खोल्नुहोस्।)",
+    pc: "पृष्ठमा दायाँ क्लिक गर्नुहोस् → नेपालीमा अनुवाद गर्नुहोस्, वा ठेगाना पट्टीको दायाँ छेउको अनुवाद आइकनमा क्लिक गर्नुहोस्।",
+    note: "मेसिन अनुवाद गलत हुन सक्छ, विशेष गरी कानुनी शब्दहरू। यो साइट सिक्नका लागि हो, कानुनी सल्लाह होइन।",
+    help: "बहुभाषी सहायता लाइन: 1345 (विदेशी नागरिक सम्पर्क केन्द्र, न्याय मन्त्रालय; कार्यदिन 9:00–22:00; 20 भाषा)।",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "कम्प्युटर (Chrome / Edge)", "ध्यान दिनुहोस्", "सहायता"],
+  },
+  {
+    code: "id", name: "Bahasa Indonesia", ko: "인도네시아어",
+    intro: "Situs web ini ditulis dalam bahasa Korea. Browser di ponsel atau komputer Anda dapat menerjemahkan setiap halaman ke bahasa Indonesia.",
+    android: "Ketuk ⋮ di kanan atas → Terjemahkan… → Bahasa Indonesia.",
+    iphone: "Ketuk ᴀA di bilah alamat → Terjemahkan ke Bahasa Indonesia. (Atau buka situs ini dengan aplikasi Chrome.)",
+    pc: "Klik kanan halaman → Terjemahkan ke Bahasa Indonesia, atau klik ikon terjemahan di ujung kanan bilah alamat.",
+    note: "Terjemahan mesin bisa tidak akurat, terutama istilah hukum. Situs ini untuk belajar dan bukan nasihat hukum.",
+    help: "Layanan bantuan multibahasa: 1345 (Pusat Kontak Imigrasi, Kementerian Kehakiman; hari kerja 9:00–22:00; 20 bahasa).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "Komputer (Chrome / Edge)", "Catatan", "Bantuan"],
+  },
+  {
+    code: "km", name: "ភាសាខ្មែរ", ko: "크메르어(캄보디아)",
+    intro: "គេហទំព័រនេះសរសេរជាភាសាកូរ៉េ។ កម្មវិធីរុករកនៅលើទូរស័ព្ទ ឬកុំព្យូទ័ររបស់អ្នកអាចបកប្រែគ្រប់ទំព័រទៅជាភាសាខ្មែរបាន។",
+    android: "ចុច ⋮ នៅជ្រុងខាងលើស្ដាំ → បកប្រែ… → ភាសាខ្មែរ។",
+    iphone: "ចុច ᴀA ក្នុងរបារអាសយដ្ឋាន → បកប្រែជាភាសាខ្មែរ។ (ឬបើកគេហទំព័រនេះដោយកម្មវិធី Chrome។)",
+    pc: "ចុចម៉ៅស៍ស្ដាំលើទំព័រ → បកប្រែជាភាសាខ្មែរ ឬចុចរូបតំណាងបកប្រែនៅខាងស្ដាំរបារអាសយដ្ឋាន។",
+    note: "ការបកប្រែដោយម៉ាស៊ីនអាចមិនត្រឹមត្រូវ ជាពិសេសពាក្យច្បាប់។ គេហទំព័រនេះសម្រាប់ការសិក្សា មិនមែនជាការប្រឹក្សាផ្នែកច្បាប់ទេ។",
+    help: "ខ្សែទូរស័ព្ទជំនួយពហុភាសា៖ 1345 (មជ្ឈមណ្ឌលទំនាក់ទំនងអន្តោប្រវេសន៍ ក្រសួងយុត្តិធម៌; ថ្ងៃធ្វើការ 9:00–22:00; 20 ភាសា)។",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "កុំព្យូទ័រ (Chrome / Edge)", "ចំណាំ", "ជំនួយ"],
+  },
+  {
+    code: "th", name: "ไทย", ko: "태국어",
+    intro: "เว็บไซต์นี้เขียนเป็นภาษาเกาหลี เบราว์เซอร์ในโทรศัพท์หรือคอมพิวเตอร์ของคุณสามารถแปลทุกหน้าเป็นภาษาไทยได้",
+    android: "แตะ ⋮ ที่มุมขวาบน → แปล… → ไทย",
+    iphone: "แตะ ᴀA ในแถบที่อยู่ → แปลเป็นภาษาไทย (หรือเปิดเว็บไซต์นี้ด้วยแอป Chrome)",
+    pc: "คลิกขวาที่หน้าเว็บ → แปลเป็นภาษาไทย หรือคลิกไอคอนแปลภาษาทางขวาของแถบที่อยู่",
+    note: "การแปลด้วยเครื่องอาจไม่ถูกต้อง โดยเฉพาะคำศัพท์ทางกฎหมาย เว็บไซต์นี้มีไว้เพื่อการเรียนรู้ ไม่ใช่คำแนะนำทางกฎหมาย",
+    help: "สายด่วนหลายภาษา: 1345 (ศูนย์ให้ข้อมูลชาวต่างชาติ กระทรวงยุติธรรม; วันทำการ 9:00–22:00; 20 ภาษา)",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "คอมพิวเตอร์ (Chrome / Edge)", "หมายเหตุ", "ความช่วยเหลือ"],
+  },
+  {
+    code: "uz", name: "Oʻzbekcha", ko: "우즈베크어",
+    intro: "Bu veb-sayt koreys tilida yozilgan. Telefoningiz yoki kompyuteringizdagi brauzer har bir sahifani oʻzbek tiliga tarjima qila oladi.",
+    android: "Yuqori oʻng burchakdagi ⋮ ga bosing → Tarjima qilish… → Oʻzbek.",
+    iphone: "Manzil satridagi ᴀA ga bosing → Oʻzbek tiliga tarjima qilish. (Yoki bu saytni Chrome ilovasida oching.)",
+    pc: "Sahifada oʻng tugmani bosing → Oʻzbek tiliga tarjima qilish, yoki manzil satrining oʻng chetidagi tarjima belgisini bosing.",
+    note: "Mashina tarjimasi notoʻgʻri boʻlishi mumkin, ayniqsa huquqiy atamalar. Bu sayt oʻrganish uchun boʻlib, yuridik maslahat emas.",
+    help: "Koʻp tilli yordam liniyasi: 1345 (Chet elliklar uchun axborot markazi, Adliya vazirligi; ish kunlari 9:00–22:00; 20 til — rus va ingliz tillarida ham).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "Kompyuter (Chrome / Edge)", "Eslatma", "Yordam"],
+  },
+  {
+    code: "mn", name: "Монгол", ko: "몽골어",
+    intro: "Энэ вэбсайт солонгос хэлээр бичигдсэн. Таны утас эсвэл компьютерийн хөтөч хуудас бүрийг монгол хэл рүү орчуулж чадна.",
+    android: "Баруун дээд буланд байгаа ⋮ дээр дарна → Орчуулах… → Монгол.",
+    iphone: "Хаягийн мөрөнд байгаа ᴀA дээр дарна → Монгол руу орчуулах. (Эсвэл энэ сайтыг Chrome аппаар нээнэ үү.)",
+    pc: "Хуудас дээр хулганы баруун товчийг дарна → Монгол руу орчуулах, эсвэл хаягийн мөрний баруун талд байгаа орчуулгын дүрс дээр дарна.",
+    note: "Машин орчуулга буруу байж болно, ялангуяа хуулийн нэр томьёо. Энэ сайт нь суралцах зориулалттай бөгөөд хуулийн зөвлөгөө биш.",
+    help: "Олон хэлний тусламжийн утас: 1345 (Гадаадын иргэдийн мэдээллийн төв, Хууль зүйн яам; ажлын өдөр 9:00–22:00; 20 хэл).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "Компьютер (Chrome / Edge)", "Анхаар", "Тусламж"],
+  },
+  {
+    code: "my", name: "မြန်မာ", ko: "미얀마어",
+    intro: "ဤဝက်ဘ်ဆိုက်ကို ကိုရီးယားဘာသာဖြင့် ရေးသားထားပါသည်။ သင့်ဖုန်း သို့မဟုတ် ကွန်ပျူတာရှိ ဘရောက်ဇာသည် စာမျက်နှာတိုင်းကို မြန်မာဘာသာသို့ ဘာသာပြန်ပေးနိုင်ပါသည်။",
+    android: "ညာဘက်အပေါ်ထောင့်ရှိ ⋮ ကိုနှိပ်ပါ → ဘာသာပြန်… → မြန်မာ။",
+    iphone: "လိပ်စာဘားရှိ ᴀA ကိုနှိပ်ပါ → မြန်မာဘာသာသို့ ဘာသာပြန်ပါ။ (သို့မဟုတ် ဤဆိုက်ကို Chrome အက်ပ်ဖြင့် ဖွင့်ပါ။)",
+    pc: "စာမျက်နှာပေါ်တွင် ညာကလစ်နှိပ်ပါ → မြန်မာဘာသာသို့ ဘာသာပြန်ပါ၊ သို့မဟုတ် လိပ်စာဘား၏ ညာဘက်စွန်းရှိ ဘာသာပြန်အိုင်ကွန်ကို နှိပ်ပါ။",
+    note: "စက်ဘာသာပြန်ချက်သည် အထူးသဖြင့် ဥပဒေဝေါဟာရများတွင် မှားယွင်းနိုင်ပါသည်။ ဤဆိုက်သည် လေ့လာရန်အတွက်သာဖြစ်ပြီး ဥပဒေအကြံဉာဏ် မဟုတ်ပါ။",
+    help: "ဘာသာစကားစုံ အကူအညီဖုန်း − 1345 (နိုင်ငံခြားသား ဆက်သွယ်ရေးစင်တာ၊ တရားရေးဝန်ကြီးဌာန၊ ရုံးဖွင့်ရက် 9:00–22:00၊ ဘာသာစကား 20)။",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "ကွန်ပျူတာ (Chrome / Edge)", "သတိပြုရန်", "အကူအညီ"],
+  },
+  {
+    code: "fil", name: "Filipino", ko: "필리핀어",
+    intro: "Ang website na ito ay nakasulat sa wikang Korean. Kayang isalin ng browser ng iyong telepono o computer ang bawat pahina sa Filipino.",
+    android: "I-tap ang ⋮ sa kanang itaas → Isalin… → Filipino.",
+    iphone: "I-tap ang ᴀA sa address bar → Isalin sa Filipino. (O buksan ang site na ito sa Chrome app.)",
+    pc: "I-right-click ang pahina → Isalin sa Filipino, o i-click ang translate icon sa kanang dulo ng address bar.",
+    note: "Maaaring hindi tumpak ang machine translation, lalo na ang mga terminong legal. Ang site na ito ay para sa pag-aaral at hindi legal na payo.",
+    help: "Multilingual helpline: 1345 (Immigration Contact Center, Ministry of Justice; Lunes–Biyernes 9:00–22:00; 20 wika).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "Computer (Chrome / Edge)", "Paalala", "Tulong"],
+  },
+  {
+    code: "bn", name: "বাংলা", ko: "벵골어(방글라데시)",
+    intro: "এই ওয়েবসাইটটি কোরীয় ভাষায় লেখা। আপনার ফোন বা কম্পিউটারের ব্রাউজার প্রতিটি পৃষ্ঠা বাংলায় অনুবাদ করতে পারে।",
+    android: "উপরের ডান কোণে ⋮ চাপুন → অনুবাদ করুন… → বাংলা।",
+    iphone: "ঠিকানা বারে ᴀA চাপুন → বাংলায় অনুবাদ করুন। (অথবা এই সাইটটি Chrome অ্যাপে খুলুন।)",
+    pc: "পৃষ্ঠায় ডান-ক্লিক করুন → বাংলায় অনুবাদ করুন, অথবা ঠিকানা বারের ডান প্রান্তের অনুবাদ আইকনে ক্লিক করুন।",
+    note: "যন্ত্র-অনুবাদ ভুল হতে পারে, বিশেষ করে আইনি শব্দ। এই সাইটটি শেখার জন্য, আইনি পরামর্শ নয়।",
+    help: "বহুভাষিক হেল্পলাইন: 1345 (ইমিগ্রেশন কন্টাক্ট সেন্টার, বিচার মন্ত্রণালয়; কর্মদিবস 9:00–22:00; 20টি ভাষা)।",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "কম্পিউটার (Chrome / Edge)", "দ্রষ্টব্য", "সাহায্য"],
+  },
+  {
+    code: "si", name: "සිංහල", ko: "싱할라어(스리랑카)",
+    intro: "මෙම වෙබ් අඩවිය කොරියානු භාෂාවෙන් ලියා ඇත. ඔබේ දුරකථනයේ හෝ පරිගණකයේ බ්‍රවුසරයට සෑම පිටුවක්ම සිංහලට පරිවර්තනය කළ හැකිය.",
+    android: "ඉහළ දකුණේ ⋮ ස්පර්ශ කරන්න → පරිවර්තනය කරන්න… → සිංහල.",
+    iphone: "ලිපින තීරුවේ ᴀA ස්පර්ශ කරන්න → සිංහලට පරිවර්තනය කරන්න. (නැතහොත් මෙම අඩවිය Chrome යෙදුමෙන් විවෘත කරන්න.)",
+    pc: "පිටුව මත දකුණු-ක්ලික් කරන්න → සිංහලට පරිවර්තනය කරන්න, නැතහොත් ලිපින තීරුවේ දකුණු කෙළවරේ ඇති පරිවර්තන අයිකනය ක්ලික් කරන්න.",
+    note: "යන්ත්‍ර පරිවර්තනය, විශේෂයෙන් නීතිමය වචන, වැරදි විය හැකිය. මෙම අඩවිය ඉගෙනීම සඳහා වන අතර නීති උපදෙස් නොවේ.",
+    help: "බහුභාෂා උපකාරක අංකය: 1345 (ආගමන සම්බන්ධතා මධ්‍යස්ථානය, අධිකරණ අමාත්‍යාංශය; වැඩ කරන දින 9:00–22:00; භාෂා 20).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "පරිගණකය (Chrome / Edge)", "සටහන", "උදව්"],
+  },
+  {
+    code: "ur", name: "اردو", ko: "우르두어(파키스탄)", rtl: true,
+    intro: "یہ ویب سائٹ کوریائی زبان میں لکھی گئی ہے۔ آپ کے فون یا کمپیوٹر کا براؤزر ہر صفحے کا اردو میں ترجمہ کر سکتا ہے۔",
+    android: "اوپر دائیں کونے میں ⋮ پر ٹیپ کریں ← ترجمہ کریں… ← اردو۔",
+    iphone: "ایڈریس بار میں ᴀA پر ٹیپ کریں ← اردو میں ترجمہ کریں۔ (یا یہ سائٹ Chrome ایپ میں کھولیں۔)",
+    pc: "صفحے پر رائٹ کلک کریں ← اردو میں ترجمہ کریں، یا ایڈریس بار کے دائیں سرے پر ترجمے کے آئیکن پر کلک کریں۔",
+    note: "مشینی ترجمہ غلط ہو سکتا ہے، خاص طور پر قانونی اصطلاحات۔ یہ سائٹ سیکھنے کے لیے ہے، قانونی مشورہ نہیں۔",
+    help: "کثیر لسانی ہیلپ لائن: 1345 (امیگریشن رابطہ مرکز، وزارت انصاف؛ کام کے دن 9:00–22:00؛ 20 زبانیں)۔",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "کمپیوٹر (Chrome / Edge)", "نوٹ", "مدد"],
+  },
+  {
+    code: "ru", name: "Русский", ko: "러시아어",
+    intro: "Этот сайт написан на корейском языке. Браузер вашего телефона или компьютера может перевести каждую страницу на русский.",
+    android: "Нажмите ⋮ в правом верхнем углу → Перевести… → Русский.",
+    iphone: "Нажмите ᴀA в адресной строке → Перевести на русский. (Или откройте сайт в приложении Chrome.)",
+    pc: "Щёлкните правой кнопкой по странице → Перевести на русский, или нажмите значок перевода справа в адресной строке.",
+    note: "Машинный перевод может быть неточным, особенно юридические термины. Сайт предназначен для обучения и не является юридической консультацией.",
+    help: "Многоязычная горячая линия: 1345 (Иммиграционный контактный центр, Министерство юстиции; будни 9:00–22:00; 20 языков).",
+    labels: ["Android (Chrome)", "iPhone (Safari)", "Компьютер (Chrome / Edge)", "Примечание", "Помощь"],
+  },
+];
+---
+<BaseLayout title="Languages · 다른 언어로 보기 | 기본권">
+  <h1>🌐 Languages · 다른 언어로 보기</h1>
+  <p class="lead">
+    이 사이트는 한국어로 쓰였습니다. 스마트폰이나 컴퓨터의 <b>브라우저 번역 기능</b>을 쓰면 별도 설치 없이 <b>모든 페이지</b>를 내 언어로 읽을 수 있습니다.
+    아래에서 언어를 고르세요.
+    <span lang="en" style="display:block;color:var(--muted);margin-top:.3rem">This site is in Korean. Your browser can translate every page — choose your language below.</span>
+  </p>
+
+  <nav class="lang-chips" aria-label="언어 선택 / Choose language">
+    {langs.map((l) => (
+      <a href={`#${l.code}`} lang={l.code}>{l.name}</a>
+    ))}
+  </nav>
+
+  <div class="lang-note">
+    <p><b>번역 품질에 관한 안내(한국어)</b> — 브라우저 번역은 기계번역이므로 법률 용어가 어색하거나 틀릴 수 있습니다. 헌법 조문의 정확한 뜻은 <a href="https://www.law.go.kr/LSW/eng/engMain.do" target="_blank" rel="noopener">국가법령정보센터 영문법령</a>에서 확인할 수 있습니다. 아래 각 언어의 안내문은 검수 전 초안입니다 — 모어 화자의 교정을 <a href="https://github.com/15678910/fundamentalrights/issues" target="_blank" rel="noopener">GitHub</a>이나 <a href="mailto:fundamentalrights2026@gmail.com">이메일</a>로 보내 주시면 바로 반영합니다.</p>
+  </div>
+
+  {langs.map((l) => (
+    <section class="lang-card" id={l.code} lang={l.code} dir={l.rtl ? "rtl" : "ltr"}>
+      <h2>{l.name} <small lang="ko" dir="ltr">{l.ko}</small></h2>
+      <p class="intro">{l.intro}</p>
+      <dl>
+        <dt>📱 {l.labels[0]}</dt><dd>{l.android}</dd>
+        <dt>🍎 {l.labels[1]}</dt><dd>{l.iphone}</dd>
+        <dt>💻 {l.labels[2]}</dt><dd>{l.pc}</dd>
+      </dl>
+      <p class="warn">⚠️ <b>{l.labels[3]}</b> — {l.note}</p>
+      <p class="help">☎️ <b>{l.labels[4]}</b> — {l.help}</p>
+      <p class="top" dir="ltr"><a href="#main" lang="en">↑ Languages</a></p>
+    </section>
+  ))}
+
+  <section class="lang-card" lang="ko" id="ko">
+    <h2>한국어 <small>쉬운 한국어로 읽기</small></h2>
+    <p class="intro">한국어를 배우는 중이라면, 모든 조항 페이지의 <b>'쉬운 말'</b> 단계부터 읽어 보세요. 초등학생도 이해할 수 있게 짧은 문장으로 썼습니다.</p>
+    <dl>
+      <dt>📜 <a href={`${base}rights`}>기본권 목록</a></dt><dd>제10조부터 제39조까지, 조항마다 쉬운 말 · 보통 · 자세히 세 단계가 있습니다.</dd>
+      <dt>📖 <a href={`${base}glossary`}>용어사전</a></dt><dd>어려운 법률 용어를 한 문장으로 풀었습니다.</dd>
+      <dt>☎️ 상담</dt><dd>외국인종합안내센터 <b>1345</b>(법무부, 평일 09:00~22:00 · 18시 이후는 한·중·영, 20개 언어, 통화료 부과). 임금 체불·폭행·성폭력 등 인권침해는 <b>1345 → 1번</b>(2026년 5월 27일 신설, 신고·상담·기관 연계를 한 번에).</dd>
+    </dl>
+  </section>
+
+  <style>
+    .lead { font-size: 1.05rem; line-height: 1.6; }
+    .lang-chips { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0 1.2rem; }
+    .lang-chips a {
+      text-decoration: none; border: 1px solid var(--border); border-radius: 999px;
+      padding: .35rem .85rem; font-weight: 600; color: var(--fg); background: var(--card);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .lang-chips a:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,.12); }
+    .lang-note { border-left: 4px solid var(--accent); background: var(--card); padding: .7rem 1rem; border-radius: 8px; margin-bottom: 1.4rem; font-size: .93rem; }
+    .lang-note p { margin: 0; }
+    .lang-card { border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1.3rem; margin-bottom: 1.1rem; background: var(--card); scroll-margin-top: 5rem; }
+    .lang-card h2 { margin: 0 0 .5rem; font-size: 1.35rem; }
+    .lang-card h2 small { font-size: .8rem; color: var(--muted); font-weight: 500; margin-inline-start: .5rem; }
+    .lang-card .intro { font-size: 1.02rem; line-height: 1.65; }
+    .lang-card dl { display: grid; grid-template-columns: max-content 1fr; gap: .4rem .9rem; margin: .6rem 0; }
+    .lang-card dt { font-weight: 700; white-space: nowrap; }
+    .lang-card dd { margin: 0; line-height: 1.6; }
+    .lang-card .warn, .lang-card .help { font-size: .92rem; line-height: 1.55; margin: .4rem 0; }
+    .lang-card .top { margin: .5rem 0 0; font-size: .85rem; text-align: right; }
+    .lang-card .top a { color: var(--muted); text-decoration: none; }
+    @media (max-width: 560px) { .lang-card dl { grid-template-columns: 1fr; gap: .15rem; } .lang-card dd { margin-bottom: .45rem; } }
+  </style>
+</BaseLayout>
