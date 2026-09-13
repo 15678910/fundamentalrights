@@ -1,0 +1,45 @@
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="어린이 권리 자료집">
+  <title>어린이 권리 자료집</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#fef9c3"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="200" rx="16" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="530" cy="46" r="26" fill="#fde047"/>
+  <!-- hill -->
+  <path d="M0 160 Q150 110 300 150 T600 140 V200 H0 Z" fill="#bbf7d0"/>
+  <!-- balloons -->
+  <g stroke="#475569" stroke-width="1.5">
+    <path d="M118 88 q-6 40 0 60" fill="none"/>
+    <path d="M176 82 q4 40 -2 66" fill="none"/>
+    <path d="M232 92 q-4 34 2 56" fill="none"/>
+    <path d="M292 80 q6 40 0 68" fill="none"/>
+  </g>
+  <ellipse cx="118" cy="68" rx="20" ry="24" fill="#f87171"/>
+  <ellipse cx="176" cy="60" rx="20" ry="24" fill="#60a5fa"/>
+  <ellipse cx="232" cy="72" rx="20" ry="24" fill="#4ade80"/>
+  <ellipse cx="292" cy="58" rx="20" ry="24" fill="#c084fc"/>
+  <!-- children holding hands -->
+  <g stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="118" cy="150" r="11" fill="#fcd34d" stroke="#92400e"/>
+    <path d="M104 190 v-16 a14 14 0 0 1 28 0 v16 Z" fill="#f87171" stroke="#991b1b"/>
+    <circle cx="176" cy="146" r="11" fill="#fca5a5" stroke="#991b1b"/>
+    <path d="M162 190 v-20 a14 14 0 0 1 28 0 v20 Z" fill="#60a5fa" stroke="#1e3a8a"/>
+    <circle cx="232" cy="152" r="10" fill="#d9f99d" stroke="#3f6212"/>
+    <path d="M219 190 v-14 a13 13 0 0 1 26 0 v14 Z" fill="#4ade80" stroke="#166534"/>
+    <circle cx="292" cy="146" r="11" fill="#e9d5ff" stroke="#6b21a8"/>
+    <path d="M278 190 v-20 a14 14 0 0 1 28 0 v20 Z" fill="#c084fc" stroke="#6b21a8"/>
+    <path d="M132 176 h30 M190 174 h29 M245 178 h33" stroke="#475569" fill="none"/>
+  </g>
+  <!-- open book with shield on the right -->
+  <g transform="translate(400 96)">
+    <path d="M0 10 q40 -14 80 0 v70 q-40 -14 -80 0 Z" fill="#ffffff" stroke="#0e7490" stroke-width="3"/>
+    <path d="M80 10 q40 -14 80 0 v70 q-40 -14 -80 0 Z" fill="#ffffff" stroke="#0e7490" stroke-width="3"/>
+    <path d="M80 10 v70" stroke="#0e7490" stroke-width="3"/>
+    <path d="M14 28 h48 M14 42 h48 M14 56 h34" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M120 22 l20 7 v14 c0 11 -9 18 -20 22 c-11 -4 -20 -11 -20 -22 v-14 Z" fill="#e0f2fe" stroke="#0e7490" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M110 44 l7 7 l14 -15" stroke="#0e7490" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

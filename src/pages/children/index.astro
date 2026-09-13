@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const docs = (await getCollection("children")).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
+
+const timeline = [
+  { year: "1923", text: "방정환과 소년운동협회, 5월 1일 어린이날 선언", href: `${base}children/01-방정환과-어린이-선언` },
+  { year: "1924", text: "국제연맹 제네바 아동권리선언", href: `${base}children/02-세계로-퍼진-어린이의-권리` },
+  { year: "1959", text: "유엔 아동권리선언 10원칙", href: `${base}children/02-세계로-퍼진-어린이의-권리` },
+  { year: "1989", text: "유엔 아동권리협약 채택 (11월 20일)", href: `${base}children/03-유엔-아동권리협약` },
+  { year: "1991", text: "대한민국 협약 비준", href: `${base}children/04-우리나라의-어린이-권리` },
+  { year: "2016", text: "아동권리헌장 선포", href: `${base}children/04-우리나라의-어린이-권리` },
+];
+
+const four = [
+  { key: "생존권", en: "Survival", icon: "🍚", desc: "살아가는 데 꼭 필요한 것 — 먹을 것, 잠잘 곳, 치료" },
+  { key: "보호권", en: "Protection", icon: "🛡️", desc: "폭력·학대·착취·차별로부터 지켜질 권리" },
+  { key: "발달권", en: "Development", icon: "🌱", desc: "배우고, 놀고, 쉬고, 재능을 키울 권리" },
+  { key: "참여권", en: "Participation", icon: "🗣️", desc: "내 일에 대해 의견을 말하고 존중받을 권리" },
+];
+---
+<BaseLayout title="어린이 권리 자료집 | 방정환 선언에서 유엔 아동권리협약까지">
+  <h1>어린이 권리 자료집</h1>
+  <p style="color:var(--muted);max-width:44rem">1923년 방정환과 소년운동협회가 세계에서 가장 이른 어린이 인권선언 가운데 하나를 발표한 뒤, 제네바 선언과 유엔 아동권리협약을 거쳐 우리 헌법과 법이 어린이의 권리를 어떻게 지키게 되었는지 — 네 권의 자료로 정리했습니다.</p>
+
+  <img src={`${base}illustrations/children-hero.svg`} alt="" style="width:100%;max-width:44rem;display:block;margin:.6rem 0 0;border-radius:14px" />
+
+  <h2 style="font-size:1.35rem;margin-top:1.6rem">한눈에 보는 역사</h2>
+  <ol class="timeline">
+    {timeline.map((t) => (
+      <li><a href={t.href}><b>{t.year}</b><span>{t.text}</span></a></li>
+    ))}
+  </ol>
+
+  <h2 style="font-size:1.35rem;margin-top:1.6rem">유엔 아동권리협약의 4대 기본권</h2>
+  <div class="four">
+    {four.map((f) => (
+      <a class="lift" href={`${base}children/03-유엔-아동권리협약#${f.key}`}>
+        <span class="ic">{f.icon}</span>
+        <strong>{f.key} <small>{f.en}</small></strong>
+        <span class="d">{f.desc}</span>
+      </a>
+    ))}
+  </div>
+
+  <h2 style="font-size:1.35rem;margin-top:1.6rem">자료집 목차</h2>
+  <div style="display:grid;gap:.8rem;margin-top:.8rem">
+    {docs.map((d, i) => (
+      <a class="lift" href={`${base}children/${d.id}`} style="border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.3rem;text-decoration:none;color:var(--fg);display:flex;gap:1rem;align-items:flex-start;background:var(--card)">
+        <span style="font-size:2rem;flex:none">{d.data.icon}</span>
+        <span>
+          <strong style="font-size:1.18rem;display:block">{i + 1}권 · {d.data.title}</strong>
+          <span style="color:var(--muted);font-size:.95rem">{d.data.summary}</span>
+        </span>
+      </a>
+    ))}
+  </div>
+
+  <p style="color:var(--muted);font-size:.9rem;margin-top:1.4rem">
+    함께 보기: <a href={`${base}lessons/14-어린이라서-갖는-권리`}>수업 14 — 어린이라서 갖는 권리</a> ·
+    <a href={`${base}teachers/60-워크시트-어린이의-권리`}>워크시트 — 어린이의 권리</a> ·
+    <a href={`${base}issues/촉법소년`}>쟁점 — 촉법소년</a> ·
+    <a href={`${base}issues/학생인권과-교권`}>쟁점 — 학생인권과 교권</a> ·
+    <a href={`${base}rights/31-교육권`}>제31조 교육을 받을 권리</a>
+  </p>
+
+  <style>
+    .timeline { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .5rem; }
+    .timeline a { display: flex; flex-direction: column; gap: .2rem; border: 1px solid var(--border); border-left: 5px solid var(--accent); border-radius: 10px; padding: .7rem .85rem; text-decoration: none; color: var(--fg); background: var(--card); height: 100%; transition: transform .18s ease, box-shadow .18s ease; }
+    .timeline a:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,.12); }
+    .timeline b { font-size: 1.25rem; color: var(--accent); }
+    .timeline span { font-size: .88rem; line-height: 1.45; }
+    .four { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .7rem; margin-top: .8rem; }
+    .four a { border: 1px solid var(--border); border-radius: 12px; padding: 1rem; text-decoration: none; color: var(--fg); background: var(--card); display: flex; flex-direction: column; gap: .3rem; }
+    .four .ic { font-size: 2rem; }
+    .four strong { font-size: 1.1rem; }
+    .four small { color: var(--muted); font-weight: 500; margin-left: .3rem; }
+    .four .d { color: var(--muted); font-size: .9rem; line-height: 1.5; }
+  </style>
+</BaseLayout>

@@ -126,4 +126,15 @@ const lessons = defineCollection({
   }),
 });
 
-export const collections = { rights, glossary, issues, topics, teachers, films, comics, lessons, sdgs };
+const children = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/children" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    icon: z.string().default("🧒"),
+    order: z.number().int(),
+    relatedRights: z.array(z.number().int()).default([]),
+  }),
+});
+
+export const collections = { rights, glossary, issues, topics, teachers, films, comics, lessons, sdgs, children };
