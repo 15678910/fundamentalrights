@@ -1,7 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MascotScene from "../components/MascotScene.astro";
+import { CATEGORIES } from "../lib/categories";
 const base = import.meta.env.BASE_URL;
+
+const rights = await getCollection("rights");
+const categoryCards = CATEGORIES.map((cat) => ({
+  ...cat,
+  count: rights.filter((r) => r.data.category === cat.key).length,
+})).filter((c) => c.count > 0);
 
 const features = [
   {
@@ -27,32 +35,57 @@ const features = [
   },
 ];
 
-const sections = [
-  { icon: "📜", label: "기본권 목록", desc: "제10조~제39조", href: `${base}rights` },
-  { icon: "🔎", label: "주제 특집", desc: "민주주의·AI·보이텔스바흐", href: `${base}topics` },
-  { icon: "🌍", label: "SDGs 자료집", desc: "지속가능발전 4권", href: `${base}sdgs` },
-  { icon: "🧒", label: "어린이 권리", desc: "방정환 선언부터 유엔 협약까지 4권", href: `${base}children` },
-  { icon: "🧑‍🏫", label: "수업하기", desc: "단계별 진행 수업 15편 (29차시)", href: `${base}lessons` },
-  { icon: "🎲", label: "놀이·퀴즈", desc: "90문항 3단계", href: `${base}quiz` },
-  { icon: "🎨", label: "만화", desc: "네 컷 만화 33편", href: `${base}comics` },
-  { icon: "🎬", label: "영화", desc: "영화로 배우는 기본권", href: `${base}films` },
-  { icon: "📂", label: "교사 자료", desc: "수업안·워크시트 94종", href: `${base}teachers` },
-  { icon: "💬", label: "쟁점", desc: "23가지 현실 논쟁", href: `${base}issues` },
-  { icon: "📖", label: "용어사전", desc: "24개 용어 + 짝맞추기", href: `${base}glossary` },
-  { icon: "🌐", label: "Languages", desc: "이주민을 위한 번역 안내 15개 언어", href: `${base}language` },
+const sectionGroups = [
+  {
+    title: "알아보기",
+    items: [
+      { label: "기본권 목록", desc: "제10조~제39조", href: `${base}rights` },
+      { label: "주제 특집", desc: "민주주의·AI·보이텔스바흐", href: `${base}topics` },
+      { label: "SDGs 자료집", desc: "지속가능발전 4권", href: `${base}sdgs` },
+      { label: "어린이 권리", desc: "방정환 선언부터 유엔 협약까지 4권", href: `${base}children` },
+      { label: "용어사전", desc: "24개 용어 + 짝맞추기", href: `${base}glossary` },
+    ],
+  },
+  {
+    title: "배우고 놀기",
+    items: [
+      { label: "수업하기", desc: "단계별 진행 수업 15편 (29차시)", href: `${base}lessons` },
+      { label: "놀이·퀴즈", desc: "90문항 3단계", href: `${base}quiz` },
+      { label: "만화", desc: "네 컷 만화 33편", href: `${base}comics` },
+      { label: "영화", desc: "영화로 배우는 기본권", href: `${base}films` },
+    ],
+  },
+  {
+    title: "교사·더 보기",
+    items: [
+      { label: "교사 자료", desc: "수업안·워크시트 94종", href: `${base}teachers` },
+      { label: "쟁점", desc: "23가지 현실 논쟁", href: `${base}issues` },
+      { label: "Languages", desc: "이주민을 위한 번역 안내 15개 언어", href: `${base}language` },
+    ],
+  },
 ];
 ---
 <BaseLayout title="기본권 학습터 — 대한민국 헌법으로 배우는 기본권">
-  <section style="text-align:center;padding:.5rem 0 0">
+  <section class="hero">
     <MascotScene />
-    <h1 style="margin:.6rem 0 .4rem;font-size:2rem">우리 헌법이 지켜주는 권리</h1>
-    <p style="color:var(--muted);max-width:34rem;margin:0 auto;font-size:1.05rem">
-      대한민국 헌법 제2장의 기본권을 <b>쉬운 말 · 보통 · 자세히</b> 세 단계로 —
+    <p class="hero-eyebrow">대한민국 헌법 제2장 · 제10조~제39조</p>
+    <h1>우리 헌법이 지켜주는 권리</h1>
+    <p class="hero-lead">
+      기본권을 <b>쉬운 말 · 보통 · 자세히</b> 세 단계로 —
       초등학생부터 누구나 자기 수준에서 읽을 수 있어요.
     </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href={`${base}rights`}>기본권 읽어보기</a>
+      <a class="btn btn-ghost" href={`${base}lessons`}>수업에 쓰기</a>
+    </div>
+    <ul class="hero-trust" aria-label="사이트 특징">
+      <li>무료 · 무광고</li>
+      <li>헌법 원문 함께 보기</li>
+      <li>CC BY-NC-SA 4.0</li>
+    </ul>
   </section>
 
-  <section class="slider" aria-roledescription="carousel" aria-label="주요 소식" style="margin-top:2rem">
+  <section class="slider" aria-roledescription="carousel" aria-label="주요 소식">
     <div class="slider-track" id="slider-track">
       {features.map((f) => (
         <a class="slide" href={f.href}>
@@ -73,19 +106,82 @@ const sections = [
     </div>
   </section>
 
+  <section class="block" aria-labelledby="cat-title">
+    <h2 id="cat-title">기본권 일곱 갈래</h2>
+    <p class="block-lead">헌법이 보장하는 권리를 성격에 따라 묶어 보았어요.</p>
+    <div class="cat-grid">
+      {categoryCards.map((c) => (
+        <a class="cat-card" href={`${base}rights#cat-${c.key}`} style={`--cat:${c.color}`}>
+          <img src={`${base}illustrations/cat-${c.key}.svg`} alt="" width="56" height="56" loading="lazy" />
+          <span class="cat-name">{c.label}</span>
+          <span class="cat-count">{c.count}개 권리</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="browse-title">
+    <h2 id="browse-title">둘러보기</h2>
+    {sectionGroups.map((g) => (
+      <div class="browse-group">
+        <h3>{g.title}</h3>
+        <div class="browse-grid">
+          {g.items.map((s) => (
+            <a class="browse-card" href={s.href}>
+              <strong>{s.label}</strong>
+              <span>{s.desc}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+
   <style>
-    .slider { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    /* 한글 어절 단위 줄바꿈 + 읽기 좋은 행간 */
+    .hero, .slider, .block { word-break: keep-all; overflow-wrap: break-word; }
+
+    .hero { text-align: center; padding: .25rem 0 0; }
+    .hero-eyebrow {
+      margin: .9rem 0 .5rem; font-size: .95rem; font-weight: 700;
+      letter-spacing: .04em; color: var(--brand);
+    }
+    .hero h1 {
+      margin: 0 0 .7rem; font-size: clamp(1.9rem, 5.6vw, 2.75rem);
+      line-height: 1.25; font-weight: 800; letter-spacing: -.02em;
+    }
+    .hero-lead { max-width: 36rem; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; color: var(--muted); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; margin-top: 1.4rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: .6rem 1.5rem; border-radius: 999px;
+      font-weight: 700; font-size: 1.02rem; text-decoration: none;
+      border: 2px solid var(--brand);
+    }
+    .btn-primary { background: var(--brand); color: var(--brand-fg); }
+    .btn-ghost { background: transparent; color: var(--brand); }
+    .btn:hover { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+    :root[data-contrast="high"] .btn { border-color: var(--accent); }
+    :root[data-contrast="high"] .btn-ghost { color: var(--accent); }
+    .hero-trust {
+      list-style: none; margin: 1.3rem 0 0; padding: 0;
+      display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; justify-content: center;
+      font-size: .95rem; color: var(--muted);
+    }
+    .hero-trust li::before { content: "✓"; margin-right: .35rem; color: var(--accent); font-weight: 800; }
+
+    .slider { position: relative; margin-top: 2.5rem; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 30px -18px rgba(15, 23, 42, .35); }
     .slider-track { display: flex; transition: transform .6s ease; }
     .slide { flex: 0 0 100%; position: relative; display: block; text-decoration: none; color: var(--fg); }
     .slide img { width: 100%; display: block; aspect-ratio: 600 / 260; object-fit: cover; }
     .slide-caption {
-      position: absolute; left: 1.2rem; bottom: 1.1rem; max-width: 62%;
-      background: var(--bg); border-radius: 10px; padding: .85rem 1.1rem;
-      box-shadow: 0 3px 14px rgba(0,0,0,.18);
-      display: flex; flex-direction: column; gap: .3rem;
+      position: absolute; left: 1.4rem; bottom: 1.3rem; max-width: 62%;
+      background: var(--bg); border-radius: 14px; padding: 1rem 1.25rem;
+      box-shadow: 0 6px 22px rgba(15, 23, 42, .2);
+      display: flex; flex-direction: column; gap: .35rem;
     }
-    .slide-caption strong { font-size: 1.25rem; }
-    .slide-caption span { font-size: .92rem; line-height: 1.55; }
+    .slide-caption strong { font-size: 1.25rem; line-height: 1.4; }
+    .slide-caption span { font-size: 1rem; line-height: 1.65; }
     .slide-caption em { font-style: normal; color: var(--accent); font-weight: 700; }
     .slider-controls {
       position: absolute; right: 1rem; bottom: 1rem;
@@ -97,13 +193,57 @@ const sections = [
     }
     .slider-dot[aria-current="true"] { background: var(--accent); }
     .slider-pause {
-      width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;
-      background: var(--accent); color: #fff; font-size: .85rem; line-height: 1;
+      width: 34px; height: 34px; border-radius: 50%; border: none; cursor: pointer;
+      background: var(--accent); color: #fff; font-size: .9rem; line-height: 1;
     }
+
+    .block { margin-top: 3.2rem; }
+    .block h2 { margin: 0 0 .35rem; font-size: 1.5rem; line-height: 1.35; letter-spacing: -.01em; }
+    .block-lead { margin: 0 0 1.1rem; color: var(--muted); }
+
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .8rem; }
+    .cat-card {
+      display: flex; flex-direction: column; align-items: flex-start; gap: .25rem;
+      padding: 1rem; border-radius: 16px; text-decoration: none; color: var(--fg);
+      background: var(--card); border: 1px solid var(--border);
+      border-top: 4px solid var(--cat);
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+    .cat-card img { margin-bottom: .4rem; }
+    .cat-name { font-weight: 800; font-size: 1.05rem; line-height: 1.35; }
+    .cat-count { font-size: .92rem; color: var(--muted); }
+    .cat-card:hover { box-shadow: 0 10px 24px -14px rgba(15, 23, 42, .45); transform: translateY(-3px); }
+
+    .browse-group { margin-top: 1.5rem; }
+    .browse-group h3 {
+      margin: 0 0 .6rem; font-size: .95rem; font-weight: 700; letter-spacing: .06em;
+      color: var(--muted); padding-bottom: .4rem; border-bottom: 1px solid var(--border);
+    }
+    .browse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .7rem; }
+    .browse-card {
+      display: flex; flex-direction: column; gap: .2rem; padding: 1rem 1.1rem;
+      border-radius: 14px; text-decoration: none; color: var(--fg);
+      background: var(--bg); border: 1px solid var(--border);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .browse-card strong { font-size: 1.1rem; line-height: 1.4; }
+    .browse-card strong::after { content: " →"; color: var(--accent); }
+    .browse-card span { font-size: .95rem; line-height: 1.55; color: var(--muted); }
+    .browse-card:hover { border-color: var(--accent); box-shadow: 0 8px 20px -14px rgba(15, 23, 42, .5); }
+
     @media (max-width: 640px) {
-      .slide-caption { position: static; max-width: none; border-radius: 0; box-shadow: none; border-top: 1px solid var(--border); }
+      .slider { margin-top: 2rem; border-radius: 14px; }
+      .slide-caption { position: static; max-width: none; border-radius: 0; box-shadow: none; border-top: 1px solid var(--border); padding: .9rem 1rem; }
       .slider-controls { position: static; justify-content: center; padding: .6rem 0 .8rem; background: var(--bg); }
-      .slide-caption strong { font-size: 1.1rem; }
+      .slide-caption strong { font-size: 1.15rem; }
+      .block { margin-top: 2.6rem; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .browse-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .slider-track, .cat-card, .browse-card { transition: none; }
+      .cat-card:hover { transform: none; }
     }
   </style>
 
@@ -112,17 +252,22 @@ const sections = [
       var track = document.getElementById("slider-track");
       var dots = Array.prototype.slice.call(document.querySelectorAll(".slider-dot"));
       var pauseBtn = document.getElementById("slider-pause");
-      var n = dots.length, cur = 0, timer = null, playing = true;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var n = dots.length, cur = 0, timer = null, playing = !reduce;
 
       function show(i) {
         cur = (i + n) % n;
         track.style.transform = "translateX(-" + cur * 100 + "%)";
         dots.forEach(function (d, k) { d.setAttribute("aria-current", k === cur ? "true" : "false"); });
       }
+      function label(isPlaying) {
+        pauseBtn.textContent = isPlaying ? "⏸" : "▶";
+        pauseBtn.setAttribute("aria-label", isPlaying ? "자동 넘김 일시정지" : "자동 넘김 재생");
+      }
       function start() {
         stop();
         timer = setInterval(function () { show(cur + 1); }, 6000);
-        playing = true; pauseBtn.textContent = "⏸"; pauseBtn.setAttribute("aria-label", "자동 넘김 일시정지");
+        playing = true; label(true);
       }
       function stop() { if (timer) { clearInterval(timer); timer = null; } }
 
@@ -130,27 +275,15 @@ const sections = [
         d.addEventListener("click", function () { show(parseInt(d.dataset.slide, 10)); if (playing) start(); });
       });
       pauseBtn.addEventListener("click", function () {
-        if (playing) { stop(); playing = false; pauseBtn.textContent = "▶"; pauseBtn.setAttribute("aria-label", "자동 넘김 재생"); }
+        if (playing) { stop(); playing = false; label(false); }
         else { show(cur + 1); start(); }
       });
       var slider = track.parentElement;
       slider.addEventListener("mouseenter", function () { if (playing) stop(); });
       slider.addEventListener("mouseleave", function () { if (playing) start(); });
 
-      show(0); start();
+      show(0);
+      if (playing) start(); else label(false);
     })();
   </script>
-
-  <section style="margin-top:2.2rem">
-    <h2 style="font-size:1.3rem;margin-bottom:.7rem">둘러보기</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.7rem">
-      {sections.map((s) => (
-        <a class="lift" href={s.href} style="border:1px solid var(--border);border-radius:12px;padding:.9rem;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:.15rem;background:var(--card)">
-          <span style="font-size:1.6rem">{s.icon}</span>
-          <strong style="font-size:1.02rem">{s.label}</strong>
-          <span style="color:var(--muted);font-size:.85rem">{s.desc}</span>
-        </a>
-      ))}
-    </div>
-  </section>
 </BaseLayout>

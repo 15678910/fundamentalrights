@@ -1,7 +1,7 @@
 :root {
   --bg: #ffffff;
   --fg: #1e293b;
-  --muted: #64748b;
+  --muted: #475569;
   --accent: #2563eb;
   --border: #e5e7eb;
   --card: #fafafa;
@@ -26,8 +26,10 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: "Pretendard", system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  font-family: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 main { min-width: 0; }
 a { color: var(--accent); }
