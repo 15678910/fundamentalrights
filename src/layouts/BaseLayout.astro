@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import AccessibilityBar from "../components/AccessibilityBar.astro";
+import LanguagePicker from "../components/LanguagePicker.astro";
 const { title = "우리 헌법 기본권", noindex = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const hasSidebar = Astro.slots.has("sidebar");
@@ -74,7 +75,7 @@ const hasSidebar = Astro.slots.has("sidebar");
         </nav>
         <div class="header-right">
           <a class="header-search" href={`${base}search`}>🔍 검색</a>
-          <a class="header-search header-lang" href={`${base}language`} lang="en" aria-label="Languages · 다른 언어로 보기" title="Languages · 다른 언어로 보기">🌐 <span>Languages</span></a>
+          <LanguagePicker />
           <AccessibilityBar />
         </div>
       </div>
