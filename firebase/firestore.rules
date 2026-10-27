@@ -13,12 +13,17 @@ service cloud.firestore {
     // 공개 현황: 누구나 읽고, 새로 한 번 쓸 수만 있다. 고치거나 지울 수 없다(운영자는 콘솔에서 지운다).
     match /participants/{id} {
       allow read: if true;
-      allow create: if request.resource.data.keys().hasOnly(['field', 'nickname', 'avatar', 'createdAt'])
+      allow create: if request.resource.data.keys().hasOnly(['field', 'nickname', 'avatar', 'photo', 'createdAt'])
         && request.resource.data.keys().hasAll(['field', 'nickname', 'avatar', 'createdAt'])
         && validField(request.resource.data.field)
         && request.resource.data.nickname is string
         && request.resource.data.nickname.size() <= 12
         && validAvatar(request.resource.data.avatar)
+        // 내 그림(작은 JPEG): 공개 동의로 닉네임이 있을 때만 올릴 수 있다.
+        && (!('photo' in request.resource.data) || (request.resource.data.photo is string
+          && request.resource.data.photo.size() <= 14000
+          && request.resource.data.photo.matches('^data:image/jpeg;base64,[A-Za-z0-9+/=]+$')
+          && request.resource.data.nickname.size() > 0))
         && request.resource.data.createdAt == request.time;
       allow update, delete: if false;
     }

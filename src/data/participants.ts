@@ -47,3 +47,16 @@ export const avatars: { icon: string; name: string }[] = [
   { icon: "🌼", name: "데이지" },
   { icon: "🌺", name: "히비스커스" },
 ];
+
+// 스팸 방어(Firebase App Check + reCAPTCHA v3). 사이트 키는 공개용이다. 비워 두면 사용하지 않는다.
+export const appCheck = {
+  appId: "1:447116632174:web:0a599b62376d5d973b467f",
+  siteKey: "",
+};
+
+// 신청 알림 메일(EmailJS 무료). 세 값은 모두 공개용 식별자다. 하나라도 비어 있으면 보내지 않는다.
+export const emailjs = {
+  serviceId: "",
+  templateId: "",
+  publicKey: "",
+};
