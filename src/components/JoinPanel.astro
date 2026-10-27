@@ -1,0 +1,195 @@
+---
+import { firebase, fields, avatars } from "../data/participants";
+const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) });
+---
+<section class="join" aria-labelledby="join-h" data-join={config}>
+  <h3 id="join-h">참여 신청</h3>
+  <p class="join-total" aria-live="polite">참여 현황을 불러오는 중입니다…</p>
+  <ul class="join-fields">
+    {fields.map((f) => (
+      <li data-field={f.key}>
+        <span class="join-label">{f.label}</span>
+        <span class="join-count"><b>-</b>명</span>
+        <ul class="join-names" aria-label={`${f.label} 참여자`}></ul>
+      </li>
+    ))}
+  </ul>
+
+  <form class="join-form" novalidate>
+    <fieldset>
+      <legend>1. 참여 분야</legend>
+      {fields.map((f, i) => (
+        <label class="join-choice"><input type="radio" name="field" value={f.key} checked={i === 0} /> {f.label}</label>
+      ))}
+    </fieldset>
+    <fieldset>
+      <legend>2. 나를 나타낼 그림 (동물·식물)</legend>
+      <div class="join-avatars">
+        {avatars.map((a, i) => (
+          <label class="join-avatar" title={a.name}>
+            <input type="radio" name="avatar" value={a.icon} checked={i === 0} />
+            <span aria-hidden="true">{a.icon}</span>
+            <span class="sr-only">{a.name}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+    <p>
+      <label for="join-nick">3. 닉네임 (12자까지)</label><br />
+      <input id="join-nick" name="nickname" type="text" maxlength="12" autocomplete="off" />
+    </p>
+    <p>
+      <label for="join-contact">4. 연락처 (이메일 또는 전화번호, 감수 연락에만 씁니다)</label><br />
+      <input id="join-contact" name="contact" type="text" maxlength="100" autocomplete="email" />
+    </p>
+    <p class="join-hp" aria-hidden="true"><label>비워 두세요 <input name="website" type="text" tabindex="-1" autocomplete="off" /></label></p>
+    <label class="join-choice"><input type="checkbox" name="consent" /> 닉네임과 그림을 이 페이지에 공개하는 데 동의합니다. (선택 · 동의하지 않으면 인원 수에만 반영됩니다)</label>
+    <label class="join-choice"><input type="checkbox" name="privacy" /> 연락처 수집·이용에 동의합니다. (필수 · 감수 연락 목적, 삭제를 원하면 언제든 요청 가능)</label>
+    <p><button type="submit" class="join-btn">참여 신청하기</button></p>
+    <p class="join-msg" role="status" aria-live="polite"></p>
+  </form>
+  <p class="join-note">연락처는 운영자만 볼 수 있고 화면에 나오지 않습니다. 닉네임은 공개에 동의한 분만 표시됩니다. 부적절한 닉네임은 운영자가 삭제할 수 있습니다. 삭제·수정을 원하시면 fundamentalrights2026@gmail.com 으로 알려 주세요.</p>
+</section>
+
+<script>
+  const root = document.querySelector<HTMLElement>("[data-join]");
+  if (root) {
+    const cfg = JSON.parse(root.dataset.join || "{}") as { projectId: string; apiKey: string; fields: string[] };
+    const base = `https://firestore.googleapis.com/v1/projects/${cfg.projectId}/databases/(default)/documents`;
+    const key = `?key=${cfg.apiKey}`;
+    const totalEl = root.querySelector<HTMLElement>(".join-total")!;
+    const form = root.querySelector<HTMLFormElement>(".join-form")!;
+    const msg = root.querySelector<HTMLElement>(".join-msg")!;
+    const openedAt = Date.now();
+    let lastTotal = -1;
+
+    const post = (path: string, body: unknown) =>
+      fetch(`${base}${path}${key}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+
+    async function loadCounts(): Promise<number | null> {
+      try {
+        const res = await Promise.all(cfg.fields.map((f) =>
+          post(":runAggregationQuery", {
+            structuredAggregationQuery: {
+              structuredQuery: {
+                from: [{ collectionId: "participants" }],
+                where: { fieldFilter: { field: { fieldPath: "field" }, op: "EQUAL", value: { stringValue: f } } },
+              },
+              aggregations: [{ alias: "n", count: {} }],
+            },
+          }).then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+        ));
+        let total = 0;
+        cfg.fields.forEach((f, i) => {
+          const n = Number(res[i]?.[0]?.result?.aggregateFields?.n?.integerValue ?? 0);
+          total += n;
+          const b = root!.querySelector(`[data-field="${f}"] .join-count b`);
+          if (b) b.textContent = String(n);
+        });
+        totalEl.textContent = total === 0 ? "첫 참여자를 기다립니다." : `지금까지 ${total}명이 함께하고 있습니다.`;
+        return total;
+      } catch {
+        totalEl.textContent = "참여 현황을 지금은 불러오지 못했습니다.";
+        return null;
+      }
+    }
+
+    async function loadNames() {
+      try {
+        const r = await post(":runQuery", {
+          structuredQuery: { from: [{ collectionId: "participants" }], orderBy: [{ field: { fieldPath: "createdAt" }, direction: "DESCENDING" }], limit: 80 },
+        });
+        if (!r.ok) return;
+        const rows = (await r.json()) as { document?: { fields: Record<string, { stringValue: string }> } }[];
+        const byField: Record<string, string[]> = {};
+        for (const row of rows) {
+          const d = row.document?.fields;
+          if (!d || !d.nickname?.stringValue) continue;
+          (byField[d.field.stringValue] ||= []).push(`${d.avatar?.stringValue ?? ""} ${d.nickname.stringValue}`.trim());
+        }
+        for (const f of cfg.fields) {
+          const ul = root!.querySelector<HTMLElement>(`[data-field="${f}"] .join-names`);
+          if (!ul) continue;
+          ul.replaceChildren(...(byField[f] || []).map((t) => { const li = document.createElement("li"); li.textContent = t; return li; }));
+        }
+      } catch { /* 닉네임 목록은 없어도 신청에는 지장이 없다 */ }
+    }
+
+    async function refresh() {
+      const total = await loadCounts();
+      if (total !== null && total !== lastTotal) { lastTotal = total; await loadNames(); }
+    }
+    refresh();
+    setInterval(() => { if (!document.hidden) refresh(); }, 20000);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });
+
+    const newId = () => Array.from(crypto.getRandomValues(new Uint8Array(10)), (b) => b.toString(16).padStart(2, "0")).join("");
+    const str = (v: string) => ({ stringValue: v });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const contact = String(fd.get("contact") || "").trim();
+      const nickname = String(fd.get("nickname") || "").trim();
+      const consent = fd.get("consent") === "on";
+      if (fd.get("website")) return; // 봇 거름
+      if (contact.length < 5) { msg.textContent = "연락처를 5자 이상 적어 주세요."; return; }
+      if (fd.get("privacy") !== "on") { msg.textContent = "연락처 수집·이용에 동의해 주세요."; return; }
+      if (consent && !nickname) { msg.textContent = "공개에 동의하셨다면 닉네임을 적어 주세요."; return; }
+      if (Date.now() - openedAt < 3000) { msg.textContent = "잠시 뒤에 다시 눌러 주세요."; return; }
+      try { if (localStorage.getItem("join-sent")) { msg.textContent = "이미 신청하셨습니다. 감사합니다."; return; } } catch { /* 저장소를 못 써도 진행 */ }
+
+      const field = String(fd.get("field"));
+      const avatar = String(fd.get("avatar"));
+      const btn = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
+      btn.disabled = true;
+      msg.textContent = "보내는 중입니다…";
+      const name = (col: string) => `projects/${cfg.projectId}/databases/(default)/documents/${col}/${newId()}`;
+      const stamp = [{ fieldPath: "createdAt", setToServerValue: "REQUEST_TIME" }];
+      try {
+        const r = await post(":commit", {
+          writes: [
+            { update: { name: name("participants"), fields: { field: str(field), nickname: str(consent ? nickname : ""), avatar: str(avatar) } }, currentDocument: { exists: false }, updateTransforms: stamp },
+            { update: { name: name("applications"), fields: { field: str(field), nickname: str(nickname), avatar: str(avatar), consent: { booleanValue: consent }, contact: str(contact) } }, currentDocument: { exists: false }, updateTransforms: stamp },
+          ],
+        });
+        if (!r.ok) throw new Error(String(r.status));
+        try { localStorage.setItem("join-sent", "1"); } catch { /* 무시 */ }
+        form.reset();
+        msg.textContent = "신청되었습니다. 감사합니다! 위 현황에 곧 반영됩니다.";
+        btn.disabled = false;
+        lastTotal = -1;
+        refresh();
+      } catch {
+        btn.disabled = false;
+        msg.textContent = "지금은 신청을 보내지 못했습니다. fundamentalrights2026@gmail.com 으로 보내 주세요.";
+      }
+    });
+  }
+</script>
+
+<style>
+  .join { margin: 1.6rem 0; padding: 1.2rem 1.4rem; border: 1px solid var(--muted); border-radius: 12px; }
+  .join h3 { margin-top: 0; }
+  .join-total { font-weight: 700; }
+  .join-fields { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: .8rem; }
+  .join-fields > li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1rem; }
+  .join-label { font-weight: 700; }
+  .join-names { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; flex-basis: 100%; }
+  .join-names li { padding: .2rem .7rem; border: 1px solid var(--muted); border-radius: 999px; }
+  .join-form fieldset { border: 1px solid var(--border); border-radius: 8px; margin: 0 0 1rem; padding: .6rem .9rem; min-width: 0; }
+  .join-choice { display: flex; align-items: center; gap: .5rem; min-height: 48px; }
+  .join-choice input { width: 24px; height: 24px; flex: none; }
+  .join-avatars { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .join-avatar { position: relative; display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border: 2px solid var(--border); border-radius: 12px; font-size: 1.6rem; cursor: pointer; }
+  .join-avatar input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+  .join-avatar:has(input:checked) { border-color: var(--accent); background: var(--card); }
+  .join-avatar:has(input:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .join-form input[type="text"] { width: 100%; max-width: 28rem; min-height: 48px; padding: 0 .7rem; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--muted); border-radius: 8px; box-sizing: border-box; }
+  .join-hp { position: absolute; left: -9999px; }
+  .join-btn { min-height: 48px; padding: 0 1.4rem; font: inherit; font-weight: 700; color: var(--brand-fg); background: var(--brand); border: 2px solid var(--brand); border-radius: 8px; cursor: pointer; }
+  .join-btn:disabled { opacity: .6; cursor: default; }
+  .join-msg { min-height: 1.5em; font-weight: 700; }
+  .join-note { color: var(--muted); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

@@ -1,0 +1,46 @@
+rules_version = '2';
+// fundamentalrights.kr 참여 신청 전용 프로젝트. 다른 사이트와 데이터를 섞지 않는다.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function validField(f) {
+      return f in ['legal', 'teacher', 'researcher'];
+    }
+    function validAvatar(a) {
+      return a in ['🐻','🦊','🐰','🐧','🦉','🐢','🐬','🦋','🌻','🌳','🌸','🍀','🌵','🍄'];
+    }
+
+    // 공개 현황: 누구나 읽고, 새로 한 번 쓸 수만 있다. 고치거나 지울 수 없다(운영자는 콘솔에서 지운다).
+    match /participants/{id} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['field', 'nickname', 'avatar', 'createdAt'])
+        && request.resource.data.keys().hasAll(['field', 'nickname', 'avatar', 'createdAt'])
+        && validField(request.resource.data.field)
+        && request.resource.data.nickname is string
+        && request.resource.data.nickname.size() <= 12
+        && validAvatar(request.resource.data.avatar)
+        && request.resource.data.createdAt == request.time;
+      allow update, delete: if false;
+    }
+
+    // 비공개 신청서(연락처 포함): 누구도 읽을 수 없고, 쓰기만 된다. 운영자는 콘솔에서 본다.
+    match /applications/{id} {
+      allow read: if false;
+      allow create: if request.resource.data.keys().hasOnly(['field', 'nickname', 'avatar', 'consent', 'contact', 'createdAt'])
+        && request.resource.data.keys().hasAll(['field', 'avatar', 'consent', 'contact', 'createdAt'])
+        && validField(request.resource.data.field)
+        && validAvatar(request.resource.data.avatar)
+        && request.resource.data.consent is bool
+        && request.resource.data.contact is string
+        && request.resource.data.contact.size() >= 5
+        && request.resource.data.contact.size() <= 100
+        && (!('nickname' in request.resource.data) || (request.resource.data.nickname is string && request.resource.data.nickname.size() <= 12))
+        && request.resource.data.createdAt == request.time;
+      allow update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
