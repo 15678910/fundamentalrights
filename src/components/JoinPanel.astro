@@ -3,8 +3,10 @@ import { firebase, fields, avatars } from "../data/participants";
 const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) });
 ---
 <section class="join" aria-labelledby="join-h" data-join={config}>
-  <h3 id="join-h">참여 신청</h3>
-  <p class="join-total" aria-live="polite">참여 현황을 불러오는 중입니다…</p>
+  <div class="join-head">
+    <h3 id="join-h">참여 신청</h3>
+    <p class="join-total" aria-live="polite">참여 현황을 불러오는 중입니다…</p>
+  </div>
   <ul class="join-fields">
     {fields.map((f) => (
       <li data-field={f.key}>
@@ -16,39 +18,45 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
   </ul>
 
   <form class="join-form" novalidate>
-    <fieldset>
-      <legend>1. 참여 분야</legend>
-      {fields.map((f, i) => (
-        <label class="join-choice"><input type="radio" name="field" value={f.key} checked={i === 0} /> {f.label}</label>
-      ))}
-    </fieldset>
-    <fieldset>
-      <legend>2. 나를 나타낼 그림 (동물·식물)</legend>
-      <div class="join-avatars">
-        {avatars.map((a, i) => (
-          <label class="join-avatar" title={a.name}>
-            <input type="radio" name="avatar" value={a.icon} checked={i === 0} />
-            <span aria-hidden="true">{a.icon}</span>
-            <span class="sr-only">{a.name}</span>
-          </label>
+    <div class="join-grid">
+      <fieldset>
+        <legend>1. 참여 분야</legend>
+        {fields.map((f, i) => (
+          <label class="join-choice"><input type="radio" name="field" value={f.key} checked={i === 0} /> {f.label}</label>
         ))}
+      </fieldset>
+      <div>
+        <details class="join-pick">
+          <summary>2. 나를 나타낼 그림: <span class="join-picked" aria-hidden="true">{avatars[0].icon}</span> <small>(눌러서 고르기)</small></summary>
+          <div class="join-avatars">
+            {avatars.map((a, i) => (
+              <label class="join-avatar" title={a.name}>
+                <input type="radio" name="avatar" value={a.icon} checked={i === 0} />
+                <span aria-hidden="true">{a.icon}</span>
+                <span class="sr-only">{a.name}</span>
+              </label>
+            ))}
+          </div>
+        </details>
+        <p class="join-row">
+          <label for="join-nick">3. 닉네임 (12자까지)</label>
+          <input id="join-nick" name="nickname" type="text" maxlength="12" autocomplete="off" />
+        </p>
+        <p class="join-row">
+          <label for="join-contact">4. 연락처 (이메일·전화, 감수 연락용)</label>
+          <input id="join-contact" name="contact" type="text" maxlength="100" autocomplete="email" />
+        </p>
       </div>
-    </fieldset>
-    <p>
-      <label for="join-nick">3. 닉네임 (12자까지)</label><br />
-      <input id="join-nick" name="nickname" type="text" maxlength="12" autocomplete="off" />
-    </p>
-    <p>
-      <label for="join-contact">4. 연락처 (이메일 또는 전화번호, 감수 연락에만 씁니다)</label><br />
-      <input id="join-contact" name="contact" type="text" maxlength="100" autocomplete="email" />
-    </p>
+    </div>
     <p class="join-hp" aria-hidden="true"><label>비워 두세요 <input name="website" type="text" tabindex="-1" autocomplete="off" /></label></p>
-    <label class="join-choice"><input type="checkbox" name="consent" /> 닉네임과 그림을 이 페이지에 공개하는 데 동의합니다. (선택 · 동의하지 않으면 인원 수에만 반영됩니다)</label>
-    <label class="join-choice"><input type="checkbox" name="privacy" /> 연락처 수집·이용에 동의합니다. (필수 · 감수 연락 목적, 삭제를 원하면 언제든 요청 가능)</label>
-    <p><button type="submit" class="join-btn">참여 신청하기</button></p>
-    <p class="join-msg" role="status" aria-live="polite"></p>
+    <label class="join-choice"><input type="checkbox" name="consent" /> 닉네임과 그림을 이 페이지에 공개하는 데 동의합니다. (선택)</label>
+    <label class="join-choice"><input type="checkbox" name="privacy" /> 연락처 수집·이용에 동의합니다. (필수 · 감수 연락 목적)</label>
+    <div class="join-send">
+      <button type="submit" class="join-btn">참여 신청하기</button>
+      <span class="join-msg" role="status" aria-live="polite"></span>
+    </div>
   </form>
-  <p class="join-note">연락처는 운영자만 볼 수 있고 화면에 나오지 않습니다. 닉네임은 공개에 동의한 분만 표시됩니다. 부적절한 닉네임은 운영자가 삭제할 수 있습니다. 삭제·수정을 원하시면 fundamentalrights2026@gmail.com 으로 알려 주세요.</p>
+  <p class="join-note">연락처는 운영자만 볼 수 있고 화면에 나오지 않습니다. 공개에 동의하지 않으면 인원 수에만 반영됩니다. 삭제·수정은 fundamentalrights2026@gmail.com 으로 알려 주세요.</p>
 </section>
 
 <script>
@@ -60,8 +68,16 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
     const totalEl = root.querySelector<HTMLElement>(".join-total")!;
     const form = root.querySelector<HTMLFormElement>(".join-form")!;
     const msg = root.querySelector<HTMLElement>(".join-msg")!;
+    const pick = root.querySelector<HTMLDetailsElement>(".join-pick")!;
+    const picked = root.querySelector<HTMLElement>(".join-picked")!;
     const openedAt = Date.now();
     let lastTotal = -1;
+
+    // 그림을 고르면 접고, 고른 그림을 제목줄에 보여 준다.
+    pick.addEventListener("change", (e) => {
+      const t = e.target as HTMLInputElement;
+      if (t.name === "avatar") { picked.textContent = t.value; pick.open = false; }
+    });
 
     const post = (path: string, body: unknown) =>
       fetch(`${base}${path}${key}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
@@ -156,7 +172,8 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
         if (!r.ok) throw new Error(String(r.status));
         try { localStorage.setItem("join-sent", "1"); } catch { /* 무시 */ }
         form.reset();
-        msg.textContent = "신청되었습니다. 감사합니다! 위 현황에 곧 반영됩니다.";
+        picked.textContent = (form.querySelector<HTMLInputElement>("input[name=avatar]:checked"))?.value ?? "";
+        msg.textContent = "신청되었습니다. 감사합니다!";
         btn.disabled = false;
         lastTotal = -1;
         refresh();
@@ -169,27 +186,35 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
 </script>
 
 <style>
-  .join { margin: 1.6rem 0; padding: 1.2rem 1.4rem; border: 1px solid var(--muted); border-radius: 12px; }
-  .join h3 { margin-top: 0; }
-  .join-total { font-weight: 700; }
-  .join-fields { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: .8rem; }
-  .join-fields > li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1rem; }
+  .join { margin: 1.2rem 0; padding: .9rem 1.2rem; border: 1px solid var(--muted); border-radius: 12px; }
+  .join-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 1rem; }
+  .join h3 { margin: 0 0 .3rem; }
+  .join-total { margin: 0 0 .3rem; font-weight: 700; }
+  .join-fields { list-style: none; padding: 0; margin: .3rem 0 .8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .3rem 1rem; }
+  .join-fields > li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .7rem; }
   .join-label { font-weight: 700; }
-  .join-names { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; flex-basis: 100%; }
-  .join-names li { padding: .2rem .7rem; border: 1px solid var(--muted); border-radius: 999px; }
-  .join-form fieldset { border: 1px solid var(--border); border-radius: 8px; margin: 0 0 1rem; padding: .6rem .9rem; min-width: 0; }
+  .join-names { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .3rem; flex-basis: 100%; }
+  .join-names:empty { display: none; }
+  .join-names li { padding: .1rem .6rem; border: 1px solid var(--muted); border-radius: 999px; }
+  .join-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem 1.4rem; align-items: start; }
+  .join-form fieldset { border: 1px solid var(--border); border-radius: 8px; margin: 0; padding: .2rem .8rem .3rem; min-width: 0; }
   .join-choice { display: flex; align-items: center; gap: .5rem; min-height: 48px; }
   .join-choice input { width: 24px; height: 24px; flex: none; }
-  .join-avatars { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .join-pick summary { display: flex; align-items: center; flex-wrap: wrap; gap: .3rem; min-height: 48px; cursor: pointer; }
+  .join-picked { font-size: 1.6rem; }
+  .join-avatars { display: flex; flex-wrap: wrap; gap: .3rem; padding: .3rem 0 .6rem; }
   .join-avatar { position: relative; display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border: 2px solid var(--border); border-radius: 12px; font-size: 1.6rem; cursor: pointer; }
   .join-avatar input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
   .join-avatar:has(input:checked) { border-color: var(--accent); background: var(--card); }
   .join-avatar:has(input:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; }
-  .join-form input[type="text"] { width: 100%; max-width: 28rem; min-height: 48px; padding: 0 .7rem; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--muted); border-radius: 8px; box-sizing: border-box; }
+  .join-row { margin: 0 0 .4rem; display: grid; gap: .1rem; }
+  .join-form input[type="text"] { width: 100%; min-height: 48px; padding: 0 .7rem; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--muted); border-radius: 8px; box-sizing: border-box; }
   .join-hp { position: absolute; left: -9999px; }
+  .join-send { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1rem; }
   .join-btn { min-height: 48px; padding: 0 1.4rem; font: inherit; font-weight: 700; color: var(--brand-fg); background: var(--brand); border: 2px solid var(--brand); border-radius: 8px; cursor: pointer; }
   .join-btn:disabled { opacity: .6; cursor: default; }
-  .join-msg { min-height: 1.5em; font-weight: 700; }
-  .join-note { color: var(--muted); }
+  .join-msg { font-weight: 700; }
+  .join-note { margin: .6rem 0 0; color: var(--muted); }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 700px) { .join-grid { grid-template-columns: 1fr; } }
 </style>
