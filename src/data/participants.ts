@@ -54,9 +54,8 @@ export const appCheck = {
   siteKey: "",
 };
 
-// 신청 알림 메일(EmailJS 무료). 세 값은 모두 공개용 식별자다. 하나라도 비어 있으면 보내지 않는다.
-export const emailjs = {
-  serviceId: "",
-  templateId: "",
-  publicKey: "",
+// 신청 알림(텔레그램). Google Apps Script 웹 앱 주소(공개 주소)를 넣는다. 비워 두면 보내지 않는다.
+// 봇 토큰은 Apps Script 안에만 두고 이 저장소에는 넣지 않는다. 코드: docs/telegram-notify.gs
+export const notify = {
+  url: "",
 };

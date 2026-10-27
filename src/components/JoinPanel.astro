@@ -1,8 +1,8 @@
 ---
-import { firebase, fields, avatars, appCheck, emailjs } from "../data/participants";
+import { firebase, fields, avatars, appCheck, notify } from "../data/participants";
 const labels = Object.fromEntries(fields.map((f) => [f.key, f.label]));
-const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key), labels, appCheck, emailjs });
-const mailOn = Boolean(emailjs.serviceId && emailjs.templateId && emailjs.publicKey);
+const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key), labels, appCheck, notify: notify.url });
+const notifyOn = Boolean(notify.url);
 const guardOn = Boolean(appCheck.siteKey);
 ---
 <section class="join" aria-labelledby="join-h" data-join={config}>
@@ -53,7 +53,7 @@ const guardOn = Boolean(appCheck.siteKey);
     </div>
     <p class="join-hp" aria-hidden="true"><label>비워 두세요 <input name="website" type="text" tabindex="-1" autocomplete="off" /></label></p>
     <label class="join-choice"><input type="checkbox" name="consent" /> 닉네임과 그림을 이 페이지에 공개하는 데 동의합니다. (선택)</label>
-    <label class="join-choice"><input type="checkbox" name="privacy" /> 연락처 수집·이용에 동의합니다. (필수 · 감수 연락 목적){mailOn && " 신청 알림은 메일 서비스(EmailJS)를 거쳐 운영자에게 전달됩니다."}</label>
+    <label class="join-choice"><input type="checkbox" name="privacy" /> 연락처 수집·이용에 동의합니다. (필수 · 감수 연락 목적){notifyOn && " 신청 알림은 Google Apps Script와 텔레그램을 거쳐 운영자에게만 전달됩니다."}</label>
     <div class="join-send">
       <button type="submit" class="join-btn">참여 신청하기</button>
       <span class="join-msg" role="status" aria-live="polite"></span>
@@ -67,7 +67,7 @@ const guardOn = Boolean(appCheck.siteKey);
   if (root) {
     const cfg = JSON.parse(root.dataset.join || "{}") as {
       projectId: string; apiKey: string; fields: string[]; labels: Record<string, string>;
-      appCheck: { appId: string; siteKey: string }; emailjs: { serviceId: string; templateId: string; publicKey: string };
+      appCheck: { appId: string; siteKey: string }; notify: string;
     };
     const base = `https://firestore.googleapis.com/v1/projects/${cfg.projectId}/databases/(default)/documents`;
     const key = `?key=${cfg.apiKey}`;
@@ -180,16 +180,12 @@ const guardOn = Boolean(appCheck.siteKey);
     const newId = () => Array.from(crypto.getRandomValues(new Uint8Array(10)), (b) => b.toString(16).padStart(2, "0")).join("");
     const str = (v: string) => ({ stringValue: v });
 
-    // 신청 알림 메일(EmailJS). 실패해도 신청 자체에는 영향이 없다.
+    // 신청 알림(텔레그램). 중계 주소가 없으면 보내지 않고, 실패해도 신청 자체에는 영향이 없다.
     function notifyOperator(field: string, nickname: string, consent: boolean, avatar: string, contact: string) {
-      const m = cfg.emailjs;
-      if (!m.serviceId || !m.templateId || !m.publicKey) return;
-      fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST", headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          service_id: m.serviceId, template_id: m.templateId, user_id: m.publicKey,
-          template_params: { field: cfg.labels[field] ?? field, nickname: nickname || "(없음)", avatar, consent: consent ? "공개 동의" : "공개 안 함", contact },
-        }),
+      if (!cfg.notify) return;
+      fetch(cfg.notify, {
+        method: "POST", mode: "no-cors", headers: { "content-type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ field: cfg.labels[field] ?? field, nickname: nickname || "(없음)", avatar, consent: consent ? "공개 동의" : "공개 안 함", contact }),
       }).catch(() => {});
     }
 
