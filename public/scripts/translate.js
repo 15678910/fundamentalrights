@@ -7,9 +7,17 @@
     var m = document.cookie.match(/(?:^|;\s*)googtrans=\/ko\/([^;]+)/);
     return m && /^[A-Za-z-]{2,8}$/.test(m[1]) ? m[1] : "";
   }
+  // 구글 위젯도 같은 쿠키를 도메인 지정 방식(.호스트)으로 따로 저장하므로
+  // 바꾸거나 지울 때는 세 가지 변형을 모두 같은 값으로 처리해야 한다.
   function setCookie(value) {
     var exp = value ? "" : "expires=Thu, 01 Jan 1970 00:00:00 GMT;";
-    document.cookie = COOKIE + "=" + value + ";path=/;SameSite=Lax;" + exp;
+    var base = COOKIE + "=" + value + ";path=/;SameSite=Lax;" + exp;
+    document.cookie = base;
+    var host = location.hostname;
+    if (host.indexOf(".") > -1 && !/^[0-9.]+$/.test(host)) {
+      document.cookie = base + "domain=" + host + ";";
+      document.cookie = base + "domain=." + host + ";";
+    }
   }
   var current = getLang();
   var items = document.querySelectorAll(".lang-item");
