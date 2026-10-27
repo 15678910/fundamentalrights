@@ -47,3 +47,15 @@ export const avatars: { icon: string; name: string }[] = [
   { icon: "🌼", name: "데이지" },
   { icon: "🌺", name: "히비스커스" },
 ];
+
+// 스팸 방어(Firebase App Check + reCAPTCHA v3). 사이트 키는 공개용이다. 비워 두면 사용하지 않는다.
+export const appCheck = {
+  appId: "1:447116632174:web:0a599b62376d5d973b467f",
+  siteKey: "",
+};
+
+// 신청 알림(텔레그램). Google Apps Script 웹 앱 주소(공개 주소)를 넣는다. 비워 두면 보내지 않는다.
+// 봇 토큰은 Apps Script 안에만 두고 이 저장소에는 넣지 않는다. 코드: docs/telegram-notify.gs
+export const notify = {
+  url: "https://script.google.com/macros/s/AKfycbyzSa8X0rZOBrUVd2v4zNg29YpobMcK88_M4YSh-O3JI-SG_bOpKh23FXWyANUNVJgo/exec",
+};

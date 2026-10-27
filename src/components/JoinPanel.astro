@@ -1,6 +1,9 @@
 ---
-import { firebase, fields, avatars } from "../data/participants";
-const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) });
+import { firebase, fields, avatars, appCheck, notify } from "../data/participants";
+const labels = Object.fromEntries(fields.map((f) => [f.key, f.label]));
+const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key), labels, appCheck, notify: notify.url });
+const notifyOn = Boolean(notify.url);
+const guardOn = Boolean(appCheck.siteKey);
 ---
 <section class="join" aria-labelledby="join-h" data-join={config}>
   <div class="join-head">
@@ -50,19 +53,22 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
     </div>
     <p class="join-hp" aria-hidden="true"><label>비워 두세요 <input name="website" type="text" tabindex="-1" autocomplete="off" /></label></p>
     <label class="join-choice"><input type="checkbox" name="consent" /> 닉네임과 그림을 이 페이지에 공개하는 데 동의합니다. (선택)</label>
-    <label class="join-choice"><input type="checkbox" name="privacy" /> 연락처 수집·이용에 동의합니다. (필수 · 감수 연락 목적)</label>
+    <label class="join-choice"><input type="checkbox" name="privacy" /> 연락처 수집·이용에 동의합니다. (필수 · 감수 연락 목적){notifyOn && " 신청 알림은 Google Apps Script와 텔레그램을 거쳐 운영자에게만 전달됩니다."}</label>
     <div class="join-send">
       <button type="submit" class="join-btn">참여 신청하기</button>
       <span class="join-msg" role="status" aria-live="polite"></span>
     </div>
   </form>
-  <p class="join-note">연락처는 운영자만 볼 수 있고 화면에 나오지 않습니다. 공개에 동의하지 않으면 인원 수에만 반영됩니다. 삭제·수정은 fundamentalrights2026@gmail.com 으로 알려 주세요.</p>
+  <p class="join-note">연락처는 운영자만 볼 수 있고 화면에 나오지 않습니다. 공개에 동의하지 않으면 인원 수에만 반영됩니다. 삭제·수정은 fundamentalrights2026@gmail.com 으로 알려 주세요.{guardOn && " 이 양식은 reCAPTCHA로 보호되며 Google의 개인정보처리방침과 서비스 약관이 적용됩니다."}</p>
 </section>
 
 <script>
   const root = document.querySelector<HTMLElement>("[data-join]");
   if (root) {
-    const cfg = JSON.parse(root.dataset.join || "{}") as { projectId: string; apiKey: string; fields: string[] };
+    const cfg = JSON.parse(root.dataset.join || "{}") as {
+      projectId: string; apiKey: string; fields: string[]; labels: Record<string, string>;
+      appCheck: { appId: string; siteKey: string }; notify: string;
+    };
     const base = `https://firestore.googleapis.com/v1/projects/${cfg.projectId}/databases/(default)/documents`;
     const key = `?key=${cfg.apiKey}`;
     const totalEl = root.querySelector<HTMLElement>(".join-total")!;
@@ -79,8 +85,40 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
       if (t.name === "avatar") { picked.textContent = t.value; pick.open = false; }
     });
 
-    const post = (path: string, body: unknown) =>
-      fetch(`${base}${path}${key}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+    // 스팸 방어: reCAPTCHA v3 → App Check 토큰. 사이트 키가 없으면 쓰지 않는다.
+    let guard: { token: string; until: number } | null = null;
+    let recaptchaLoading: Promise<void> | null = null;
+    const loadRecaptcha = () => (recaptchaLoading ||= new Promise<void>((ok, fail) => {
+      const el = document.createElement("script");
+      el.src = `https://www.google.com/recaptcha/api.js?render=${cfg.appCheck.siteKey}`;
+      el.onload = () => ok();
+      el.onerror = () => fail(new Error("recaptcha"));
+      document.head.appendChild(el);
+    }));
+    async function guardToken(): Promise<string | null> {
+      if (!cfg.appCheck.siteKey) return null;
+      if (guard && guard.until > Date.now()) return guard.token;
+      try {
+        await loadRecaptcha();
+        const g = (window as any).grecaptcha;
+        await new Promise<void>((ok) => g.ready(() => ok()));
+        const rc = await g.execute(cfg.appCheck.siteKey, { action: "firestore" });
+        const r = await fetch(`https://firebaseappcheck.googleapis.com/v1/projects/${cfg.projectId}/apps/${cfg.appCheck.appId}:exchangeRecaptchaV3Token${key}`, {
+          method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ recaptcha_v3_token: rc }),
+        });
+        if (!r.ok) return null;
+        const j = (await r.json()) as { token: string; ttl: string };
+        guard = { token: j.token, until: Date.now() + Math.max(60, parseInt(j.ttl, 10) - 60) * 1000 };
+        return j.token;
+      } catch { return null; }
+    }
+
+    const post = async (path: string, body: unknown) => {
+      const headers: Record<string, string> = { "content-type": "application/json" };
+      const t = await guardToken();
+      if (t) headers["X-Firebase-AppCheck"] = t;
+      return fetch(`${base}${path}${key}`, { method: "POST", headers, body: JSON.stringify(body) });
+    };
 
     async function loadCounts(): Promise<number | null> {
       try {
@@ -142,6 +180,15 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
     const newId = () => Array.from(crypto.getRandomValues(new Uint8Array(10)), (b) => b.toString(16).padStart(2, "0")).join("");
     const str = (v: string) => ({ stringValue: v });
 
+    // 신청 알림(텔레그램). 중계 주소가 없으면 보내지 않고, 실패해도 신청 자체에는 영향이 없다.
+    function notifyOperator(field: string, nickname: string, consent: boolean, avatar: string, contact: string) {
+      if (!cfg.notify) return;
+      fetch(cfg.notify, {
+        method: "POST", mode: "no-cors", headers: { "content-type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ field: cfg.labels[field] ?? field, nickname: nickname || "(없음)", avatar, consent: consent ? "공개 동의" : "공개 안 함", contact }),
+      }).catch(() => {});
+    }
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const fd = new FormData(form);
@@ -171,6 +218,7 @@ const config = JSON.stringify({ ...firebase, fields: fields.map((f) => f.key) })
         });
         if (!r.ok) throw new Error(String(r.status));
         try { localStorage.setItem("join-sent", "1"); } catch { /* 무시 */ }
+        notifyOperator(field, nickname, consent, avatar, contact);
         form.reset();
         picked.textContent = (form.querySelector<HTMLInputElement>("input[name=avatar]:checked"))?.value ?? "";
         msg.textContent = "신청되었습니다. 감사합니다!";
