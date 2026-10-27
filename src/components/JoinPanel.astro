@@ -40,13 +40,6 @@ const guardOn = Boolean(appCheck.siteKey);
               </label>
             ))}
           </div>
-          <div class="join-photo">
-            <label for="join-photo">또는 내가 그린 그림·사진 올리기 (선택)</label>
-            <input id="join-photo" type="file" accept="image/*" />
-            <label class="join-choice"><input type="checkbox" id="join-cartoon" checked /> 만화 느낌으로 바꾸기</label>
-            <p class="join-photo-note">그림은 이 기기 안에서 작게 줄여지며, 공개에 동의하신 경우에만 그 작은 그림이 올라갑니다. 원본은 어디에도 보내지 않습니다.</p>
-            <button type="button" class="join-photo-clear" hidden>올린 그림 지우기</button>
-          </div>
         </details>
         <p class="join-row">
           <label for="join-nick">3. 닉네임 (12자까지)</label>
@@ -89,7 +82,7 @@ const guardOn = Boolean(appCheck.siteKey);
     // 그림을 고르면 접고, 고른 그림을 제목줄에 보여 준다.
     pick.addEventListener("change", (e) => {
       const t = e.target as HTMLInputElement;
-      if (t.name === "avatar") { clearPhoto(); picked.textContent = t.value; pick.open = false; }
+      if (t.name === "avatar") { picked.textContent = t.value; pick.open = false; }
     });
 
     // 스팸 방어: reCAPTCHA v3 → App Check 토큰. 사이트 키가 없으면 쓰지 않는다.
@@ -127,70 +120,6 @@ const guardOn = Boolean(appCheck.siteKey);
       return fetch(`${base}${path}${key}`, { method: "POST", headers, body: JSON.stringify(body) });
     };
 
-    // 내 그림: 이 기기 안에서 96×96으로 줄이고(선택하면 만화 느낌으로), 작은 JPEG 글자열로 만든다.
-    const photoInput = root.querySelector<HTMLInputElement>("#join-photo")!;
-    const cartoonBox = root.querySelector<HTMLInputElement>("#join-cartoon")!;
-    const photoClear = root.querySelector<HTMLButtonElement>(".join-photo-clear")!;
-    let photoBitmap: ImageBitmap | null = null;
-    let photoData = "";
-
-    function cartoonize(img: ImageData) {
-      const { width: w, height: h, data } = img;
-      const lum = new Float32Array(w * h);
-      for (let i = 0; i < w * h; i++) lum[i] = 0.299 * data[i * 4] + 0.587 * data[i * 4 + 1] + 0.114 * data[i * 4 + 2];
-      for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
-        const i = y * w + x;
-        let edge = 0;
-        if (x > 0 && y > 0 && x < w - 1 && y < h - 1) {
-          const gx = -lum[i - w - 1] - 2 * lum[i - 1] - lum[i + w - 1] + lum[i - w + 1] + 2 * lum[i + 1] + lum[i + w + 1];
-          const gy = -lum[i - w - 1] - 2 * lum[i - w] - lum[i - w + 1] + lum[i + w - 1] + 2 * lum[i + w] + lum[i + w + 1];
-          edge = Math.hypot(gx, gy);
-        }
-        for (let c = 0; c < 3; c++) {
-          const v = data[i * 4 + c];
-          const level = Math.round((v / 255) * 4) * 63.75; // 색을 5단계로 단순화
-          data[i * 4 + c] = edge > 140 ? 20 : Math.min(255, level * 1.08);
-        }
-      }
-    }
-
-    function renderPhoto() {
-      if (!photoBitmap) { photoData = ""; return; }
-      const c = document.createElement("canvas");
-      c.width = c.height = 96;
-      const ctx = c.getContext("2d")!;
-      const side = Math.min(photoBitmap.width, photoBitmap.height);
-      ctx.drawImage(photoBitmap, (photoBitmap.width - side) / 2, (photoBitmap.height - side) / 2, side, side, 0, 0, 96, 96);
-      if (cartoonBox.checked) { const id = ctx.getImageData(0, 0, 96, 96); cartoonize(id); ctx.putImageData(id, 0, 0); }
-      let q = 0.7, url = c.toDataURL("image/jpeg", q);
-      while (url.length > 12000 && q > 0.3) { q -= 0.1; url = c.toDataURL("image/jpeg", q); }
-      photoData = url.length <= 12000 ? url : "";
-      picked.replaceChildren();
-      if (photoData) {
-        const im = document.createElement("img");
-        im.src = photoData; im.alt = ""; im.width = im.height = 36;
-        picked.appendChild(im);
-      }
-    }
-
-    function clearPhoto() {
-      photoBitmap = null; photoData = ""; photoInput.value = ""; photoClear.hidden = true;
-      picked.textContent = root!.querySelector<HTMLInputElement>("input[name=avatar]:checked")?.value ?? "";
-    }
-
-    photoInput.addEventListener("change", async () => {
-      const f = photoInput.files?.[0];
-      if (!f) { clearPhoto(); return; }
-      try {
-        photoBitmap = await createImageBitmap(f);
-        renderPhoto();
-        photoClear.hidden = !photoData;
-        if (!photoData) msg.textContent = "그림을 작게 만들지 못했습니다. 다른 그림으로 해 보세요.";
-      } catch { clearPhoto(); msg.textContent = "이 파일은 그림으로 읽을 수 없습니다."; }
-    });
-    cartoonBox.addEventListener("change", renderPhoto);
-    photoClear.addEventListener("click", clearPhoto);
-
     async function loadCounts(): Promise<number | null> {
       try {
         const res = await Promise.all(cfg.fields.map((f) =>
@@ -226,25 +155,16 @@ const guardOn = Boolean(appCheck.siteKey);
         });
         if (!r.ok) return;
         const rows = (await r.json()) as { document?: { fields: Record<string, { stringValue: string }> } }[];
-        const byField: Record<string, { text: string; photo: string }[]> = {};
+        const byField: Record<string, string[]> = {};
         for (const row of rows) {
           const d = row.document?.fields;
           if (!d || !d.nickname?.stringValue) continue;
-          const photo = d.photo?.stringValue ?? "";
-          (byField[d.field.stringValue] ||= []).push({
-            text: photo ? d.nickname.stringValue : `${d.avatar?.stringValue ?? ""} ${d.nickname.stringValue}`.trim(),
-            photo: photo.startsWith("data:image/jpeg;base64,") ? photo : "",
-          });
+          (byField[d.field.stringValue] ||= []).push(`${d.avatar?.stringValue ?? ""} ${d.nickname.stringValue}`.trim());
         }
         for (const f of cfg.fields) {
           const ul = root!.querySelector<HTMLElement>(`[data-field="${f}"] .join-names`);
           if (!ul) continue;
-          ul.replaceChildren(...(byField[f] || []).map((n) => {
-            const li = document.createElement("li");
-            if (n.photo) { const im = document.createElement("img"); im.src = n.photo; im.alt = ""; im.width = im.height = 32; li.appendChild(im); }
-            li.append(n.text);
-            return li;
-          }));
+          ul.replaceChildren(...(byField[f] || []).map((t) => { const li = document.createElement("li"); li.textContent = t; return li; }));
         }
       } catch { /* 닉네임 목록은 없어도 신청에는 지장이 없다 */ }
     }
@@ -283,7 +203,6 @@ const guardOn = Boolean(appCheck.siteKey);
       if (contact.length < 5) { msg.textContent = "연락처를 5자 이상 적어 주세요."; return; }
       if (fd.get("privacy") !== "on") { msg.textContent = "연락처 수집·이용에 동의해 주세요."; return; }
       if (consent && !nickname) { msg.textContent = "공개에 동의하셨다면 닉네임을 적어 주세요."; return; }
-      if (photoData && !consent) { msg.textContent = "그림을 올리려면 공개 동의에 체크해 주세요."; return; }
       if (Date.now() - openedAt < 3000) { msg.textContent = "잠시 뒤에 다시 눌러 주세요."; return; }
       try { if (localStorage.getItem("join-sent")) { msg.textContent = "이미 신청하셨습니다. 감사합니다."; return; } } catch { /* 저장소를 못 써도 진행 */ }
 
@@ -297,7 +216,7 @@ const guardOn = Boolean(appCheck.siteKey);
       try {
         const r = await post(":commit", {
           writes: [
-            { update: { name: name("participants"), fields: { field: str(field), nickname: str(consent ? nickname : ""), avatar: str(avatar), ...(photoData && consent ? { photo: str(photoData) } : {}) } }, currentDocument: { exists: false }, updateTransforms: stamp },
+            { update: { name: name("participants"), fields: { field: str(field), nickname: str(consent ? nickname : ""), avatar: str(avatar) } }, currentDocument: { exists: false }, updateTransforms: stamp },
             { update: { name: name("applications"), fields: { field: str(field), nickname: str(nickname), avatar: str(avatar), consent: { booleanValue: consent }, contact: str(contact) } }, currentDocument: { exists: false }, updateTransforms: stamp },
           ],
         });
@@ -305,7 +224,7 @@ const guardOn = Boolean(appCheck.siteKey);
         try { localStorage.setItem("join-sent", "1"); } catch { /* 무시 */ }
         notifyOperator(field, nickname, consent, avatar, contact);
         form.reset();
-        clearPhoto();
+        picked.textContent = (form.querySelector<HTMLInputElement>("input[name=avatar]:checked"))?.value ?? "";
         msg.textContent = "신청되었습니다. 감사합니다!";
         btn.disabled = false;
         lastTotal = -1;
@@ -340,13 +259,6 @@ const guardOn = Boolean(appCheck.siteKey);
   .join-avatar input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
   .join-avatar:has(input:checked) { border-color: var(--accent); background: var(--card); }
   .join-avatar:has(input:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; }
-  .join-photo { display: grid; gap: .2rem; padding: .2rem 0 .6rem; }
-  .join-grid > * { min-width: 0; }
-  .join-photo input[type="file"] { min-height: 48px; padding: .6rem 0; font: inherit; width: 100%; box-sizing: border-box; }
-  .join-photo-note { margin: 0; color: var(--muted); }
-  .join-photo-clear { min-height: 48px; font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--muted); border-radius: 8px; cursor: pointer; justify-self: start; padding: 0 1rem; }
-  .join-picked img { border-radius: 50%; vertical-align: middle; }
-  .join-names li img { border-radius: 50%; vertical-align: middle; margin-right: .3rem; }
   .join-row { margin: 0 0 .4rem; display: grid; gap: .1rem; }
   .join-form input[type="text"] { width: 100%; min-height: 48px; padding: 0 .7rem; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--muted); border-radius: 8px; box-sizing: border-box; }
   .join-hp { position: absolute; left: -9999px; }
