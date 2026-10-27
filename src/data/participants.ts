@@ -57,5 +57,5 @@ export const appCheck = {
 // 신청 알림(텔레그램). Google Apps Script 웹 앱 주소(공개 주소)를 넣는다. 비워 두면 보내지 않는다.
 // 봇 토큰은 Apps Script 안에만 두고 이 저장소에는 넣지 않는다. 코드: docs/telegram-notify.gs
 export const notify = {
-  url: "",
+  url: "https://script.google.com/macros/s/AKfycbyzSa8X0rZOBrUVd2v4zNg29YpobMcK88_M4YSh-O3JI-SG_bOpKh23FXWyANUNVJgo/exec",
 };
