@@ -1,0 +1,33 @@
+---
+// 시험판: 구글 웹사이트 번역(기계 번역)으로 전체 화면을 다른 언어로 보여 줍니다.
+// 언어를 고르기 전에는 구글에 아무것도 보내지 않습니다. (scripts/translate.js)
+const base = import.meta.env.BASE_URL;
+const langs = [
+  { code: "en", name: "English" },
+  { code: "vi", name: "Tiếng Việt" },
+  { code: "zh-CN", name: "中文(简体)" },
+  { code: "ne", name: "नेपाली" },
+  { code: "id", name: "Bahasa Indonesia" },
+  { code: "km", name: "ភាសាខ្មែរ" },
+  { code: "th", name: "ไทย" },
+  { code: "uz", name: "O‘zbekcha" },
+  { code: "mn", name: "Монгол" },
+  { code: "my", name: "မြန်မာ" },
+  { code: "tl", name: "Filipino" },
+  { code: "bn", name: "বাংলা" },
+  { code: "si", name: "සිංහල" },
+  { code: "ur", name: "اردو" },
+  { code: "ru", name: "Русский" },
+];
+---
+<details class="lang-drop notranslate" translate="no">
+  <summary class="header-search header-lang" aria-label="Languages · 다른 언어로 보기" title="Languages · 다른 언어로 보기">🌐 <span>Languages</span></summary>
+  <div class="lang-panel" role="group" aria-label="언어 선택">
+    <button type="button" class="lang-item" data-lang="">한국어 (원문)</button>
+    {langs.map((l) => <button type="button" class="lang-item" data-lang={l.code}>{l.name}</button>)}
+    <p class="lang-note">기계 번역입니다. 정확하지 않을 수 있습니다.<br>Machine translation. May be inaccurate.<br>언어를 고르면 이 페이지의 글이 구글 번역으로 전송됩니다. · Page text is sent to Google Translate.</p>
+    <a class="lang-more" href={`${base}language`}>번역 안내 · 상담 정보 보기</a>
+  </div>
+</details>
+<div id="google_translate_element" class="notranslate" hidden></div>
+<script src={`${base}scripts/translate.js`} is:inline></script>
