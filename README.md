@@ -6,7 +6,7 @@
 누구나 자기 수준에서 이해할 수 있도록 **쉬운 말 · 보통 · 자세히** 세 단계로 설명하는 정적 교육 웹사이트입니다.
 
 독일의 [Grundrechte-Fibel](https://www.grundrechte-fibel.de/)과 [bpb](https://www.bpb.de/)의
-쉬운 정치 교육 자료에서 영감을 받았고, 쟁점·토론 자료는 [보이텔스바흐 합의](https://ko.wikipedia.org/wiki/보이텔스바흐_합의)의
+쉬운 정치 학습 자료에서 영감을 받았고, 쟁점·토론 자료는 [보이텔스바흐 합의](https://ko.wikipedia.org/wiki/보이텔스바흐_합의)의
 세 원칙(교화 금지·논쟁성 재현·학습자 지향)을 따릅니다.
 
 ## 함께 만들기 (기여 안내)
