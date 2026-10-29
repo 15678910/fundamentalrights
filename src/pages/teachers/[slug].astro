@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TeachersSidebar from "../../components/TeachersSidebar.astro";
+import PeerTeach from "../../components/PeerTeach.astro";
 
 export async function getStaticPaths() {
   const items = await getCollection("teachers");
@@ -20,6 +21,7 @@ const typeColors: Record<string, string> = {
   "워크시트":  "#dcfce7",
   "토론가이드":"#fef9c3",
 };
+const showPeerTeach = entry.data.type === "수업안" && related.length > 0;
 const badgeBg = typeColors[entry.data.type] ?? "var(--card)";
 ---
 <BaseLayout title={`${entry.data.title} | 교사 자료실`}>
@@ -41,6 +43,8 @@ const badgeBg = typeColors[entry.data.type] ?? "var(--card)";
   <article>
     <Content />
   </article>
+
+  {showPeerTeach && <PeerTeach rightTitle={(related[0] as any).data.title} />}
 
   {related.length > 0 && (
     <section style="margin:1.5rem 0">
