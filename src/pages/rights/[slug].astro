@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import DifficultyToggle from "../../components/DifficultyToggle.astro";
 import OriginalText from "../../components/OriginalText.astro";
 import Quiz from "../../components/Quiz.astro";
+import ThinkFirst from "../../components/ThinkFirst.astro";
 import InfoSection from "../../components/InfoSection.astro";
 import { getCategory } from "../../lib/categories";
 import Sidebar from "../../components/Sidebar.astro";
@@ -35,6 +36,8 @@ const comic = comics.find((c) => c.data.order === entry.data.article);
   {comic && <p style="margin:.6rem 0 0"><a href={`${base}comics/${comic.id}`} style="display:inline-block;border:1px solid var(--border);border-radius:999px;padding:.3rem .9rem;text-decoration:none;color:var(--fg);font-size:.9rem">🖼️ 이 권리, 만화로 보기</a></p>}
 
   <DifficultyToggle />
+
+  <ThinkFirst article={entry.data.article} title={entry.data.title} />
 
   <article>
     <Content />
