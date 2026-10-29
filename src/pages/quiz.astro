@@ -63,6 +63,15 @@ const dataJson = JSON.stringify(pool);
           <button id="btn-start" style="background:var(--accent);color:#fff;border:none;border-radius:999px;padding:.75rem 2.5rem;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:inherit">
             퀴즈 시작
           </button>
+
+          <div id="review-box" style="display:none;margin-top:1.4rem;padding-top:1.3rem;border-top:1px dashed var(--border)">
+            <p style="margin:0 0 .8rem;line-height:1.7;word-break:keep-all;overflow-wrap:break-word">
+              전에 헷갈렸던 문제가 <strong id="review-count"></strong>개 모여 있어요.<br>
+              다시 풀어서 내 것으로 만들어 봐요. 맞히면 목록에서 빠져요.
+            </p>
+            <button id="btn-review" class="sub-btn">📌 헷갈린 문제 다시 풀기</button>
+            <button id="btn-review-clear" class="link-btn">기록 지우기</button>
+          </div>
         </div>
         <p style="text-align:center;margin-top:1.5rem;font-size:.9rem">
           <a href={`${base}rights`}>각 권리 페이지에도 퀴즈가 있어요 →</a><br>
@@ -102,6 +111,12 @@ const dataJson = JSON.stringify(pool);
             <span id="result-total"></span>문제 중 <span id="result-score"></span>개 정답
           </p>
           <p id="result-msg" style="color:var(--muted);margin:.4rem 0 1.6rem"></p>
+          <div id="result-wrong" style="display:none;text-align:left;margin:0 0 1.6rem;padding:1rem 1.1rem;background:var(--bg);border:1px solid var(--border);border-radius:12px">
+            <h3 style="margin:0 0 .5rem;font-size:1.05rem">📌 이번에 헷갈린 문제</h3>
+            <p style="margin:0 0 .6rem;color:var(--muted);word-break:keep-all;overflow-wrap:break-word">틀려도 괜찮아요. 다시 풀면 더 오래 기억돼요.</p>
+            <ul id="result-wrong-list" style="margin:0 0 1rem;padding-left:1.2rem;line-height:1.7;word-break:keep-all;overflow-wrap:break-word"></ul>
+            <button id="btn-retry-wrong" class="sub-btn">틀린 문제만 다시 풀기</button>
+          </div>
           <button id="btn-retry" style="background:var(--accent);color:#fff;border:none;border-radius:999px;padding:.75rem 2.5rem;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:inherit">
             다시 풀기
           </button>
@@ -171,6 +186,36 @@ const dataJson = JSON.stringify(pool);
     opacity: .88;
   }
 
+  /* 헷갈린 문제 다시 풀기 */
+  .sub-btn {
+    min-height: 48px;
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    padding: .6rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .link-btn {
+    min-height: 48px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 1rem;
+    font-family: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: .5rem .9rem;
+  }
+  .sub-btn:hover, .link-btn:hover { opacity: .85; }
+  .sub-btn:focus-visible, .link-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+
   /* Category selector buttons */
   .cat-btn {
     border-radius: 999px;
@@ -235,6 +280,13 @@ const dataJson = JSON.stringify(pool);
   var resultCatLine  = document.getElementById('result-category-line');
   var btnStart       = document.getElementById('btn-start');
   var btnRetry       = document.getElementById('btn-retry');
+  var reviewBox      = document.getElementById('review-box');
+  var reviewCountEl  = document.getElementById('review-count');
+  var btnReview      = document.getElementById('btn-review');
+  var btnReviewClear = document.getElementById('btn-review-clear');
+  var resultWrong    = document.getElementById('result-wrong');
+  var resultWrongList = document.getElementById('result-wrong-list');
+  var btnRetryWrong  = document.getElementById('btn-retry-wrong');
   var qCatBadge      = document.getElementById('q-category-badge');
   var qCatLabel      = document.getElementById('q-category-label');
 
@@ -374,12 +426,39 @@ const dataJson = JSON.stringify(pool);
     return a;
   }
 
-  function startRound() {
-    var filtered = getFilteredPool();
-    roundSize = Math.min(10, filtered.length);
-    round = shuffle(filtered).slice(0, roundSize);
+  // 헷갈린 문제 기록(이 기기에만 저장). 저장소를 못 쓰면 이번 방문 동안만 기억한다.
+  var WRONG_KEY = 'quiz-wrong';
+  var wrongMemo = {};
+  function qid(item) { return item.article + '|' + item.q; }
+  function loadWrong() {
+    try {
+      var saved = JSON.parse(localStorage.getItem(WRONG_KEY) || '{}');
+      if (saved && typeof saved === 'object') wrongMemo = saved;
+    } catch (e) { /* 저장소 사용 불가 */ }
+  }
+  function saveWrong() {
+    try { localStorage.setItem(WRONG_KEY, JSON.stringify(wrongMemo)); } catch (e) { /* 저장소 사용 불가 */ }
+  }
+  function getWrongPool() {
+    return allPool.filter(function (item) { return wrongMemo[qid(item)]; });
+  }
+  function updateReviewBox() {
+    var n = getWrongPool().length;
+    if (reviewCountEl) reviewCountEl.textContent = n;
+    if (reviewBox) reviewBox.style.display = n > 0 ? '' : 'none';
+  }
+  loadWrong();
+
+  var roundWrong = [];
+
+  // list를 주면 그 문제들로, 없으면 고른 분야·수준에서 무작위로 낸다.
+  function startRound(list) {
+    var source = list || getFilteredPool();
+    roundSize = Math.min(10, source.length);
+    round = shuffle(source).slice(0, roundSize);
     current = 0;
     score = 0;
+    roundWrong = [];
     showQuestion();
   }
 
@@ -445,9 +524,13 @@ const dataJson = JSON.stringify(pool);
     if (chosen !== correct) {
       buttons[chosen].classList.add('opt-wrong');
       buttons[chosen].setAttribute('aria-label', buttons[chosen].getAttribute('aria-label') + ' (오답)');
+      roundWrong.push(item);
+      wrongMemo[qid(item)] = true;
     } else {
       score++;
+      delete wrongMemo[qid(item)];
     }
+    saveWrong();
 
     // Show explanation
     qExplanation.textContent = item.explanation;
@@ -486,6 +569,19 @@ const dataJson = JSON.stringify(pool);
     }
     resultEmoji.textContent = emoji;
     resultMsg.textContent   = msg;
+
+    // 이번에 틀린 문제 목록
+    resultWrongList.innerHTML = '';
+    roundWrong.forEach(function (item) {
+      var li = document.createElement('li');
+      var strong = document.createElement('strong');
+      strong.textContent = item.q;
+      li.appendChild(strong);
+      li.appendChild(document.createElement('br'));
+      li.appendChild(document.createTextNode('정답: ' + item.options[item.answer]));
+      resultWrongList.appendChild(li);
+    });
+    resultWrong.style.display = roundWrong.length > 0 ? '' : 'none';
   }
 
   // Event listeners
@@ -506,7 +602,25 @@ const dataJson = JSON.stringify(pool);
     // Return to start screen so user can pick a category again
     showScreen('start');
     updatePoolCount();
+    updateReviewBox();
   });
+
+  btnRetryWrong.addEventListener('click', function () {
+    startRound(roundWrong.slice());
+  });
+
+  btnReview.addEventListener('click', function () {
+    var pool = getWrongPool();
+    if (pool.length > 0) startRound(pool);
+  });
+
+  btnReviewClear.addEventListener('click', function () {
+    wrongMemo = {};
+    saveWrong();
+    updateReviewBox();
+  });
+
+  updateReviewBox();
 
   // Keyboard: Enter on result/start screen triggers the primary button
   document.addEventListener('keydown', function (e) {
