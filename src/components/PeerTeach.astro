@@ -1,0 +1,49 @@
+---
+// 수업 마무리 활동: 배운 내용을 친구에게 한 문장으로 설명해 보기(가르치며 배우기).
+// 교사용 수업안 페이지 끝에 붙는다. 수업 내용은 건드리지 않고 마무리 활동만 안내한다.
+interface Props { rightTitle?: string }
+const { rightTitle } = Astro.props;
+const topic = rightTitle ? `‘${rightTitle}’` : "오늘 배운 권리";
+---
+<section class="peer-teach">
+  <h2>🗣️ 마무리 활동 · 친구에게 한 문장으로 설명해 보기 <span class="peer-time">(약 5분)</span></h2>
+  <p class="peer-lead">남에게 설명해 보면 내가 아는 것과 헷갈리는 것이 또렷해져요. {topic}을(를) 짝에게 한 문장으로 설명해 봅니다.</p>
+  <ol class="peer-steps">
+    <li><strong>혼자 정리 (1분)</strong> — 오늘 배운 권리를 한 문장으로 적어 봅니다.</li>
+    <li><strong>짝에게 설명 (1분)</strong> — 짝에게 소리 내어 읽어 주며 설명합니다.</li>
+    <li><strong>짝의 되묻기 (1분)</strong> — 짝은 “예를 들면 어떤 때?”, “왜 그렇게 생각해?” 중 하나를 묻습니다.</li>
+    <li><strong>역할 바꾸기 (2분)</strong> — 설명하는 사람과 듣는 사람을 바꿉니다.</li>
+  </ol>
+  <div class="peer-frame">
+    <p class="peer-frame-title">문장 틀 (도움이 필요하면 써 보세요)</p>
+    <p>“{rightTitle ?? "○○○"}은(는) ____________ 권리예요. 예를 들면 ____________ 때 필요해요. 왜냐하면 ____________ 때문이에요.”</p>
+  </div>
+  <p class="peer-tip">교사 안내: 정답을 고쳐 주기보다 짝이 서로 되묻도록 돕고, 설명이 막히는 부분을 칠판에 모아 다음 수업의 질문으로 삼아 보세요.</p>
+</section>
+
+<style>
+  .peer-teach {
+    margin: 2rem 0;
+    padding: 1.1rem 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--brand);
+    border-radius: 12px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .peer-teach h2 { font-size: 1.15rem; margin: 0 0 .5rem; }
+  .peer-time { font-weight: 400; color: var(--muted); font-size: 1rem; }
+  .peer-lead { margin: 0 0 .6rem; }
+  .peer-steps { margin: 0 0 .9rem; padding-left: 1.3rem; line-height: 1.8; }
+  .peer-frame {
+    margin: 0 0 .9rem;
+    padding: .7rem .9rem;
+    background: var(--bg);
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+  }
+  .peer-frame p { margin: 0; line-height: 1.8; }
+  .peer-frame-title { font-weight: 700; color: var(--muted); margin-bottom: .2rem !important; }
+  .peer-tip { margin: 0; color: var(--muted); }
+</style>

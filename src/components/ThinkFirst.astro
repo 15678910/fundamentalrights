@@ -1,0 +1,71 @@
+---
+// 설명을 읽기 전에 스스로 먼저 생각해 보는 질문 상자(소크라테스식 질문).
+// 정답을 알려 주지 않고 질문만 던진다. 메모는 이 기기(localStorage)에만 저장된다.
+interface Props { article: number; title: string }
+const { article, title } = Astro.props;
+const prompts = [
+  "이 권리가 없다면 우리 생활은 어떻게 달라질까요?",
+  "내 생활에서 이 권리와 닿아 있던 순간이 있었나요?",
+  "다른 사람의 권리와 내 권리가 부딪힌다면, 어떻게 풀면 좋을까요?",
+];
+---
+<section class="think-first" data-think={article} aria-labelledby={`think-h-${article}`}>
+  <h2 id={`think-h-${article}`}>🤔 먼저 생각해 보기</h2>
+  <p class="think-lead">‘{title}’ 설명을 읽기 전에 잠깐 생각해 봐요. 정해진 답은 없어요. 내 생각을 먼저 떠올리면 설명이 더 쏙 들어와요.</p>
+  <ol class="think-list">
+    {prompts.map((p) => <li>{p}</li>)}
+  </ol>
+  <label class="think-label" for={`think-note-${article}`}>내 생각 적어 보기 <span>(이 기기에만 저장돼요)</span></label>
+  <textarea id={`think-note-${article}`} class="think-note" rows="3" maxlength="500" placeholder="떠오르는 대로 편하게 적어 보세요."></textarea>
+</section>
+
+<style>
+  .think-first {
+    margin: 1.6rem 0;
+    padding: 1.1rem 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+  }
+  .think-first h2 { font-size: 1.15rem; margin: 0 0 .4rem; }
+  .think-lead { margin: 0 0 .5rem; color: var(--muted); word-break: keep-all; overflow-wrap: break-word; }
+  .think-list { margin: 0 0 .9rem; padding-left: 1.3rem; line-height: 1.8; word-break: keep-all; overflow-wrap: break-word; }
+  .think-label { display: block; font-weight: 700; margin-bottom: .3rem; }
+  .think-label span { font-weight: 400; color: var(--muted); font-size: 1rem; }
+  .think-note {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 48px;
+    padding: .6rem .8rem;
+    font: inherit;
+    line-height: 1.6;
+    color: var(--fg);
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    resize: vertical;
+  }
+  .think-note:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<script>
+  // 메모 저장은 있으면 좋은 기능이다. 저장소를 못 쓰는 환경에서도 화면은 그대로 동작해야 한다.
+  document.querySelectorAll<HTMLElement>("[data-think]").forEach((box) => {
+    const note = box.querySelector<HTMLTextAreaElement>("textarea");
+    if (!note) return;
+    const key = `think-note:${box.dataset.think}`;
+    try { note.value = localStorage.getItem(key) ?? ""; } catch { /* 저장소 사용 불가 */ }
+    let timer: number | undefined;
+    note.addEventListener("input", () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        try {
+          if (note.value.trim()) localStorage.setItem(key, note.value);
+          else localStorage.removeItem(key);
+        } catch { /* 저장소 사용 불가 */ }
+      }, 400);
+    });
+  });
+</script>
